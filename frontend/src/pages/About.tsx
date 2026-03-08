@@ -55,14 +55,15 @@ export function About() {
       <section className="py-10">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {[
-            { icon: Database, title: 'Data Engineering', desc: 'Specialising in dbt, Databricks, and AWS data mesh architectures. Passionate about data contracts and shift-left governance.' },
-            { icon: Cpu, title: 'AI-Augmented Work', desc: 'Building GitHub Copilot workflows, LLM agents, and MCP server integrations to accelerate engineering teams.' },
-            { icon: Layers, title: 'Platform Thinking', desc: 'Centre of Excellence leadership, DataOps Manifesto-aligned change management, and team capability uplift.' },
-            { icon: BarChart3, title: 'Content & Community', desc: 'Regular contributor on Medium and LinkedIn covering dbt, data mesh, MLSecOps, and modern data stack practices.' },
-          ].map(({ icon: Icon, title, desc }) => (
-            <Card key={title}>
-              <CardContent className="pt-5">
-                <Icon size={20} className="text-muted-foreground mb-3" />
+            { icon: Database, title: 'Data Engineering', desc: 'Specialising in dbt, Databricks, and AWS data mesh architectures. Passionate about data contracts and shift-left governance.', color: '#a855f7' },
+            { icon: Cpu, title: 'AI-Augmented Work', desc: 'Building GitHub Copilot workflows, LLM agents, and MCP server integrations to accelerate engineering teams.', color: '#3b82f6' },
+            { icon: Layers, title: 'Platform Thinking', desc: 'Centre of Excellence leadership, DataOps Manifesto-aligned change management, and team capability uplift.', color: '#06b6d4' },
+            { icon: BarChart3, title: 'Content & Community', desc: 'Regular contributor on Medium and LinkedIn covering dbt, data mesh, MLSecOps, and modern data stack practices.', color: '#8b5cf6' },
+          ].map(({ icon: Icon, title, desc, color }) => (
+            <Card key={title} className="overflow-hidden">
+              <div className="h-1 w-full" style={{ background: `linear-gradient(90deg, ${color}, transparent)` }} />
+              <CardContent className="pt-4">
+                <Icon size={20} className="mb-3" style={{ color }} />
                 <h3 className="font-semibold text-base mb-2">{title}</h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">{desc}</p>
               </CardContent>
@@ -75,10 +76,14 @@ export function About() {
       <section className="py-10">
         <h2 className="text-2xl font-semibold mb-6">Skills & Tech Stack</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          {skills.map(({ category, items }) => (
-            <Card key={category}>
-              <CardContent className="pt-5">
-                <h4 className="text-xs font-mono uppercase tracking-wider text-muted-foreground mb-3">
+          {skills.map(({ category, items }, i) => {
+            const cardColors = ['#a855f7', '#3b82f6', '#06b6d4', '#8b5cf6'];
+            const color = cardColors[i % 4];
+            return (
+            <Card key={category} className="overflow-hidden">
+              <div className="h-1 w-full" style={{ background: `linear-gradient(90deg, ${color}, transparent)` }} />
+              <CardContent className="pt-4">
+                <h4 className="text-xs font-mono uppercase tracking-wider mb-3" style={{ color }}>
                   {category}
                 </h4>
                 <div className="flex flex-wrap gap-1.5">
@@ -88,7 +93,8 @@ export function About() {
                 </div>
               </CardContent>
             </Card>
-          ))}
+            );
+          })}
         </div>
       </section>
 

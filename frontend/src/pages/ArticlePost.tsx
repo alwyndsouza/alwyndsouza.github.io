@@ -27,7 +27,7 @@ export function ArticlePost() {
         <article>
           <header className="mb-10">
             <div className="flex flex-wrap gap-2 mb-4">
-              <Badge variant="secondary">{article.category}</Badge>
+              <span className="px-2 py-0.5 rounded-full text-xs font-semibold text-white" style={{ background: 'linear-gradient(135deg, #a855f7, #3b82f6)' }}>{article.category}</span>
               {!article.published && <Badge variant="outline" className="border-yellow-500 text-yellow-600">Draft</Badge>}
             </div>
             <h1 className="text-4xl md:text-5xl font-bold tracking-tight leading-tight mb-6">{article.title}</h1>
@@ -62,7 +62,7 @@ export function ArticlePost() {
           <div className="space-y-3">
             {articles.filter(a => a.slug !== slug).slice(0, 3).map(related => (
               <Link key={related.slug} to={`/articles/${related.slug}`} className="block p-4 border border-border rounded-lg hover:bg-accent transition-colors">
-                <Badge variant="secondary" className="mb-2 text-xs">{related.category}</Badge>
+                <span className="px-2 py-0.5 rounded-full text-xs font-semibold text-white mb-2 inline-block" style={{ background: 'linear-gradient(135deg, #a855f7, #3b82f6)' }}>{related.category}</span>
                 <p className="font-medium text-sm">{related.title}</p>
                 <p className="text-xs text-muted-foreground mt-1 line-clamp-1">{related.excerpt}</p>
               </Link>

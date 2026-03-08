@@ -35,7 +35,7 @@ export function ProjectDetail() {
         <article>
           <header className="mb-10">
             <div className="flex flex-wrap gap-2 mb-4">
-              <Badge variant="secondary">{project.category}</Badge>
+              <span className="px-2.5 py-0.5 rounded-full text-xs font-semibold text-white" style={{ background: 'linear-gradient(135deg, #a855f7, #3b82f6)' }}>{project.category}</span>
               <span className={`text-xs px-2.5 py-0.5 rounded-full font-semibold ${statusColor[project.status] ?? ''}`}>{project.status}</span>
             </div>
             <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-4">{project.title}</h1>

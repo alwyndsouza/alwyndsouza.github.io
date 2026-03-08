@@ -112,14 +112,15 @@ export function Home() {
         <h2 className="text-2xl font-semibold mb-6">What I Write About</h2>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {[
-            { icon: Layers, label: 'Data Engineering', desc: 'dbt, Databricks, Spark' },
-            { icon: BookOpen, label: 'DataOps', desc: 'CI/CD for data, observability' },
-            { icon: Bot, label: 'AI in Data', desc: 'Automation, LLM pipelines' },
-            { icon: TrendingUp, label: 'Data Governance', desc: 'Data contracts, Quality' },
-          ].map(({ icon: Icon, label, desc }) => (
-            <Card key={label} className="hover:shadow-md transition-shadow">
-              <CardContent className="pt-5">
-                <Icon className="size-5 mb-3 text-muted-foreground" />
+            { icon: Layers, label: 'Data Engineering', desc: 'dbt, Databricks, Spark', color: '#a855f7' },
+            { icon: BookOpen, label: 'DataOps', desc: 'CI/CD for data, observability', color: '#3b82f6' },
+            { icon: Bot, label: 'AI in Data', desc: 'Automation, LLM pipelines', color: '#06b6d4' },
+            { icon: TrendingUp, label: 'Data Governance', desc: 'Data contracts, Quality', color: '#8b5cf6' },
+          ].map(({ icon: Icon, label, desc, color }) => (
+            <Card key={label} className="hover:shadow-md transition-shadow overflow-hidden">
+              <div className="h-1 w-full" style={{ background: `linear-gradient(90deg, ${color}, transparent)` }} />
+              <CardContent className="pt-4">
+                <Icon className="size-5 mb-3" style={{ color }} />
                 <p className="font-medium text-sm mb-1">{label}</p>
                 <p className="text-xs text-muted-foreground">{desc}</p>
               </CardContent>
@@ -143,7 +144,9 @@ export function Home() {
                 <Card className="hover:shadow-md transition-shadow">
                   <CardContent className="pt-5">
                     <div className="flex flex-wrap gap-2 mb-2">
-                      <Badge variant="secondary">{article.category}</Badge>
+                      <span className="px-2 py-0.5 rounded-full text-xs font-semibold text-white" style={{ background: 'linear-gradient(135deg, #a855f7, #3b82f6)' }}>
+                        {article.category}
+                      </span>
                     </div>
                     <h3 className="font-semibold mb-1">{article.title}</h3>
                     <p className="text-sm text-muted-foreground line-clamp-2">{article.excerpt}</p>
