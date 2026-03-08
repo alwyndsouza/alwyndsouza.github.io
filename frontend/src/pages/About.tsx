@@ -1,3 +1,8 @@
+/**
+ * Render the About page section containing a short biography, writing & projects summary, and external contact links.
+ *
+ * @returns The JSX element for the About page content.
+ */
 export function About() {
   return (
     <div className="max-w-2xl mx-auto px-4 py-12">

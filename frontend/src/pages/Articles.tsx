@@ -5,6 +5,11 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { articles } from '@/data/articles';
 
+/**
+ * Renders a filterable articles listing with category badges, tag filters, active filter controls, and article cards.
+ *
+ * @returns The JSX element that displays filter controls, a summary ("Showing X of Y articles"), and the list of article cards (or a no-results message).
+ */
 export function Articles() {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [selectedTags, setSelectedTags] = useState<string[]>([]);

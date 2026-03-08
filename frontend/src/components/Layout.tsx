@@ -1,6 +1,13 @@
 import { Outlet, Link, useLocation } from 'react-router';
 import { Database, Code2 } from 'lucide-react';
 
+/**
+ * App layout component that renders a header with route-aware navigation, a main content Outlet, and a footer.
+ *
+ * The header highlights a navigation link as active when the current pathname exactly matches `/` or starts with the link's path.
+ *
+ * @returns The rendered layout element containing the header, the Outlet for nested routes, and the footer.
+ */
 export function Layout() {
   const location = useLocation();
 

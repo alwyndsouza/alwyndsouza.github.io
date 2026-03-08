@@ -5,6 +5,11 @@ import { Button } from '@/components/ui/button';
 import { getProjectById } from '@/data/projects';
 import 'highlight.js/styles/github-dark.css';
 
+/**
+ * Render a project detail page for the route `id`, showing the project's metadata, technologies, external links, cover image, and HTML content.
+ *
+ * @returns The component's React element for the project detail page; if the project cannot be found, a navigation element that redirects to `/projects`.
+ */
 export function ProjectDetail() {
   const { id } = useParams();
   const project = getProjectById(id ?? '');

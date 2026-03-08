@@ -6,11 +6,30 @@ import time
 from datetime import datetime
 
 def slugify(text):
+    """
+    Create a URL-friendly slug from the given text.
+    
+    Parameters:
+        text (str): Input string to convert.
+    
+    Returns:
+        str: Lowercase string where consecutive non-alphanumeric characters are replaced by single hyphens and any leading or trailing hyphens are removed.
+    """
     text = text.lower()
     text = re.sub(r'[^a-z0-9]+', '-', text)
     return text.strip('-')
 
 def download_image(url, dest_path):
+    """
+    Download an image from a URL to a local filesystem path, with retries and simple backoff.
+    
+    Parameters:
+        url (str): HTTP(S) URL of the image to download.
+        dest_path (str): Local filesystem path where the image will be saved. If the file already exists, no download is attempted.
+    
+    Returns:
+        bool: `True` if the image file exists at `dest_path` after the call (either preexisting or successfully downloaded), `False` if all download attempts failed.
+    """
     if os.path.exists(dest_path):
         return True
 
@@ -32,6 +51,11 @@ def download_image(url, dest_path):
     return False
 
 def extract_metadata():
+    """
+    Parse 'medium_feed.xml' and generate Markdown article files and image assets for the frontend.
+    
+    Reads the RSS feed from 'medium_feed.xml', extracts each item’s title, link, publication date, categories, description/content, and first embedded image (if any); creates directories 'frontend/src/articles' and 'frontend/public/images' as needed; downloads cover images into the images directory when available; generates a slug for each item, a plain-text excerpt (first 160 characters), and a Markdown file with YAML front matter written to 'frontend/src/articles/{slug}.md'. If an item's publication date cannot be parsed, the current date is used; if no category is present, the category defaults to "Data Engineering". This function does not return a value.
+    """
     tree = ET.parse('medium_feed.xml')
     root = tree.getroot()
     channel = root.find('channel')

@@ -6,6 +6,14 @@ import { Badge } from '@/components/ui/badge';
 import { articles } from '@/data/articles';
 import { featuredProjects } from '@/data/projects';
 
+/**
+ * Renders the homepage with a hero, topics grid, latest articles, and featured projects.
+ *
+ * The "Latest Articles" and "Featured Projects" sections are rendered only when there are items
+ * in the corresponding data arrays.
+ *
+ * @returns A React element representing the homepage layout
+ */
 export function Home() {
   const latestArticles = articles.slice(0, 2);
 

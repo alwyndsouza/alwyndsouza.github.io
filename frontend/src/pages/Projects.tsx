@@ -4,6 +4,14 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { projects } from '@/data/projects';
 
+/**
+ * Render a responsive projects overview with a category filter, status badges, and tech stack indicators.
+ *
+ * Displays a row of selectable category Badges (including "all"); selecting a category filters the shown projects.
+ * Each project is rendered as a card linking to `/projects/{id}`, showing its category, a colored status badge (with a default gray style for unknown statuses), title, truncated description, and up to five technology pills with an overflow count.
+ *
+ * @returns The component's rendered JSX element.
+ */
 export function Projects() {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const categories = ['all', ...Array.from(new Set(projects.map(p => p.category)))];

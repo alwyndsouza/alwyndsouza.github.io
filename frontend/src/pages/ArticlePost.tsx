@@ -4,6 +4,11 @@ import { Badge } from '@/components/ui/badge';
 import { articles } from '@/data/articles';
 import 'highlight.js/styles/github-dark.css';
 
+/**
+ * Render the article page for the slug from route parameters or redirect to the articles index when no match is found.
+ *
+ * @returns The article page JSX element, or a navigation element that redirects to `/articles` when the slug does not match any article.
+ */
 export function ArticlePost() {
   const { slug } = useParams();
   const article = articles.find(a => a.slug === slug);
