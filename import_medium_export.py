@@ -5,20 +5,101 @@ from datetime import datetime
 from pathlib import Path
 
 def slugify(text):
-    """Create a URL-friendly slug from the given text."""
+    """
+    Create a URL-friendly slug from the given text.
+    
+    Parameters:
+        text (str): Input string to convert into a slug.
+    
+    Returns:
+        slug (str): Lowercased string containing only ASCII letters, digits, and hyphens; sequences of non-alphanumeric characters are replaced by a single hyphen and leading/trailing hyphens are removed.
+    """
     text = text.lower()
     text = re.sub(r'[^a-z0-9]+', '-', text)
     return text.strip('-')
 
-def extract_article_from_html(html_file_path):
+def categorize_article(title, content=""):
     """
-    Extract article content from Medium's exported HTML file.
+    Determine an article category and associated tag slugs based on its title and optional content.
     
     Parameters:
-        html_file_path (str): Path to the exported HTML file
-        
+        title (str): Article title; matching is attempted against the title first.
+        content (str, optional): Article content used as a fallback when the title does not yield a category.
+    
     Returns:
-        dict: Article metadata and content, or None if parsing fails
+        tuple: (category, tags)
+            category (str): Short hyphenated category slug (e.g., 'data-engineering', 'mlops').
+            tags (list[str]): List of related tag slugs prioritized for the inferred category. Defaults to ('data-engineering',) when no matches are found.
+    """
+    title_lower = title.lower()
+    content_lower = content.lower() if content else ""
+    
+    # Define category keywords with priority order (more specific first)
+    category_keywords = {
+        'mlops': {
+            'keywords': ['mlops', 'mlsecops', 'machine learning lifecycle', 'ml security', 'ai lifecycle', 'model pipeline', 'securing ai', 'securing the ai', 'mlsecops dream team'],
+            'tags': ['mlops', 'machine-learning', 'ai']
+        },
+        'security': {
+            'keywords': ['pii', 'pii data', 'databricks pii', 'discoverx', 'identification, protection'],
+            'tags': ['security', 'privacy', 'compliance']
+        },
+        'data-quality': {
+            'keywords': ['data quality', 'data lineage', 'dbt-expectations', 'dbt-checkpoint', 'sqlfluff', 'data validation', 'sql standards', 'shift left governance'],
+            'tags': ['data-quality', 'testing', 'validation']
+        },
+        'data-architecture': {
+            'keywords': ['data mesh', 'data contract', 'data product', 'data architecture', 'ontology', 'data card', 'architecture evolution', 'ontology layer'],
+            'tags': ['data-architecture', 'data-strategy']
+        },
+        'ai': {
+            'keywords': ['context-aware ai', 'ai for your team', 'ai transformed', 'ai project', 'teach ai', 'ai understand', 'code review.*ai', 'ai.*code review', 'ai-powered'],
+            'tags': ['ai', 'artificial-intelligence', 'automation']
+        },
+        'devops': {
+            'keywords': ['docker', 'ci/cd', 'github actions', 'pre-commit', 'git branch', 'virtualenv', 'workflow', 'image build', 'yaml formatting'],
+            'tags': ['devops', 'automation', 'ci-cd']
+        },
+    }
+    
+    # Check for specific category matches in title first (more reliable)
+    for category, config in category_keywords.items():
+        for keyword in config['keywords']:
+            # Use regex for more flexible matching
+            if re.search(keyword, title_lower):
+                return category, config['tags']
+    
+    # If title contains 'dbt', it's data engineering
+    if 'dbt' in title_lower:
+        return 'data-engineering', ['data-engineering', 'dbt', 'analytics']
+    
+    # Check broader context in content for edge cases
+    for category, config in category_keywords.items():
+        for keyword in config['keywords']:
+            if re.search(keyword, content_lower[:500]):  # Check first 500 chars of content
+                return category, config['tags']
+    
+    # Default to data engineering
+    return 'data-engineering', ['data-engineering']
+
+def extract_article_from_html(html_file_path):
+    """
+    Parse a Medium-exported HTML file and extract article metadata and cleaned HTML content.
+    
+    Parameters:
+        html_file_path (str): Path to the Medium-exported HTML file to parse.
+    
+    Returns:
+        dict: A mapping with the extracted article data:
+            - title (str): Article title (defaults to "Untitled" if not found).
+            - slug (str): URL-friendly slug generated from the title.
+            - date (str): Publication date in 'YYYY-MM-DD' format (defaults to current date on failure).
+            - category (str): Category inferred from title/content.
+            - excerpt (str): First paragraph text trimmed to ~160 characters.
+            - tags (list[str]): List of tag slugs (limited to 6); falls back to categorized tags when none are found.
+            - coverImage (str): URL of the first image found in the article HTML or empty string.
+            - content (str): Cleaned HTML content with an appended canonical-link note when available.
+        or None if the file cannot be parsed.
     """
     try:
         with open(html_file_path, 'r', encoding='utf-8') as f:
@@ -51,12 +132,23 @@ def extract_article_from_html(html_file_path):
         
         article_html = body_match.group(1)
         
+        # Extract canonical link (Medium article URL) from footer
+        # Try both attribute orders since they can vary
+        canonical_match = re.search(r'<a[^>]*href="([^"]+)"[^>]*class="p-canonical"', content)
+        if not canonical_match:
+            canonical_match = re.search(r'<a[^>]*class="p-canonical"[^>]*href="([^"]+)"', content)
+        canonical_url = canonical_match.group(1) if canonical_match else ""
+        
         # Extract first image for cover BEFORE cleaning
         img_match = re.search(r'<img[^>]*src="([^"]+)"[^>]*>', article_html)
         cover_image = img_match.group(1) if img_match else ""
         
         # Clean up the HTML - remove Medium-specific wrapper elements
         article_html = clean_medium_export_html(article_html, cover_image)
+        
+        # Add canonical link note at the end
+        if canonical_url:
+            article_html += f'\n\n<hr>\n\n<p><em>This article was originally published at <a href="{canonical_url}" target="_blank" rel="nofollow">{canonical_url}</a></em></p>'
         
         # Extract subtitle/excerpt from first paragraph or meta description
         excerpt_match = re.search(r'<p[^>]*>(.*?)</p>', article_html, re.DOTALL)
@@ -76,8 +168,12 @@ def extract_article_from_html(html_file_path):
             if tag_text:
                 tags.append(slugify(tag_text))
         
-        # Default category from first tag or default
-        category = tags[0] if tags else 'data-engineering'
+        # Determine category and tags based on title and content
+        category, default_tags = categorize_article(title, article_html)
+        
+        # If no tags were extracted from Medium, use the categorized tags
+        if not tags:
+            tags = default_tags
         
         return {
             'title': title,
@@ -85,7 +181,7 @@ def extract_article_from_html(html_file_path):
             'date': formatted_date,
             'category': category,
             'excerpt': excerpt,
-            'tags': tags[:6] if tags else ['data-engineering'],
+            'tags': tags[:6],
             'coverImage': cover_image,
             'content': article_html
         }

@@ -1,0 +1,72 @@
+<!DOCTYPE html><html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><title>Using SQLcl Bulk export Oracle table into CSV and load into GCS</title><style>
+      * {
+        font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+      }
+      html, body {
+        margin: 0;
+        padding: 0;
+      }
+      h1 {
+        font-size: 50px;
+        margin-bottom: 17px;
+        color: #333;
+      }
+      h2 {
+        font-size: 24px;
+        line-height: 1.6;
+        margin: 30px 0 0 0;
+        margin-bottom: 18px;
+        margin-top: 33px;
+        color: #333;
+      }
+      h3 {
+        font-size: 30px;
+        margin: 10px 0 20px 0;
+        color: #333;
+      }
+      header {
+        width: 640px;
+        margin: auto;
+      }
+      section {
+        width: 640px;
+        margin: auto;
+      }
+      section p {
+        margin-bottom: 27px;
+        font-size: 20px;
+        line-height: 1.6;
+        color: #333;
+      }
+      section img {
+        max-width: 640px;
+      }
+      footer {
+        padding: 0 20px;
+        margin: 50px 0;
+        text-align: center;
+        font-size: 12px;
+      }
+      .aspectRatioPlaceholder {
+        max-width: auto !important;
+        max-height: auto !important;
+      }
+      .aspectRatioPlaceholder-fill {
+        padding-bottom: 0 !important;
+      }
+      header,
+      section[data-field=subtitle],
+      section[data-field=description] {
+        display: none;
+      }
+      </style></head><body><article class="h-entry">
+<header>
+<h1 class="p-name">Using SQLcl Bulk export Oracle table into CSV and load into GCS</h1>
+</header>
+<section data-field="subtitle" class="p-summary">
+Oracle SQLcl
+</section>
+<section data-field="body" class="e-content">
+<section name="734c" class="section section--body section--first section--last"><div class="section-divider"><hr class="section-divider"></div><div class="section-content"><div class="section-inner sectionLayout--insetColumn"><h3 name="7c68" id="7c68" class="graf graf--h3 graf--leading graf--title">Using SQLcl Bulk export Oracle table into CSV and load into GCS</h3><figure name="cfcb" id="cfcb" class="graf graf--figure graf-after--h3"><img class="graf-image" data-image-id="1*5cXOVEilg0CpsL0mbuPJtQ.png" data-width="500" data-height="508" src="https://cdn-images-1.medium.com/max/800/1*5cXOVEilg0CpsL0mbuPJtQ.png"><figcaption class="imageCaption">Oracle SQLcl</figcaption></figure><p name="25bd" id="25bd" class="graf graf--p graf-after--figure">In this article I will explain how you can quickly download list of tables from Oracle database into csv format and copy them into google cloud store.</p><h3 name="ad7f" id="ad7f" class="graf graf--h3 graf-after--p">Required Software</h3><ul class="postList"><li name="b832" id="b832" class="graf graf--li graf-after--h3">gsutil: This is a command-line tool for interacting with GCS. You can download and install it from the <a href="https://cloud.google.com/sdk/docs/install" data-href="https://cloud.google.com/sdk/docs/install" class="markup--anchor markup--li-anchor" rel="nofollow noopener" target="_blank">Google Cloud SDK</a>.</li><li name="7ea1" id="7ea1" class="graf graf--li graf-after--li">SQLcl: This is a command-line interface for interacting with Oracle databases. You can download it from the <a href="https://www.oracle.com/database/technologies/appdev/sqlcl.html" data-href="https://www.oracle.com/database/technologies/appdev/sqlcl.html" class="markup--anchor markup--li-anchor" rel="nofollow noopener" target="_blank">Oracle Technology Network</a>.</li></ul><h3 name="fd22" id="fd22" class="graf graf--h3 graf-after--li">Instructions</h3><ol class="postList"><li name="a1fe" id="a1fe" class="graf graf--li graf-after--h3">Install gsutil and SQLcl on your local machine.</li><li name="2334" id="2334" class="graf graf--li graf-after--li">Create a bash script named <code class="markup--code markup--li-code">copy_tables_gcs.sh</code> in the <code class="markup--code markup--li-code">sqlcl/bin</code> folder of your local machine.</li><li name="97b1" id="97b1" class="graf graf--li graf-after--li">Add the following code to the <code class="markup--code markup--li-code">copy_tables_gcs.sh</code> script:</li></ol><pre data-code-block-mode="1" spellcheck="false" data-code-block-lang="bash" name="1d99" id="1d99" class="graf graf--pre graf-after--li graf--preV2"><span class="pre--content"><span class="hljs-meta">#!/bin/bash</span><br /><span class="hljs-keyword">while</span> <span class="hljs-built_in">read</span> value<br /><span class="hljs-keyword">do</span><br />    <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;Processing <span class="hljs-variable">$value</span>&quot;</span><br />    <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;SET TERM OFF&quot;</span> &gt; command.sql<br />    <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;SET FEED OFF&quot;</span> &gt;&gt; command.sql<br />    <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;SET SQLFORMAT CSV&quot;</span> &gt;&gt; command.sql<br />    <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;UNLOAD <span class="hljs-variable">$value</span>&quot;</span> &gt;&gt; command.sql<br />    <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;EXIT&quot;</span> &gt;&gt; command.sql<br />    <span class="hljs-built_in">wc</span> -l <span class="hljs-variable">$value</span>*.csv<br />    <span class="hljs-built_in">rm</span> -rf <span class="hljs-variable">$value</span>*.csv<br />    ./sql <span class="hljs-variable">$CONN_STR</span> @command.sql<br />    gsutil <span class="hljs-built_in">cp</span> <span class="hljs-variable">$value</span>*.csv <span class="hljs-variable">$GCS_BUCKET</span><br /><span class="hljs-keyword">done</span> &lt; table_list.txt</span></pre><p name="1c4c" id="1c4c" class="graf graf--p graf-after--pre">This script exports each table listed in the <code class="markup--code markup--p-code">table_list.txt</code> file to a CSV file, copies the CSV file to the specified GCS bucket, and deletes the local CSV file.</p><p name="8e01" id="8e01" class="graf graf--p graf-after--p">4. Create a file named <code class="markup--code markup--p-code">table_list.txt</code> in the <code class="markup--code markup--p-code">sqlcl/bin</code> folder and add the names of all the tables that need to be exported to CSV.</p><pre data-code-block-mode="1" spellcheck="false" data-code-block-lang="typescript" name="cf17" id="cf17" class="graf graf--pre graf-after--p graf--preV2"><span class="pre--content">table1<br />table2</span></pre><p name="75a4" id="75a4" class="graf graf--p graf-after--pre">5. Set the database connection details in an environment variable named <code class="markup--code markup--p-code">CONN_STR</code>.</p><pre data-code-block-mode="1" spellcheck="false" data-code-block-lang="ruby" name="ece4" id="ece4" class="graf graf--pre graf-after--p graf--preV2"><span class="pre--content">export <span class="hljs-variable constant_">CONN_STR</span>=username/password<span class="hljs-variable">@hostname</span><span class="hljs-symbol">:portnumber/service_name</span></span></pre><p name="0206" id="0206" class="graf graf--p graf-after--pre">6. Set the name of the GCS bucket in an environment variable named <code class="markup--code markup--p-code">GCS_BUCKET</code>.</p><pre data-code-block-mode="1" spellcheck="false" data-code-block-lang="bash" name="ed86" id="ed86" class="graf graf--pre graf-after--p graf--preV2"><span class="pre--content"><span class="hljs-built_in">export</span> GCS_BUCKET=your-bucket-name</span></pre><p name="3ed1" id="3ed1" class="graf graf--p graf-after--pre">7. Make the <code class="markup--code markup--p-code">copy_tables_gcs.sh</code> script executable.</p><pre data-code-block-mode="1" spellcheck="false" data-code-block-lang="bash" name="ef5c" id="ef5c" class="graf graf--pre graf-after--p graf--preV2"><span class="pre--content"><span class="hljs-built_in">chmod</span> 755 copy_tables_gcs.sh</span></pre><p name="2118" id="2118" class="graf graf--p graf-after--pre">8. Execute the <code class="markup--code markup--p-code">copy_tables_gcs.sh</code> script in the background using the following command:</p><pre data-code-block-mode="1" spellcheck="false" data-code-block-lang="bash" name="750b" id="750b" class="graf graf--pre graf-after--p graf--preV2"><span class="pre--content"><span class="hljs-built_in">nohup</span> ./copy_tables_gcs.sh &gt; one_time_copy.log 2&gt;&amp;1 &amp;</span></pre><p name="36c3" id="36c3" class="graf graf--p graf-after--pre graf--trailing">This command runs the script in the background, redirects the output to the <code class="markup--code markup--p-code">one_time_copy.log</code> file, and detaches the script from the terminal.</p></div></div></section>
+</section>
+<footer><p>By <a href="https://medium.com/@aradsouza" class="p-author h-card">Alwyn DSouza</a> on <a href="https://medium.com/p/a5b784ac3bdf"><time class="dt-published" datetime="2023-08-16T11:55:37.368Z">August 16, 2023</time></a>.</p><p><a href="https://medium.com/@aradsouza/using-sqlcl-bulk-export-oracle-table-into-csv-and-load-into-gcs-a5b784ac3bdf" class="p-canonical">Canonical link</a></p><p>Exported from <a href="https://medium.com">Medium</a> on March 8, 2026.</p></footer></article></body></html>
