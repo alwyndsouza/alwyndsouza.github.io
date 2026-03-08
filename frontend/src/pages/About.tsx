@@ -3,49 +3,57 @@ export function About() {
     <div className="container mx-auto px-4 py-12">
       <div className="max-w-3xl mx-auto prose prose-lg dark:prose-invert">
         <h1 className="text-4xl font-bold mb-2">About</h1>
-        <p className="text-muted-foreground text-lg mb-8">Who I am and what I work on.</p>
-
-        <p>
-          I'm Alwyn Dsouza, a Lead Data Engineer based in Australia. I design and build
-          data platforms that help organisations move from raw data to reliable, actionable
-          insights at scale.
+        <p className="text-muted-foreground text-lg mb-8">
+          Data Engineer • DataOps Practitioner • Builder
         </p>
 
         <p>
-          My work sits at the intersection of data engineering, DataOps, and applied AI —
-          building systems that are reproducible, observable, and easy to operate.
+          I'm <strong>Alwyn Dsouza</strong>, a DataOps Engineer based in Australia. I design and
+          build modern data platforms that help organisations turn raw data into reliable,
+          well-governed, and actionable insights.
         </p>
 
-        <h2>What I Work With</h2>
-        <ul>
-          <li><strong>Lakehouse platforms</strong> — Databricks, Delta Lake, Apache Spark</li>
-          <li><strong>Transformation</strong> — dbt Core and dbt Cloud, SQL modelling patterns</li>
-          <li><strong>Orchestration</strong> — Apache Airflow, Databricks Workflows</li>
-          <li><strong>DataOps</strong> — CI/CD for data, data quality frameworks, observability</li>
-          <li><strong>AI & LLMs</strong> — building agentic workflows, RAG pipelines, LLM tooling</li>
-          <li><strong>Cloud</strong> — AWS, Azure</li>
-          <li><strong>Languages</strong> — Python, SQL, Bash</li>
-        </ul>
-
-        <h2>Writing</h2>
         <p>
-          I write to document patterns I use in production and ideas worth exploring. Topics
-          include dbt best practices, AI agent design, trading models, and technical experiments.
+          My work focuses on building scalable <strong>lakehouse architectures</strong> and
+          establishing strong <strong>DataOps practices</strong> that make data platforms
+          reproducible, observable, and easy to operate. I enjoy solving problems at the
+          intersection of <strong>data engineering, platform engineering, and applied AI</strong>.
         </p>
 
-        <h2>Outside Work</h2>
         <p>
-          I follow macro economics and markets closely, applying systematic frameworks like
-          the Wyckoff Method to equity and crypto markets. I also build small side projects
-          at the intersection of finance and engineering.
+          Over the years I’ve worked on designing data platforms, building data mesh architectures, migrating legacy SQL pipelines
+          into modern transformation frameworks, implementing CI/CD for data, and enabling 
+          analytics teams to work faster with trusted data.
         </p>
 
-        <h2>Get in Touch</h2>
+        <h2>Writing & Projects</h2>
         <p>
-          Find me on{' '}
-          <a href="https://github.com/alwyndsouza" target="_blank" rel="noopener noreferrer">GitHub</a>
-          {' '}or{' '}
-          <a href="https://linkedin.com/in/alwyndsouza" target="_blank" rel="noopener noreferrer">LinkedIn</a>.
+          This site is where I document patterns, experiments, and ideas from my work. I also share technical projects,
+          reference architectures, and lessons learned from building production systems.
+        </p>
+
+        <h2>Interests Outside Engineering</h2>
+        <p>
+          Outside of engineering, I follow macroeconomics and financial markets closely.
+          I'm particularly interested in market structure and frameworks such as the
+          <strong> Wyckoff Method, Elliot Waves, Dow Theory </strong>, and I occasionally build small tools and models
+          related to market analysis as a hobby. I also enjoy reading on topics related to market structure, trading psychology, and macroeconomics.
+        </p>
+
+        <h2>Connect</h2>
+        <p>
+          Find my work on{" "}
+          <a href="https://github.com/alwyndsouza" target="_blank" rel="noopener noreferrer">
+            GitHub
+          </a>{" "}
+          or connect with me on{" "}
+          <a
+            href="https://www.linkedin.com/in/alwynanildsouza/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            LinkedIn
+          </a>.
         </p>
       </div>
     </div>
