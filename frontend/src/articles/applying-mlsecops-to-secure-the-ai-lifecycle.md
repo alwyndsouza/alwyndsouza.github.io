@@ -11,9 +11,113 @@ tags:
   - ai
 coverImage: "https://cdn-images-1.medium.com/max/800/1*kJUMN-egi9uFh8fd8rHdhQ.png"
 ---
+The proliferation of Artificial Intelligence (AI) and Machine Learning (ML) across enterprise environments necessitates a dedicated, rigorous security strategy. MLSecOps (Machine Learning Security Operations) provides the necessary framework to embed security throughout the entire AI lifecycle, ensuring systems are resilient, trustworthy, and compliant.
 
-<p>The proliferation of Artificial Intelligence (AI) and Machine Learning (ML) across enterprise environments necessitates a dedicated, rigorous security strategy. MLSecOps (Machine Learning Security Operations) provides the necessary framework to embed security throughout the entire AI lifecycle, ensuring systems are resilient, trustworthy, and compliant.</p><p>This article details how MLSecOps aligns with established risk management standards and outlines the practical steps for integrating security, from strategic threat modeling to secure deployment.</p><h3>Integrating MLSecOps with the NIST AI Risk Management Framework (AI RMF)</h3><p>Effective AI governance is anchored in continuous risk management. The <strong>National Institute of Standards and Technology (NIST) AI Risk Management Framework (AI RMF)</strong> offers a structured approach that perfectly complements MLSecOps practices. This framework is built upon four core, continuous functions: <strong>Map, Measure, Manage, and Govern</strong>.</p><p>NIST provides a companion <strong>AI RMF Playbook</strong> to guide organizations in practical adoption, demonstrating that combining the core functions of the AI RMF with MLSecOps principles is essential for building robust, risk-managed AI capabilities.</p><h3>Analyzing AI Attack Vectors and Vulnerabilities</h3><p>The introduction of AI and ML creates new attack surface areas that are not adequately addressed by traditional cybersecurity frameworks. Organizations must categorize these threats to deploy appropriate defenses.</p><p>NIST classifies attacks on machine learning into two broad categories:</p><ol><li><strong>Attacks on Predictive AI (Pred-AI):</strong> Systems that analyze historical data to find patterns and forecast potential outcomes (e.g., fraud detection, stock valuation).</li><li><strong>Attacks on Generative AI (Gen-AI):</strong> Systems that ingest data to generate new content (e.g., Large Language Models (LLMs), image generators).</li></ol><p>A prominent threat to Gen-AI is <strong>Prompt Injection Attacks</strong>, which subvert the model’s guardrails or intended function:</p><ul><li><strong>Direct Prompt Injection:</strong> The adversary inputs a prompt designed to bypass system restrictions. The “Grandma Jailbreak” is a classic example, where a request framed as an innocuous story (e.g., a bedtime tale about a secret recipe) tricks the AI into revealing sensitive information it was trained to withhold.</li><li><strong>Indirect Prompt Injection:</strong> An attacker provides malicious input to System A, which is then processed by the targeted System B. For instance, malicious, invisible text embedded in a webpage can be parsed by an LLM that is being trained on or interacting with that page, causing the AI to later output the attacker’s instruction as fact.</li></ul><p>These sophisticated vectors underscore the necessity of integrating security practices directly into the ML lifecycle, moving beyond reactive, perimeter-based security.</p><h3>The MLSecOps Approach to Threat Modeling</h3><p><strong>Threat modeling</strong> is a crucial, iterative activity for risk management, providing a strong foundation for understanding exposures and their potential organizational impacts. For AI/ML systems, the process must be customized to account for data, model, and lifecycle complexities.</p><h3>Customizing the AI/ML Threat Model</h3><p>Unlike traditional DevSecOps, where training on live or production data is typically discouraged, it is often a <strong>requirement</strong> for ML. Therefore, customized threat models must shift focus from data inclusion risk to <strong>data provenance</strong> and <strong>integrity</strong>:</p><img src="https://cdn-images-1.medium.com/max/800/1*bmmrzDkPKh0Xp-56sc8_mg.png" alt="" /><p>Creating effective, AI-aware threat models requires incorporating specific threats related to the technology itself. Common categories of concern include: <strong>Technique and Processes, Accessibility, Identifiability and Linkability, Security and Safety, Ethics and Human Rights, and Compliance.</strong></p><h3>Strategic Threat Analysis</h3><p>While customized models focus on technical components, <strong>strategic threat models</strong> address the business risks that span organizational units, ecosystems, or impact the target operating model.</p><p>Strategic MLSecOps threat models define and address business threats influenced by AI/ML deployment, taking into account:</p><ul><li><strong>Resource Risks:</strong> Given the novelty of MLSecOps, the inability to <strong>staff and manage</strong> a critical AI/ML launch (a resource-related risk) represents a significant threat to the project’s success.</li><li><strong>Legal and Regulatory Risks:</strong> What sectoral regulations apply (e.g., healthcare, finance)?</li><li><strong>Business Consequence:</strong> What is the financial and <strong>reputational impact</strong> if the AI fails to complete a core customer transaction?</li></ul><p>Reviewing both strategic and technical threats ensures that deployed AI/ML solutions are robustly secured and aligned with overarching business objectives.</p><h3>Ensuring Adversarial Robustness and Secure Deployment</h3><p>Threat modeling provides the inputs for creating test plans and strategies to verify that AI/ML systems are <strong>robust and resilient</strong> against intentional and unintentional failures.</p><h3>Adversarial Training and Robustness</h3><p>Intentional failures, known as <strong>adversarial attacks</strong>, occur when an attacker exploits a system vulnerability. An <strong>evasion attack</strong>, for example, involves slightly modifying the input of a trained model to cause misclassification (e.g., manipulating a stop sign image to be interpreted as a yield sign).</p><p><strong>Adversarial training</strong> is the key defense mechanism. This technique involves emulating real-world malicious activity within a <strong>sandboxed environment</strong> to observe system performance under attack.</p><ul><li><strong>Perturbation Techniques:</strong> Trainers introduce controlled <strong>perturbations</strong> (noise) to the training data. For instance, changing a few pixels in an image can shift the classification outcome. By integrating these adversarial samples into the training data, engineers increase the model’s <strong>robustness and accuracy</strong> even when facing malicious inputs.</li></ul><p>Investing in adversarial training fortifies defenses, ensuring reliable AI/ML performance even under duress.</p><h3>Secure Model Deployment and Continuous Monitoring</h3><p>Once the model has passed rigorous testing, the final phases of the MLSecOps lifecycle are executed: <strong>Release, Deploy, Operate, and Monitor.</strong></p><ol><li><strong>Release:</strong> This is the final gate. The MLSecOps team confirms performance, validates compliance, and may apply digital signing. The <strong>ML-BOM (Machine Learning Bill of Materials)</strong> is generated, documenting all components for supply chain visibility.</li><li><strong>Deploy:</strong> Models become available in production with security policies enforced. Using <strong>Policy as Code</strong> (e.g., OPA), security policies can automatically manage risks — for instance, removing all instances of a model from production if it is flagged as insecure.</li><li><strong>Operate:</strong> Models are protected via controls like <strong>rate limiting</strong> to manage requests and prevent <strong>DDoS</strong> attacks. Access controls and segmentation are reviewed and refined based on operational data.</li><li><strong>Monitor:</strong> Models are <strong>dynamic</strong> and can experience <strong>drift or decay</strong> — a gradual loss of accuracy over time. Continuous monitoring detects this degradation, providing valuable insights for <strong>retraining or adjustment</strong>. This monitoring closes the MLSecOps loop, feeding real-world data back into the planning phase to continuously improve the security posture.</li></ol><p>By strategically applying MLSecOps principles throughout the AI lifecycle, organizations can ensure the creation of secure, compliant, and efficient AI/ML applications, effectively managing the unique risks associated with this transformative technology.</p><h3>References and Further Reading</h3><p>For those looking to dive deeper into the frameworks and tools discussed, the following resources provide detailed guidance for implementing a robust MLSecOps program:</p><p><strong>NIST AI Risk Management Framework (AI RMF 1.0) — </strong>The core framework detailing the Map, Measure, Manage, and Govern functions for deploying trustworthy and responsible AI systems.</p><p><a href="https://nvlpubs.nist.gov/nistpubs/ai/nist.ai.100-1.pdf" rel="noopener" target="_blank">Download the NIST AI RMF 1.0 (PDF)</a></p><p><strong>NIST AI RMF Playbook</strong></p><p>Companion resource to the RMF, offering actionable advice and constructive guidance for putting the framework’s concepts into practice.</p><p><a href="https://www.nist.gov/itl/ai-risk-management-framework/nist-ai-rmf-playbook" rel="noopener" target="_blank">Access the NIST AI RMF Playbook</a></p><p><strong>Microsoft: Threat Modeling AI/ML Systems and Dependencies</strong></p><p>A comprehensive article detailing how to approach threat modeling specifically for AI and ML components, including data, model, and infrastructure risks.</p><p><a href="https://learn.microsoft.com/en-us/security/engineering/threat-modeling-aiml" rel="noopener" target="_blank">Read the Microsoft Article</a></p><p><strong>OWASP Top 10 for Large Language Model Applications (LLMs)</strong></p><p>A project by the Open Web Application Security Project (OWASP) detailing the most critical security vulnerabilities unique to LLM-based applications.</p><p><a href="https://owasp.org/www-project-top-10-for-large-language-model-applications/" rel="noopener" target="_blank">View the OWASP LLM Top 10</a></p><p><strong>PLOT4ai: Quick Assessment Tool (Online)</strong></p><p>An online resource that offers a quick assessment feature for users to conduct threat models focusing on ML-specific lifecycle phases and relevant categories.</p><p><a href="https://plot4.ai/assessments/plot4ai" rel="noopener" target="_blank">Explore PLOT4ai Threat Assessment</a></p>
+This article details how MLSecOps aligns with established risk management standards and outlines the practical steps for integrating security, from strategic threat modeling to secure deployment.
 
-<hr>
+### Integrating MLSecOps with the NIST AI Risk Management Framework (AI RMF)
 
-<p><em>This article was originally published at <a href="https://medium.com/@aradsouza/applying-mlsecops-to-secure-the-ai-lifecycle-be6e0acf9679" target="_blank" rel="nofollow">https://medium.com/@aradsouza/applying-mlsecops-to-secure-the-ai-lifecycle-be6e0acf9679</a></em></p>
+Effective AI governance is anchored in continuous risk management. The **National Institute of Standards and Technology (NIST) AI Risk Management Framework (AI RMF)** offers a structured approach that perfectly complements MLSecOps practices. This framework is built upon four core, continuous functions: **Map, Measure, Manage, and Govern**.
+
+NIST provides a companion **AI RMF Playbook** to guide organizations in practical adoption, demonstrating that combining the core functions of the AI RMF with MLSecOps principles is essential for building robust, risk-managed AI capabilities.
+
+### Analyzing AI Attack Vectors and Vulnerabilities
+
+The introduction of AI and ML creates new attack surface areas that are not adequately addressed by traditional cybersecurity frameworks. Organizations must categorize these threats to deploy appropriate defenses.
+
+NIST classifies attacks on machine learning into two broad categories:
+
+1. **Attacks on Predictive AI (Pred-AI):** Systems that analyze historical data to find patterns and forecast potential outcomes (e.g., fraud detection, stock valuation).
+2. **Attacks on Generative AI (Gen-AI):** Systems that ingest data to generate new content (e.g., Large Language Models (LLMs), image generators).
+
+A prominent threat to Gen-AI is **Prompt Injection Attacks**, which subvert the model’s guardrails or intended function:
+
+* **Direct Prompt Injection:** The adversary inputs a prompt designed to bypass system restrictions. The “Grandma Jailbreak” is a classic example, where a request framed as an innocuous story (e.g., a bedtime tale about a secret recipe) tricks the AI into revealing sensitive information it was trained to withhold.
+* **Indirect Prompt Injection:** An attacker provides malicious input to System A, which is then processed by the targeted System B. For instance, malicious, invisible text embedded in a webpage can be parsed by an LLM that is being trained on or interacting with that page, causing the AI to later output the attacker’s instruction as fact.
+
+These sophisticated vectors underscore the necessity of integrating security practices directly into the ML lifecycle, moving beyond reactive, perimeter-based security.
+
+### The MLSecOps Approach to Threat Modeling
+
+**Threat modeling** is a crucial, iterative activity for risk management, providing a strong foundation for understanding exposures and their potential organizational impacts. For AI/ML systems, the process must be customized to account for data, model, and lifecycle complexities.
+
+### Customizing the AI/ML Threat Model
+
+Unlike traditional DevSecOps, where training on live or production data is typically discouraged, it is often a **requirement** for ML. Therefore, customized threat models must shift focus from data inclusion risk to **data provenance** and **integrity**:
+
+![](https://cdn-images-1.medium.com/max/800/1*bmmrzDkPKh0Xp-56sc8_mg.png)
+
+Creating effective, AI-aware threat models requires incorporating specific threats related to the technology itself. Common categories of concern include: **Technique and Processes, Accessibility, Identifiability and Linkability, Security and Safety, Ethics and Human Rights, and Compliance.**
+
+### Strategic Threat Analysis
+
+While customized models focus on technical components, **strategic threat models** address the business risks that span organizational units, ecosystems, or impact the target operating model.
+
+Strategic MLSecOps threat models define and address business threats influenced by AI/ML deployment, taking into account:
+
+* **Resource Risks:** Given the novelty of MLSecOps, the inability to **staff and manage** a critical AI/ML launch (a resource-related risk) represents a significant threat to the project’s success.
+* **Legal and Regulatory Risks:** What sectoral regulations apply (e.g., healthcare, finance)?
+* **Business Consequence:** What is the financial and **reputational impact** if the AI fails to complete a core customer transaction?
+
+Reviewing both strategic and technical threats ensures that deployed AI/ML solutions are robustly secured and aligned with overarching business objectives.
+
+### Ensuring Adversarial Robustness and Secure Deployment
+
+Threat modeling provides the inputs for creating test plans and strategies to verify that AI/ML systems are **robust and resilient** against intentional and unintentional failures.
+
+### Adversarial Training and Robustness
+
+Intentional failures, known as **adversarial attacks**, occur when an attacker exploits a system vulnerability. An **evasion attack**, for example, involves slightly modifying the input of a trained model to cause misclassification (e.g., manipulating a stop sign image to be interpreted as a yield sign).
+
+**Adversarial training** is the key defense mechanism. This technique involves emulating real-world malicious activity within a **sandboxed environment** to observe system performance under attack.
+
+* **Perturbation Techniques:** Trainers introduce controlled **perturbations** (noise) to the training data. For instance, changing a few pixels in an image can shift the classification outcome. By integrating these adversarial samples into the training data, engineers increase the model’s **robustness and accuracy** even when facing malicious inputs.
+
+Investing in adversarial training fortifies defenses, ensuring reliable AI/ML performance even under duress.
+
+### Secure Model Deployment and Continuous Monitoring
+
+Once the model has passed rigorous testing, the final phases of the MLSecOps lifecycle are executed: **Release, Deploy, Operate, and Monitor.**
+
+1. **Release:** This is the final gate. The MLSecOps team confirms performance, validates compliance, and may apply digital signing. The **ML-BOM (Machine Learning Bill of Materials)** is generated, documenting all components for supply chain visibility.
+2. **Deploy:** Models become available in production with security policies enforced. Using **Policy as Code** (e.g., OPA), security policies can automatically manage risks — for instance, removing all instances of a model from production if it is flagged as insecure.
+3. **Operate:** Models are protected via controls like **rate limiting** to manage requests and prevent **DDoS** attacks. Access controls and segmentation are reviewed and refined based on operational data.
+4. **Monitor:** Models are **dynamic** and can experience **drift or decay** — a gradual loss of accuracy over time. Continuous monitoring detects this degradation, providing valuable insights for **retraining or adjustment**. This monitoring closes the MLSecOps loop, feeding real-world data back into the planning phase to continuously improve the security posture.
+
+By strategically applying MLSecOps principles throughout the AI lifecycle, organizations can ensure the creation of secure, compliant, and efficient AI/ML applications, effectively managing the unique risks associated with this transformative technology.
+
+### References and Further Reading
+
+For those looking to dive deeper into the frameworks and tools discussed, the following resources provide detailed guidance for implementing a robust MLSecOps program:
+
+**NIST AI Risk Management Framework (AI RMF 1.0) —**The core framework detailing the Map, Measure, Manage, and Govern functions for deploying trustworthy and responsible AI systems.
+
+[Download the NIST AI RMF 1.0 (PDF)](https://nvlpubs.nist.gov/nistpubs/ai/nist.ai.100-1.pdf)
+
+**NIST AI RMF Playbook**
+
+Companion resource to the RMF, offering actionable advice and constructive guidance for putting the framework’s concepts into practice.
+
+[Access the NIST AI RMF Playbook](https://www.nist.gov/itl/ai-risk-management-framework/nist-ai-rmf-playbook)
+
+**Microsoft: Threat Modeling AI/ML Systems and Dependencies**
+
+A comprehensive article detailing how to approach threat modeling specifically for AI and ML components, including data, model, and infrastructure risks.
+
+[Read the Microsoft Article](https://learn.microsoft.com/en-us/security/engineering/threat-modeling-aiml)
+
+**OWASP Top 10 for Large Language Model Applications (LLMs)**
+
+A project by the Open Web Application Security Project (OWASP) detailing the most critical security vulnerabilities unique to LLM-based applications.
+
+[View the OWASP LLM Top 10](https://owasp.org/www-project-top-10-for-large-language-model-applications/)
+
+**PLOT4ai: Quick Assessment Tool (Online)**
+
+An online resource that offers a quick assessment feature for users to conduct threat models focusing on ML-specific lifecycle phases and relevant categories.
+
+[Explore PLOT4ai Threat Assessment](https://plot4.ai/assessments/plot4ai)
+
+---
+
+*This article was originally published at <https://medium.com/@aradsouza/applying-mlsecops-to-secure-the-ai-lifecycle-be6e0acf9679>*

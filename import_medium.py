@@ -6,6 +6,36 @@ import time
 from datetime import datetime
 import html
 import json
+from markdownify import markdownify as md_convert
+
+
+def html_to_markdown(html_content):
+    """
+    Convert HTML content to clean markdown.
+
+    Parameters:
+        html_content (str): HTML string to convert.
+
+    Returns:
+        str: Converted markdown string.
+    """
+    result = md_convert(
+        html_content,
+        heading_style="ATX",
+        bullets="*",
+        newline_style="backslash",
+        strip=["span"],
+    )
+    # Collapse 3+ blank lines to 2
+    result = re.sub(r"\n{3,}", "\n\n", result)
+    # Fix escaped hyphens/dots that markdownify over-escapes
+    result = result.replace(r"\-", "-")
+    result = result.replace(r"\.", ".")
+    # Remove backslash line-continuations inside fenced code blocks
+    def fix_codeblock(m):
+        return m.group(0).replace("\\\n", "\n")
+    result = re.sub(r"```[\s\S]*?```", fix_codeblock, result)
+    return result.strip()
 
 def slugify(text):
     """
@@ -228,24 +258,34 @@ def extract_metadata():
         excerpt = text_content[:160].strip().replace('\n', ' ')
         if len(text_content) > 160:
             excerpt += "..."
-        
+
+        # Convert HTML body to markdown
+        content_markdown = html_to_markdown(content_cleaned)
+
+        # Append canonical link footer in markdown format
+        if link:
+            content_markdown += f'\n\n---\n\n*This article was originally published at <{link}>*'
+
         # Small delay to avoid rate limiting
         time.sleep(1)
 
-        md_content = f"""---
-title: "{title.replace('"', '\\"')}"
-slug: "{slug}"
-date: {formatted_date}
-category: "{category}"
-excerpt: "{excerpt.replace('"', '\\"')}"
-published: true
-tags:
-{chr(10).join([f"  - {tag}" for tag in categories])}
-coverImage: "{cover_image_url}"
----
-
-{content_cleaned}
-"""
+        safe_title = title.replace('"', '\\"')
+        safe_excerpt = excerpt.replace('"', '\\"')
+        tags_yaml = "\n".join([f"  - {tag}" for tag in categories])
+        md_content = (
+            f'---\n'
+            f'title: "{safe_title}"\n'
+            f'slug: "{slug}"\n'
+            f'date: {formatted_date}\n'
+            f'category: "{category}"\n'
+            f'excerpt: "{safe_excerpt}"\n'
+            f'published: true\n'
+            f'tags:\n'
+            f'{tags_yaml}\n'
+            f'coverImage: "{cover_image_url}"\n'
+            f'---\n\n'
+            f'{content_markdown}\n'
+        )
         with open(f"frontend/src/articles/{slug}.md", 'w', encoding='utf-8') as f:
             f.write(md_content)
         print(f"Created article: {title}")

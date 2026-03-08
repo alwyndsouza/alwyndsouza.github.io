@@ -11,9 +11,98 @@ tags:
   - ci-cd
 coverImage: "https://cdn-images-1.medium.com/max/800/1*A-Fzxw5CFSD89Zk8MNQbUA.png"
 ---
+I was recently buiding a docker images for dbt-databricks and even through I used the slim version of the python image the size of the overall docker image was close to 1GB which not very convincing.
 
-<p>I was recently buiding a docker images for dbt-databricks and even through I used the slim version of the python image the size of the overall docker image was close to 1GB which not very convincing.</p><p>Did the following improvements on my docker file to reduce the size of the image drastically and achive around 40% reduction.</p><p><strong>Original image size without any improvements</strong></p><p><code>FROM python:3.11-slim-bullseye</code></p><img src="https://cdn-images-1.medium.com/max/800/1*sBNXYopvrnGwJlb5bjQ6hQ.png" alt="" /><ol><li><strong>Removed unnecessary package install which reduced the size massively.</strong></li></ol><blockquote>Original code</blockquote><pre spellcheck="false">RUN apt-get update &amp;&amp; apt-get install -qq -y --no-install-recommends \<br /> git gcc build-essential libpq-dev ca-certificates --fix-missing --no-install-recommends \ <br /> &amp;&amp; update-ca-certificates</pre><blockquote>After changes</blockquote><pre spellcheck="false">RUN apt-get update &amp;&amp; apt-get install -qq -y --no-install-recommends \<br /> &amp;&amp; update-ca-certificates</pre><img src="https://cdn-images-1.medium.com/max/800/1*5-CL9JJB8PCHYXTSg7E00g.png" alt="" /><p><strong>2. Removed all the packages downloaded for OS</strong></p><blockquote><em>rm -rf /var/lib/apt/lists/* <br>apt-get clean</em></blockquote><pre spellcheck="false">RUN apt-get update &amp;&amp; apt-get install -qq -y --no-install-recommends \<br /> &amp;&amp; update-ca-certificates -v \<br /> &amp;&amp; rm -rf /var/lib/apt/lists/* \<br /> &amp;&amp; apt-get clean</pre><img src="https://cdn-images-1.medium.com/max/800/1*iEMhdBAcSmYTFcNohHVOEg.png" alt="" /><p><strong>3. Cleared pip cache</strong></p><blockquote><em>pip cache clear</em></blockquote><pre spellcheck="false">RUN pip install -r requirements.txt \<br /> &amp;&amp; pip cache purge</pre><img src="https://cdn-images-1.medium.com/max/800/1*RdYihaRtkHJbxKa9ohxRtg.png" alt="" /><p>By making small changes to the images we were able to reduce the overall size from 915.44mb to 544.58mb which is about 370.86mb, and 40% reduction in size.</p><p><strong>Modified docker file.</strong></p><pre spellcheck="false">##<br /># base image (abstract)<br />##<br />FROM python:3.11-slim-bullseye<br /><br />LABEL maintainer=&quot;emp0&quot;<br /><br /># Env vars<br />ENV PYTHONIOENCODING=utf-8<br />ENV LANG=C.UTF-8<br /><br />WORKDIR /usr/src/dbt<br /><br /># Add trusted hosts for pip install<br />RUN pip config set global.trusted-host \<br /> &quot;pypi.org files.pythonhosted.org pypi.python.org&quot;<br /><br /># Install OS dependencies<br />RUN apt-get update &amp;&amp; apt-get install -qq -y --no-install-recommends \<br /> &amp;&amp; update-ca-certificates -v \<br /> &amp;&amp; rm -rf /var/lib/apt/lists/* \<br /> &amp;&amp; apt-get clean<br /><br /># Make sure we are using latest pip<br />RUN pip install --upgrade pip<br /><br /># Copy requirements.txt<br />COPY requirements.txt requirements.txt<br /><br /># Install dependencies<br />RUN pip install -r requirements.txt \<br /> &amp;&amp; pip cache purge<br /><br />CMD dbt deps &amp;&amp; sleep infinity</pre>
+Did the following improvements on my docker file to reduce the size of the image drastically and achive around 40% reduction.
 
-<hr>
+**Original image size without any improvements**
 
-<p><em>This article was originally published at <a href="https://medium.com/@aradsouza/how-did-i-gain-40-reduction-of-docker-image-269a62412e13" target="_blank" rel="nofollow">https://medium.com/@aradsouza/how-did-i-gain-40-reduction-of-docker-image-269a62412e13</a></em></p>
+`FROM python:3.11-slim-bullseye`
+
+![](https://cdn-images-1.medium.com/max/800/1*sBNXYopvrnGwJlb5bjQ6hQ.png)
+
+1. **Removed unnecessary package install which reduced the size massively.**
+
+> Original code
+
+```
+RUN apt-get update && apt-get install -qq -y --no-install-recommends \
+ git gcc build-essential libpq-dev ca-certificates --fix-missing --no-install-recommends \ 
+ && update-ca-certificates
+```
+
+> After changes
+
+```
+RUN apt-get update && apt-get install -qq -y --no-install-recommends \
+ && update-ca-certificates
+```
+
+![](https://cdn-images-1.medium.com/max/800/1*5-CL9JJB8PCHYXTSg7E00g.png)
+
+**2. Removed all the packages downloaded for OS**
+
+> *rm -rf /var/lib/apt/lists/\* \
+> apt-get clean*
+
+```
+RUN apt-get update && apt-get install -qq -y --no-install-recommends \
+```
+
+![](https://cdn-images-1.medium.com/max/800/1*iEMhdBAcSmYTFcNohHVOEg.png)
+
+**3. Cleared pip cache**
+
+> *pip cache clear*
+
+```
+RUN pip install -r requirements.txt \
+ && pip cache purge
+```
+
+![](https://cdn-images-1.medium.com/max/800/1*RdYihaRtkHJbxKa9ohxRtg.png)
+
+By making small changes to the images we were able to reduce the overall size from 915.44mb to 544.58mb which is about 370.86mb, and 40% reduction in size.
+
+**Modified docker file.**
+
+```
+##
+# base image (abstract)
+##
+FROM python:3.11-slim-bullseye
+
+LABEL maintainer="emp0"
+
+# Env vars
+ENV PYTHONIOENCODING=utf-8
+ENV LANG=C.UTF-8
+
+WORKDIR /usr/src/dbt
+
+# Add trusted hosts for pip install
+RUN pip config set global.trusted-host \
+ "pypi.org files.pythonhosted.org pypi.python.org"
+
+# Install OS dependencies
+RUN apt-get update && apt-get install -qq -y --no-install-recommends \
+ && update-ca-certificates -v \
+ && rm -rf /var/lib/apt/lists/* \
+ && apt-get clean
+
+# Make sure we are using latest pip
+RUN pip install --upgrade pip
+
+# Copy requirements.txt
+COPY requirements.txt requirements.txt
+
+# Install dependencies
+RUN pip install -r requirements.txt \
+ && pip cache purge
+
+CMD dbt deps && sleep infinity
+```
+
+---
+
+*This article was originally published at <https://medium.com/@aradsouza/how-did-i-gain-40-reduction-of-docker-image-269a62412e13>*

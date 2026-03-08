@@ -11,9 +11,178 @@ tags:
   - analytics
 coverImage: "https://cdn-images-1.medium.com/max/800/1*EPqCAu7uGLmID-SMC58qgg.png"
 ---
+After working extensively with dbt in production environments across multiple organisations, I have compiled this expanded set of gold standards for dbt that have consistently saved time, reduced errors, and made data teams more efficient.
 
-<p>After working extensively with dbt in production environments across multiple organisations, I have compiled this expanded set of gold standards for dbt that have consistently saved time, reduced errors, and made data teams more efficient.</p><h3>1. Use ref() function</h3><p>This is dbt’s secret sauce! It lets dbt handle model dependencies and ensures correct build order. The <code>ref()</code> function creates a dependency graph that dbt uses to determine which models to build and in what order. This prevents the classic &quot;table doesn&#39;t exist&quot; errors and ensures your transformations run smoothly.</p><pre spellcheck="false">-- Instead of hardcoding table references:<br />SELECT * FROM raw_data.customer_orders<br /><br />-- Use ref() to let dbt manage dependencies:<br />SELECT * FROM {{ ref(&#x27;stg_customer_orders&#x27;) }}</pre><h3>2. Isolate Source Data Touchpoints</h3><p>Implement a dedicated staging layer as the single access point for raw data. This creates a clean separation between raw data and your transformations, making it easier to adapt when source systems change. When source systems changes, you will only need to update models in your staging layer rather than throughout your entire project.</p><p>Create staging models that:</p><ul><li>Standardise field naming conventions</li><li>Handle data type conversions</li><li>Implement basic quality filters</li><li>Document field definitions and business context</li></ul><h3>3. Implement Source-to-Business Layer Separation</h3><p>Establish clear boundaries between different types of transformation logic. Separate source-focused operations (cleaning and standardizing raw data) from business-oriented transformations (metrics calculations and business rule implementation). A typical architecture includes:</p><ul><li><strong>Sources</strong>: Original data from your warehouse</li><li><strong>Staging</strong>: Cleansed data with consistent structure</li><li><strong>Intermediate</strong>: Joined and aggregated staging models</li><li><strong>Marts</strong>: Business domain-specific models ready for analytics</li></ul><p>This separation enhances code organization and helps team members understand data lineage more intuitively.</p><h3>4. Select Appropriate Materialization Strategies</h3><p>Each materialization type offers distinct tradeoffs. Views deploy quickly but may perform poorly for complex queries. Tables provide faster query performance but require full rebuilds. Incremental models balance performance and build time with additional complexity. Match each model’s materialization to its specific usage patterns:</p><ul><li><strong>Views</strong>: For exploration or infrequently accessed data</li><li><strong>Tables</strong>: For computationally intensive or commonly queried models</li><li><strong>Incremental</strong>: For large datasets with regular updates</li><li><strong>Ephemeral</strong>: For intermediary transformations that don’t need persistence</li></ul><h3>5. Breakdown Large Models Into Modular Components</h3><p>Prioritise smaller, focused models over monolithic queries. Modular design improves testability, readability, and maintenance. When individual components handle specific transformation tasks, debugging becomes simpler and code reusability increases across your project.</p><p>Consider refactoring any SQL file exceeding a few hundred lines or containing numerous CTEs into multiple interconnected models.</p><h3>6. Implement Logical Directory Organization</h3><p>Thoughtful project structure dramatically improves navigation and maintenance. Organize directories by functional purpose rather than business domains to promote reusability. I have found that categorising by transformation stage — staging, intermediate, and mart models — creates a natural progression that mirrors data flow:</p><pre spellcheck="false">models/<br />├── staging/ # One directory per source system<br />│ ├── salesforce/<br />│ └── shopify/<br />├── intermediate/ # Joined/cleaned models<br />└── marts/ # Business-domain oriented<br /> ├── marketing/<br /> ├── finance/<br /> └── product/</pre><h3>7. Configure Permissions Through Model Definitions</h3><p>Manage access control directly within model configurations to prevent security incidents. This declarative approach ensures that appropriate permissions get applied automatically whenever models are created or updated, eliminating manual permission management and reducing security gaps.</p><pre spellcheck="false">models:<br /> - name: sensitive_customer_data<br /> config:<br /> grants:<br /> select: [&#x27;analyst_role&#x27;, &#x27;data_scientist_role&#x27;]</pre><h3>8. Implement Comprehensive Testing</h3><p>Develop a robust testing strategy incorporating schema tests, data quality checks, and business logic validation. Effective testing prevents downstream issues by catching problems early in the development cycle. At minimum, implement tests that verify:</p><ul><li>Primary key uniqueness</li><li>Referential integrity between models</li><li>Non-null constraints for required fields</li><li>Adherence to business rules and assumptions</li></ul><h3>9. Prioritise Thorough Documentation</h3><p>Invest in comprehensive documentation that contextualises your models and explains their purpose. Leverage dbt’s built-in documentation capabilities to describe models, columns, and relationships. Well-documented projects reduce onboarding time and help all team members understand the data ecosystem.</p><pre spellcheck="false">models:<br /> - name: orders<br /> description: &quot;Refined order data including customer information&quot;<br /> columns:<br /> - name: order_id<br /> description: &quot;Unique identifier for each order&quot;<br /> tests:<br /> - unique<br /> - not_null<br /> - name: customer_id<br /> description: &quot;References the customer who placed the order&quot;<br /> tests:<br /> - relationships:<br /> to: ref(&#x27;customers&#x27;)<br /> field: id</pre><h3>10. Implement Environment-Specific Configuration</h3><p>Use dbt’s environment targeting to create different behaviors in development versus production. This approach solves common challenges like keeping development fast and lightweight while ensuring production runs are optimised for performance and reduce the compute costs.</p><p><strong>Real-world example:</strong> When working locally, you might want to:</p><ul><li>Use smaller data samples</li><li>Build models as views for faster iteration</li><li>Use less compute power to save costs</li></ul><pre spellcheck="false"># In your dbt_project.yml<br />models:<br /> +materialized: table # Default for all models<br /> <br /> my_project:<br /> # Dev environment configurations<br /> +schema: &quot;{{ &#x27;dev_&#x27; + env_var(&#x27;DBT_USER&#x27;, &#x27;default&#x27;) if target.name == &#x27;dev&#x27; else &#x27;prod&#x27; }}&quot;<br /> finance_models:<br /> # Use views in dev, tables in prod<br /> +materialized: &quot;{{ &#x27;view&#x27; if target.name == &#x27;dev&#x27; else &#x27;table&#x27; }}&quot;<br /> # Only process 7 days of data in dev, full dataset in prod<br /> vars:<br /> lookback_days: &quot;{{ 7 if target.name == &#x27;dev&#x27; else 90 }}&quot;</pre><p>Then in your SQL models, leverage these variables:</p><pre spellcheck="false">SELECT * <br />FROM {{ ref(&#x27;raw_transactions&#x27;) }}<br />WHERE transaction_date &gt;= DATEADD(day, -{{ var(&#x27;lookback_days&#x27;) }}, CURRENT_DATE())</pre><p>This approach dramatically speeds up development cycles while maintaining full data coverage in production.</p><h3>11. Establish CI/CD Workflows</h3><p>Integrate dbt into continuous integration pipelines to automate validation before deploying to production:</p><ul><li>Verify syntax correctness with <code>dbt compile</code></li><li>Confirm data quality through <code>dbt test</code></li><li>Generate and review documentation changes</li><li>Implement slim CI to selectively test modified models</li></ul><p>These practices significantly reduce production incidents while accelerating development cycles.</p><h3>12. Implement Version Control Discipline</h3><p>Adopt Git or an equivalent version control system as a foundation for collaborative development. This provides:</p><ul><li>Comprehensive change history</li><li>Rollback capabilities for problematic changes</li><li>Structured collaboration through pull requests</li><li>Code review processes that improve overall quality</li></ul><p>The combination of version control and CI/CD creates a development workflow that scales effectively with team growth.</p><h3><strong>References</strong></h3><p><a href="https://medium.com/@aradsouza/understanding-dbt-modelling-layers-and-their-purpose-ff393e96d83a" rel="nofollow" target="_blank">https://medium.com/@aradsouza/understanding-dbt-modelling-layers-and-their-purpose-ff393e96d83a</a></p>
+### 1. Use ref() function
 
-<hr>
+This is dbt’s secret sauce! It lets dbt handle model dependencies and ensures correct build order. The `ref()` function creates a dependency graph that dbt uses to determine which models to build and in what order. This prevents the classic "table doesn't exist" errors and ensures your transformations run smoothly.
 
-<p><em>This article was originally published at <a href="https://medium.com/@aradsouza/12-gold-standards-for-dbt-success-1de5f9e50f66" target="_blank" rel="nofollow">https://medium.com/@aradsouza/12-gold-standards-for-dbt-success-1de5f9e50f66</a></em></p>
+```
+-- Instead of hardcoding table references:
+SELECT * FROM raw_data.customer_orders
+
+-- Use ref() to let dbt manage dependencies:
+SELECT * FROM {{ ref('stg_customer_orders') }}
+```
+
+### 2. Isolate Source Data Touchpoints
+
+Implement a dedicated staging layer as the single access point for raw data. This creates a clean separation between raw data and your transformations, making it easier to adapt when source systems change. When source systems changes, you will only need to update models in your staging layer rather than throughout your entire project.
+
+Create staging models that:
+
+* Standardise field naming conventions
+* Handle data type conversions
+* Implement basic quality filters
+* Document field definitions and business context
+
+### 3. Implement Source-to-Business Layer Separation
+
+Establish clear boundaries between different types of transformation logic. Separate source-focused operations (cleaning and standardizing raw data) from business-oriented transformations (metrics calculations and business rule implementation). A typical architecture includes:
+
+* **Sources**: Original data from your warehouse
+* **Staging**: Cleansed data with consistent structure
+* **Intermediate**: Joined and aggregated staging models
+* **Marts**: Business domain-specific models ready for analytics
+
+This separation enhances code organization and helps team members understand data lineage more intuitively.
+
+### 4. Select Appropriate Materialization Strategies
+
+Each materialization type offers distinct tradeoffs. Views deploy quickly but may perform poorly for complex queries. Tables provide faster query performance but require full rebuilds. Incremental models balance performance and build time with additional complexity. Match each model’s materialization to its specific usage patterns:
+
+* **Views**: For exploration or infrequently accessed data
+* **Tables**: For computationally intensive or commonly queried models
+* **Incremental**: For large datasets with regular updates
+* **Ephemeral**: For intermediary transformations that don’t need persistence
+
+### 5. Breakdown Large Models Into Modular Components
+
+Prioritise smaller, focused models over monolithic queries. Modular design improves testability, readability, and maintenance. When individual components handle specific transformation tasks, debugging becomes simpler and code reusability increases across your project.
+
+Consider refactoring any SQL file exceeding a few hundred lines or containing numerous CTEs into multiple interconnected models.
+
+### 6. Implement Logical Directory Organization
+
+Thoughtful project structure dramatically improves navigation and maintenance. Organize directories by functional purpose rather than business domains to promote reusability. I have found that categorising by transformation stage — staging, intermediate, and mart models — creates a natural progression that mirrors data flow:
+
+```
+models/
+├── staging/ # One directory per source system
+│ ├── salesforce/
+│ └── shopify/
+├── intermediate/ # Joined/cleaned models
+└── marts/ # Business-domain oriented
+ ├── marketing/
+ ├── finance/
+ └── product/
+```
+
+### 7. Configure Permissions Through Model Definitions
+
+Manage access control directly within model configurations to prevent security incidents. This declarative approach ensures that appropriate permissions get applied automatically whenever models are created or updated, eliminating manual permission management and reducing security gaps.
+
+```
+models:
+ - name: sensitive_customer_data
+ config:
+ grants:
+ select: ['analyst_role', 'data_scientist_role']
+```
+
+### 8. Implement Comprehensive Testing
+
+Develop a robust testing strategy incorporating schema tests, data quality checks, and business logic validation. Effective testing prevents downstream issues by catching problems early in the development cycle. At minimum, implement tests that verify:
+
+* Primary key uniqueness
+* Referential integrity between models
+* Non-null constraints for required fields
+* Adherence to business rules and assumptions
+
+### 9. Prioritise Thorough Documentation
+
+Invest in comprehensive documentation that contextualises your models and explains their purpose. Leverage dbt’s built-in documentation capabilities to describe models, columns, and relationships. Well-documented projects reduce onboarding time and help all team members understand the data ecosystem.
+
+```
+models:
+ - name: orders
+ description: "Refined order data including customer information"
+ columns:
+ - name: order_id
+ description: "Unique identifier for each order"
+ tests:
+ - unique
+ - not_null
+ - name: customer_id
+ description: "References the customer who placed the order"
+ tests:
+ - relationships:
+ to: ref('customers')
+ field: id
+```
+
+### 10. Implement Environment-Specific Configuration
+
+Use dbt’s environment targeting to create different behaviors in development versus production. This approach solves common challenges like keeping development fast and lightweight while ensuring production runs are optimised for performance and reduce the compute costs.
+
+**Real-world example:** When working locally, you might want to:
+
+* Use smaller data samples
+* Build models as views for faster iteration
+* Use less compute power to save costs
+
+```
+# In your dbt_project.yml
+models:
+ +materialized: table # Default for all models
+ 
+ my_project:
+ # Dev environment configurations
+ +schema: "{{ 'dev_' + env_var('DBT_USER', 'default') if target.name == 'dev' else 'prod' }}"
+ finance_models:
+ # Use views in dev, tables in prod
+ +materialized: "{{ 'view' if target.name == 'dev' else 'table' }}"
+ # Only process 7 days of data in dev, full dataset in prod
+ vars:
+ lookback_days: "{{ 7 if target.name == 'dev' else 90 }}"
+```
+
+Then in your SQL models, leverage these variables:
+
+```
+SELECT * 
+FROM {{ ref('raw_transactions') }}
+WHERE transaction_date >= DATEADD(day, -{{ var('lookback_days') }}, CURRENT_DATE())
+```
+
+This approach dramatically speeds up development cycles while maintaining full data coverage in production.
+
+### 11. Establish CI/CD Workflows
+
+Integrate dbt into continuous integration pipelines to automate validation before deploying to production:
+
+* Verify syntax correctness with `dbt compile`
+* Confirm data quality through `dbt test`
+* Generate and review documentation changes
+* Implement slim CI to selectively test modified models
+
+These practices significantly reduce production incidents while accelerating development cycles.
+
+### 12. Implement Version Control Discipline
+
+Adopt Git or an equivalent version control system as a foundation for collaborative development. This provides:
+
+* Comprehensive change history
+* Rollback capabilities for problematic changes
+* Structured collaboration through pull requests
+* Code review processes that improve overall quality
+
+The combination of version control and CI/CD creates a development workflow that scales effectively with team growth.
+
+### **References**
+
+<https://medium.com/@aradsouza/understanding-dbt-modelling-layers-and-their-purpose-ff393e96d83a>
+
+---
+
+*This article was originally published at <https://medium.com/@aradsouza/12-gold-standards-for-dbt-success-1de5f9e50f66>*

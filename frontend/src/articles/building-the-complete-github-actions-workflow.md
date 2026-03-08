@@ -11,9 +11,8 @@ tags:
   - ci-cd
 coverImage: ""
 ---
+*Article 5 of 5: Building a Production-Ready dbt CI/CD Pipeline*
 
-<p><em>Article 5 of 5: Building a Production-Ready dbt CI/CD Pipeline</em></p>
+---
 
-<hr>
-
-<p><em>This article was originally published at <a href="https://medium.com/@aradsouza/building-the-complete-github-actions-workflow-f9d7be5268ef" target="_blank" rel="nofollow">https://medium.com/@aradsouza/building-the-complete-github-actions-workflow-f9d7be5268ef</a></em></p>
+*This article was originally published at <https://medium.com/@aradsouza/building-the-complete-github-actions-workflow-f9d7be5268ef>*

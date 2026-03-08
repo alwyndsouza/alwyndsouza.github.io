@@ -3,6 +3,36 @@ import re
 import html
 from datetime import datetime
 from pathlib import Path
+from markdownify import markdownify as md_convert
+
+
+def html_to_markdown(html_content):
+    """
+    Convert HTML content to clean markdown.
+
+    Parameters:
+        html_content (str): HTML string to convert.
+
+    Returns:
+        str: Converted markdown string.
+    """
+    result = md_convert(
+        html_content,
+        heading_style="ATX",
+        bullets="*",
+        newline_style="backslash",
+        strip=["span"],
+    )
+    # Collapse 3+ blank lines to 2
+    result = re.sub(r"\n{3,}", "\n\n", result)
+    # Fix escaped hyphens/dots that markdownify over-escapes
+    result = result.replace(r"\-", "-")
+    result = result.replace(r"\.", ".")
+    # Remove backslash line-continuations inside fenced code blocks
+    def fix_codeblock(m):
+        return m.group(0).replace("\\\n", "\n")
+    result = re.sub(r"```[\s\S]*?```", fix_codeblock, result)
+    return result.strip()
 
 def slugify(text):
     """
@@ -146,10 +176,16 @@ def extract_article_from_html(html_file_path):
         # Clean up the HTML - remove Medium-specific wrapper elements
         article_html = clean_medium_export_html(article_html, cover_image)
         
-        # Add canonical link note at the end
-        if canonical_url:
-            article_html += f'\n\n<hr>\n\n<p><em>This article was originally published at <a href="{canonical_url}" target="_blank" rel="nofollow">{canonical_url}</a></em></p>'
+        # Store canonical URL for later markdown footer
+        article_data_canonical = canonical_url
         
+        # Convert HTML body to markdown
+        article_markdown = html_to_markdown(article_html)
+
+        # Append canonical link footer in markdown format
+        if article_data_canonical:
+            article_markdown += f'\n\n---\n\n*This article was originally published at <{article_data_canonical}>*'
+
         # Extract subtitle/excerpt from first paragraph or meta description
         excerpt_match = re.search(r'<p[^>]*>(.*?)</p>', article_html, re.DOTALL)
         if excerpt_match:
@@ -183,7 +219,7 @@ def extract_article_from_html(html_file_path):
             'excerpt': excerpt,
             'tags': tags[:6],
             'coverImage': cover_image,
-            'content': article_html
+            'content': article_markdown
         }
         
     except Exception as e:
@@ -316,20 +352,23 @@ def process_medium_export(export_dir='medium-export/posts'):
             continue
         
         # Generate markdown content
-        md_content = f"""---
-title: "{article_data['title'].replace('"', '\\"')}"
-slug: "{article_data['slug']}"
-date: {article_data['date']}
-category: "{article_data['category']}"
-excerpt: "{article_data['excerpt'].replace('"', '\\"')}"
-published: true
-tags:
-{chr(10).join([f"  - {tag}" for tag in article_data['tags']])}
-coverImage: "{article_data['coverImage']}"
----
-
-{article_data['content']}
-"""
+        safe_title = article_data['title'].replace('"', '\\"')
+        safe_excerpt = article_data['excerpt'].replace('"', '\\"')
+        tags_yaml = "\n".join([f"  - {tag}" for tag in article_data['tags']])
+        md_content = (
+            f'---\n'
+            f'title: "{safe_title}"\n'
+            f'slug: "{article_data["slug"]}"\n'
+            f'date: {article_data["date"]}\n'
+            f'category: "{article_data["category"]}"\n'
+            f'excerpt: "{safe_excerpt}"\n'
+            f'published: true\n'
+            f'tags:\n'
+            f'{tags_yaml}\n'
+            f'coverImage: "{article_data["coverImage"]}"\n'
+            f'---\n\n'
+            f'{article_data["content"]}\n'
+        )
         
         # Write markdown file
         output_path = f"frontend/src/articles/{article_data['slug']}.md"

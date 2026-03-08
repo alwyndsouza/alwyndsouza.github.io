@@ -11,9 +11,407 @@ tags:
   - automation
 coverImage: "https://cdn-images-1.medium.com/max/800/1*Ut1y6-pyIMKka2cwZ5ADtw.png"
 ---
+### Part 2: How Context-Aware AI Transforms Code Reviews
 
-<h3>Part 2: How Context-Aware AI Transforms Code Reviews</h3><p>In Part 1, we explored why code reviews have become such a bottleneck and why standard AI tools don’t solve the problem. Now let’s talk about what actually works: teaching AI to understand your specific context.</p><ul><li><a href="https://aradsouza.medium.com/the-code-review-bottleneck-nobody-talks-about-4e601a3e556f" rel="noopener" target="_blank">Part 1: The Code Review Bottleneck Nobody Talks About</a></li><li><a href="https://medium.com/@aradsouza/teaching-ai-to-understand-your-codebase-8e95865ebffc" rel="noopener" target="_blank">Part 2: Teaching AI to Understand Your Codebase (deep dive on instruction writing)</a></li><li><a href="https://medium.com/@aradsouza/building-context-aware-ai-for-your-team-cc808474ed6f" rel="noopener" target="_blank">Part 3: Building Context-Aware AI for Your Team (detailed implementation guide)</a></li></ul><p>The results speak for themselves:</p><ul><li>PR review time: <strong>2–4 days → 1–2 hours</strong> (75% reduction)</li><li>Pre-commit failures: <strong>35% → 7%</strong> (80% reduction)</li><li>Revision cycles: <strong>2–4 → 1–2</strong> per PR (48% reduction)</li><li>Test coverage: <strong>60% → 92%</strong> (+32 points)</li><li>Documentation compliance: <strong>45% → 88%</strong> (+43 points)</li><li>Standards adherence: <strong>70% → 100%</strong> (+30 points)</li></ul><p>These aren’t projections. This is what happened when we implemented context-aware AI on a real data engineering project with dozens of developers and hundreds of models.</p><h3>The breakthrough: Custom Instructions</h3><p>The solution came from a feature that many people overlook: GitHub Copilot’s Custom Instructions. Specifically, the ability to create instruction files in your repository that Copilot reads before every interaction.</p><p>Think of it like this: if Copilot is a brilliant new team member who knows everything about software engineering in general, Custom Instructions are the onboarding documents that teach them how <em>your</em> team specifically works.</p><p>There are two approaches to organizing instructions:</p><p><strong>Repository-wide</strong> (simpler, works everywhere):</p><pre spellcheck="false">.github/<br />└── copilot-instructions.md</pre><p><strong>Path-specific</strong> (advanced, more granular control):</p><pre spellcheck="false">.github/<br />├── copilot-instructions.md<br />└── instructions/<br /> ├── dbt.instructions.md<br /> ├── airflow.instructions.md<br /> └── glue.instructions.md</pre><p><strong>Start with repository-wide.</strong> It works in all IDEs (VS Code, Visual Studio, JetBrains, Xcode, GitHub CLI). Path-specific instructions currently work best in VS Code and GitHub.com for Copilot Coding Agent and Code Review features.</p><p>But the real magic isn’t in the folder structure — it’s in what you put into those files and how you structure the knowledge.</p><img src="https://cdn-images-1.medium.com/max/800/1*qu3gu91frT_Y6kWJrnIu5w.png" alt="" /><h3>What makes this different from documentation</h3><p>You might be thinking: “We already have documentation. We have wiki pages and README files. Why is this different?”</p><p>Here’s why:</p><p><strong>Documentation is passive.</strong> It sits there waiting for someone to search for it, find it, read it, remember it, and apply it. Custom Instructions are active. They’re automatically applied every time Copilot reviews code.</p><p><strong>Documentation gets outdated.</strong> That wiki page written two years ago? Nobody’s sure if it still applies. Custom Instructions live in your repo. They’re versioned. They evolve with your code.</p><p><strong>Documentation is scattered.</strong> Best practices for data models are in one place, testing standards are somewhere else, deployment patterns are in a different wiki entirely. Custom Instructions consolidate what matters for each context.</p><p><strong>Documentation doesn’t teach — it tells.</strong> Custom Instructions can include examples, explanations of why certain patterns exist, and guidance on common mistakes. They’re pedagogical, not just informational.</p><p><strong>Nobody reads documentation consistently.</strong> Be honest — when was the last time you read your team’s entire wiki before starting work? Custom Instructions are consumed by AI that <em>does</em> read them consistently, every single time.</p><h3>The anatomy of effective Custom Instructions</h3><p>Let’s break down what actually goes into these files. I’ll use a data engineering context as an example, but the principles apply to any domain with established patterns.</p><h3>The orchestrator file</h3><p>The main <code>copilot-instructions.md</code> acts as a routing layer. It tells Copilot how to think about the codebase:</p><pre spellcheck="false"># Project Context for Code Reviews<br />This repository contains data transformation pipelines built with <br />multiple technologies. When reviewing code, apply the appropriate <br />technology-specific guidelines.<br /><br /><br />## Technology Stack<br />- Data transformation: dbt (see dbt.instructions.md)<br />- Orchestration: Airflow (see airflow.instructions.md)<br />- Serverless processing: AWS Lambda (see lambda.instructions.md)<br />- ETL jobs: AWS Glue (see glue.instructions.md)<br /><br /><br />## General Principles<br />- All code must be tested<br />- All code must be documented<br />- Configuration over hardcoding<br />- Fail fast with clear error messages</pre><p>This gives Copilot a map of the landscape and points it toward more specific guidance.</p><h3>Technology-specific instruction files</h3><p>This is where the real knowledge lives. A <code>dbt.instructions.md</code> file might contain:</p><pre spellcheck="false"># dbt Model Standards## Staging Models<br />Staging models extract and lightly transform data from sources.<br /><br />### Required Patterns<br />1. **Incremental Strategy**<br /> - All staging models must be incremental<br /> - Must include delete_old_records pre-hook<br /> - Example:<br />```sql<br /> {{ config(<br /> materialized=&#x27;incremental&#x27;,<br /> unique_key=&#x27;id&#x27;,<br /> pre_hook=[<br /> &quot;{{ delete_old_staging_records() }}&quot;<br /> ]<br /> ) }}<br />```<br />2. **Source Deduplication**<br /> - Models loading from certain sources must deduplicate<br /> - Use dbt_utils.deduplicate() with appropriate unique key<br /> - Why: Source systems may contain duplicate records<br /> <br />3. **Primary Key Requirements**<br /> - Every staging model must have a unique_key<br /> - Must include tests: unique, not_null<br /> - Example:<br />```yaml<br /> - name: stg_model_name<br /> columns:<br /> - name: id<br /> tests:<br /> - unique<br /> - not_null<br />```<br />### Common Mistakes<br />- Forgetting pre-hooks on incremental models<br />- Using SELECT * (must specify columns explicitly)<br />- Missing tests on primary keys<br />- Hardcoding table names instead of using source() macro<br />### Why These Patterns Exist<br />- Pre-hooks prevent data duplication in incremental loads<br />- Explicit column selection makes schema changes visible<br />- Primary key tests catch data quality issues early</pre><p>Notice what this includes:</p><ul><li><strong>Required patterns</strong> with specific code examples</li><li><strong>Explanations</strong> of why patterns exist</li><li><strong>Common mistakes</strong> to watch for</li><li><strong>Examples</strong> of correct and incorrect code</li></ul><p>This isn’t just rules — it’s teaching.</p><h3>Path-specific instructions (advanced)</h3><img src="https://cdn-images-1.medium.com/max/800/1*CkIUYU3NtGTTuuVAQQjx3A.png" alt="" /><p>For more granular control, you can create instruction files that apply only to specific file types or directories. These require YAML frontmatter with an <code>applyTo</code> field:</p><pre spellcheck="false">---<br />applyTo:<br /> - &quot;models/**/*.sql&quot;<br /> - &quot;**/*.sql&quot;<br />---<br /># SQL Model Standards<br />These instructions apply only to SQL files in the models directory.<br />## Required Patterns<br />[Your specific SQL instructions here]<br /><br /></pre><p>The <code>applyTo</code> field uses glob syntax:</p><ul><li><code>**/*.sql</code> - All SQL files anywhere</li><li><code>models/**/*</code> - All files under models/</li></ul><p><strong>When to use path-specific instructions:</strong></p><ul><li>Different standards for different file types</li><li>Technology-specific rules (SQL vs Python vs YAML)</li><li>Test files vs production code requirements</li><li>Legacy code vs new code standards</li></ul><p><strong>Important:</strong> Path-specific instructions currently work best in VS Code and GitHub.com. For maximum compatibility, start with repository-wide instructions.</p><h3>The three-tier approach to instructions</h3><p>We found that instructions work best when organized in three tiers:</p><h3>Tier 1: Critical Rules</h3><p>These are non-negotiable. Missing them means the code doesn’t work or creates serious problems. Flag these as CRITICAL in your instructions.</p><p>Example: “CRITICAL: All incremental models must include the delete_old_records pre-hook. Missing this will cause data duplication.”</p><h3>Tier 2: Standards and Best Practices</h3><p>These are strongly recommended patterns that ensure consistency and quality. Flag these as WARNING.</p><p>Example: “WARNING: Models should specify columns explicitly rather than using SELECT *. This makes schema changes visible in PR diffs.”</p><h3>Tier 3: Suggestions and Improvements</h3><p>These are nice-to-haves that improve code quality but aren’t blockers. Flag these as INFO or SUGGESTION.</p><p>Example: “SUGGESTION: Consider extracting this complex CTE into an intermediate model for better maintainability.”</p><p>This tiered approach helps developers prioritize what to fix and helps reviewers understand what really matters.</p><h3>From generic to specific: A real example</h3><p>Let me show you the difference between generic AI feedback and context-aware feedback on the same piece of code.</p><p><strong>The code:</strong> A staging model that’s functionally correct but non-compliant with standards.</p><pre spellcheck="false">-- stg_customer_assets.sql<br />SELECT *<br />FROM raw.customer_assets<br />WHERE updated_at &gt; &#x27;2024-01-01&#x27;</pre><p><strong>Generic Copilot review:</strong></p><ul><li>“Consider adding comments to explain the date filter”</li><li>“The SELECT * pattern could be replaced with explicit columns”</li></ul><p><strong>Context-aware Copilot review:</strong></p><ul><li>🚨 CRITICAL: “Missing incremental materialization config and delete_old_records pre-hook. This will cause data duplication on subsequent runs.”</li><li>🚨 CRITICAL: “Must use source() macro instead of hardcoded table name ‘raw.customer_assets’”</li><li>⚠️ WARNING: “SELECT * is not allowed. Must specify columns explicitly.”</li><li>⚠️ WARNING: “Missing unique and not_null tests on primary key”</li><li>⚠️ WARNING: “No deduplication step. Customer assets may contain duplicates from the source system.”</li><li>ℹ️ INFO: “Missing model description in schema.yml”</li></ul><p>See the difference? Generic feedback is about code style. Context-aware feedback is about your specific architecture and standards.</p><h3>The transformation in practice</h3><p>Let’s walk through a realistic scenario to see how this changes the development workflow.</p><h3>Before: The manual review gauntlet</h3><p><strong>Monday 9 AM:</strong> Developer submits PR for new staging model. Code works, tests pass locally.</p><p><strong>Tuesday 3 PM:</strong> Reviewer finally gets to the PR. Leaves comments:</p><ul><li>“Missing pre-hook. See our staging model standards.”</li><li>“Need to add deduplication. Check the wiki.”</li><li>“Where are the PK tests?”</li></ul><p><strong>Wednesday 10 AM:</strong> Developer reads feedback, searches wiki, finds outdated page, asks in Slack for clarification.</p><p><strong>Wednesday 3 PM:</strong> Makes changes, pushes update.</p><p><strong>Thursday 11 AM:</strong> Reviewer checks again, finds new issues:</p><ul><li>“Wrong deduplication key — should use composite key”</li><li>“Still need documentation”</li></ul><p><strong>Friday 9 AM:</strong> Another revision.</p><p><strong>Friday 4 PM:</strong> Finally approved after multiple cycles.</p><p><strong>Total time:</strong> 4 days of calendar time, multiple context switches, frustration on both sides.</p><h3>After: The context-aware workflow</h3><p><strong>Monday 9 AM:</strong> Developer starts writing the staging model.</p><p><strong>Monday 9:15 AM:</strong> Uses Copilot in IDE, which suggests config based on custom instructions. Developer accepts, gets it right the first time.</p><p><strong>Monday 10 AM:</strong> Submits PR. Asks Copilot to review before requesting human review.</p><p><strong>Monday 10:02 AM:</strong> Copilot flags three issues with specific guidance. Developer fixes immediately.</p><p><strong>Monday 10:30 AM:</strong> Requests human review.</p><p><strong>Monday 11 AM:</strong> Human reviewer sees Copilot’s feedback was addressed, focuses on business logic review.</p><p><strong>Monday 11:30 AM:</strong> Approved.</p><p><strong>Total time:</strong> 2.5 hours, single cycle, minimal friction.</p><h3>What changed beyond the speed</h3><p>The quantitative improvements are impressive, but the qualitative changes matter just as much:</p><p><strong>Reviewer fatigue vanished.</strong> When you don’t have to mentally check the same twenty requirements on every PR, you have energy left for things that actually require human judgment — architectural decisions, business logic, edge cases.</p><p><strong>Developers learned faster.</strong> Instead of waiting days for feedback, they get instant, specific, actionable guidance. They start internalizing the patterns. New team members come up to speed in weeks instead of months.</p><p><strong>Standards became consistent.</strong> Human reviewers are variable — we have good days and bad days, and we emphasize different things. Context-aware Copilot enforces standards consistently every single time.</p><p><strong>The conversation shifted.</strong> Code review comments moved from “you forgot to add this boilerplate” to “have we considered this alternative approach for handling edge cases?” The human reviewer became an enabler focused on value-add feedback.</p><p><strong>Onboarding accelerated.</strong> New developers get real-time teaching about patterns and standards. They don’t just fix issues — they understand why certain patterns exist.</p><h3>The self-reinforcing cycle</h3><p>Here’s something unexpected: context-aware AI creates a positive feedback loop.</p><p>When initial code quality goes up (because developers are getting real-time guidance), human reviewers have more time and energy. When reviewers have more capacity, they can provide better strategic feedback. When developers get better strategic feedback, they improve further.</p><p>We saw a virtuous cycle:</p><ol><li>Copilot catches compliance issues instantly</li><li>Developers fix them before human review</li><li>Human reviewers focus on architecture and logic</li><li>Developers learn better patterns from strategic feedback</li><li>Code quality improves beyond just compliance</li><li>The bar raises for everyone</li></ol><p>Within a few weeks, developers started taking more pride in their initial submissions. They knew Copilot would catch basic issues, so they made sure to get those right before even asking for AI review. The overall craftsmanship of the codebase improved.</p><h3>The hidden benefit: Living documentation</h3><p>Something we didn’t anticipate: the custom instruction files became our best documentation.</p><p>When new team members join, we tell them to read the instruction files. They’re more useful than our old wiki pages because they’re:</p><ul><li><strong>Focused:</strong> Only what matters for each technology</li><li><strong>Up-to-date:</strong> Changed with the code they describe</li><li><strong>Actionable:</strong> Not just descriptions but specific patterns to follow</li><li><strong>Example-rich:</strong> Show don’t just tell</li></ul><p>The instructions also expose inconsistencies in our own thinking. Writing things down precisely forces you to confront ambiguities. We discovered we had some “standards” that were actually just preferences of whoever was reviewing that day. Codifying them made us more consistent.</p><h3>Why context is everything</h3><p>The fundamental insight here is that generic AI is powerful but limited. It becomes transformative when you give it specific context.</p><p>Think about the knowledge that exists in your team:</p><ul><li>The incident three years ago that taught you why certain patterns matter</li><li>The architectural decisions documented in RFC #47 that nobody remembers</li><li>The unwritten rules that everyone “just knows” after a year on the team</li><li>The common mistakes that new developers always make</li></ul><p>This knowledge has been expensive to accumulate. It’s locked in senior engineers’ heads. New team members learn it slowly through osmosis and trial and error.</p><p>Custom Instructions are a way to unlock that knowledge and make it instantly accessible to everyone — through an AI intermediary that applies it consistently, every time, at exactly the moment it’s needed.</p><h3>What this means for your team</h3><p>The pattern we’ve described isn’t specific to data engineering or dbt. It works for any domain with:</p><ul><li>Established patterns and standards</li><li>Multiple technologies in a stack</li><li>Team-specific architectural decisions</li><li>Accumulated wisdom about what works</li><li>A need for consistency across many contributors</li></ul><p>That includes:</p><ul><li>Infrastructure as code (Terraform, CloudFormation)</li><li>Backend services with specific patterns</li><li>Frontend applications with design systems</li><li>Mobile apps with platform-specific guidelines</li><li>DevOps pipelines with security requirements</li></ul><p>Anywhere you have knowledge that needs to be applied consistently but is currently trapped in people’s heads — that’s where context-aware AI can help.</p><h3>The investment required</h3><p>Let’s be practical about what this actually takes to implement.</p><p><strong>Initial time investment:</strong> Expect 20–40 hours to create comprehensive instructions for your main technology stack. This is writing, example-finding, and refining based on real code.</p><p><strong>Ongoing maintenance:</strong> Perhaps 2–3 hours per month as you refine based on usage, add new patterns, and update for changes.</p><p><strong>The hard part:</strong> You need someone with deep domain knowledge to write these. You can’t outsource it to someone who doesn’t understand your systems. The value comes from encoding genuine expertise.</p><p><strong>The easy part:</strong> The technical implementation is trivial. Create some markdown files. Commit them to your repo. Done.</p><p>Compare this to the cost of slow code reviews: if each delayed PR costs even one day of developer time, and you have dozens of PRs per sprint, the ROI is enormous.</p><p>But beyond the economics, there’s the morale improvement from unblocking developers and reducing reviewer fatigue. That doesn’t show up in a spreadsheet, but it matters enormously.</p><h3>Looking ahead</h3><p>In Part 3, we’ll cover the practical implementation: exactly how to structure your instruction files, how to test and refine them, how to roll them out to your team, and how to measure the impact.</p><p>We’ll also address the limitations and challenges — this isn’t magic, and there are real constraints on what context-aware AI can and cannot do.</p><p>But the core insight remains: the difference between generic AI and transformative AI is context. The teams that figure out how to encode their expertise into AI systems will have a significant advantage.</p><p><strong>Want to go deeper?</strong></p><p>Go through the three-part series:</p><ul><li><a href="https://aradsouza.medium.com/the-code-review-bottleneck-nobody-talks-about-4e601a3e556f" rel="noopener" target="_blank">Part 1: The Code Review Bottleneck Nobody Talks About</a></li><li><a href="https://medium.com/@aradsouza/teaching-ai-to-understand-your-codebase-8e95865ebffc" target="_blank">Part 2: Teaching AI to Understand Your Codebase (deep dive on instruction writing)</a></li><li><a href="https://medium.com/@aradsouza/building-context-aware-ai-for-your-team-cc808474ed6f" target="_blank">Part 3: Building Context-Aware AI for Your Team (detailed implementation guide)</a></li></ul>
+In Part 1, we explored why code reviews have become such a bottleneck and why standard AI tools don’t solve the problem. Now let’s talk about what actually works: teaching AI to understand your specific context.
 
-<hr>
+* [Part 1: The Code Review Bottleneck Nobody Talks About](https://aradsouza.medium.com/the-code-review-bottleneck-nobody-talks-about-4e601a3e556f)
+* [Part 2: Teaching AI to Understand Your Codebase (deep dive on instruction writing)](https://medium.com/@aradsouza/teaching-ai-to-understand-your-codebase-8e95865ebffc)
+* [Part 3: Building Context-Aware AI for Your Team (detailed implementation guide)](https://medium.com/@aradsouza/building-context-aware-ai-for-your-team-cc808474ed6f)
 
-<p><em>This article was originally published at <a href="https://medium.com/@aradsouza/teaching-ai-to-understand-your-codebase-8e95865ebffc" target="_blank" rel="nofollow">https://medium.com/@aradsouza/teaching-ai-to-understand-your-codebase-8e95865ebffc</a></em></p>
+The results speak for themselves:
+
+* PR review time: **2–4 days → 1–2 hours** (75% reduction)
+* Pre-commit failures: **35% → 7%** (80% reduction)
+* Revision cycles: **2–4 → 1–2** per PR (48% reduction)
+* Test coverage: **60% → 92%** (+32 points)
+* Documentation compliance: **45% → 88%** (+43 points)
+* Standards adherence: **70% → 100%** (+30 points)
+
+These aren’t projections. This is what happened when we implemented context-aware AI on a real data engineering project with dozens of developers and hundreds of models.
+
+### The breakthrough: Custom Instructions
+
+The solution came from a feature that many people overlook: GitHub Copilot’s Custom Instructions. Specifically, the ability to create instruction files in your repository that Copilot reads before every interaction.
+
+Think of it like this: if Copilot is a brilliant new team member who knows everything about software engineering in general, Custom Instructions are the onboarding documents that teach them how *your* team specifically works.
+
+There are two approaches to organizing instructions:
+
+**Repository-wide** (simpler, works everywhere):
+
+```
+.github/
+└── copilot-instructions.md
+```
+
+**Path-specific** (advanced, more granular control):
+
+```
+.github/
+├── copilot-instructions.md
+└── instructions/
+ ├── dbt.instructions.md
+ ├── airflow.instructions.md
+ └── glue.instructions.md
+```
+
+**Start with repository-wide.** It works in all IDEs (VS Code, Visual Studio, JetBrains, Xcode, GitHub CLI). Path-specific instructions currently work best in VS Code and GitHub.com for Copilot Coding Agent and Code Review features.
+
+But the real magic isn’t in the folder structure — it’s in what you put into those files and how you structure the knowledge.
+
+![](https://cdn-images-1.medium.com/max/800/1*qu3gu91frT_Y6kWJrnIu5w.png)
+
+### What makes this different from documentation
+
+You might be thinking: “We already have documentation. We have wiki pages and README files. Why is this different?”
+
+Here’s why:
+
+**Documentation is passive.** It sits there waiting for someone to search for it, find it, read it, remember it, and apply it. Custom Instructions are active. They’re automatically applied every time Copilot reviews code.
+
+**Documentation gets outdated.** That wiki page written two years ago? Nobody’s sure if it still applies. Custom Instructions live in your repo. They’re versioned. They evolve with your code.
+
+**Documentation is scattered.** Best practices for data models are in one place, testing standards are somewhere else, deployment patterns are in a different wiki entirely. Custom Instructions consolidate what matters for each context.
+
+**Documentation doesn’t teach — it tells.** Custom Instructions can include examples, explanations of why certain patterns exist, and guidance on common mistakes. They’re pedagogical, not just informational.
+
+**Nobody reads documentation consistently.** Be honest — when was the last time you read your team’s entire wiki before starting work? Custom Instructions are consumed by AI that *does* read them consistently, every single time.
+
+### The anatomy of effective Custom Instructions
+
+Let’s break down what actually goes into these files. I’ll use a data engineering context as an example, but the principles apply to any domain with established patterns.
+
+### The orchestrator file
+
+The main `copilot-instructions.md` acts as a routing layer. It tells Copilot how to think about the codebase:
+
+```
+# Project Context for Code Reviews
+This repository contains data transformation pipelines built with 
+multiple technologies. When reviewing code, apply the appropriate 
+technology-specific guidelines.
+
+
+## Technology Stack
+- Data transformation: dbt (see dbt.instructions.md)
+- Orchestration: Airflow (see airflow.instructions.md)
+- Serverless processing: AWS Lambda (see lambda.instructions.md)
+- ETL jobs: AWS Glue (see glue.instructions.md)
+
+
+## General Principles
+- All code must be tested
+- All code must be documented
+- Configuration over hardcoding
+- Fail fast with clear error messages
+```
+
+This gives Copilot a map of the landscape and points it toward more specific guidance.
+
+### Technology-specific instruction files
+
+This is where the real knowledge lives. A `dbt.instructions.md` file might contain:
+
+```
+# dbt Model Standards## Staging Models
+Staging models extract and lightly transform data from sources.
+
+### Required Patterns
+1. **Incremental Strategy**
+ - All staging models must be incremental
+ - Must include delete_old_records pre-hook
+ - Example:
+```sql\
+ {{ config(\
+ materialized='incremental',\
+ unique_key='id',\
+ pre_hook=[\
+ "{{ delete_old_staging_records() }}"\
+ ]\
+ ) }}\
+```
+2. **Source Deduplication**
+ - Models loading from certain sources must deduplicate
+ - Use dbt_utils.deduplicate() with appropriate unique key
+ - Why: Source systems may contain duplicate records
+ 
+3. **Primary Key Requirements**
+ - Every staging model must have a unique_key
+ - Must include tests: unique, not_null
+ - Example:
+```yaml\
+ - name: stg_model_name\
+ columns:\
+ - name: id\
+ tests:\
+ - unique\
+ - not_null\
+```
+### Common Mistakes
+- Forgetting pre-hooks on incremental models
+- Using SELECT * (must specify columns explicitly)
+- Missing tests on primary keys
+- Hardcoding table names instead of using source() macro
+### Why These Patterns Exist
+- Pre-hooks prevent data duplication in incremental loads
+- Explicit column selection makes schema changes visible
+- Primary key tests catch data quality issues early
+```
+
+Notice what this includes:
+
+* **Required patterns** with specific code examples
+* **Explanations** of why patterns exist
+* **Common mistakes** to watch for
+* **Examples** of correct and incorrect code
+
+This isn’t just rules — it’s teaching.
+
+### Path-specific instructions (advanced)
+
+![](https://cdn-images-1.medium.com/max/800/1*CkIUYU3NtGTTuuVAQQjx3A.png)
+
+For more granular control, you can create instruction files that apply only to specific file types or directories. These require YAML frontmatter with an `applyTo` field:
+
+```
+---
+applyTo:
+ - "models/**/*.sql"
+ - "**/*.sql"
+---
+# SQL Model Standards
+These instructions apply only to SQL files in the models directory.
+## Required Patterns
+[Your specific SQL instructions here]
+
+```
+
+The `applyTo` field uses glob syntax:
+
+* `**/*.sql` - All SQL files anywhere
+* `models/**/*` - All files under models/
+
+**When to use path-specific instructions:**
+
+* Different standards for different file types
+* Technology-specific rules (SQL vs Python vs YAML)
+* Test files vs production code requirements
+* Legacy code vs new code standards
+
+**Important:** Path-specific instructions currently work best in VS Code and GitHub.com. For maximum compatibility, start with repository-wide instructions.
+
+### The three-tier approach to instructions
+
+We found that instructions work best when organized in three tiers:
+
+### Tier 1: Critical Rules
+
+These are non-negotiable. Missing them means the code doesn’t work or creates serious problems. Flag these as CRITICAL in your instructions.
+
+Example: “CRITICAL: All incremental models must include the delete\_old\_records pre-hook. Missing this will cause data duplication.”
+
+### Tier 2: Standards and Best Practices
+
+These are strongly recommended patterns that ensure consistency and quality. Flag these as WARNING.
+
+Example: “WARNING: Models should specify columns explicitly rather than using SELECT \*. This makes schema changes visible in PR diffs.”
+
+### Tier 3: Suggestions and Improvements
+
+These are nice-to-haves that improve code quality but aren’t blockers. Flag these as INFO or SUGGESTION.
+
+Example: “SUGGESTION: Consider extracting this complex CTE into an intermediate model for better maintainability.”
+
+This tiered approach helps developers prioritize what to fix and helps reviewers understand what really matters.
+
+### From generic to specific: A real example
+
+Let me show you the difference between generic AI feedback and context-aware feedback on the same piece of code.
+
+**The code:** A staging model that’s functionally correct but non-compliant with standards.
+
+```
+-- stg_customer_assets.sql
+SELECT *
+FROM raw.customer_assets
+WHERE updated_at > '2024-01-01'
+```
+
+**Generic Copilot review:**
+
+* “Consider adding comments to explain the date filter”
+* “The SELECT \* pattern could be replaced with explicit columns”
+
+**Context-aware Copilot review:**
+
+* 🚨 CRITICAL: “Missing incremental materialization config and delete\_old\_records pre-hook. This will cause data duplication on subsequent runs.”
+* 🚨 CRITICAL: “Must use source() macro instead of hardcoded table name ‘raw.customer\_assets’”
+* ⚠️ WARNING: “SELECT \* is not allowed. Must specify columns explicitly.”
+* ⚠️ WARNING: “Missing unique and not\_null tests on primary key”
+* ⚠️ WARNING: “No deduplication step. Customer assets may contain duplicates from the source system.”
+* ℹ️ INFO: “Missing model description in schema.yml”
+
+See the difference? Generic feedback is about code style. Context-aware feedback is about your specific architecture and standards.
+
+### The transformation in practice
+
+Let’s walk through a realistic scenario to see how this changes the development workflow.
+
+### Before: The manual review gauntlet
+
+**Monday 9 AM:** Developer submits PR for new staging model. Code works, tests pass locally.
+
+**Tuesday 3 PM:** Reviewer finally gets to the PR. Leaves comments:
+
+* “Missing pre-hook. See our staging model standards.”
+* “Need to add deduplication. Check the wiki.”
+* “Where are the PK tests?”
+
+**Wednesday 10 AM:** Developer reads feedback, searches wiki, finds outdated page, asks in Slack for clarification.
+
+**Wednesday 3 PM:** Makes changes, pushes update.
+
+**Thursday 11 AM:** Reviewer checks again, finds new issues:
+
+* “Wrong deduplication key — should use composite key”
+* “Still need documentation”
+
+**Friday 9 AM:** Another revision.
+
+**Friday 4 PM:** Finally approved after multiple cycles.
+
+**Total time:** 4 days of calendar time, multiple context switches, frustration on both sides.
+
+### After: The context-aware workflow
+
+**Monday 9 AM:** Developer starts writing the staging model.
+
+**Monday 9:15 AM:** Uses Copilot in IDE, which suggests config based on custom instructions. Developer accepts, gets it right the first time.
+
+**Monday 10 AM:** Submits PR. Asks Copilot to review before requesting human review.
+
+**Monday 10:02 AM:** Copilot flags three issues with specific guidance. Developer fixes immediately.
+
+**Monday 10:30 AM:** Requests human review.
+
+**Monday 11 AM:** Human reviewer sees Copilot’s feedback was addressed, focuses on business logic review.
+
+**Monday 11:30 AM:** Approved.
+
+**Total time:** 2.5 hours, single cycle, minimal friction.
+
+### What changed beyond the speed
+
+The quantitative improvements are impressive, but the qualitative changes matter just as much:
+
+**Reviewer fatigue vanished.** When you don’t have to mentally check the same twenty requirements on every PR, you have energy left for things that actually require human judgment — architectural decisions, business logic, edge cases.
+
+**Developers learned faster.** Instead of waiting days for feedback, they get instant, specific, actionable guidance. They start internalizing the patterns. New team members come up to speed in weeks instead of months.
+
+**Standards became consistent.** Human reviewers are variable — we have good days and bad days, and we emphasize different things. Context-aware Copilot enforces standards consistently every single time.
+
+**The conversation shifted.** Code review comments moved from “you forgot to add this boilerplate” to “have we considered this alternative approach for handling edge cases?” The human reviewer became an enabler focused on value-add feedback.
+
+**Onboarding accelerated.** New developers get real-time teaching about patterns and standards. They don’t just fix issues — they understand why certain patterns exist.
+
+### The self-reinforcing cycle
+
+Here’s something unexpected: context-aware AI creates a positive feedback loop.
+
+When initial code quality goes up (because developers are getting real-time guidance), human reviewers have more time and energy. When reviewers have more capacity, they can provide better strategic feedback. When developers get better strategic feedback, they improve further.
+
+We saw a virtuous cycle:
+
+1. Copilot catches compliance issues instantly
+2. Developers fix them before human review
+3. Human reviewers focus on architecture and logic
+4. Developers learn better patterns from strategic feedback
+5. Code quality improves beyond just compliance
+6. The bar raises for everyone
+
+Within a few weeks, developers started taking more pride in their initial submissions. They knew Copilot would catch basic issues, so they made sure to get those right before even asking for AI review. The overall craftsmanship of the codebase improved.
+
+### The hidden benefit: Living documentation
+
+Something we didn’t anticipate: the custom instruction files became our best documentation.
+
+When new team members join, we tell them to read the instruction files. They’re more useful than our old wiki pages because they’re:
+
+* **Focused:** Only what matters for each technology
+* **Up-to-date:** Changed with the code they describe
+* **Actionable:** Not just descriptions but specific patterns to follow
+* **Example-rich:** Show don’t just tell
+
+The instructions also expose inconsistencies in our own thinking. Writing things down precisely forces you to confront ambiguities. We discovered we had some “standards” that were actually just preferences of whoever was reviewing that day. Codifying them made us more consistent.
+
+### Why context is everything
+
+The fundamental insight here is that generic AI is powerful but limited. It becomes transformative when you give it specific context.
+
+Think about the knowledge that exists in your team:
+
+* The incident three years ago that taught you why certain patterns matter
+* The architectural decisions documented in RFC #47 that nobody remembers
+* The unwritten rules that everyone “just knows” after a year on the team
+* The common mistakes that new developers always make
+
+This knowledge has been expensive to accumulate. It’s locked in senior engineers’ heads. New team members learn it slowly through osmosis and trial and error.
+
+Custom Instructions are a way to unlock that knowledge and make it instantly accessible to everyone — through an AI intermediary that applies it consistently, every time, at exactly the moment it’s needed.
+
+### What this means for your team
+
+The pattern we’ve described isn’t specific to data engineering or dbt. It works for any domain with:
+
+* Established patterns and standards
+* Multiple technologies in a stack
+* Team-specific architectural decisions
+* Accumulated wisdom about what works
+* A need for consistency across many contributors
+
+That includes:
+
+* Infrastructure as code (Terraform, CloudFormation)
+* Backend services with specific patterns
+* Frontend applications with design systems
+* Mobile apps with platform-specific guidelines
+* DevOps pipelines with security requirements
+
+Anywhere you have knowledge that needs to be applied consistently but is currently trapped in people’s heads — that’s where context-aware AI can help.
+
+### The investment required
+
+Let’s be practical about what this actually takes to implement.
+
+**Initial time investment:** Expect 20–40 hours to create comprehensive instructions for your main technology stack. This is writing, example-finding, and refining based on real code.
+
+**Ongoing maintenance:** Perhaps 2–3 hours per month as you refine based on usage, add new patterns, and update for changes.
+
+**The hard part:** You need someone with deep domain knowledge to write these. You can’t outsource it to someone who doesn’t understand your systems. The value comes from encoding genuine expertise.
+
+**The easy part:** The technical implementation is trivial. Create some markdown files. Commit them to your repo. Done.
+
+Compare this to the cost of slow code reviews: if each delayed PR costs even one day of developer time, and you have dozens of PRs per sprint, the ROI is enormous.
+
+But beyond the economics, there’s the morale improvement from unblocking developers and reducing reviewer fatigue. That doesn’t show up in a spreadsheet, but it matters enormously.
+
+### Looking ahead
+
+In Part 3, we’ll cover the practical implementation: exactly how to structure your instruction files, how to test and refine them, how to roll them out to your team, and how to measure the impact.
+
+We’ll also address the limitations and challenges — this isn’t magic, and there are real constraints on what context-aware AI can and cannot do.
+
+But the core insight remains: the difference between generic AI and transformative AI is context. The teams that figure out how to encode their expertise into AI systems will have a significant advantage.
+
+**Want to go deeper?**
+
+Go through the three-part series:
+
+* [Part 1: The Code Review Bottleneck Nobody Talks About](https://aradsouza.medium.com/the-code-review-bottleneck-nobody-talks-about-4e601a3e556f)
+* [Part 2: Teaching AI to Understand Your Codebase (deep dive on instruction writing)](https://medium.com/@aradsouza/teaching-ai-to-understand-your-codebase-8e95865ebffc)
+* [Part 3: Building Context-Aware AI for Your Team (detailed implementation guide)](https://medium.com/@aradsouza/building-context-aware-ai-for-your-team-cc808474ed6f)
+
+---
+
+*This article was originally published at <https://medium.com/@aradsouza/teaching-ai-to-understand-your-codebase-8e95865ebffc>*

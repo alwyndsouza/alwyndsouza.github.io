@@ -9,9 +9,71 @@ tags:
   - data-engineering
 coverImage: "https://cdn-images-1.medium.com/max/800/1*5cXOVEilg0CpsL0mbuPJtQ.png"
 ---
+In this article I will explain how you can quickly download list of tables from Oracle database into csv format and copy them into google cloud store.
 
-<p>In this article I will explain how you can quickly download list of tables from Oracle database into csv format and copy them into google cloud store.</p><h3>Required Software</h3><ul><li>gsutil: This is a command-line tool for interacting with GCS. You can download and install it from the <a href="https://cloud.google.com/sdk/docs/install" rel="nofollow noopener" target="_blank">Google Cloud SDK</a>.</li><li>SQLcl: This is a command-line interface for interacting with Oracle databases. You can download it from the <a href="https://www.oracle.com/database/technologies/appdev/sqlcl.html" rel="nofollow noopener" target="_blank">Oracle Technology Network</a>.</li></ul><h3>Instructions</h3><ol><li>Install gsutil and SQLcl on your local machine.</li><li>Create a bash script named <code>copy_tables_gcs.sh</code> in the <code>sqlcl/bin</code> folder of your local machine.</li><li>Add the following code to the <code>copy_tables_gcs.sh</code> script:</li></ol><pre spellcheck="false">#!/bin/bash<br />while read value<br />do<br /> echo &quot;Processing $value&quot;<br /> echo &quot;SET TERM OFF&quot; &gt; command.sql<br /> echo &quot;SET FEED OFF&quot; &gt;&gt; command.sql<br /> echo &quot;SET SQLFORMAT CSV&quot; &gt;&gt; command.sql<br /> echo &quot;UNLOAD $value&quot; &gt;&gt; command.sql<br /> echo &quot;EXIT&quot; &gt;&gt; command.sql<br /> wc -l $value*.csv<br /> rm -rf $value*.csv<br /> ./sql $CONN_STR @command.sql<br /> gsutil cp $value*.csv $GCS_BUCKET<br />done &lt; table_list.txt</pre><p>This script exports each table listed in the <code>table_list.txt</code> file to a CSV file, copies the CSV file to the specified GCS bucket, and deletes the local CSV file.</p><p>4. Create a file named <code>table_list.txt</code> in the <code>sqlcl/bin</code> folder and add the names of all the tables that need to be exported to CSV.</p><pre spellcheck="false">table1<br />table2</pre><p>5. Set the database connection details in an environment variable named <code>CONN_STR</code>.</p><pre spellcheck="false">export CONN_STR=username/password@hostname:portnumber/service_name</pre><p>6. Set the name of the GCS bucket in an environment variable named <code>GCS_BUCKET</code>.</p><pre spellcheck="false">export GCS_BUCKET=your-bucket-name</pre><p>7. Make the <code>copy_tables_gcs.sh</code> script executable.</p><pre spellcheck="false">chmod 755 copy_tables_gcs.sh</pre><p>8. Execute the <code>copy_tables_gcs.sh</code> script in the background using the following command:</p><pre spellcheck="false">nohup ./copy_tables_gcs.sh &gt; one_time_copy.log 2&gt;&amp;1 &amp;</pre><p>This command runs the script in the background, redirects the output to the <code>one_time_copy.log</code> file, and detaches the script from the terminal.</p>
+### Required Software
 
-<hr>
+* gsutil: This is a command-line tool for interacting with GCS. You can download and install it from the [Google Cloud SDK](https://cloud.google.com/sdk/docs/install).
+* SQLcl: This is a command-line interface for interacting with Oracle databases. You can download it from the [Oracle Technology Network](https://www.oracle.com/database/technologies/appdev/sqlcl.html).
 
-<p><em>This article was originally published at <a href="https://medium.com/@aradsouza/using-sqlcl-bulk-export-oracle-table-into-csv-and-load-into-gcs-a5b784ac3bdf" target="_blank" rel="nofollow">https://medium.com/@aradsouza/using-sqlcl-bulk-export-oracle-table-into-csv-and-load-into-gcs-a5b784ac3bdf</a></em></p>
+### Instructions
+
+1. Install gsutil and SQLcl on your local machine.
+2. Create a bash script named `copy_tables_gcs.sh` in the `sqlcl/bin` folder of your local machine.
+3. Add the following code to the `copy_tables_gcs.sh` script:
+
+```
+#!/bin/bash
+while read value
+do
+ echo "Processing $value"
+ echo "SET TERM OFF" > command.sql
+ echo "SET FEED OFF" >> command.sql
+ echo "SET SQLFORMAT CSV" >> command.sql
+ echo "UNLOAD $value" >> command.sql
+ echo "EXIT" >> command.sql
+ wc -l $value*.csv
+ rm -rf $value*.csv
+ ./sql $CONN_STR @command.sql
+ gsutil cp $value*.csv $GCS_BUCKET
+done < table_list.txt
+```
+
+This script exports each table listed in the `table_list.txt` file to a CSV file, copies the CSV file to the specified GCS bucket, and deletes the local CSV file.
+
+4. Create a file named `table_list.txt` in the `sqlcl/bin` folder and add the names of all the tables that need to be exported to CSV.
+
+```
+table1
+table2
+```
+
+5. Set the database connection details in an environment variable named `CONN_STR`.
+
+```
+export CONN_STR=username/password@hostname:portnumber/service_name
+```
+
+6. Set the name of the GCS bucket in an environment variable named `GCS_BUCKET`.
+
+```
+export GCS_BUCKET=your-bucket-name
+```
+
+7. Make the `copy_tables_gcs.sh` script executable.
+
+```
+chmod 755 copy_tables_gcs.sh
+```
+
+8. Execute the `copy_tables_gcs.sh` script in the background using the following command:
+
+```
+nohup ./copy_tables_gcs.sh > one_time_copy.log 2>&1 &
+```
+
+This command runs the script in the background, redirects the output to the `one_time_copy.log` file, and detaches the script from the terminal.
+
+---
+
+*This article was originally published at <https://medium.com/@aradsouza/using-sqlcl-bulk-export-oracle-table-into-csv-and-load-into-gcs-a5b784ac3bdf>*

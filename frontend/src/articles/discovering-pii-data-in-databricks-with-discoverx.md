@@ -11,9 +11,265 @@ tags:
   - compliance
 coverImage: ""
 ---
+`discoverx`, a project from Databricks Labs, is a powerful "Swiss-Army-knife" toolkit designed to automate administrative tasks across your Databricks Lakehouse. It simplifies complex operations that would otherwise require manual inspection or extensive custom coding. One of its most valuable use cases is the automated detection of Personally Identifiable Information (PII), which is essential for data governance and compliance.
 
-<p><code>discoverx</code>, a project from Databricks Labs, is a powerful &quot;Swiss-Army-knife&quot; toolkit designed to automate administrative tasks across your Databricks Lakehouse. It simplifies complex operations that would otherwise require manual inspection or extensive custom coding. One of its most valuable use cases is the automated detection of Personally Identifiable Information (PII), which is essential for data governance and compliance.</p><h3>What is <code>discoverx</code>?</h3><p><code>discoverx</code> is a Python library that allows you to perform operations on a large number of tables with a single command. It works by applying SQL templates or predefined functions concurrently to tables that match a specified pattern. This makes it an ideal tool for tasks like table maintenance (e.g., <code>VACUUM</code> and <code>OPTIMIZE</code>), data governance, and, as we&#39;ll explore, PII detection.</p><p>It’s important to note that <code>discoverx</code> is a Databricks Labs project, meaning it&#39;s provided for exploration and is not officially supported with Databricks Service Level Agreements (SLAs).</p><h3>How to Use <code>discoverx</code> for PII Detection</h3><p>The library includes functionality for semantic classification, which can be leveraged for PII detection. The process generally involves these steps:</p><ol><li><strong>Installation:</strong> You first need to install the <code>discoverx</code> library in your Databricks notebook using the <code>%pip</code> command.</li><li>Python</li></ol><pre spellcheck="false">%pip install dbl-discoverx</pre><p><strong>Initialization:</strong> Once installed, you can import the <code>DX</code> class and create an instance to start your operations.</p><pre spellcheck="false">from discoverx import DX dx = DX()</pre><p><strong>PII Scanning:</strong> <code>discoverx</code> integrates with other tools like <strong>Presidio</strong> to perform PII detection. It can scan your entire lakehouse, or a specific subset of tables, to identify columns and values that match known PII patterns. It uses predefined rules for semantic classes like <code>email</code>, <code>phone number</code>, and <code>IP address</code>.</p><p><strong>Actionable Results:</strong> The output of the scan is a DataFrame that provides a clear overview of where PII was found. You can then use this information to:</p><p><strong>Tag Data:</strong> Apply metadata tags to PII columns within Databricks Unity Catalog for easier tracking and governance.</p><p><strong>Secure Data:</strong> Implement access controls, masking, or encryption on the identified tables to protect the sensitive information.</p><p><strong>Audit and Report:</strong> Use the scan results to build dashboards and reports to monitor your PII landscape and demonstrate compliance.</p><h3>Benefits of <code>discoverx</code> for PII Discovery</h3><ul><li><strong>Scalability:</strong> <code>discoverx</code> is designed for the Databricks Lakehouse, allowing you to scan and manage PII across hundreds or thousands of tables in a scalable, efficient manner.</li><li><strong>Automation:</strong> It automates a tedious and error-prone manual process, ensuring that PII detection is a consistent and repeatable part of your data pipeline.</li><li><strong>Integration:</strong> By integrating with tools like Presidio, it provides a robust and intelligent way to classify and manage sensitive data.</li></ul><p>Using <code>discoverx</code> for PII discovery can significantly streamline your data governance efforts on Databricks, enabling you to maintain a secure and compliant data environment.</p><h3>Example on using discoverx</h3><pre spellcheck="false"># Databricks notebook source<br /># MAGIC %md<br /># MAGIC # Lakehouse PII Scanner<br /># MAGIC This notebook is designed to scan the lakehouse and discover columns that hold Personally Identifiable Information (PII). <br /># MAGIC It systematically examines the content, identifies potential PII, and classifies the findings for further analysis. <br /># MAGIC<br /># MAGIC ### Rules and Score<br /># MAGIC We define rules using regex and scan through all the columns to identify the occurrence and create a score. <br /># MAGIC Scores are defined between 0 to 1. If the score is 1, the rule perfectly matches. Any score greater than 0.9 is a good score.<br /># MAGIC<br /># MAGIC ### How It Works<br /># MAGIC 1. **Data Collection**: The scanner collects metadata and samples from the lakehouse.<br /># MAGIC 2. **Regex Matching**: It applies predefined regex patterns to identify potential PII.<br /># MAGIC 3. **Scoring**: Each match is scored based on its confidence level.<br /># MAGIC<br /># MAGIC ### Benefits<br /># MAGIC - **Automated Detection**: Reduces manual effort in identifying PII.<br /># MAGIC - **Accuracy**: High precision in detecting PII with regex rules.<br /># MAGIC - **Compliance**: Helps in maintaining data privacy and compliance.<br /><br /># COMMAND ----------<br /><br /># DBTITLE 1,Get job input through Widgets<br /># Create text widgets for user input<br />dbutils.widgets.dropdown(<br /> &quot;environment&quot;,<br /> &quot;prod&quot;,<br /> [&quot;prod&quot;,&quot;dev&quot;,&quot;preprod&quot;],<br />)<br />dbutils.widgets.text(&quot;catalogs&quot;, &quot;shared&quot;)<br />dbutils.widgets.text(&quot;schemas&quot;, &quot;*&quot;)<br />dbutils.widgets.text(&quot;tables&quot;, &quot;*&quot;)<br /><br /># Retrieve the values entered by the user in the widgets<br />catalogs = dbutils.widgets.get(&quot;catalogs&quot;)<br />schemas = dbutils.widgets.get(&quot;schemas&quot;)<br />tables = dbutils.widgets.get(&quot;tables&quot;)<br />environment = dbutils.widgets.get(&quot;environment&quot;)<br /><br /># Get the Databricks workspace URL from the Spark configuration<br />workspace_url = spark.conf.get(&quot;spark.databricks.workspaceUrl&quot;)<br />display(workspace_url)<br /><br /><br /># Display all widget values<br />display({&quot;catalogs&quot;: catalogs, &quot;schemas&quot;: schemas, &quot;tables&quot;: tables, &quot;environment&quot;: environment})<br /><br /># Construct the table reference string<br />from_table_statement = &quot;.&quot;.join([catalogs, schemas, tables])<br /><br /># Display the constructed table reference string<br />display(from_table_statement)<br /><br /># COMMAND ----------<br /><br /># DBTITLE 1,Define Regex Rules for Validation<br />from discoverx.rules import RegexRule<br /><br /># Define a rule for phone numbers<br />phone_number_rule = {<br /> &quot;name&quot;: &quot;phone_number&quot;,<br /> &quot;description&quot;: &quot;Australian phone number&quot;,<br /> &quot;definition&quot;: r&quot;^61\d{9}$&quot;,<br /> &quot;match_example&quot;: [&quot;61123456789&quot;],<br /> &quot;nomatch_example&quot;: [&quot;123456789&quot;],<br />}<br /><br /># Create a RegexRule object for Australian phone numbers<br />phone_number_rule = RegexRule(**phone_number_rule)<br /><br /># Define a rule for postcodes<br />postcode_rule = {<br /> &quot;name&quot;: &quot;postcode&quot;,<br /> &quot;description&quot;: &quot;Australian postcode&quot;,<br /> &quot;definition&quot;: r&quot;^\d{4}$&quot;,<br /> &quot;match_example&quot;: [&quot;2000&quot;, &quot;3000&quot;],<br /> &quot;nomatch_example&quot;: [&quot;123&quot;, &quot;12345&quot;],<br />}<br /><br /># Create a RegexRule object for postcodes<br />postcode_rule = RegexRule(**postcode_rule)<br /><br /># Define a rule for IMEI<br />imei_rule = {<br /> &quot;name&quot;: &quot;imei&quot;,<br /> &quot;description&quot;: &quot;International Mobile Equipment Identity&quot;,<br /> &quot;definition&quot;: r&quot;^\d{15}$&quot;,<br /> &quot;match_example&quot;: [&quot;490154203237518&quot;],<br /> &quot;nomatch_example&quot;: [&quot;49015420323751&quot;, &quot;4901542032375189&quot;, &quot;abc123456789012&quot;],<br />}<br /><br /># Create a RegexRule object for IMEI<br />imei_rule = RegexRule(**imei_rule)<br /><br /># Define a rule for Australian Medicare card<br />medicare_card_rule = {<br /> &quot;name&quot;: &quot;medicare&quot;,<br /> &quot;description&quot;: &quot;Australian Medicare card&quot;,<br /> &quot;definition&quot;: r&quot;^\d{4}\s\d{5}\s\d{1}$&quot;,<br /> &quot;match_example&quot;: [&quot;1234 56789 1&quot;],<br /> &quot;nomatch_example&quot;: [&quot;1234567891&quot;, &quot;1234 5678 91&quot;, &quot;abc 56789 1&quot;],<br />}<br /><br /># Create a RegexRule object for Australian Medicare card<br />medicare_card_rule = RegexRule(**medicare_card_rule)<br /><br /># Define a rule for IMSI<br />imsi_rule = {<br /> &quot;name&quot;: &quot;imsi&quot;,<br /> &quot;description&quot;: &quot;International Mobile Subscriber Identity&quot;,<br /> &quot;definition&quot;: r&quot;^\d{15}$&quot;,<br /> &quot;match_example&quot;: [&quot;310150123456789&quot;],<br /> &quot;nomatch_example&quot;: [&quot;31015012345678&quot;, &quot;3101501234567890&quot;, &quot;abc123456789012&quot;],<br />}<br /><br /># Create a RegexRule object for IMSI<br />imsi_rule = RegexRule(**imsi_rule)<br /><br /># Define a rule for Australian passport number<br />passport_number_rule = {<br /> &quot;name&quot;: &quot;passport_number&quot;,<br /> &quot;description&quot;: &quot;Australian passport number&quot;,<br /> &quot;definition&quot;: r&quot;^[A-Z]{2}\d{7}$&quot;,<br /> &quot;match_example&quot;: [&quot;AB1234567&quot;],<br /> &quot;nomatch_example&quot;: [&quot;1234567&quot;, &quot;ABC1234567&quot;, &quot;AB123456&quot;],<br />}<br /><br /># Create a RegexRule object for Australian passport number<br />passport_number_rule = RegexRule(**passport_number_rule)<br /><br /># Define a rule for Australian mobile number starting with 04<br />mobile_number_rule = {<br /> &quot;name&quot;: &quot;mobile_number&quot;,<br /> &quot;description&quot;: &quot;Australian mobile number starting with 04&quot;,<br /> &quot;definition&quot;: r&quot;^04\d{8}$&quot;,<br /> &quot;match_example&quot;: [&quot;0478111628&quot;],<br /> &quot;nomatch_example&quot;: [&quot;1478111628&quot;, &quot;048111628&quot;, &quot;abc0478111628&quot;],<br />}<br /><br /># Create a RegexRule object for Australian mobile number starting with 04<br />mobile_number_rule = RegexRule(**mobile_number_rule)<br /><br /># Define a rule for Australian landline number<br />landline_number_rule = {<br /> &quot;name&quot;: &quot;landline_number&quot;,<br /> &quot;description&quot;: &quot;Australian landline number&quot;,<br /> &quot;definition&quot;: r&quot;^02\s?\d{4}\s?\d{4}$&quot;,<br /> &quot;match_example&quot;: [&quot;0244444444&quot;, &quot;02 4444 4444&quot;],<br /> &quot;nomatch_example&quot;: [&quot;024444444&quot;, &quot;02 444 4444&quot;, &quot;abc0244444444&quot;],<br />}<br /><br /># Create a RegexRule object for Australian landline number<br />landline_number_rule = RegexRule(**landline_number_rule)<br /><br /># COMMAND ----------<br /><br /># DBTITLE 1,Review DX module documentation<br />#help(DX)<br /><br /># COMMAND ----------<br /><br /># DBTITLE 1,Define and Display Custom DX Rules<br />from discoverx import DX<br /><br /># Initialize the DX object with custom rules<br />custom_rules = [<br /> phone_number_rule,<br /> postcode_rule,<br /> imei_rule,<br /> #imsi_rule,<br /> passport_number_rule,<br /> mobile_number_rule,<br /> landline_number_rule<br />]<br /><br />#display(custom_rules)<br />dx = DX(custom_rules=custom_rules)<br /><br /># Display the defined rules<br />dx.display_rules()<br /><br /># COMMAND ----------<br /><br /># DBTITLE 1,Scan Tables Using All Rules<br /># Scan the specified tables using all defined rules<br />dx.scan(from_tables=from_table_statement, rules=&quot;*&quot;)<br /><br /># COMMAND ----------<br /><br /># DBTITLE 1,Save Results to Table<br /># Create schema pii_scan if it doesn&#x27;t exist<br />spark.sql(f&quot;CREATE SCHEMA IF NOT EXISTS {environment}.pii_scan&quot;)<br /><br /># Save the DiscoverX results to the table pii_scan.pii_scan_results<br />spark.sql(f&quot;DROP TABLE IF EXISTS {environment}.pii_scan.pii_scan_results&quot;)<br /><br />dx.save(f&quot;{environment}.pii_scan.pii_scan_results&quot;)<br /><br />spark.sql(f&quot;&quot;&quot;<br />DELETE FROM {environment}.pii_scan.pii_scan_results<br />WHERE class_name NOT IN (<br /> &#x27;email&#x27;,<br /> &#x27;phone_number&#x27;,<br /> &#x27;mobile_number&#x27;,<br /> &#x27;passport_number&#x27;,<br /> &#x27;credit_card_number&#x27;,<br /> &#x27;postcode&#x27;,<br /> &#x27;imei&#x27;,<br /> &#x27;landline_number&#x27;<br />) or score &lt; 0.8<br />&quot;&quot;&quot;)</pre>
+### What is `discoverx`?
 
-<hr>
+`discoverx` is a Python library that allows you to perform operations on a large number of tables with a single command. It works by applying SQL templates or predefined functions concurrently to tables that match a specified pattern. This makes it an ideal tool for tasks like table maintenance (e.g., `VACUUM` and `OPTIMIZE`), data governance, and, as we'll explore, PII detection.
 
-<p><em>This article was originally published at <a href="https://medium.com/@aradsouza/discovering-pii-data-in-databricks-with-discoverx-8a1f525b1fb1" target="_blank" rel="nofollow">https://medium.com/@aradsouza/discovering-pii-data-in-databricks-with-discoverx-8a1f525b1fb1</a></em></p>
+It’s important to note that `discoverx` is a Databricks Labs project, meaning it's provided for exploration and is not officially supported with Databricks Service Level Agreements (SLAs).
+
+### How to Use `discoverx` for PII Detection
+
+The library includes functionality for semantic classification, which can be leveraged for PII detection. The process generally involves these steps:
+
+1. **Installation:** You first need to install the `discoverx` library in your Databricks notebook using the `%pip` command.
+2. Python
+
+```
+%pip install dbl-discoverx
+```
+
+**Initialization:** Once installed, you can import the `DX` class and create an instance to start your operations.
+
+```
+from discoverx import DX dx = DX()
+```
+
+**PII Scanning:** `discoverx` integrates with other tools like **Presidio** to perform PII detection. It can scan your entire lakehouse, or a specific subset of tables, to identify columns and values that match known PII patterns. It uses predefined rules for semantic classes like `email`, `phone number`, and `IP address`.
+
+**Actionable Results:** The output of the scan is a DataFrame that provides a clear overview of where PII was found. You can then use this information to:
+
+**Tag Data:** Apply metadata tags to PII columns within Databricks Unity Catalog for easier tracking and governance.
+
+**Secure Data:** Implement access controls, masking, or encryption on the identified tables to protect the sensitive information.
+
+**Audit and Report:** Use the scan results to build dashboards and reports to monitor your PII landscape and demonstrate compliance.
+
+### Benefits of `discoverx` for PII Discovery
+
+* **Scalability:** `discoverx` is designed for the Databricks Lakehouse, allowing you to scan and manage PII across hundreds or thousands of tables in a scalable, efficient manner.
+* **Automation:** It automates a tedious and error-prone manual process, ensuring that PII detection is a consistent and repeatable part of your data pipeline.
+* **Integration:** By integrating with tools like Presidio, it provides a robust and intelligent way to classify and manage sensitive data.
+
+Using `discoverx` for PII discovery can significantly streamline your data governance efforts on Databricks, enabling you to maintain a secure and compliant data environment.
+
+### Example on using discoverx
+
+```
+# Databricks notebook source
+# MAGIC %md
+# MAGIC # Lakehouse PII Scanner
+# MAGIC This notebook is designed to scan the lakehouse and discover columns that hold Personally Identifiable Information (PII). 
+# MAGIC It systematically examines the content, identifies potential PII, and classifies the findings for further analysis. 
+# MAGIC
+# MAGIC ### Rules and Score
+# MAGIC We define rules using regex and scan through all the columns to identify the occurrence and create a score. 
+# MAGIC Scores are defined between 0 to 1. If the score is 1, the rule perfectly matches. Any score greater than 0.9 is a good score.
+# MAGIC
+# MAGIC ### How It Works
+# MAGIC 1. **Data Collection**: The scanner collects metadata and samples from the lakehouse.
+# MAGIC 2. **Regex Matching**: It applies predefined regex patterns to identify potential PII.
+# MAGIC 3. **Scoring**: Each match is scored based on its confidence level.
+# MAGIC
+# MAGIC ### Benefits
+# MAGIC - **Automated Detection**: Reduces manual effort in identifying PII.
+# MAGIC - **Accuracy**: High precision in detecting PII with regex rules.
+# MAGIC - **Compliance**: Helps in maintaining data privacy and compliance.
+
+# COMMAND ----------
+
+# DBTITLE 1,Get job input through Widgets
+# Create text widgets for user input
+dbutils.widgets.dropdown(
+ "environment",
+ "prod",
+ ["prod","dev","preprod"],
+)
+dbutils.widgets.text("catalogs", "shared")
+dbutils.widgets.text("schemas", "*")
+dbutils.widgets.text("tables", "*")
+
+# Retrieve the values entered by the user in the widgets
+catalogs = dbutils.widgets.get("catalogs")
+schemas = dbutils.widgets.get("schemas")
+tables = dbutils.widgets.get("tables")
+environment = dbutils.widgets.get("environment")
+
+# Get the Databricks workspace URL from the Spark configuration
+workspace_url = spark.conf.get("spark.databricks.workspaceUrl")
+display(workspace_url)
+
+
+# Display all widget values
+display({"catalogs": catalogs, "schemas": schemas, "tables": tables, "environment": environment})
+
+# Construct the table reference string
+from_table_statement = ".".join([catalogs, schemas, tables])
+
+# Display the constructed table reference string
+display(from_table_statement)
+
+# COMMAND ----------
+
+# DBTITLE 1,Define Regex Rules for Validation
+from discoverx.rules import RegexRule
+
+# Define a rule for phone numbers
+phone_number_rule = {
+ "name": "phone_number",
+ "description": "Australian phone number",
+ "definition": r"^61\d{9}$",
+ "match_example": ["61123456789"],
+ "nomatch_example": ["123456789"],
+}
+
+# Create a RegexRule object for Australian phone numbers
+phone_number_rule = RegexRule(**phone_number_rule)
+
+# Define a rule for postcodes
+postcode_rule = {
+ "name": "postcode",
+ "description": "Australian postcode",
+ "definition": r"^\d{4}$",
+ "match_example": ["2000", "3000"],
+ "nomatch_example": ["123", "12345"],
+}
+
+# Create a RegexRule object for postcodes
+postcode_rule = RegexRule(**postcode_rule)
+
+# Define a rule for IMEI
+imei_rule = {
+ "name": "imei",
+ "description": "International Mobile Equipment Identity",
+ "definition": r"^\d{15}$",
+ "match_example": ["490154203237518"],
+ "nomatch_example": ["49015420323751", "4901542032375189", "abc123456789012"],
+}
+
+# Create a RegexRule object for IMEI
+imei_rule = RegexRule(**imei_rule)
+
+# Define a rule for Australian Medicare card
+medicare_card_rule = {
+ "name": "medicare",
+ "description": "Australian Medicare card",
+ "definition": r"^\d{4}\s\d{5}\s\d{1}$",
+ "match_example": ["1234 56789 1"],
+ "nomatch_example": ["1234567891", "1234 5678 91", "abc 56789 1"],
+}
+
+# Create a RegexRule object for Australian Medicare card
+medicare_card_rule = RegexRule(**medicare_card_rule)
+
+# Define a rule for IMSI
+imsi_rule = {
+ "name": "imsi",
+ "description": "International Mobile Subscriber Identity",
+ "definition": r"^\d{15}$",
+ "match_example": ["310150123456789"],
+ "nomatch_example": ["31015012345678", "3101501234567890", "abc123456789012"],
+}
+
+# Create a RegexRule object for IMSI
+imsi_rule = RegexRule(**imsi_rule)
+
+# Define a rule for Australian passport number
+passport_number_rule = {
+ "name": "passport_number",
+ "description": "Australian passport number",
+ "definition": r"^[A-Z]{2}\d{7}$",
+ "match_example": ["AB1234567"],
+ "nomatch_example": ["1234567", "ABC1234567", "AB123456"],
+}
+
+# Create a RegexRule object for Australian passport number
+passport_number_rule = RegexRule(**passport_number_rule)
+
+# Define a rule for Australian mobile number starting with 04
+mobile_number_rule = {
+ "name": "mobile_number",
+ "description": "Australian mobile number starting with 04",
+ "definition": r"^04\d{8}$",
+ "match_example": ["0478111628"],
+ "nomatch_example": ["1478111628", "048111628", "abc0478111628"],
+}
+
+# Create a RegexRule object for Australian mobile number starting with 04
+mobile_number_rule = RegexRule(**mobile_number_rule)
+
+# Define a rule for Australian landline number
+landline_number_rule = {
+ "name": "landline_number",
+ "description": "Australian landline number",
+ "definition": r"^02\s?\d{4}\s?\d{4}$",
+ "match_example": ["0244444444", "02 4444 4444"],
+ "nomatch_example": ["024444444", "02 444 4444", "abc0244444444"],
+}
+
+# Create a RegexRule object for Australian landline number
+landline_number_rule = RegexRule(**landline_number_rule)
+
+# COMMAND ----------
+
+# DBTITLE 1,Review DX module documentation
+#help(DX)
+
+# COMMAND ----------
+
+# DBTITLE 1,Define and Display Custom DX Rules
+from discoverx import DX
+
+# Initialize the DX object with custom rules
+custom_rules = [
+ phone_number_rule,
+ postcode_rule,
+ imei_rule,
+ #imsi_rule,
+ passport_number_rule,
+ mobile_number_rule,
+ landline_number_rule
+]
+
+#display(custom_rules)
+dx = DX(custom_rules=custom_rules)
+
+# Display the defined rules
+dx.display_rules()
+
+# COMMAND ----------
+
+# DBTITLE 1,Scan Tables Using All Rules
+# Scan the specified tables using all defined rules
+dx.scan(from_tables=from_table_statement, rules="*")
+
+# COMMAND ----------
+
+# DBTITLE 1,Save Results to Table
+# Create schema pii_scan if it doesn't exist
+spark.sql(f"CREATE SCHEMA IF NOT EXISTS {environment}.pii_scan")
+
+# Save the DiscoverX results to the table pii_scan.pii_scan_results
+spark.sql(f"DROP TABLE IF EXISTS {environment}.pii_scan.pii_scan_results")
+
+dx.save(f"{environment}.pii_scan.pii_scan_results")
+
+spark.sql(f"""
+DELETE FROM {environment}.pii_scan.pii_scan_results
+WHERE class_name NOT IN (
+ 'email',
+ 'phone_number',
+ 'mobile_number',
+ 'passport_number',
+ 'credit_card_number',
+ 'postcode',
+ 'imei',
+ 'landline_number'
+) or score < 0.8
+""")
+```
+
+---
+
+*This article was originally published at <https://medium.com/@aradsouza/discovering-pii-data-in-databricks-with-discoverx-8a1f525b1fb1>*

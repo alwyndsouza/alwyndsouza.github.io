@@ -11,9 +11,528 @@ tags:
   - automation
 coverImage: "https://cdn-images-1.medium.com/max/800/1*8oBb2mJdow7cxTlOPnh5fA.png"
 ---
+### Part 3: A Practical Implementation Guide
 
-<h3>Part 3: A Practical Implementation Guide</h3><p>In Parts 1 and 2, we explored why code reviews are broken and how context-aware AI fixes them. Now let’s get practical: exactly how do you implement this for your team?</p><ul><li><a href="https://medium.com/@aradsouza/the-code-review-bottleneck-nobody-talks-about-4e601a3e556f" target="_blank">Part 1: The Code Review Bottleneck Nobody Talks About</a></li><li><a href="https://medium.com/@aradsouza/teaching-ai-to-understand-your-codebase-8e95865ebffc" target="_blank">Part 2: Teaching AI to Understand Your Codebase</a></li></ul><p>This isn’t theoretical. This is a step-by-step guide based on implementing context-aware Copilot on real projects with real teams, learning what works and what doesn’t.</p><h3>The five-phase rollout</h3><p>We learned (sometimes the hard way) that successful implementation follows five distinct phases:</p><ol><li><strong>Foundation:</strong> Set up the structure</li><li><strong>Core Content:</strong> Document your most critical standards</li><li><strong>Testing:</strong> Validate with real PRs</li><li><strong>Refinement:</strong> Iterate based on feedback</li><li><strong>Scale:</strong> Expand across teams and technologies</li></ol><p>Let’s walk through each phase in detail.</p><h3>Phase 1: Foundation (2–4 hours)</h3><p>The first phase is about creating the structure that everything else builds on.</p><h3>Step 1: Create the folder structure</h3><p>Start simple with repository-wide instructions:</p><pre spellcheck="false">.github/<br />└── copilot-instructions.md</pre><p><strong>Important:</strong> This single file approach works in all IDEs: VS Code, Visual Studio, JetBrains, Xcode, and GitHub.com.</p><p><strong>Later, if needed,</strong> you can add path-specific instructions:</p><pre spellcheck="false">.github/<br />├── copilot-instructions.md (repository-wide)<br />└── instructions/ (path-specific, advanced)<br /> ├── dbt.instructions.md<br /> ├── airflow.instructions.md<br /> └── glue.instructions.md</pre><p><strong>Compatibility note:</strong></p><ul><li>Repository-wide: Works everywhere ✓</li><li>Path-specific: Best in VS Code and GitHub.com (for Copilot Coding Agent and Code Review)</li></ul><p><strong>Recommendation:</strong> Start with just <code>.github/copilot-instructions.md</code>. Add path-specific files only when you need different rules for different file types.</p><h3>Step 2: Write the orchestrator</h3><p>The <code>copilot-instructions.md</code> file should start simple. Here&#39;s a template:</p><p>markdown</p><pre spellcheck="false"># Code Review Instructions<br /><br />## Purpose<br />These instructions help GitHub Copilot understand our codebase<br />standards and provide context-aware code reviews.<br />## Repository Overview<br />[Brief description of what this repo does]<br />## Technology Stack<br />- [Technology 1]: See [technology1].instructions.md<br />- [Technology 2]: See [technology2].instructions.md<br />- [Technology 3]: See [technology3].instructions.md<br />## General Principles<br />1. All code must be tested<br />2. All code must be documented <br />3. Follow DRY (Don&#x27;t Repeat Yourself)<br />4. Fail fast with clear error messages<br />5. Use configuration over hardcoding<br />## How to Use These Instructions<br />When reviewing code:<br />1. Identify which technology is being modified<br />2. Apply the technology-specific guidelines<br />3. Check against general principles<br />4. Flag CRITICAL issues that break functionality<br />5. Warn about STANDARD violations<br />6. Suggest IMPROVEMENTS for code quality</pre><p>This gives Copilot the big picture and a framework for thinking about reviews.</p><h3>Step 3: Pick your first technology</h3><p>Don’t try to document everything at once. Pick the technology where:</p><ul><li>You have the most PRs</li><li>Standards are clearest</li><li>Pain points are biggest</li><li>You have the most expertise</li></ul><p>For many teams, this might be your backend framework, your infrastructure-as-code tool, or your data transformation layer.</p><h3>Phase 2: Core Content (20–40 hours)</h3><p>This is where the real work happens. You’re encoding years of accumulated knowledge into structured instructions.</p><h3>Start with the critical path</h3><p>For your chosen technology, identify the top 5–10 patterns that:</p><ol><li>Are required for code to work correctly</li><li>Are frequently missed in reviews</li><li>Cause problems when violated</li><li>New developers always get wrong</li></ol><p>These become your CRITICAL rules.</p><h3>Document with this structure</h3><p>For each pattern, include:</p><p><strong>1. The Rule</strong> Clear, specific statement of what’s required.</p><p><strong>2. Why It Exists</strong> The reasoning — often from painful lessons learned.</p><p><strong>3. How to Implement</strong> Code example showing the correct pattern.</p><p><strong>4. Common Mistakes</strong> What you often see done wrong, with examples.</p><p><strong>5. How to Check</strong> What reviewers should look for to verify compliance.</p><h3>Instruction file length best practices</h3><p><strong>Keep files focused and manageable:</strong></p><p><strong>Maximum recommended length:</strong> ~1,000 lines per file</p><ul><li>Beyond this, Copilot may overlook some instructions</li><li>Response quality can deteriorate with very long files</li><li>Context limits mean not everything gets processed</li></ul><p><strong>Starting point:</strong> 10–20 critical instructions</p><ul><li>Test what works with real PRs</li><li>Add incrementally based on actual needs</li><li>Don’t try to document everything at once</li></ul><p><strong>If files grow too large:</strong></p><ul><li>Split into multiple path-specific instruction files</li><li>Each focusing on a specific domain or file type</li><li>This also improves maintainability and clarity</li></ul><p><strong>Example split:</strong></p><pre spellcheck="false">.github/<br />├── copilot-instructions.md (general, 200 lines)<br />└── instructions/<br /> ├── dbt.instructions.md (400 lines)<br /> ├── airflow.instructions.md (300 lines)<br /> └── glue.instructions.md (200 lines)</pre><p>Each focused file is more effective than one 1,100-line mega-file.</p><h3>Real example: Incremental data models</h3><p>Here’s how we documented incremental model patterns:</p><p>markdown</p><pre spellcheck="false">## Incremental Models Must Include Data Cleanup<br /><br />### The Rule<br />Any model using incremental materialization MUST include a pre-hook <br />that deletes stale records before inserting new ones.<br />### Why This Exists<br />Without cleanup, incremental runs append data without removing old <br />versions. Over time, this causes:<br />- Duplicate records in the target table<br />- Incorrect aggregations and counts<br />- Data quality failures that are hard to trace<br />- Need for full refreshes that take hours<br />We learned this after an incident where a critical dashboard showed <br />inflated numbers for three days before anyone noticed.<br />### How to Implement<br />```sql<br />{{ config(<br /> materialized=&#x27;incremental&#x27;,<br /> unique_key=&#x27;id&#x27;,<br /> pre_hook=[<br /> &quot;{{ delete_old_records() }}&quot;<br /> ]<br />) }}<br />SELECT <br /> id,<br /> name,<br /> updated_at<br />FROM {{ source(&#x27;raw&#x27;, &#x27;customers&#x27;) }}<br />{% if is_incremental() %}<br /> WHERE updated_at &gt; (SELECT MAX(updated_at) FROM {{ this }})<br />{% endif %}<br />```<br />### Common Mistakes<br />**Mistake 1:** Forgetting the pre-hook entirely<br />```sql<br />-- WRONG: No cleanup, will duplicate data<br />{{ config(<br /> materialized=&#x27;incremental&#x27;,<br /> unique_key=&#x27;id&#x27;<br />) }}<br />```<br />**Mistake 2:** Using pre-hook but missing unique_key<br />```sql<br />-- WRONG: Cleanup runs but can&#x27;t identify which records to delete<br />{{ config(<br /> materialized=&#x27;incremental&#x27;,<br /> pre_hook=[&quot;{{ delete_old_records() }}&quot;]<br /> -- Missing: unique_key=&#x27;id&#x27;<br />) }}<br />```<br />**Mistake 3:** Incremental filter without matching cleanup logic<br />```sql<br />-- PROBLEMATIC: Filter checks updated_at but cleanup <br />-- doesn&#x27;t know about this field<br />{% if is_incremental() %}<br /> WHERE updated_at &gt; (SELECT MAX(updated_at) FROM {{ this }})<br />{% endif %}<br />```<br />### How to Check<br />As a reviewer, verify:<br />- [ ] Config block includes pre_hook with cleanup macro<br />- [ ] unique_key is specified and matches actual PK<br />- [ ] Incremental filter logic aligns with cleanup strategy<br />- [ ] Tests include uniqueness check on the key field</pre><p>This level of detail might seem excessive, but remember: you’re teaching an AI. Specificity and examples are crucial.</p><h3>Cover the full lifecycle</h3><p>Don’t just document happy path patterns. Include:</p><p><strong>Error handling:</strong> How should code fail? What error messages are good?</p><p><strong>Testing requirements:</strong> What tests are mandatory? What’s nice to have?</p><p><strong>Documentation standards:</strong> What needs to be documented? Where?</p><p><strong>Configuration patterns:</strong> What should be configurable? What should be hardcoded?</p><p><strong>Performance considerations:</strong> What patterns are expensive? When does it matter?</p><p><strong>Security requirements:</strong> What data needs protection? How?</p><h3>Use the tiered approach</h3><p>As mentioned in Part 2, organize your rules in three tiers:</p><p><strong>🚨 CRITICAL:</strong> Breaks functionality or creates serious problems</p><ul><li>Flag with “CRITICAL:” prefix</li><li>These are non-negotiable</li><li>Examples: Missing required configs, incorrect data handling</li></ul><p><strong>⚠️ WARNING:</strong> Violates standards, creates technical debt</p><ul><li>Flag with “WARNING:” prefix</li><li>Should be fixed but might have valid exceptions</li><li>Examples: Missing tests, poor naming, inadequate documentation</li></ul><p><strong>ℹ️ INFO:</strong> Improvement opportunities</p><ul><li>Flag with “INFO:” or “SUGGESTION:” prefix</li><li>Makes code better but not essential</li><li>Examples: Refactoring opportunities, performance optimizations</li></ul><p>This helps both AI and humans prioritize what matters.</p><h3>Phase 3: Testing (4–8 hours)</h3><p>Before rolling out to your team, you need to validate that your instructions actually work.</p><h3>Test with historical PRs</h3><p>Go back through your merged PRs from the last month. Pick 5–10 that had significant review feedback. Ask Copilot to review them using your new instructions.</p><p><strong>Good signs:</strong></p><ul><li>Copilot catches the issues that human reviewers caught</li><li>Copilot’s feedback is specific and actionable</li><li>False positives are rare</li></ul><p><strong>Bad signs:</strong></p><ul><li>Copilot misses critical issues</li><li>Feedback is too generic</li><li>Many false positives on acceptable code</li></ul><h3>Refine based on test results</h3><p>When Copilot misses something important:</p><ul><li>Add more specific guidance to your instructions</li><li>Include examples of that specific pattern</li><li>Make the “why” clearer</li></ul><p>When Copilot flags false positives:</p><ul><li>Add examples of acceptable exceptions</li><li>Clarify the conditions when rules apply</li><li>Add nuance to your instructions</li></ul><h3>Test with new PRs</h3><p>Once you’re satisfied with historical testing, try your instructions on 2–3 new PRs before they go to human review.</p><p>Ask the PR authors:</p><ul><li>Was the feedback helpful?</li><li>Did you understand what to change?</li><li>Were there false positives?</li><li>What did it miss?</li></ul><p>Use this feedback to iterate.</p><h3>Phase 4: Refinement (Ongoing)</h3><p>Your instructions are never “done.” They evolve as your codebase and standards evolve.</p><h3>Establish feedback loops</h3><p><strong>After each PR review:</strong></p><ul><li>Did Copilot catch everything the human reviewer caught?</li><li>If not, update the instructions</li></ul><p><strong>Monthly review:</strong></p><ul><li>What patterns have emerged in recent feedback?</li><li>Are there new common mistakes to document?</li><li>Have any standards changed?</li></ul><p><strong>Quarterly retrospective:</strong></p><ul><li>What instructions are most/least useful?</li><li>Where are the gaps?</li><li>What can be simplified?</li></ul><h3>Version your instructions</h3><p>Treat instruction files like code:</p><ul><li>Review changes before merging</li><li>Write commit messages explaining updates</li><li>Track what instructions catch what issues</li><li>Roll back if changes cause problems</li></ul><h3>Measure effectiveness</h3><p>Track metrics to understand impact:</p><p><strong>Leading indicators:</strong></p><ul><li>Time from PR creation to first review</li><li>Time from first review to approval</li><li>Number of revision cycles per PR</li><li>Percentage of PRs approved first try</li></ul><p><strong>Lagging indicators:</strong></p><ul><li>Pre-commit failure rate</li><li>Post-merge bugs related to standard violations</li><li>Test coverage trends</li><li>Documentation completeness</li></ul><p><strong>Qualitative feedback:</strong></p><ul><li>Developer satisfaction with review speed</li><li>Reviewer satisfaction with workload</li><li>New hire onboarding time</li></ul><h3>Phase 5: Scale (4–8 hours per technology)</h3><p>Once you’ve proven the approach with one technology, expand to others.</p><h3>Add technology-specific files</h3><p>You have two options for scaling: repository-wide references or path-specific instructions.</p><p><strong>Option 1: Repository-wide with references (simpler)</strong></p><pre spellcheck="false">.github/<br />└── copilot-instructions.md (all guidelines in one file)</pre><p>Update your main file to include all technology guidelines in sections.</p><p><strong>Option 2: Path-specific instructions (advanced, more granular)</strong></p><p>Create separate files that automatically apply to specific file types:</p><pre spellcheck="false">.github/<br />├── copilot-instructions.md (general principles)<br />└── instructions/<br /> ├── dbt.instructions.md<br /> ├── glue.instructions.md<br /> ├── airflow.instructions.md<br /> └── lambda.instructions.md</pre><p>Path-specific files require YAML frontmatter with <code>applyTo</code> field:</p><pre spellcheck="false">---<br />applyTo:<br /> - &quot;**/*.py&quot;<br /> - &quot;src/**/*.py&quot;<br />---<br /># Python Backend Standards<br />These instructions automatically apply when working with Python files.<br />## Code Style<br />[Your Python-specific guidelines]<br /><br /></pre><p><strong>Glob pattern examples:</strong></p><ul><li><code>**/*.sql</code> - All SQL files anywhere in the repo</li><li><code>models/**/*</code> - All files under the models directory</li><li><code>tests/**/*.py</code> - Python files in tests directory</li><li><code>*.yaml</code> - YAML files in root directory only</li></ul><p><strong>When to use path-specific:</strong></p><ul><li>Different standards for different languages</li><li>Test files vs production code requirements</li><li>Legacy code vs new code standards</li><li>Frontend vs backend conventions</li></ul><h3>Common challenges and solutions</h3><h3>Challenge 1: Instructions are too generic</h3><p><strong>Symptom:</strong> Copilot provides feedback that could apply to any project.</p><p><strong>Solution:</strong> Add more specific examples. Include actual code from your codebase. Reference specific systems, patterns, and architectural decisions unique to your project.</p><h3>Challenge 2: Instructions are too rigid</h3><p><strong>Symptom:</strong> Copilot flags acceptable variations as violations.</p><p><strong>Solution:</strong> Add examples of valid exceptions. Use language like “typically requires” instead of “must always have.” Explain when rules apply and when they don’t.</p><h3>Challenge 3: Instructions get out of sync</h3><p><strong>Symptom:</strong> Instructions reference patterns no longer used or miss new standards.</p><p><strong>Solution:</strong> Make instruction updates part of your standard process. When standards change, update instructions in the same PR. Assign ownership of instruction files to tech leads.</p><h3>Challenge 4: Too many false positives</h3><p><strong>Symptom:</strong> Copilot flags issues in code that’s actually fine.</p><p><strong>Solution:</strong> Review the false positives. Often they reveal ambiguity in your actual standards. Either refine the instructions to allow the pattern, or refine your standards to disallow it. Use this as an opportunity to clarify.</p><h3>Challenge 5: Developers ignore AI feedback</h3><p><strong>Symptom:</strong> PRs still have issues despite Copilot flagging them.</p><p><strong>Solution:</strong> Make AI review a required step before requesting human review. Add a PR template checkbox: “I’ve reviewed Copilot’s feedback and addressed critical issues.” Set team norms around respecting AI feedback.</p><h3>The relationship with CI/CD</h3><p>One question that comes up frequently: how does this relate to existing CI/CD pipelines?</p><p><strong>Context-aware AI and CI are complementary:</strong></p><p><strong>CI/CD catches:</strong> Syntax errors, test failures, build breaks, security vulnerabilities (via scanners)</p><p><strong>Context-aware AI catches:</strong> Architecture violations, standard deviations, missing documentation, incomplete tests, anti-patterns</p><p><strong>The key difference:</strong> Timing</p><ul><li>CI runs after you’ve committed and pushed</li><li>AI reviews while you’re writing code or immediately on PR</li></ul><p>This means:</p><ul><li>Fewer CI failures (caught by AI first)</li><li>Faster feedback loops (no commit/push/wait cycle)</li><li>Better learning (explanations alongside checks)</li></ul><p>But you still need CI! It’s your guardrail. AI is your guide.</p><h3>Limitations and realistic expectations</h3><p>This is powerful, but it’s not magic. Be clear about limitations:</p><p><strong>Context-aware AI is great at:</strong></p><ul><li>Enforcing known patterns and standards</li><li>Catching missing configurations</li><li>Identifying common mistakes</li><li>Teaching through examples</li><li>Consistent application of rules</li></ul><p><strong>Context-aware AI struggles with:</strong></p><ul><li>Novel architectural decisions</li><li>Complex business logic</li><li>Subtle bugs requiring deep domain knowledge</li><li>Tradeoff analysis between competing approaches</li><li>Understanding unstated requirements</li></ul><p>Human reviewers remain essential for strategic thinking, architectural oversight, and complex problem-solving.</p><p>The goal isn’t to replace human reviewers. It’s to elevate them from gatekeepers checking compliance to advisors providing strategic guidance.</p>
+In Parts 1 and 2, we explored why code reviews are broken and how context-aware AI fixes them. Now let’s get practical: exactly how do you implement this for your team?
 
-<hr>
+* [Part 1: The Code Review Bottleneck Nobody Talks About](https://medium.com/@aradsouza/the-code-review-bottleneck-nobody-talks-about-4e601a3e556f)
+* [Part 2: Teaching AI to Understand Your Codebase](https://medium.com/@aradsouza/teaching-ai-to-understand-your-codebase-8e95865ebffc)
 
-<p><em>This article was originally published at <a href="https://medium.com/@aradsouza/building-context-aware-ai-for-your-team-cc808474ed6f" target="_blank" rel="nofollow">https://medium.com/@aradsouza/building-context-aware-ai-for-your-team-cc808474ed6f</a></em></p>
+This isn’t theoretical. This is a step-by-step guide based on implementing context-aware Copilot on real projects with real teams, learning what works and what doesn’t.
+
+### The five-phase rollout
+
+We learned (sometimes the hard way) that successful implementation follows five distinct phases:
+
+1. **Foundation:** Set up the structure
+2. **Core Content:** Document your most critical standards
+3. **Testing:** Validate with real PRs
+4. **Refinement:** Iterate based on feedback
+5. **Scale:** Expand across teams and technologies
+
+Let’s walk through each phase in detail.
+
+### Phase 1: Foundation (2–4 hours)
+
+The first phase is about creating the structure that everything else builds on.
+
+### Step 1: Create the folder structure
+
+Start simple with repository-wide instructions:
+
+```
+.github/
+└── copilot-instructions.md
+```
+
+**Important:** This single file approach works in all IDEs: VS Code, Visual Studio, JetBrains, Xcode, and GitHub.com.
+
+**Later, if needed,** you can add path-specific instructions:
+
+```
+.github/
+├── copilot-instructions.md (repository-wide)
+└── instructions/ (path-specific, advanced)
+ ├── dbt.instructions.md
+ ├── airflow.instructions.md
+ └── glue.instructions.md
+```
+
+**Compatibility note:**
+
+* Repository-wide: Works everywhere ✓
+* Path-specific: Best in VS Code and GitHub.com (for Copilot Coding Agent and Code Review)
+
+**Recommendation:** Start with just `.github/copilot-instructions.md`. Add path-specific files only when you need different rules for different file types.
+
+### Step 2: Write the orchestrator
+
+The `copilot-instructions.md` file should start simple. Here's a template:
+
+markdown
+
+```
+# Code Review Instructions
+
+## Purpose
+These instructions help GitHub Copilot understand our codebase
+standards and provide context-aware code reviews.
+## Repository Overview
+[Brief description of what this repo does]
+## Technology Stack
+- [Technology 1]: See [technology1].instructions.md
+- [Technology 2]: See [technology2].instructions.md
+- [Technology 3]: See [technology3].instructions.md
+## General Principles
+1. All code must be tested
+2. All code must be documented 
+3. Follow DRY (Don't Repeat Yourself)
+4. Fail fast with clear error messages
+5. Use configuration over hardcoding
+## How to Use These Instructions
+When reviewing code:
+1. Identify which technology is being modified
+2. Apply the technology-specific guidelines
+3. Check against general principles
+4. Flag CRITICAL issues that break functionality
+5. Warn about STANDARD violations
+6. Suggest IMPROVEMENTS for code quality
+```
+
+This gives Copilot the big picture and a framework for thinking about reviews.
+
+### Step 3: Pick your first technology
+
+Don’t try to document everything at once. Pick the technology where:
+
+* You have the most PRs
+* Standards are clearest
+* Pain points are biggest
+* You have the most expertise
+
+For many teams, this might be your backend framework, your infrastructure-as-code tool, or your data transformation layer.
+
+### Phase 2: Core Content (20–40 hours)
+
+This is where the real work happens. You’re encoding years of accumulated knowledge into structured instructions.
+
+### Start with the critical path
+
+For your chosen technology, identify the top 5–10 patterns that:
+
+1. Are required for code to work correctly
+2. Are frequently missed in reviews
+3. Cause problems when violated
+4. New developers always get wrong
+
+These become your CRITICAL rules.
+
+### Document with this structure
+
+For each pattern, include:
+
+**1. The Rule** Clear, specific statement of what’s required.
+
+**2. Why It Exists** The reasoning — often from painful lessons learned.
+
+**3. How to Implement** Code example showing the correct pattern.
+
+**4. Common Mistakes** What you often see done wrong, with examples.
+
+**5. How to Check** What reviewers should look for to verify compliance.
+
+### Instruction file length best practices
+
+**Keep files focused and manageable:**
+
+**Maximum recommended length:** ~1,000 lines per file
+
+* Beyond this, Copilot may overlook some instructions
+* Response quality can deteriorate with very long files
+* Context limits mean not everything gets processed
+
+**Starting point:** 10–20 critical instructions
+
+* Test what works with real PRs
+* Add incrementally based on actual needs
+* Don’t try to document everything at once
+
+**If files grow too large:**
+
+* Split into multiple path-specific instruction files
+* Each focusing on a specific domain or file type
+* This also improves maintainability and clarity
+
+**Example split:**
+
+```
+.github/
+├── copilot-instructions.md (general, 200 lines)
+└── instructions/
+ ├── dbt.instructions.md (400 lines)
+ ├── airflow.instructions.md (300 lines)
+ └── glue.instructions.md (200 lines)
+```
+
+Each focused file is more effective than one 1,100-line mega-file.
+
+### Real example: Incremental data models
+
+Here’s how we documented incremental model patterns:
+
+markdown
+
+```
+## Incremental Models Must Include Data Cleanup
+
+### The Rule
+Any model using incremental materialization MUST include a pre-hook 
+that deletes stale records before inserting new ones.
+### Why This Exists
+Without cleanup, incremental runs append data without removing old 
+versions. Over time, this causes:
+- Duplicate records in the target table
+- Incorrect aggregations and counts
+- Data quality failures that are hard to trace
+- Need for full refreshes that take hours
+We learned this after an incident where a critical dashboard showed 
+inflated numbers for three days before anyone noticed.
+### How to Implement
+```sql\
+{{ config(\
+ materialized='incremental',\
+ unique_key='id',\
+ pre_hook=[\
+ "{{ delete_old_records() }}"\
+ ]\
+) }}\
+SELECT \
+ id,\
+ name,\
+ updated_at\
+FROM {{ source('raw', 'customers') }}\
+{% if is_incremental() %}\
+ WHERE updated_at > (SELECT MAX(updated_at) FROM {{ this }})\
+{% endif %}\
+```
+### Common Mistakes
+**Mistake 1:** Forgetting the pre-hook entirely
+```sql\
+-- WRONG: No cleanup, will duplicate data\
+{{ config(\
+ materialized='incremental',\
+ unique_key='id'\
+) }}\
+```
+**Mistake 2:** Using pre-hook but missing unique_key
+```sql\
+-- WRONG: Cleanup runs but can't identify which records to delete\
+{{ config(\
+ materialized='incremental',\
+ pre_hook=["{{ delete_old_records() }}"]\
+ -- Missing: unique_key='id'\
+) }}\
+```
+**Mistake 3:** Incremental filter without matching cleanup logic
+```sql\
+-- PROBLEMATIC: Filter checks updated_at but cleanup \
+-- doesn't know about this field\
+{% if is_incremental() %}\
+ WHERE updated_at > (SELECT MAX(updated_at) FROM {{ this }})\
+{% endif %}\
+```
+### How to Check
+As a reviewer, verify:
+- [ ] Config block includes pre_hook with cleanup macro
+- [ ] unique_key is specified and matches actual PK
+- [ ] Incremental filter logic aligns with cleanup strategy
+- [ ] Tests include uniqueness check on the key field
+```
+
+This level of detail might seem excessive, but remember: you’re teaching an AI. Specificity and examples are crucial.
+
+### Cover the full lifecycle
+
+Don’t just document happy path patterns. Include:
+
+**Error handling:** How should code fail? What error messages are good?
+
+**Testing requirements:** What tests are mandatory? What’s nice to have?
+
+**Documentation standards:** What needs to be documented? Where?
+
+**Configuration patterns:** What should be configurable? What should be hardcoded?
+
+**Performance considerations:** What patterns are expensive? When does it matter?
+
+**Security requirements:** What data needs protection? How?
+
+### Use the tiered approach
+
+As mentioned in Part 2, organize your rules in three tiers:
+
+**🚨 CRITICAL:** Breaks functionality or creates serious problems
+
+* Flag with “CRITICAL:” prefix
+* These are non-negotiable
+* Examples: Missing required configs, incorrect data handling
+
+**⚠️ WARNING:** Violates standards, creates technical debt
+
+* Flag with “WARNING:” prefix
+* Should be fixed but might have valid exceptions
+* Examples: Missing tests, poor naming, inadequate documentation
+
+**ℹ️ INFO:** Improvement opportunities
+
+* Flag with “INFO:” or “SUGGESTION:” prefix
+* Makes code better but not essential
+* Examples: Refactoring opportunities, performance optimizations
+
+This helps both AI and humans prioritize what matters.
+
+### Phase 3: Testing (4–8 hours)
+
+Before rolling out to your team, you need to validate that your instructions actually work.
+
+### Test with historical PRs
+
+Go back through your merged PRs from the last month. Pick 5–10 that had significant review feedback. Ask Copilot to review them using your new instructions.
+
+**Good signs:**
+
+* Copilot catches the issues that human reviewers caught
+* Copilot’s feedback is specific and actionable
+* False positives are rare
+
+**Bad signs:**
+
+* Copilot misses critical issues
+* Feedback is too generic
+* Many false positives on acceptable code
+
+### Refine based on test results
+
+When Copilot misses something important:
+
+* Add more specific guidance to your instructions
+* Include examples of that specific pattern
+* Make the “why” clearer
+
+When Copilot flags false positives:
+
+* Add examples of acceptable exceptions
+* Clarify the conditions when rules apply
+* Add nuance to your instructions
+
+### Test with new PRs
+
+Once you’re satisfied with historical testing, try your instructions on 2–3 new PRs before they go to human review.
+
+Ask the PR authors:
+
+* Was the feedback helpful?
+* Did you understand what to change?
+* Were there false positives?
+* What did it miss?
+
+Use this feedback to iterate.
+
+### Phase 4: Refinement (Ongoing)
+
+Your instructions are never “done.” They evolve as your codebase and standards evolve.
+
+### Establish feedback loops
+
+**After each PR review:**
+
+* Did Copilot catch everything the human reviewer caught?
+* If not, update the instructions
+
+**Monthly review:**
+
+* What patterns have emerged in recent feedback?
+* Are there new common mistakes to document?
+* Have any standards changed?
+
+**Quarterly retrospective:**
+
+* What instructions are most/least useful?
+* Where are the gaps?
+* What can be simplified?
+
+### Version your instructions
+
+Treat instruction files like code:
+
+* Review changes before merging
+* Write commit messages explaining updates
+* Track what instructions catch what issues
+* Roll back if changes cause problems
+
+### Measure effectiveness
+
+Track metrics to understand impact:
+
+**Leading indicators:**
+
+* Time from PR creation to first review
+* Time from first review to approval
+* Number of revision cycles per PR
+* Percentage of PRs approved first try
+
+**Lagging indicators:**
+
+* Pre-commit failure rate
+* Post-merge bugs related to standard violations
+* Test coverage trends
+* Documentation completeness
+
+**Qualitative feedback:**
+
+* Developer satisfaction with review speed
+* Reviewer satisfaction with workload
+* New hire onboarding time
+
+### Phase 5: Scale (4–8 hours per technology)
+
+Once you’ve proven the approach with one technology, expand to others.
+
+### Add technology-specific files
+
+You have two options for scaling: repository-wide references or path-specific instructions.
+
+**Option 1: Repository-wide with references (simpler)**
+
+```
+.github/
+└── copilot-instructions.md (all guidelines in one file)
+```
+
+Update your main file to include all technology guidelines in sections.
+
+**Option 2: Path-specific instructions (advanced, more granular)**
+
+Create separate files that automatically apply to specific file types:
+
+```
+.github/
+├── copilot-instructions.md (general principles)
+└── instructions/
+ ├── dbt.instructions.md
+ ├── glue.instructions.md
+ ├── airflow.instructions.md
+ └── lambda.instructions.md
+```
+
+Path-specific files require YAML frontmatter with `applyTo` field:
+
+```
+---
+applyTo:
+ - "**/*.py"
+ - "src/**/*.py"
+---
+# Python Backend Standards
+These instructions automatically apply when working with Python files.
+## Code Style
+[Your Python-specific guidelines]
+
+```
+
+**Glob pattern examples:**
+
+* `**/*.sql` - All SQL files anywhere in the repo
+* `models/**/*` - All files under the models directory
+* `tests/**/*.py` - Python files in tests directory
+* `*.yaml` - YAML files in root directory only
+
+**When to use path-specific:**
+
+* Different standards for different languages
+* Test files vs production code requirements
+* Legacy code vs new code standards
+* Frontend vs backend conventions
+
+### Common challenges and solutions
+
+### Challenge 1: Instructions are too generic
+
+**Symptom:** Copilot provides feedback that could apply to any project.
+
+**Solution:** Add more specific examples. Include actual code from your codebase. Reference specific systems, patterns, and architectural decisions unique to your project.
+
+### Challenge 2: Instructions are too rigid
+
+**Symptom:** Copilot flags acceptable variations as violations.
+
+**Solution:** Add examples of valid exceptions. Use language like “typically requires” instead of “must always have.” Explain when rules apply and when they don’t.
+
+### Challenge 3: Instructions get out of sync
+
+**Symptom:** Instructions reference patterns no longer used or miss new standards.
+
+**Solution:** Make instruction updates part of your standard process. When standards change, update instructions in the same PR. Assign ownership of instruction files to tech leads.
+
+### Challenge 4: Too many false positives
+
+**Symptom:** Copilot flags issues in code that’s actually fine.
+
+**Solution:** Review the false positives. Often they reveal ambiguity in your actual standards. Either refine the instructions to allow the pattern, or refine your standards to disallow it. Use this as an opportunity to clarify.
+
+### Challenge 5: Developers ignore AI feedback
+
+**Symptom:** PRs still have issues despite Copilot flagging them.
+
+**Solution:** Make AI review a required step before requesting human review. Add a PR template checkbox: “I’ve reviewed Copilot’s feedback and addressed critical issues.” Set team norms around respecting AI feedback.
+
+### The relationship with CI/CD
+
+One question that comes up frequently: how does this relate to existing CI/CD pipelines?
+
+**Context-aware AI and CI are complementary:**
+
+**CI/CD catches:** Syntax errors, test failures, build breaks, security vulnerabilities (via scanners)
+
+**Context-aware AI catches:** Architecture violations, standard deviations, missing documentation, incomplete tests, anti-patterns
+
+**The key difference:** Timing
+
+* CI runs after you’ve committed and pushed
+* AI reviews while you’re writing code or immediately on PR
+
+This means:
+
+* Fewer CI failures (caught by AI first)
+* Faster feedback loops (no commit/push/wait cycle)
+* Better learning (explanations alongside checks)
+
+But you still need CI! It’s your guardrail. AI is your guide.
+
+### Limitations and realistic expectations
+
+This is powerful, but it’s not magic. Be clear about limitations:
+
+**Context-aware AI is great at:**
+
+* Enforcing known patterns and standards
+* Catching missing configurations
+* Identifying common mistakes
+* Teaching through examples
+* Consistent application of rules
+
+**Context-aware AI struggles with:**
+
+* Novel architectural decisions
+* Complex business logic
+* Subtle bugs requiring deep domain knowledge
+* Tradeoff analysis between competing approaches
+* Understanding unstated requirements
+
+Human reviewers remain essential for strategic thinking, architectural oversight, and complex problem-solving.
+
+The goal isn’t to replace human reviewers. It’s to elevate them from gatekeepers checking compliance to advisors providing strategic guidance.
+
+---
+
+*This article was originally published at <https://medium.com/@aradsouza/building-context-aware-ai-for-your-team-cc808474ed6f>*

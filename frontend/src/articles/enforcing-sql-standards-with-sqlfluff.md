@@ -11,9 +11,8 @@ tags:
   - validation
 coverImage: ""
 ---
+*Article 3 of 5: Building a Production-Ready dbt CI/CD Pipeline*
 
-<p><em>Article 3 of 5: Building a Production-Ready dbt CI/CD Pipeline</em></p>
+---
 
-<hr>
-
-<p><em>This article was originally published at <a href="https://medium.com/@aradsouza/enforcing-sql-standards-with-sqlfluff-febdde35436a" target="_blank" rel="nofollow">https://medium.com/@aradsouza/enforcing-sql-standards-with-sqlfluff-febdde35436a</a></em></p>
+*This article was originally published at <https://medium.com/@aradsouza/enforcing-sql-standards-with-sqlfluff-febdde35436a>*

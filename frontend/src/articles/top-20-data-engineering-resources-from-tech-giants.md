@@ -9,9 +9,92 @@ tags:
   - data-engineering
 coverImage: "https://cdn-images-1.medium.com/max/800/1*fz5iGpva2pn8BojhEbIClQ.png"
 ---
+> **This page is for my personal references**
 
-<blockquote><strong>This page is for my personal references</strong></blockquote><p><em>Stay up-to-date with the latest innovations, best practices, and technical insights from leading technology companies. These engineering blogs offer invaluable knowledge about data engineering, distributed systems, infrastructure, and scalable architectures.</em></p><h3>The Complete Resource List</h3><h3>1. LinkedIn Engineering</h3><p>Deep dives into data infrastructure, machine learning platforms, and large-scale data processing systems. <strong>URL:</strong> <a href="https://engineering.linkedin.com" rel="noopener" target="_blank">https://engineering.linkedin.com</a></p><h3>2. Engineering at Meta</h3><p>Insights into Meta’s data infrastructure, analytics platforms, and cutting-edge data engineering solutions. <strong>URL:</strong> <a href="https://engineering.fb.com" rel="noopener" target="_blank">https://engineering.fb.com</a></p><h3>3. Dropbox Tech Blog</h3><p>Technical articles on distributed storage, sync technology, and data infrastructure at scale. <strong>URL:</strong> <a href="https://dropbox.tech" rel="noopener" target="_blank">https://dropbox.tech</a></p><h3>4. Spotify Engineering</h3><p>Learn about music streaming data pipelines, recommendations systems, and audio data processing. <strong>URL:</strong> <a href="https://engineering.atspotify.com" rel="noopener" target="_blank">https://engineering.atspotify.com</a></p><h3>5. Netflix Tech Blog</h3><p>Explore content delivery networks, big data analytics, and streaming infrastructure technologies. <strong>URL:</strong> <a href="https://netflixtechblog.com" rel="noopener" target="_blank">https://netflixtechblog.com</a> (also available at <a href="https://netflixtechblog.medium.com" rel="noopener" target="_blank">https://netflixtechblog.medium.com</a>)</p><h3>6. GitHub Engineering</h3><p>Discover how GitHub handles code repositories, version control at scale, and developer infrastructure. <strong>URL:</strong> <a href="https://github.blog/engineering" rel="noopener" target="_blank">https://github.blog/engineering</a></p><h3>7. Stripe Blog</h3><p>Payment processing infrastructure, financial data systems, and API design principles. <strong>URL:</strong> <a href="https://stripe.com/blog" rel="noopener" target="_blank">https://stripe.com/blog</a></p><h3>8. Uber Engineering Blog</h3><p>Real-time data processing, geospatial analytics, and marketplace data infrastructure. <strong>URL:</strong> <a href="https://eng.uber.com" rel="noopener" target="_blank">https://eng.uber.com</a> (also at <a href="https://uber.com/en-US/blog/engineering" rel="noopener" target="_blank">https://uber.com/en-US/blog/engineering</a>)</p><h3>9. Slack Engineering Blog</h3><p>Messaging infrastructure, real-time communication systems, and collaboration platform architecture. <strong>URL:</strong> <a href="https://slack.engineering" rel="noopener" target="_blank">https://slack.engineering</a></p><h3>10. Engineering@Microsoft</h3><p>Cloud infrastructure, Azure services, and enterprise-scale data solutions. <strong>URL:</strong> <a href="https://devblogs.microsoft.com/engineering-at-microsoft" rel="noopener" target="_blank">https://devblogs.microsoft.com/engineering-at-microsoft</a></p><h3>11. Airbnb Tech Blog</h3><p>Marketplace data analytics, search and discovery systems, and experimentation platforms. <strong>URL:</strong> <a href="https://medium.com/airbnb-engineering" target="_blank">https://medium.com/airbnb-engineering</a> (also at <a href="https://airbnb.tech/blog" rel="noopener" target="_blank">https://airbnb.tech/blog</a>)</p><h3>12. AWS Architecture Blog</h3><p>Cloud-native architectures, serverless data processing, and AWS best practices. <strong>URL:</strong> <a href="https://aws.amazon.com/blogs/architecture" rel="noopener" target="_blank">https://aws.amazon.com/blogs/architecture</a></p><h3>13. Discord Blog</h3><p>Real-time messaging infrastructure, voice/video data systems, and gaming platform engineering. <strong>URL:</strong> <a href="https://discord.com/blog" rel="noopener" target="_blank">https://discord.com/blog</a></p><h3>14. Figma Engineering</h3><p>Collaborative design infrastructure, real-time synchronization, and browser-based data systems. <strong>URL:</strong> <a href="https://figma.com/blog/engineering" rel="noopener" target="_blank">https://figma.com/blog/engineering</a></p><h3>15. Instagram Engineering</h3><p>Photo and video infrastructure, social media data processing, and mobile-first architectures. <strong>URL:</strong> <a href="https://instagram-engineering.com" rel="noopener" target="_blank">https://instagram-engineering.com</a> (now consolidated at <a href="https://engineering.fb.com/tag/instagram" rel="noopener" target="_blank">https://engineering.fb.com/tag/instagram</a>)</p><h3>16. Pinterest Engineering</h3><p>Visual discovery systems, recommendation algorithms, and content delivery platforms. <strong>URL:</strong> <a href="https://medium.com/pinterest-engineering" target="_blank">https://medium.com/pinterest-engineering</a></p><h3>17. StackOverflow Engineering</h3><p>Developer community platforms, knowledge base systems, and Q&amp;A infrastructure. <strong>URL:</strong> <a href="https://stackoverflow.blog/engineering" rel="noopener" target="_blank">https://stackoverflow.blog/engineering</a></p><h3>18. Twitter Blog</h3><p>Social media data streams, real-time analytics, and microblogging infrastructure. <strong>URL:</strong> <a href="https://blog.x.com/engineering/en_us" rel="noopener" target="_blank">https://blog.x.com/engineering/en_us</a></p><h3>19. Notion Tools</h3><p>Workspace infrastructure, document databases, and collaborative editing systems. <strong>URL:</strong> <a href="https://notion.com/blog/topic/tech" rel="noopener" target="_blank">https://notion.com/blog/topic/tech</a></p><h3>20. Discord Blog</h3><p>Gaming communication platforms, voice infrastructure, and community management systems. <strong>URL:</strong> <a href="https://discord.com/blog" rel="noopener" target="_blank">https://discord.com/blog</a></p>
+*Stay up-to-date with the latest innovations, best practices, and technical insights from leading technology companies. These engineering blogs offer invaluable knowledge about data engineering, distributed systems, infrastructure, and scalable architectures.*
 
-<hr>
+### The Complete Resource List
 
-<p><em>This article was originally published at <a href="https://medium.com/@aradsouza/top-20-data-engineering-resources-from-tech-giants-54343a9d2304" target="_blank" rel="nofollow">https://medium.com/@aradsouza/top-20-data-engineering-resources-from-tech-giants-54343a9d2304</a></em></p>
+### 1. LinkedIn Engineering
+
+Deep dives into data infrastructure, machine learning platforms, and large-scale data processing systems. **URL:** <https://engineering.linkedin.com>
+
+### 2. Engineering at Meta
+
+Insights into Meta’s data infrastructure, analytics platforms, and cutting-edge data engineering solutions. **URL:** <https://engineering.fb.com>
+
+### 3. Dropbox Tech Blog
+
+Technical articles on distributed storage, sync technology, and data infrastructure at scale. **URL:** <https://dropbox.tech>
+
+### 4. Spotify Engineering
+
+Learn about music streaming data pipelines, recommendations systems, and audio data processing. **URL:** <https://engineering.atspotify.com>
+
+### 5. Netflix Tech Blog
+
+Explore content delivery networks, big data analytics, and streaming infrastructure technologies. **URL:** <https://netflixtechblog.com> (also available at <https://netflixtechblog.medium.com>)
+
+### 6. GitHub Engineering
+
+Discover how GitHub handles code repositories, version control at scale, and developer infrastructure. **URL:** <https://github.blog/engineering>
+
+### 7. Stripe Blog
+
+Payment processing infrastructure, financial data systems, and API design principles. **URL:** <https://stripe.com/blog>
+
+### 8. Uber Engineering Blog
+
+Real-time data processing, geospatial analytics, and marketplace data infrastructure. **URL:** <https://eng.uber.com> (also at <https://uber.com/en-US/blog/engineering>)
+
+### 9. Slack Engineering Blog
+
+Messaging infrastructure, real-time communication systems, and collaboration platform architecture. **URL:** <https://slack.engineering>
+
+### 10. Engineering@Microsoft
+
+Cloud infrastructure, Azure services, and enterprise-scale data solutions. **URL:** <https://devblogs.microsoft.com/engineering-at-microsoft>
+
+### 11. Airbnb Tech Blog
+
+Marketplace data analytics, search and discovery systems, and experimentation platforms. **URL:** <https://medium.com/airbnb-engineering> (also at <https://airbnb.tech/blog>)
+
+### 12. AWS Architecture Blog
+
+Cloud-native architectures, serverless data processing, and AWS best practices. **URL:** <https://aws.amazon.com/blogs/architecture>
+
+### 13. Discord Blog
+
+Real-time messaging infrastructure, voice/video data systems, and gaming platform engineering. **URL:** <https://discord.com/blog>
+
+### 14. Figma Engineering
+
+Collaborative design infrastructure, real-time synchronization, and browser-based data systems. **URL:** <https://figma.com/blog/engineering>
+
+### 15. Instagram Engineering
+
+Photo and video infrastructure, social media data processing, and mobile-first architectures. **URL:** <https://instagram-engineering.com> (now consolidated at <https://engineering.fb.com/tag/instagram>)
+
+### 16. Pinterest Engineering
+
+Visual discovery systems, recommendation algorithms, and content delivery platforms. **URL:** <https://medium.com/pinterest-engineering>
+
+### 17. StackOverflow Engineering
+
+Developer community platforms, knowledge base systems, and Q&A infrastructure. **URL:** <https://stackoverflow.blog/engineering>
+
+### 18. Twitter Blog
+
+Social media data streams, real-time analytics, and microblogging infrastructure. **URL:** <https://blog.x.com/engineering/en_us>
+
+### 19. Notion Tools
+
+Workspace infrastructure, document databases, and collaborative editing systems. **URL:** <https://notion.com/blog/topic/tech>
+
+### 20. Discord Blog
+
+Gaming communication platforms, voice infrastructure, and community management systems. **URL:** <https://discord.com/blog>
+
+---
+
+*This article was originally published at <https://medium.com/@aradsouza/top-20-data-engineering-resources-from-tech-giants-54343a9d2304>*

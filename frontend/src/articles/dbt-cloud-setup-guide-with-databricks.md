@@ -11,9 +11,69 @@ tags:
   - analytics
 coverImage: "https://cdn-images-1.medium.com/max/800/1*a83fwkT0fphFSn8YRreVZg.png"
 ---
+### Introduction
 
-<h3>Introduction</h3><p>In this article, we will walk through the steps required to set up dbt (data build tool) Cloud using Databricks as your data warehouse. This setup allows you to leverage the power of Databricks for data transformations while managing your projects and workflows in dbt Cloud.</p><h3>Prerequisites</h3><p>Before starting, ensure you have:</p><ul><li>A Databricks account</li><li>A GitHub account</li><li>Access to dbt Cloud</li><li>Necessary permissions for OAuth and SSO configurations</li></ul><h3>Step-by-Step Guide</h3><h3>1. Connect Databricks with OAuth</h3><p>First, establish a connection between your Databricks workspace and dbt Cloud using OAuth.</p><ol><li>Log in to your Databricks account.</li><li>Navigate to <code>Admin Console</code> &gt; <code>User Settings</code>.</li><li>Under <code>Access Tokens</code>, generate a new token and copy it.</li><li>In another tab, log in to your dbt Cloud account.</li><li>Go to <code>Account Settings</code> &gt; <code>Integrations</code>.</li><li>Select <code>Databricks</code> and click on <code>Connect</code>.</li><li>Paste the token generated from Databricks into the required field in dbt Cloud.</li></ol><h3>2. Configure Single Sign-On (SSO)</h3><p>Next, configure Single Sign-On (SSO) for seamless access management for your team of developers.</p><ol><li>In your identity provider’s admin console (e.g., Okta or Azure AD), create a new SAML application for dbt Cloud.</li><li>Obtain the SAML metadata URL or XML file from your identity provider.</li><li>In another tab, go back to <code>Account Settings</code> &gt; <code>SSO</code> in dbt Cloud.</li><li>Upload the SAML metadata or paste the URL.</li><li>Complete the SSO configuration by following the prompts.</li></ol><h3>3. Integrate GitHub with dbt Cloud</h3><p>To manage your dbt projects, integrate GitHub with dbt Cloud.</p><ol><li>In your dbt Cloud account, go to <code>Account Settings</code> &gt; <code>Integrations</code>.</li><li>Select <code>GitHub</code> and click on <code>Connect</code>.</li><li>Authorize dbt Cloud to access your GitHub repositories.</li><li>Choose the repository where your dbt project is stored.</li></ol><h3>4. Set Up Your dbt Project</h3><p>Now, set up your dbt project in dbt Cloud.</p><ol><li>In dbt Cloud, go to <code>Projects</code> and click on <code>New Project</code>.</li><li>Select your GitHub repository and branch.</li><li>Configure your project settings, including the target schema and database.</li><li>Save your project settings.</li></ol><h3>5. Run and Schedule Jobs</h3><p>Finally, run and schedule your dbt jobs in dbt Cloud.</p><ol><li>In your dbt Cloud project, go to <code>Jobs</code> and click on <code>New Job</code>.</li><li>Configure the job settings, including the commands to run and the schedule.</li><li>Save and activate the job.</li></ol>
+In this article, we will walk through the steps required to set up dbt (data build tool) Cloud using Databricks as your data warehouse. This setup allows you to leverage the power of Databricks for data transformations while managing your projects and workflows in dbt Cloud.
 
-<hr>
+### Prerequisites
 
-<p><em>This article was originally published at <a href="https://medium.com/@aradsouza/dbt-cloud-setup-guide-with-databricks-592b23a98007" target="_blank" rel="nofollow">https://medium.com/@aradsouza/dbt-cloud-setup-guide-with-databricks-592b23a98007</a></em></p>
+Before starting, ensure you have:
+
+* A Databricks account
+* A GitHub account
+* Access to dbt Cloud
+* Necessary permissions for OAuth and SSO configurations
+
+### Step-by-Step Guide
+
+### 1. Connect Databricks with OAuth
+
+First, establish a connection between your Databricks workspace and dbt Cloud using OAuth.
+
+1. Log in to your Databricks account.
+2. Navigate to `Admin Console` > `User Settings`.
+3. Under `Access Tokens`, generate a new token and copy it.
+4. In another tab, log in to your dbt Cloud account.
+5. Go to `Account Settings` > `Integrations`.
+6. Select `Databricks` and click on `Connect`.
+7. Paste the token generated from Databricks into the required field in dbt Cloud.
+
+### 2. Configure Single Sign-On (SSO)
+
+Next, configure Single Sign-On (SSO) for seamless access management for your team of developers.
+
+1. In your identity provider’s admin console (e.g., Okta or Azure AD), create a new SAML application for dbt Cloud.
+2. Obtain the SAML metadata URL or XML file from your identity provider.
+3. In another tab, go back to `Account Settings` > `SSO` in dbt Cloud.
+4. Upload the SAML metadata or paste the URL.
+5. Complete the SSO configuration by following the prompts.
+
+### 3. Integrate GitHub with dbt Cloud
+
+To manage your dbt projects, integrate GitHub with dbt Cloud.
+
+1. In your dbt Cloud account, go to `Account Settings` > `Integrations`.
+2. Select `GitHub` and click on `Connect`.
+3. Authorize dbt Cloud to access your GitHub repositories.
+4. Choose the repository where your dbt project is stored.
+
+### 4. Set Up Your dbt Project
+
+Now, set up your dbt project in dbt Cloud.
+
+1. In dbt Cloud, go to `Projects` and click on `New Project`.
+2. Select your GitHub repository and branch.
+3. Configure your project settings, including the target schema and database.
+4. Save your project settings.
+
+### 5. Run and Schedule Jobs
+
+Finally, run and schedule your dbt jobs in dbt Cloud.
+
+1. In your dbt Cloud project, go to `Jobs` and click on `New Job`.
+2. Configure the job settings, including the commands to run and the schedule.
+3. Save and activate the job.
+
+---
+
+*This article was originally published at <https://medium.com/@aradsouza/dbt-cloud-setup-guide-with-databricks-592b23a98007>*

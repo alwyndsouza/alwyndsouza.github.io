@@ -11,9 +11,52 @@ tags:
   - ci-cd
 coverImage: "https://cdn-images-1.medium.com/max/800/1*Cgt5p-un4rVW68_2K2RZFg.png"
 ---
+In the world of Python development, managing virtual environments can be a tedious task. Enter `zsh-autoswitch-virtualenv`, a ZSH plugin designed to streamline this process by automatically switching Python virtual environments as you navigate between directories. This tool is a game-changer for developers who frequently switch between projects and need a seamless way to manage their environments.
 
-<p>In the world of Python development, managing virtual environments can be a tedious task. Enter <code>zsh-autoswitch-virtualenv</code>, a ZSH plugin designed to streamline this process by automatically switching Python virtual environments as you navigate between directories. This tool is a game-changer for developers who frequently switch between projects and need a seamless way to manage their environments.</p><h4>What is zsh-autoswitch-virtualenv ?</h4><p><code>zsh-autoswitch-virtualenv</code> is a simple yet powerful ZSH plugin that detects and activates Python virtual environments automatically. Whether you&#39;re using <code>virtualenv</code>, <code>pipenv</code>, or <code>poetry</code>, this plugin ensures that the correct environment is activated as you move between directories</p><h4>Key Features</h4><ol><li>Automatic Detection and Activation: The plugin automatically detects Python projects and activates the corresponding virtual environment. It supports <code>setup.py</code>, <code>requirements.txt</code>, <code>Pipfile</code>, and <code>poetry.lock</code> files</li><li>Seamless Integration: It integrates seamlessly with <code>pipenv</code> and <code>poetry</code>, requiring no additional setup</li><li>Customizable: You can customize the plugin to switch to a default Python virtual environment by setting the <code>AUTOSWITCH_DEFAULTENV</code> environment variable</li></ol><h4>How It Works</h4><p>The plugin works by creating a <code>.venv</code> file in the project directory, which contains the name of the virtual environment. A precommand hook checks for this file and switches to the specified environment if found. For <code>pipenv</code> and <code>poetry</code> projects, it looks for <code>Pipfile</code> and <code>pyproject.toml</code> files, respectively, and activates the corresponding environment</p><h4><strong>Installation Steps for zsh</strong></h4><p><code>autoswitch-virtualenv</code> requires <a href="https://pypi.org/project/virtualenv/" rel="nofollow noopener" target="_blank">virtualenv</a> to be installed. You will also need to make sure that <code>python</code> (without a suffix; both Python 2 and 3 are supported) is available in your <code>$PATH</code>.</p><p>Copy this repository to <code>$ZSH_CUSTOM/plugins</code>, where <code>$ZSH_CUSTOM</code> is the directory with custom plugins of oh-my-zsh <a href="https://github.com/robbyrussell/oh-my-zsh/wiki/Customization/" rel="noopener" target="_blank">(read more)</a>:</p><pre spellcheck="false">git clone &quot;https://github.com/MichaelAquilina/zsh-autoswitch-virtualenv.git&quot; &quot;$ZSH_CUSTOM/plugins/autoswitch_virtualenv&quot;</pre><p>Then add this line to your <code>.zshrc</code>. Make sure it is before the line <code>source $ZSH/oh-my-zsh.sh</code>.</p><pre spellcheck="false">plugins=(autoswitch_virtualenv $plugins)</pre><p>Once the installation is complete, when you navigate to the repository which has <code>setup.py</code>, <code>requirements.txt</code>, <code>Pipfile</code>, and <code>poetry.lock</code> files, you will be provide with an option to create virtual environment.</p><p>To create an virtual environment, run the below command</p><p><em>mkvenv</em></p><p>to deactivate an virtual environment, run the below command</p><p><em>rmvenv</em></p><h4><strong>References</strong></h4><p><a href="https://github.com/MichaelAquilina/zsh-autoswitch-virtualenv" rel="nofollow noopener" target="_blank">https://github.com/MichaelAquilina/zsh-autoswitch-virtualenv</a></p>
+#### What is zsh-autoswitch-virtualenv ?
 
-<hr>
+`zsh-autoswitch-virtualenv` is a simple yet powerful ZSH plugin that detects and activates Python virtual environments automatically. Whether you're using `virtualenv`, `pipenv`, or `poetry`, this plugin ensures that the correct environment is activated as you move between directories
 
-<p><em>This article was originally published at <a href="https://medium.com/@aradsouza/automate-your-python-workflow-with-zsh-autoswitch-virtualenv-8aac9d933ff9" target="_blank" rel="nofollow">https://medium.com/@aradsouza/automate-your-python-workflow-with-zsh-autoswitch-virtualenv-8aac9d933ff9</a></em></p>
+#### Key Features
+
+1. Automatic Detection and Activation: The plugin automatically detects Python projects and activates the corresponding virtual environment. It supports `setup.py`, `requirements.txt`, `Pipfile`, and `poetry.lock` files
+2. Seamless Integration: It integrates seamlessly with `pipenv` and `poetry`, requiring no additional setup
+3. Customizable: You can customize the plugin to switch to a default Python virtual environment by setting the `AUTOSWITCH_DEFAULTENV` environment variable
+
+#### How It Works
+
+The plugin works by creating a `.venv` file in the project directory, which contains the name of the virtual environment. A precommand hook checks for this file and switches to the specified environment if found. For `pipenv` and `poetry` projects, it looks for `Pipfile` and `pyproject.toml` files, respectively, and activates the corresponding environment
+
+#### **Installation Steps for zsh**
+
+`autoswitch-virtualenv` requires [virtualenv](https://pypi.org/project/virtualenv/) to be installed. You will also need to make sure that `python` (without a suffix; both Python 2 and 3 are supported) is available in your `$PATH`.
+
+Copy this repository to `$ZSH_CUSTOM/plugins`, where `$ZSH_CUSTOM` is the directory with custom plugins of oh-my-zsh [(read more)](https://github.com/robbyrussell/oh-my-zsh/wiki/Customization/):
+
+```
+git clone "https://github.com/MichaelAquilina/zsh-autoswitch-virtualenv.git" "$ZSH_CUSTOM/plugins/autoswitch_virtualenv"
+```
+
+Then add this line to your `.zshrc`. Make sure it is before the line `source $ZSH/oh-my-zsh.sh`.
+
+```
+plugins=(autoswitch_virtualenv $plugins)
+```
+
+Once the installation is complete, when you navigate to the repository which has `setup.py`, `requirements.txt`, `Pipfile`, and `poetry.lock` files, you will be provide with an option to create virtual environment.
+
+To create an virtual environment, run the below command
+
+*mkvenv*
+
+to deactivate an virtual environment, run the below command
+
+*rmvenv*
+
+#### **References**
+
+<https://github.com/MichaelAquilina/zsh-autoswitch-virtualenv>
+
+---
+
+*This article was originally published at <https://medium.com/@aradsouza/automate-your-python-workflow-with-zsh-autoswitch-virtualenv-8aac9d933ff9>*

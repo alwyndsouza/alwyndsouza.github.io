@@ -11,9 +11,8 @@ tags:
   - ci-cd
 coverImage: ""
 ---
+*A comprehensive guide to implementing automated quality checks, formatting, and testing for your dbt projects*
 
-<p><em>A comprehensive guide to implementing automated quality checks, formatting, and testing for your dbt projects</em></p>
+---
 
-<hr>
-
-<p><em>This article was originally published at <a href="https://medium.com/@aradsouza/building-a-production-ready-dbt-ci-cd-pipeline-complete-series-73a7c088008f" target="_blank" rel="nofollow">https://medium.com/@aradsouza/building-a-production-ready-dbt-ci-cd-pipeline-complete-series-73a7c088008f</a></em></p>
+*This article was originally published at <https://medium.com/@aradsouza/building-a-production-ready-dbt-ci-cd-pipeline-complete-series-73a7c088008f>*

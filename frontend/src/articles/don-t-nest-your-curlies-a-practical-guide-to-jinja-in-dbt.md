@@ -11,9 +11,8 @@ tags:
   - analytics
 coverImage: ""
 ---
+*The most common syntax mistake in dbt projects — and how to avoid it*
 
-<p><em>The most common syntax mistake in dbt projects — and how to avoid it</em></p>
+---
 
-<hr>
-
-<p><em>This article was originally published at <a href="https://medium.com/@aradsouza/dont-nest-your-curlies-a-practical-guide-to-jinja-in-dbt-669eea3286fb" target="_blank" rel="nofollow">https://medium.com/@aradsouza/dont-nest-your-curlies-a-practical-guide-to-jinja-in-dbt-669eea3286fb</a></em></p>
+*This article was originally published at <https://medium.com/@aradsouza/dont-nest-your-curlies-a-practical-guide-to-jinja-in-dbt-669eea3286fb>*

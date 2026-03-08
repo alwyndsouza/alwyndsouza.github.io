@@ -11,9 +11,189 @@ tags:
   - analytics
 coverImage: "https://cdn-images-1.medium.com/max/800/1*6I0up47vTmbrO6KnmQ_Row.png"
 ---
+If you have ever looked at your dbt DAG and wished you could add some visual distinction to help your team quickly identify different model types, domains, or data layers, the `node_color` configuration is exactly what you need. This powerful feature allows you to customize the appearance of your models, seeds, snapshots, and analyses directly in the dbt documentation DAG.
 
-<p>If you have ever looked at your dbt DAG and wished you could add some visual distinction to help your team quickly identify different model types, domains, or data layers, the <code>node_color</code> configuration is exactly what you need. This powerful feature allows you to customize the appearance of your models, seeds, snapshots, and analyses directly in the dbt documentation DAG.</p><h3>What is node_color?</h3><p>The <code>node_color</code> configuration is a documentation attribute within dbt that lets you customize the display color of supported node types in the DAG visualization. This feature helps teams create more intuitive and visually organized data lineage graphs by color-coding models based on their purpose, domain, or layer in the data architecture.</p><p><strong>Supported node types:</strong></p><ul><li>Models</li><li>Seeds</li><li>Snapshots</li><li>Analyses</li></ul><p><strong>Note:</strong> Sources, macros, and tests do not currently support custom node colors.</p><h3>Why Use node_color?</h3><img src="https://cdn-images-1.medium.com/max/800/1*DymQIOwaIZ_JKADL43NTVQ.png" alt="" /><p>Visual organization in data pipelines can significantly improve team productivity and understanding. Here are some compelling reasons to implement custom node colors:</p><p><strong>Domain separation:</strong> Color-code models by business domain (Finance = gold, Marketing = blue, Operations = green)</p><p><strong>Data layer identification:</strong> Distinguish between staging (bronze), intermediate (silver), and mart (gold) layers at a glance</p><p><strong>Team ownership:</strong> Use colors to indicate which team owns specific models</p><p><strong>Priority levels:</strong> Visually emphasize critical business metrics or high-priority pipelines</p><h3>How to Configure node_color</h3><p>The <code>node_color</code> configuration can be set at multiple levels, giving you flexibility in how you organize your documentation. The configuration follows a hierarchy where more specific configurations override broader ones.</p><p><strong>Configuration Hierarchy</strong></p><img src="https://cdn-images-1.medium.com/max/800/1*KPhy1DsHaKXS4OAll7n6FQ.png" alt="" /><p>This means a color defined in your SQL model file will override what’s in your schema.yml, which in turn overrides what’s in dbt_project.yml.</p><p><strong>Syntax Options</strong></p><p>You can define colors using either:</p><p><strong>Named colors:</strong> Standard HTML color names like <code>red</code>, <code>blue</code>, <code>purple</code>, <code>gold</code></p><p><strong>Hex codes:</strong> Custom colors using hex notation like <code>#cd7f32</code>, <code>#000000</code>, <code>#FF6B6B</code> (must be in quotes)</p><img src="https://cdn-images-1.medium.com/max/800/1*qejCbMtlRxZX-0bVgg_d-Q.png" alt="" /><h3>Project-Level Configuration</h3><p>Set default colors for entire subdirectories in your <code>dbt_project.yml</code>:</p><pre spellcheck="false">models:<br /> my_project:<br /> staging:<br /> +materialized: view<br /> +docs:<br /> node_color: &quot;#cd7f32&quot; # Bronze for raw/staging<br /> <br /> intermediate:<br /> +docs:<br /> node_color: &quot;silver&quot; # Silver for intermediate transformations<br /> <br /> marts:<br /> core:<br /> +materialized: table<br /> +docs:<br /> node_color: &quot;gold&quot; # Gold for final data products</pre><h3>Schema-Level Configuration</h3><p>Override colors for specific models in your <code>schema.yml</code>:</p><pre spellcheck="false">models:<br /> - name: dim_customers<br /> description: Customer dimensions table<br /> config:<br /> docs:<br /> node_color: &#x27;#4A90E2&#x27; # Custom blue for dimension tables<br /> <br /> - name: fct_orders<br /> description: Orders fact table<br /> config:<br /> docs:<br /> node_color: &#x27;#E94B3C&#x27; # Custom red for fact tables</pre><h3>Model-Level Configuration</h3><p>Set colors directly in your SQL model files for the most specific control:</p><pre spellcheck="false">{{<br /> config(<br /> materialized = &#x27;table&#x27;,<br /> tags=[&#x27;finance&#x27;],<br /> docs={&#x27;node_color&#x27;: &#x27;purple&#x27;}<br /> )<br />}}<br /><br />select<br /> order_id,<br /> customer_id,<br /> order_total<br />from {{ ref(&#x27;stg_orders&#x27;) }}</pre><h3>Important Considerations</h3><h4>Regenerating Documentation</h4><p>After configuring your node colors, you must run or re-run the documentation generation command to see the changes:</p><pre spellcheck="false">dbt docs generate<br />dbt docs serve</pre><h4>Error Handling</h4><p>If you specify an invalid color, dbt will throw a compilation error:</p><pre spellcheck="false">Invalid color name for docs.node_color: invalidcolor123. <br />It is neither a valid HTML color name nor a valid HEX code.</pre><p>This validation ensures that only compatible colors are used in your documentation.</p><h4>Catalog vs. Explorer</h4><p>It’s important to note that the <code>node_color</code> attribute applies only to dbt Docs, not to the Catalog feature in dbt Cloud. For more advanced organization in dbt Cloud, use Explorer&#39;s lens feature, which provides map layers for understanding contextual metadata at scale.</p><h4>Hidden Models</h4><p>Remember that models marked as hidden using <code>docs: {show: false}</code> will still appear in the DAG visualization but will be labeled as hidden. The node_color configuration works independently of the show property.</p><h3>Best Practices</h3><p><strong>Be consistent:</strong> Establish a color scheme guide for your team and stick to it across all projects</p><p><strong>Document your scheme:</strong> Add comments in your dbt_project.yml explaining what each color represents</p><p><strong>Don’t overdo it:</strong> Too many colors can be as confusing as none. Stick to 4–6 distinct colors</p><p><strong>Consider accessibility:</strong> Choose colors with sufficient contrast for team members with color vision deficiencies</p><p><strong>Start at the project level:</strong> Define your base colors in dbt_project.yml, then override only when necessary</p><h3>Combining with Other Documentation Features</h3><p>Node colors work beautifully alongside other dbt documentation features:</p><pre spellcheck="false">models:<br /> - name: fct_orders<br /> description: Core orders fact table<br /> config:<br /> docs:<br /> show: true<br /> node_color: &#x27;#E94B3C&#x27;<br /> meta:<br /> owner: &quot;data-team@company.com&quot;<br /> certified: true<br /> columns:<br /> - name: order_id<br /> description: Unique order identifier</pre><p>The <code>node_color</code> configuration is a simple yet powerful feature that can transform your dbt documentation from a functional reference into an intuitive, visually organized resource. By thoughtfully applying colors to represent different layers, domains, or quality tiers, you create documentation that communicates your data architecture at a glance.</p><p>Start small by adding colors to your main data layers, then expand as your team develops conventions. Your future self and your teammates will thank you for the visual clarity when navigating complex data pipelines.</p><p>Ready to add some color to your dbt project? Run <code>dbt docs generate</code> and watch your DAG come to life with meaningful visual organization.</p><h3>References</h3><ul><li><a href="https://docs.getdbt.com/reference/resource-configs/docs" rel="noopener" target="_blank">Official dbt docs configuration documentation</a></li></ul>
+### What is node\_color?
 
-<hr>
+The `node_color` configuration is a documentation attribute within dbt that lets you customize the display color of supported node types in the DAG visualization. This feature helps teams create more intuitive and visually organized data lineage graphs by color-coding models based on their purpose, domain, or layer in the data architecture.
 
-<p><em>This article was originally published at <a href="https://medium.com/@aradsouza/customizing-your-dbt-documentation-with-node-color-2e7eda74434b" target="_blank" rel="nofollow">https://medium.com/@aradsouza/customizing-your-dbt-documentation-with-node-color-2e7eda74434b</a></em></p>
+**Supported node types:**
+
+* Models
+* Seeds
+* Snapshots
+* Analyses
+
+**Note:** Sources, macros, and tests do not currently support custom node colors.
+
+### Why Use node\_color?
+
+![](https://cdn-images-1.medium.com/max/800/1*DymQIOwaIZ_JKADL43NTVQ.png)
+
+Visual organization in data pipelines can significantly improve team productivity and understanding. Here are some compelling reasons to implement custom node colors:
+
+**Domain separation:** Color-code models by business domain (Finance = gold, Marketing = blue, Operations = green)
+
+**Data layer identification:** Distinguish between staging (bronze), intermediate (silver), and mart (gold) layers at a glance
+
+**Team ownership:** Use colors to indicate which team owns specific models
+
+**Priority levels:** Visually emphasize critical business metrics or high-priority pipelines
+
+### How to Configure node\_color
+
+The `node_color` configuration can be set at multiple levels, giving you flexibility in how you organize your documentation. The configuration follows a hierarchy where more specific configurations override broader ones.
+
+**Configuration Hierarchy**
+
+![](https://cdn-images-1.medium.com/max/800/1*KPhy1DsHaKXS4OAll7n6FQ.png)
+
+This means a color defined in your SQL model file will override what’s in your schema.yml, which in turn overrides what’s in dbt\_project.yml.
+
+**Syntax Options**
+
+You can define colors using either:
+
+**Named colors:** Standard HTML color names like `red`, `blue`, `purple`, `gold`
+
+**Hex codes:** Custom colors using hex notation like `#cd7f32`, `#000000`, `#FF6B6B` (must be in quotes)
+
+![](https://cdn-images-1.medium.com/max/800/1*qejCbMtlRxZX-0bVgg_d-Q.png)
+
+### Project-Level Configuration
+
+Set default colors for entire subdirectories in your `dbt_project.yml`:
+
+```
+models:
+ my_project:
+ staging:
+ +materialized: view
+ +docs:
+ node_color: "#cd7f32" # Bronze for raw/staging
+ 
+ intermediate:
+ +docs:
+ node_color: "silver" # Silver for intermediate transformations
+ 
+ marts:
+ core:
+ +materialized: table
+ +docs:
+ node_color: "gold" # Gold for final data products
+```
+
+### Schema-Level Configuration
+
+Override colors for specific models in your `schema.yml`:
+
+```
+models:
+ - name: dim_customers
+ description: Customer dimensions table
+ config:
+ docs:
+ node_color: '#4A90E2' # Custom blue for dimension tables
+ 
+ - name: fct_orders
+ description: Orders fact table
+ config:
+ docs:
+ node_color: '#E94B3C' # Custom red for fact tables
+```
+
+### Model-Level Configuration
+
+Set colors directly in your SQL model files for the most specific control:
+
+```
+{{
+ config(
+ materialized = 'table',
+ tags=['finance'],
+ docs={'node_color': 'purple'}
+ )
+}}
+
+select
+ order_id,
+ customer_id,
+ order_total
+from {{ ref('stg_orders') }}
+```
+
+### Important Considerations
+
+#### Regenerating Documentation
+
+After configuring your node colors, you must run or re-run the documentation generation command to see the changes:
+
+```
+dbt docs generate
+dbt docs serve
+```
+
+#### Error Handling
+
+If you specify an invalid color, dbt will throw a compilation error:
+
+```
+Invalid color name for docs.node_color: invalidcolor123. 
+It is neither a valid HTML color name nor a valid HEX code.
+```
+
+This validation ensures that only compatible colors are used in your documentation.
+
+#### Catalog vs. Explorer
+
+It’s important to note that the `node_color` attribute applies only to dbt Docs, not to the Catalog feature in dbt Cloud. For more advanced organization in dbt Cloud, use Explorer's lens feature, which provides map layers for understanding contextual metadata at scale.
+
+#### Hidden Models
+
+Remember that models marked as hidden using `docs: {show: false}` will still appear in the DAG visualization but will be labeled as hidden. The node\_color configuration works independently of the show property.
+
+### Best Practices
+
+**Be consistent:** Establish a color scheme guide for your team and stick to it across all projects
+
+**Document your scheme:** Add comments in your dbt\_project.yml explaining what each color represents
+
+**Don’t overdo it:** Too many colors can be as confusing as none. Stick to 4–6 distinct colors
+
+**Consider accessibility:** Choose colors with sufficient contrast for team members with color vision deficiencies
+
+**Start at the project level:** Define your base colors in dbt\_project.yml, then override only when necessary
+
+### Combining with Other Documentation Features
+
+Node colors work beautifully alongside other dbt documentation features:
+
+```
+models:
+ - name: fct_orders
+ description: Core orders fact table
+ config:
+ docs:
+ show: true
+ node_color: '#E94B3C'
+ meta:
+ owner: "data-team@company.com"
+ certified: true
+ columns:
+ - name: order_id
+ description: Unique order identifier
+```
+
+The `node_color` configuration is a simple yet powerful feature that can transform your dbt documentation from a functional reference into an intuitive, visually organized resource. By thoughtfully applying colors to represent different layers, domains, or quality tiers, you create documentation that communicates your data architecture at a glance.
+
+Start small by adding colors to your main data layers, then expand as your team develops conventions. Your future self and your teammates will thank you for the visual clarity when navigating complex data pipelines.
+
+Ready to add some color to your dbt project? Run `dbt docs generate` and watch your DAG come to life with meaningful visual organization.
+
+### References
+
+* [Official dbt docs configuration documentation](https://docs.getdbt.com/reference/resource-configs/docs)
+
+---
+
+*This article was originally published at <https://medium.com/@aradsouza/customizing-your-dbt-documentation-with-node-color-2e7eda74434b>*
