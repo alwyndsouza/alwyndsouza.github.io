@@ -76,8 +76,8 @@ export function About() {
       <section className="py-10">
         <h2 className="text-2xl font-semibold mb-6">Skills & Tech Stack</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          const cardColors = ['#a855f7', '#3b82f6', '#06b6d4', '#8b5cf6'];
           {skills.map(({ category, items }, i) => {
+            const cardColors = ['#a855f7', '#3b82f6', '#06b6d4', '#8b5cf6'];
             const color = cardColors[i % 4];
             return (
             <Card key={category} className="overflow-hidden">
