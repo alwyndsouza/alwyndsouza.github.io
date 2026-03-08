@@ -38,13 +38,17 @@ export function Projects() {
           ))}
         </div>
 
+        {(() => {
+          const cardColors = ['#a855f7', '#3b82f6', '#06b6d4', '#8b5cf6'];
+          return (
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {filtered.map(project => (
+          {filtered.map((project, i) => (
             <Link key={project.id} to={`/projects/${project.id}`}>
-              <Card className="h-full hover:shadow-md transition-shadow">
-                <CardContent className="pt-5">
+              <Card className="h-full hover:shadow-md transition-shadow overflow-hidden">
+                <div className="h-1 w-full" style={{ background: `linear-gradient(90deg, ${cardColors[i % 4]}, transparent)` }} />
+                <CardContent className="pt-4">
                   <div className="flex items-center gap-2 mb-3">
-                    <Badge variant="secondary">{project.category}</Badge>
+                    <span className="px-2 py-0.5 rounded-full text-xs font-semibold text-white" style={{ background: 'linear-gradient(135deg, #a855f7, #3b82f6)' }}>{project.category}</span>
                     <span className={`text-xs px-2 py-0.5 rounded-full font-medium ${statusColor[project.status] ?? 'bg-gray-100 text-gray-800'}`}>{project.status}</span>
                   </div>
                   <h2 className="text-lg font-semibold mb-2">{project.title}</h2>
@@ -60,6 +64,8 @@ export function Projects() {
             </Link>
           ))}
         </div>
+          );
+        })()}
     </div>
   );
 }

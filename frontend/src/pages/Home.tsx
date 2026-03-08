@@ -1,4 +1,5 @@
 import { Link } from 'react-router';
+import { useState, useEffect } from 'react';
 import { ArrowRight, BookOpen, TrendingUp, Layers, Bot } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -6,13 +7,69 @@ import { Badge } from '@/components/ui/badge';
 import { articles } from '@/data/articles';
 import { featuredProjects } from '@/data/projects';
 
+const consoleLines = [
+  '$ alwyn --role "DataOps Engineer"',
+  '> Initialising data platform...',
+  '> Loading dbt models         ✓',
+  '> Connecting Databricks      ✓',
+  '> Deploying AI pipelines     ✓',
+  '> All systems operational    ✓',
+];
+
+function ConsolePrompt() {
+  const [visibleLines, setVisibleLines] = useState<string[]>([]);
+  const [currentLine, setCurrentLine] = useState(0);
+  const [currentChar, setCurrentChar] = useState(0);
+  const [showCursor, setShowCursor] = useState(true);
+
+  useEffect(() => {
+    if (currentLine >= consoleLines.length) return;
+    if (currentChar < consoleLines[currentLine].length) {
+      const t = setTimeout(() => setCurrentChar(c => c + 1), 35);
+      return () => clearTimeout(t);
+    } else {
+      const t = setTimeout(() => {
+        setVisibleLines(prev => [...prev, consoleLines[currentLine]]);
+        setCurrentLine(l => l + 1);
+        setCurrentChar(0);
+      }, 300);
+      return () => clearTimeout(t);
+    }
+  }, [currentLine, currentChar]);
+
+  useEffect(() => {
+    const t = setInterval(() => setShowCursor(c => !c), 500);
+    return () => clearInterval(t);
+  }, []);
+
+  const typing = currentLine < consoleLines.length
+    ? consoleLines[currentLine].slice(0, currentChar)
+    : '';
+
+  return (
+    <div className="bg-[#0d1117] rounded-lg p-4 font-mono text-sm text-green-400 w-full mt-8 shadow-lg border border-[#30363d]">
+      <div className="flex items-center gap-2 mb-3">
+        <span className="w-3 h-3 rounded-full bg-red-500" />
+        <span className="w-3 h-3 rounded-full bg-yellow-400" />
+        <span className="w-3 h-3 rounded-full bg-green-500" />
+        <span className="text-xs text-gray-500 ml-2">alwyn@dev ~ zsh</span>
+      </div>
+      {visibleLines.map((line, i) => (
+        <div key={i} className={`leading-relaxed ${line.startsWith('$') ? 'text-white' : 'text-green-400'}`}>
+          {line}
+        </div>
+      ))}
+      {currentLine < consoleLines.length && (
+        <div className={`leading-relaxed ${typing.startsWith('$') ? 'text-white' : 'text-green-400'}`}>
+          {typing}<span className={`${showCursor ? 'opacity-100' : 'opacity-0'}`}>█</span>
+        </div>
+      )}
+    </div>
+  );
+}
+
 /**
  * Renders the homepage with a hero, topics grid, latest articles, and featured projects.
- *
- * The "Latest Articles" and "Featured Projects" sections are rendered only when there are items
- * in the corresponding data arrays.
- *
- * @returns A React element representing the homepage layout
  */
 export function Home() {
   const latestArticles = articles.slice(0, 2);
@@ -21,7 +78,7 @@ export function Home() {
     <div className="max-w-2xl mx-auto px-4 py-12">
       {/* Hero */}
       <section className="py-16">
-        <Badge variant="secondary" className="mb-4">DataOps Engineer</Badge>
+        <Badge variant="secondary" className="mb-4">Lead Data Engineer</Badge>
         <h1 className="text-5xl font-bold tracking-tight mb-4">
           Alwyn Dsouza
         </h1>
@@ -47,6 +104,7 @@ export function Home() {
             </Button>
           </Link>
         </div>
+        <ConsolePrompt />
       </section>
 
       {/* Topics */}
@@ -54,14 +112,15 @@ export function Home() {
         <h2 className="text-2xl font-semibold mb-6">What I Write About</h2>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {[
-            { icon: Layers, label: 'Data Engineering', desc: 'dbt, Databricks, Spark' },
-            { icon: BookOpen, label: 'DataOps', desc: 'CI/CD for data, observability' },
-            { icon: Bot, label: 'AI in Data', desc: 'Automation, LLM pipelines' },
-            { icon: TrendingUp, label: 'Data Governance', desc: 'Data contracts, Quality' },
-          ].map(({ icon: Icon, label, desc }) => (
-            <Card key={label} className="hover:shadow-md transition-shadow">
-              <CardContent className="pt-5">
-                <Icon className="size-5 mb-3 text-muted-foreground" />
+            { icon: Layers, label: 'Data Engineering', desc: 'dbt, Databricks, Spark', color: '#a855f7' },
+            { icon: BookOpen, label: 'DataOps', desc: 'CI/CD for data, observability', color: '#3b82f6' },
+            { icon: Bot, label: 'AI in Data', desc: 'Automation, LLM pipelines', color: '#06b6d4' },
+            { icon: TrendingUp, label: 'Data Governance', desc: 'Data contracts, Quality', color: '#8b5cf6' },
+          ].map(({ icon: Icon, label, desc, color }) => (
+            <Card key={label} className="hover:shadow-md transition-shadow overflow-hidden">
+              <div className="h-1 w-full" style={{ background: `linear-gradient(90deg, ${color}, transparent)` }} />
+              <CardContent className="pt-4">
+                <Icon className="size-5 mb-3" style={{ color }} />
                 <p className="font-medium text-sm mb-1">{label}</p>
                 <p className="text-xs text-muted-foreground">{desc}</p>
               </CardContent>
@@ -85,7 +144,9 @@ export function Home() {
                 <Card className="hover:shadow-md transition-shadow">
                   <CardContent className="pt-5">
                     <div className="flex flex-wrap gap-2 mb-2">
-                      <Badge variant="secondary">{article.category}</Badge>
+                      <span className="px-2 py-0.5 rounded-full text-xs font-semibold text-white" style={{ background: 'linear-gradient(135deg, #a855f7, #3b82f6)' }}>
+                        {article.category}
+                      </span>
                     </div>
                     <h3 className="font-semibold mb-1">{article.title}</h3>
                     <p className="text-sm text-muted-foreground line-clamp-2">{article.excerpt}</p>

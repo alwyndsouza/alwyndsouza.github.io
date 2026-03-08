@@ -71,15 +71,19 @@ export function Articles() {
 
         <p className="text-sm text-muted-foreground mb-6">Showing {filtered.length} of {articles.length} articles</p>
 
+        {(() => {
+          const cardColors = ['#a855f7', '#3b82f6', '#06b6d4', '#8b5cf6'];
+          return (
         <div className="space-y-4">
           {filtered.length === 0 ? (
             <p className="text-center py-10 text-muted-foreground">No articles match your filters.</p>
-          ) : filtered.map(article => (
+          ) : filtered.map((article, i) => (
             <Link key={article.slug} to={`/articles/${article.slug}`}>
-              <Card className="hover:shadow-md transition-shadow">
-                <CardContent className="pt-5">
+              <Card className="hover:shadow-md transition-shadow overflow-hidden">
+                <div className="h-1 w-full" style={{ background: `linear-gradient(90deg, ${cardColors[i % 4]}, transparent)` }} />
+                <CardContent className="pt-4">
                   <div className="flex flex-wrap gap-2 mb-3">
-                    <Badge variant="secondary">{article.category}</Badge>
+                    <span className="px-2 py-0.5 rounded-full text-xs font-semibold text-white" style={{ background: 'linear-gradient(135deg, #a855f7, #3b82f6)' }}>{article.category}</span>
                     {!article.published && <Badge variant="outline" className="border-yellow-500 text-yellow-600">Draft</Badge>}
                   </div>
                   <h2 className="text-xl font-semibold mb-2">{article.title}</h2>
@@ -98,6 +102,8 @@ export function Articles() {
             </Link>
           ))}
         </div>
+          );
+        })()}
     </div>
   );
 }
