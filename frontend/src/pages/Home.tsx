@@ -7,27 +7,27 @@ import { Badge } from '@/components/ui/badge';
 import { articles } from '@/data/articles';
 import { featuredProjects } from '@/data/projects';
 
-// const consoleLines = [
-//   '$ alwyn --role "DataOps Engineer"',
-//   '> Initialising data platform...',
-//   '> Loading dbt models         ✓',
-//   '> Connecting Databricks      ✓',
-//   '> Deploying AI pipelines     ✓',
-//   '> All systems operational    ✓',
-// ];
 
 const consoleLines = [
   '❯ alwyn.init --profile "DataOps-Lead" --env "Production"',
-  '[08:30:01] INF [Terraform]   Applying state: AWS [Provisioning VPC...]',
-  '[08:30:03] INF [Terraform]   Applying state: Databricks [Provisioning Clusters...]',
-  '[08:30:04] INF [Docker]      Orchestrating 12 containers via K8s...',
-  '[08:30:07] INF [dlthub]      Ingesting raw streams to Bronze Lakehouse...',
-  '[08:30:10] INF [dbt Cloud]   Running 400+ models... [█████████] 100%',
-  '[08:30:14] INF [Databricks]  Cluster "Gold-Tier" optimized (Delta Engine)',
-  '[08:30:17] INF [AI Agent]    Vector Indexing & LLM context-warmup...',
-  '[08:30:20] SUCCESS: All Pipeline is now ACTIVE.',
+  '[08:30:01] INF [Terraform]  Applying state: AWS [Provisioning VPC...]',
+  '[08:30:03] INF [Terraform]  Applying state: Databricks [Provisioning Clusters...]',
+  '[08:30:04] INF [Docker]     Orchestrating 12 containers via K8s...',
+  '[08:30:07] INF [dlthub]     Ingesting raw streams to Bronze Lakehouse...',
+  '[08:30:10] INF [dbt Cloud]  Running 400+ models... [████████░] 92%',
   '-----------------------------------------------------------------',
-  'System Health: 100% | Cost Efficiency: +89% | CI/CD: Green',
+  '[08:30:12] ERR [dbt-core]   Critical Failure: Schema Drift detected in "stg_orders"',
+  '[08:30:13] WRN [dbt-core]   Pipeline Halted. Expected column "discount_code" missing.',
+  '[08:30:14] INF [AI-Agent]   Analyzing error logs via dbt-mcp-server...',
+  '[08:30:16] INF [AI-Agent]   Generating patch: Adding null-safe casting for "discount_code".',
+  '[08:30:18] INF [AI-Agent]   Applying hotfix to dbt-layer... FIXED ✔',
+  '-----------------------------------------------------------------',
+  '[08:30:20] INF [dbt Cloud]  Resuming build... [█████████] 100%',
+  '[08:30:22] INF [Databricks] Cluster "Gold-Tier" optimized (Delta Engine)',
+  '[08:30:24] INF [AI-Agent]   Vector Indexing & LLM context-warmup... DONE',
+  '[08:30:26] SUCCESS: All Pipelines are now ACTIVE & Self-Healed.',
+  '-----------------------------------------------------------------',
+  'System Health: 100% | Cost Efficiency: +89% | Agents: 8 Online'
 ];
 
 function ConsolePrompt() {
