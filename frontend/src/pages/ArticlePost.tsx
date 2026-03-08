@@ -4,6 +4,11 @@ import { Badge } from '@/components/ui/badge';
 import { articles } from '@/data/articles';
 import 'highlight.js/styles/github-dark.css';
 
+/**
+ * Render the article page for the slug from route parameters or redirect to the articles index when no match is found.
+ *
+ * @returns The article page JSX element, or a navigation element that redirects to `/articles` when the slug does not match any article.
+ */
 export function ArticlePost() {
   const { slug } = useParams();
   const article = articles.find(a => a.slug === slug);
@@ -13,8 +18,7 @@ export function ArticlePost() {
   }
 
   return (
-    <div className="container mx-auto px-4 py-12">
-      <div className="max-w-3xl mx-auto">
+    <div className="max-w-2xl mx-auto px-4 py-12">
         <Link to="/articles" className="inline-flex items-center gap-2 text-muted-foreground hover:text-primary mb-8 transition-colors text-sm">
           <ArrowLeft className="size-4" />
           Back to Articles
@@ -65,7 +69,6 @@ export function ArticlePost() {
             ))}
           </div>
         </div>
-      </div>
     </div>
   );
 }

@@ -5,6 +5,11 @@ import { Button } from '@/components/ui/button';
 import { getProjectById } from '@/data/projects';
 import 'highlight.js/styles/github-dark.css';
 
+/**
+ * Render a project detail page for the route `id`, showing the project's metadata, technologies, external links, cover image, and HTML content.
+ *
+ * @returns The component's React element for the project detail page; if the project cannot be found, a navigation element that redirects to `/projects`.
+ */
 export function ProjectDetail() {
   const { id } = useParams();
   const project = getProjectById(id ?? '');
@@ -21,8 +26,7 @@ export function ProjectDetail() {
   };
 
   return (
-    <div className="container mx-auto px-4 py-12">
-      <div className="max-w-3xl mx-auto">
+    <div className="max-w-2xl mx-auto px-4 py-12">
         <Link to="/projects" className="inline-flex items-center gap-2 text-muted-foreground hover:text-primary mb-8 transition-colors text-sm">
           <ArrowLeft className="size-4" />
           Back to Projects
@@ -66,7 +70,6 @@ export function ProjectDetail() {
             <div className="text-foreground" dangerouslySetInnerHTML={{ __html: project.htmlContent }} />
           </div>
         </article>
-      </div>
     </div>
   );
 }

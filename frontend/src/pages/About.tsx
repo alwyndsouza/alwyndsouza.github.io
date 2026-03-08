@@ -1,7 +1,12 @@
+/**
+ * Render the About page section containing a short biography, writing & projects summary, and external contact links.
+ *
+ * @returns The JSX element for the About page content.
+ */
 export function About() {
   return (
-    <div className="container mx-auto px-4 py-12">
-      <div className="max-w-3xl mx-auto prose prose-lg dark:prose-invert">
+    <div className="max-w-2xl mx-auto px-4 py-12">
+      <div className="prose prose-lg dark:prose-invert">
         <h1 className="text-4xl font-bold mb-2">About</h1>
         <p className="text-muted-foreground text-lg mb-8">
           Data Engineer • DataOps Practitioner • Builder
@@ -32,13 +37,6 @@ export function About() {
           reference architectures, and lessons learned from building production systems.
         </p>
 
-        <h2>Interests Outside Engineering</h2>
-        <p>
-          Outside of engineering, I follow macroeconomics and financial markets closely.
-          I'm particularly interested in market structure and frameworks such as the
-          <strong> Wyckoff Method, Elliot Waves, Dow Theory </strong>, and I occasionally build small tools and models
-          related to market analysis as a hobby. I also enjoy reading on topics related to market structure, trading psychology, and macroeconomics.
-        </p>
 
         <h2>Connect</h2>
         <p>
