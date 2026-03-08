@@ -60,12 +60,19 @@ function calculateReadTime(content: string): string {
   return `${minutes} min read`;
 }
 
+function extractFirstImage(content: string): string | undefined {
+  const match = content.match(/<img[^>]+src=["']([^"']+)["'][^>]*>/i);
+  return match?.[1];
+}
+
 const showUnpublished = import.meta.env.DEV;
 
 export const articles: Article[] = Object.entries(articleFiles)
   .map(([, file]) => {
     const rawContent = typeof file === 'string' ? file : (file as { default: string }).default;
     const { data: frontmatter, content } = parseFrontmatter(rawContent);
+    const coverImageFromFrontmatter = frontmatter.coverImage as string | undefined;
+    const fallbackCoverImage = extractFirstImage(content);
 
     return {
       slug: frontmatter.slug as string,
@@ -76,7 +83,7 @@ export const articles: Article[] = Object.entries(articleFiles)
       category: frontmatter.category as string,
       content,
       htmlContent: marked.parse(content) as string,
-      coverImage: frontmatter.coverImage as string | undefined,
+      coverImage: coverImageFromFrontmatter || fallbackCoverImage,
       published: (frontmatter.published as boolean) ?? true,
       tags: (frontmatter.tags as string[]) ?? [],
     };

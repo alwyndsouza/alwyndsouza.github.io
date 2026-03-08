@@ -5,6 +5,7 @@ import path from 'path';
 
 export default defineConfig({
   plugins: [react(), tailwindcss()],
+  publicDir: 'frontend/public',
   assetsInclude: ['**/*.md'],
   resolve: {
     extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],

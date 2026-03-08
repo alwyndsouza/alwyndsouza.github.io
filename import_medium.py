@@ -4,6 +4,8 @@ import re
 import urllib.request
 import time
 from datetime import datetime
+import html
+import json
 
 def slugify(text):
     """
@@ -50,6 +52,116 @@ def download_image(url, dest_path):
                 break
     return False
 
+def fetch_medium_article_content(url):
+    """
+    Fetch the full article content from a Medium article URL.
+    
+    Parameters:
+        url (str): The Medium article URL
+        
+    Returns:
+        str: The article content as HTML, or empty string if fetch fails
+    """
+    try:
+        req = urllib.request.Request(url, headers={
+            'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36'
+        })
+        with urllib.request.urlopen(req, timeout=10) as response:
+            html_content = response.read().decode('utf-8')
+        
+        # Extract article content - look for main article sections
+        # Medium wraps article paragraphs in elements with specific class patterns
+        content_parts = []
+        
+        # Extract paragraphs with pw-post-body-paragraph class
+        paragraph_pattern = r'<p[^>]*class="[^"]*pw-post-body-paragraph[^"]*"[^>]*>(.*?)</p>'
+        paragraphs = re.findall(paragraph_pattern, html_content, re.DOTALL)
+        
+        # Extract headings (h2, h3, h4)
+        heading_pattern = r'<(h[234])[^>]*id="[^"]*"[^>]*>(.*?)</\1>'
+        headings = re.findall(heading_pattern, html_content, re.DOTALL)
+        
+        # Extract blockquotes
+        blockquote_pattern = r'<blockquote[^>]*class="[^"]*"[^>]*>(.*?)</blockquote>'
+        blockquotes = re.findall(blockquote_pattern, html_content, re.DOTALL)
+        
+        # Extract figures/images
+        figure_pattern = r'<figure[^>]*class="[^"]*paragraph-image[^"]*"[^>]*>.*?<img[^>]*src="([^"]+)"[^>]*>.*?(?:<figcaption[^>]*>(.*?)</figcaption>)?.*?</figure>'
+        figures = re.findall(figure_pattern, html_content, re.DOTALL)
+        
+        # Extract list items
+        li_pattern = r'<li[^>]*class="[^"]*"[^>]*>(.*?)</li>'
+        list_items = re.findall(li_pattern, html_content, re.DOTALL)
+        
+        # Build structured content by finding ordinal positions
+        # This is simplified - we'll extract content in order it appears
+        content_html = []
+        
+        # Find all content blocks with id attributes (Medium uses these for ordering)
+        content_block_pattern = r'<(p|h2|h3|h4|blockquote|figure)[^>]*id="([^"]*)"[^>]*class="[^"]*(?:pw-post-body-paragraph|qa qb|oj ok)[^"]*"[^>]*>(.*?)</\1>'
+        blocks = re.findall(content_block_pattern, html_content, re.DOTALL)
+        
+        for tag, block_id, content in blocks:
+            # Clean up the content - remove nested spans and preserve only text and basic formatting
+            clean_content = clean_medium_html(content)
+            
+            if tag == 'h2':
+                content_html.append(f'<h2>{clean_content}</h2>')
+            elif tag == 'h3':
+                content_html.append(f'<h3>{clean_content}</h3>')
+            elif tag == 'h4':
+                content_html.append(f'<h4>{clean_content}</h4>')
+            elif tag == 'blockquote':
+                content_html.append(f'<blockquote>{clean_content}</blockquote>')
+            elif tag == 'p':
+                content_html.append(f'<p>{clean_content}</p>')
+        
+        # Add images
+        for img_src, caption in figures:
+            if caption:
+                clean_caption = clean_medium_html(caption)
+                content_html.append(f'<figure><img src="{img_src}" alt="" /><figcaption>{clean_caption}</figcaption></figure>')
+            else:
+                content_html.append(f'<img src="{img_src}" alt="" />')
+        
+        # Join with line breaks
+        result = '\n\n'.join(content_html)
+        
+        return result if result else ""
+            
+    except Exception as e:
+        print(f"Error fetching Medium article from {url}: {e}")
+    
+    return ""
+
+def clean_medium_html(html_text):
+    """
+    Clean Medium-specific HTML markup, keeping only content and basic formatting.
+    
+    Parameters:
+        html_text (str): Raw HTML with Medium classes
+        
+    Returns:
+        str: Cleaned HTML with basic formatting preserved
+    """
+    # Remove all span tags but keep their content
+    text = re.sub(r'<span[^>]*>', '', html_text)
+    text = re.sub(r'</span>', '', text)
+    
+    # Remove div tags but keep content
+    text = re.sub(r'<div[^>]*>', '', text)
+    text = re.sub(r'</div>', '', text)
+    
+    # Keep strong, em, code, a tags
+    # Remove other tags except the ones we want to keep
+    text = re.sub(r'<(?!/?(?:strong|em|code|a|br)\b)[^>]*>', '', text)
+    
+    # Clean up multiple spaces and newlines
+    text = re.sub(r'\s+', ' ', text)
+    text = text.strip()
+    
+    return text
+
 def extract_metadata():
     """
     Parse 'medium_feed.xml' and generate Markdown article files and image assets for the frontend.
@@ -68,7 +180,7 @@ def extract_metadata():
 
     for item in channel.findall('item'):
         title_elem = item.find('title')
-        title = title_elem.text if title_elem is not None else "Untitled"
+        title = html.unescape(title_elem.text) if title_elem is not None else "Untitled"
 
         link_elem = item.find('link')
         link = link_elem.text if link_elem is not None else ""
@@ -92,26 +204,33 @@ def extract_metadata():
         content_encoded_elem = item.find('content:encoded', ns)
         content_encoded = content_encoded_elem.text if content_encoded_elem is not None else description
 
+        # Get cover image from RSS feed
         img_match = re.search(r'<img[^>]+src="([^">]+)"', content_encoded)
-        cover_image_url = img_match.group(1) if img_match else None
+        cover_image_url = img_match.group(1) if img_match else ""
 
         slug = slugify(title)
-
-        cover_image_path = ""
-        if cover_image_url:
-            img_ext = 'png'
-            if '.jpg' in cover_image_url or '.jpeg' in cover_image_url:
-                img_ext = 'jpg'
-            elif '.webp' in cover_image_url:
-                img_ext = 'webp'
-
-            img_filename = f"{slug}.{img_ext}"
-            local_img_path = f"frontend/public/images/{img_filename}"
-            if download_image(cover_image_url, local_img_path):
-                cover_image_path = f"/images/{img_filename}"
-
-        text_content = re.sub(r'<[^>]+>', '', content_encoded)
-        excerpt = text_content[:160].strip().replace('\n', ' ') + "..."
+        
+        # Fetch full article content from Medium
+        print(f"Fetching full content for: {title}")
+        full_content = fetch_medium_article_content(link)
+        
+        # Fallback to RSS content if fetch fails
+        if not full_content or len(full_content) < 100:
+            print(f"  - Using RSS feed content (full fetch failed or too short)")
+            content_cleaned = re.sub(r'<div class="medium-feed-item">.*?</div>', '', content_encoded, flags=re.DOTALL)
+        else:
+            print(f"  - Successfully fetched full article content")
+            content_cleaned = full_content
+        
+        # Create excerpt from cleaned content
+        text_content = re.sub(r'<[^>]+>', '', content_cleaned)
+        text_content = html.unescape(text_content)
+        excerpt = text_content[:160].strip().replace('\n', ' ')
+        if len(text_content) > 160:
+            excerpt += "..."
+        
+        # Small delay to avoid rate limiting
+        time.sleep(1)
 
         md_content = f"""---
 title: "{title.replace('"', '\\"')}"
@@ -122,10 +241,10 @@ excerpt: "{excerpt.replace('"', '\\"')}"
 published: true
 tags:
 {chr(10).join([f"  - {tag}" for tag in categories])}
-coverImage: "{cover_image_path}"
+coverImage: "{cover_image_url}"
 ---
 
-{content_encoded}
+{content_cleaned}
 """
         with open(f"frontend/src/articles/{slug}.md", 'w', encoding='utf-8') as f:
             f.write(md_content)
