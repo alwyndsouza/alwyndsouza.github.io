@@ -5,3 +5,13 @@ dist/
 .env.local
 *.log
 .DS_Store
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Medium import source data (not part of the site)
+posts/
+medium_feed.xml
+medium-export/

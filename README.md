@@ -1,9 +1,9 @@
 # alwyndsouza.github.io
 
-Personal technical website for **Alwyn Dsouza** — DataOps Engineer.
+Personal technical website for **Alwyn Dsouza** — Lead Data Engineer.
 Live at: **https://alwyndsouza.github.io**
 
-Topics covered: Data Engineering · DataOps · dbt · Databricks · AI Agents.
+Topics covered: Data Engineering · DataOps · dbt · Databricks · AI Agents · MLOps
 
 ---
 
@@ -19,7 +19,7 @@ Topics covered: Data Engineering · DataOps · dbt · Databricks · AI Agents.
 | Markdown | marked + marked-highlight + highlight.js |
 | Hosting | GitHub Pages (via GitHub Actions) |
 
-Articles, projects, and trading posts are written in **Markdown with YAML frontmatter** and rendered at build time via `import.meta.glob`.
+Articles and projects are written in **Markdown with YAML frontmatter** and rendered at build time via `import.meta.glob`.
 
 ---
 
@@ -44,8 +44,6 @@ Articles, projects, and trading posts are written in **Markdown with YAML frontm
 │   │   │   ├── ArticlePost.tsx
 │   │   │   ├── Projects.tsx
 │   │   │   ├── ProjectDetail.tsx
-│   │   │   ├── Trading.tsx
-│   │   │   ├── TradingPost.tsx
 │   │   │   └── About.tsx
 │   │   │
 │   │   ├── components/
@@ -54,14 +52,11 @@ Articles, projects, and trading posts are written in **Markdown with YAML frontm
 │   │   │
 │   │   ├── data/                # Content loaders (markdown → JS objects)
 │   │   │   ├── articles.ts
-│   │   │   ├── projects.ts
-│   │   │   └── trading.ts
+│   │   │   └── projects.ts
 │   │   │
 │   │   ├── articles/            # Article markdown files
 │   │   │   └── *.md
 │   │   ├── projects/            # Project markdown files
-│   │   │   └── *.md
-│   │   ├── trading/             # Trading post markdown files
 │   │   │   └── *.md
 │   │   │
 │   │   └── styles/
@@ -69,6 +64,9 @@ Articles, projects, and trading posts are written in **Markdown with YAML frontm
 │   │
 │   └── public/
 │       └── images/              # Static images referenced in markdown
+│
+├── import_medium_export.py      # Import from Medium HTML export (ZIP download)
+├── import_medium.py             # Import from Medium RSS feed (medium_feed.xml)
 │
 └── .github/
     └── workflows/
@@ -123,12 +121,57 @@ To enable GitHub Pages for the first time:
 
 ---
 
-## Adding a New Article
+## Importing Articles from Medium
+
+Two scripts are provided to import articles from Medium into Markdown format. Both convert HTML content to clean Markdown automatically.
+
+### Option 1 — Medium HTML Export (recommended)
+
+Use this when you have downloaded your Medium data export (ZIP file).
+
+1. Go to [https://medium.com/me/settings/security](https://medium.com/me/settings/security)
+2. Click **Download your information** and extract the ZIP
+3. Place the `posts/` folder in the repo root as `medium-export/posts/`
+4. Install the required Python dependency:
+
+   ```bash
+   pip install markdownify
+   ```
+
+5. Run the import script:
+
+   ```bash
+   python3 import_medium_export.py
+   # or specify a custom path:
+   python3 import_medium_export.py path/to/posts/
+   ```
+
+### Option 2 — Medium RSS Feed
+
+Use this when you have a `medium_feed.xml` RSS export.
+
+```bash
+pip install markdownify
+python3 import_medium.py
+```
+
+Both scripts will:
+- Parse the article title, date, tags, and cover image
+- Convert all HTML body content to clean Markdown
+- Write `.md` files into `frontend/src/articles/`
+- Append a canonical link footer pointing back to Medium
+
+> **Note:** `posts/` and `medium_feed.xml` are listed in `.gitignore` and are not committed to the repository.
+
+---
+
+## Adding a New Article Manually
 
 1. Create a new Markdown file in `frontend/src/articles/`:
 
-   ```
-   cp frontend/src/articles/dbt-databricks.md frontend/src/articles/my-new-article.md
+   ```bash
+   cp frontend/src/articles/dbt-fusion-under-the-hood-the-technical-architecture.md \
+      frontend/src/articles/my-new-article.md
    ```
 
 2. Update the YAML frontmatter at the top of the file:
@@ -138,27 +181,22 @@ To enable GitHub Pages for the first time:
    title: "My Article Title"
    slug: "my-article-slug"
    date: 2025-06-01
-   category: Data Engineering
+   category: "data-engineering"
    excerpt: "A short description shown on listing pages."
    published: true
    tags:
-     - tag-one
-     - tag-two
+     - data-engineering
+     - dbt
+   coverImage: "https://cdn-images-1.medium.com/max/800/your-image.png"
    ---
    ```
 
 3. Write the article body in standard Markdown below the frontmatter.
 
-4. To include an image, add it to `frontend/public/images/` and reference it in frontmatter:
-
-   ```yaml
-   coverImage: "/images/my-diagram.png"
-   ```
-
-   Or inline in the Markdown body:
+4. To include an image inline:
 
    ```markdown
-   ![Alt text](/images/my-diagram.png)
+   ![Alt text](https://cdn-images-1.medium.com/max/800/your-image.png)
    ```
 
 5. Commit and push — GitHub Actions deploys automatically.
@@ -169,8 +207,8 @@ To enable GitHub Pages for the first time:
 
 1. Create a new Markdown file in `frontend/src/projects/`:
 
-   ```
-   cp frontend/src/projects/asx-stock-agent.md frontend/src/projects/my-project.md
+   ```bash
+   cp frontend/src/projects/example.md frontend/src/projects/my-project.md
    ```
 
 2. Update the frontmatter:
@@ -181,51 +219,20 @@ To enable GitHub Pages for the first time:
    title: "My Project"
    description: "Short description shown on the listing card."
    status: development        # production | development | beta | archived
-   category: Finance
+   category: "data-engineering"
    featured: true
    draft: false
    tech:
      - Python
-     - PostgreSQL
+     - dbt
    links:
      github: "https://github.com/alwyndsouza/my-project"
      demo: "https://my-project.example.com"
-   coverImage: "/images/my-project.png"   # optional
+   coverImage: "/images/my-project.png"
    ---
    ```
 
 3. Write the project description in Markdown below.
-
-4. Commit and push.
-
----
-
-## Adding a New Trading / Macro Post
-
-1. Create a new Markdown file in `frontend/src/trading/`:
-
-   ```
-   cp frontend/src/trading/wyckoff-sp500.md frontend/src/trading/my-analysis.md
-   ```
-
-2. Update the frontmatter:
-
-   ```yaml
-   ---
-   title: "My Market Analysis"
-   slug: "my-analysis"
-   date: 2025-06-15
-   category: Macro Economics
-   excerpt: "Brief description."
-   published: true
-   tags:
-     - macro
-     - equities
-   coverImage: "/images/chart.png"   # optional
-   ---
-   ```
-
-3. Write the analysis in Markdown below.
 
 4. Commit and push.
 
