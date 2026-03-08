@@ -1,0 +1,72 @@
+<!DOCTYPE html><html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><title>dbt Cloud Setup Guide with Databricks</title><style>
+      * {
+        font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+      }
+      html, body {
+        margin: 0;
+        padding: 0;
+      }
+      h1 {
+        font-size: 50px;
+        margin-bottom: 17px;
+        color: #333;
+      }
+      h2 {
+        font-size: 24px;
+        line-height: 1.6;
+        margin: 30px 0 0 0;
+        margin-bottom: 18px;
+        margin-top: 33px;
+        color: #333;
+      }
+      h3 {
+        font-size: 30px;
+        margin: 10px 0 20px 0;
+        color: #333;
+      }
+      header {
+        width: 640px;
+        margin: auto;
+      }
+      section {
+        width: 640px;
+        margin: auto;
+      }
+      section p {
+        margin-bottom: 27px;
+        font-size: 20px;
+        line-height: 1.6;
+        color: #333;
+      }
+      section img {
+        max-width: 640px;
+      }
+      footer {
+        padding: 0 20px;
+        margin: 50px 0;
+        text-align: center;
+        font-size: 12px;
+      }
+      .aspectRatioPlaceholder {
+        max-width: auto !important;
+        max-height: auto !important;
+      }
+      .aspectRatioPlaceholder-fill {
+        padding-bottom: 0 !important;
+      }
+      header,
+      section[data-field=subtitle],
+      section[data-field=description] {
+        display: none;
+      }
+      </style></head><body><article class="h-entry">
+<header>
+<h1 class="p-name">dbt Cloud Setup Guide with Databricks</h1>
+</header>
+<section data-field="subtitle" class="p-summary">
+dbt cloud setup with databricks
+</section>
+<section data-field="body" class="e-content">
+<section name="0b54" class="section section--body section--first section--last"><div class="section-divider"><hr class="section-divider"></div><div class="section-content"><div class="section-inner sectionLayout--insetColumn"><h3 name="c976" id="c976" class="graf graf--h3 graf--leading graf--title">dbt Cloud Setup Guide with Databricks</h3><figure name="48fe" id="48fe" class="graf graf--figure graf-after--h3"><img class="graf-image" data-image-id="1*a83fwkT0fphFSn8YRreVZg.png" data-width="1432" data-height="752" data-is-featured="true" src="https://cdn-images-1.medium.com/max/800/1*a83fwkT0fphFSn8YRreVZg.png"><figcaption class="imageCaption">dbt cloud setup with databricks</figcaption></figure><h3 name="16f6" id="16f6" class="graf graf--h3 graf-after--figure">Introduction</h3><p name="a36a" id="a36a" class="graf graf--p graf-after--h3">In this article, we will walk through the steps required to set up dbt (data build tool) Cloud using Databricks as your data warehouse. This setup allows you to leverage the power of Databricks for data transformations while managing your projects and workflows in dbt Cloud.</p><h3 name="d7a5" id="d7a5" class="graf graf--h3 graf-after--p">Prerequisites</h3><p name="51f1" id="51f1" class="graf graf--p graf-after--h3">Before starting, ensure you have:</p><ul class="postList"><li name="974c" id="974c" class="graf graf--li graf-after--p">A Databricks account</li><li name="b9e7" id="b9e7" class="graf graf--li graf-after--li">A GitHub account</li><li name="b7c7" id="b7c7" class="graf graf--li graf-after--li">Access to dbt Cloud</li><li name="43b5" id="43b5" class="graf graf--li graf-after--li">Necessary permissions for OAuth and SSO configurations</li></ul><h3 name="22cc" id="22cc" class="graf graf--h3 graf-after--li">Step-by-Step Guide</h3><h3 name="3941" id="3941" class="graf graf--h3 graf-after--h3">1. Connect Databricks with OAuth</h3><p name="4c7b" id="4c7b" class="graf graf--p graf-after--h3">First, establish a connection between your Databricks workspace and dbt Cloud using OAuth.</p><ol class="postList"><li name="3967" id="3967" class="graf graf--li graf-after--p">Log in to your Databricks account.</li><li name="7cc7" id="7cc7" class="graf graf--li graf-after--li">Navigate to <code class="markup--code markup--li-code">Admin Console</code> &gt; <code class="markup--code markup--li-code">User Settings</code>.</li><li name="0bf0" id="0bf0" class="graf graf--li graf-after--li">Under <code class="markup--code markup--li-code">Access Tokens</code>, generate a new token and copy it.</li><li name="ad20" id="ad20" class="graf graf--li graf-after--li">In another tab, log in to your dbt Cloud account.</li><li name="890a" id="890a" class="graf graf--li graf-after--li">Go to <code class="markup--code markup--li-code">Account Settings</code> &gt; <code class="markup--code markup--li-code">Integrations</code>.</li><li name="1dca" id="1dca" class="graf graf--li graf-after--li">Select <code class="markup--code markup--li-code">Databricks</code> and click on <code class="markup--code markup--li-code">Connect</code>.</li><li name="71cf" id="71cf" class="graf graf--li graf-after--li">Paste the token generated from Databricks into the required field in dbt Cloud.</li></ol><h3 name="f53b" id="f53b" class="graf graf--h3 graf-after--li">2. Configure Single Sign-On (SSO)</h3><p name="f37c" id="f37c" class="graf graf--p graf-after--h3">Next, configure Single Sign-On (SSO) for seamless access management for your team of developers.</p><ol class="postList"><li name="f2b2" id="f2b2" class="graf graf--li graf-after--p">In your identity provider’s admin console (e.g., Okta or Azure AD), create a new SAML application for dbt Cloud.</li><li name="5ca9" id="5ca9" class="graf graf--li graf-after--li">Obtain the SAML metadata URL or XML file from your identity provider.</li><li name="4789" id="4789" class="graf graf--li graf-after--li">In another tab, go back to <code class="markup--code markup--li-code">Account Settings</code> &gt; <code class="markup--code markup--li-code">SSO</code> in dbt Cloud.</li><li name="b022" id="b022" class="graf graf--li graf-after--li">Upload the SAML metadata or paste the URL.</li><li name="2e35" id="2e35" class="graf graf--li graf-after--li">Complete the SSO configuration by following the prompts.</li></ol><h3 name="3f9a" id="3f9a" class="graf graf--h3 graf-after--li">3. Integrate GitHub with dbt Cloud</h3><p name="cc6e" id="cc6e" class="graf graf--p graf-after--h3">To manage your dbt projects, integrate GitHub with dbt Cloud.</p><ol class="postList"><li name="ab02" id="ab02" class="graf graf--li graf-after--p">In your dbt Cloud account, go to <code class="markup--code markup--li-code">Account Settings</code> &gt; <code class="markup--code markup--li-code">Integrations</code>.</li><li name="fd41" id="fd41" class="graf graf--li graf-after--li">Select <code class="markup--code markup--li-code">GitHub</code> and click on <code class="markup--code markup--li-code">Connect</code>.</li><li name="8e4b" id="8e4b" class="graf graf--li graf-after--li">Authorize dbt Cloud to access your GitHub repositories.</li><li name="fec7" id="fec7" class="graf graf--li graf-after--li">Choose the repository where your dbt project is stored.</li></ol><h3 name="270f" id="270f" class="graf graf--h3 graf-after--li">4. Set Up Your dbt Project</h3><p name="191c" id="191c" class="graf graf--p graf-after--h3">Now, set up your dbt project in dbt Cloud.</p><ol class="postList"><li name="4cfe" id="4cfe" class="graf graf--li graf-after--p">In dbt Cloud, go to <code class="markup--code markup--li-code">Projects</code> and click on <code class="markup--code markup--li-code">New Project</code>.</li><li name="36df" id="36df" class="graf graf--li graf-after--li">Select your GitHub repository and branch.</li><li name="f607" id="f607" class="graf graf--li graf-after--li">Configure your project settings, including the target schema and database.</li><li name="27fc" id="27fc" class="graf graf--li graf-after--li">Save your project settings.</li></ol><h3 name="cb4d" id="cb4d" class="graf graf--h3 graf-after--li">5. Run and Schedule Jobs</h3><p name="6ef9" id="6ef9" class="graf graf--p graf-after--h3">Finally, run and schedule your dbt jobs in dbt Cloud.</p><ol class="postList"><li name="a4ff" id="a4ff" class="graf graf--li graf-after--p">In your dbt Cloud project, go to <code class="markup--code markup--li-code">Jobs</code> and click on <code class="markup--code markup--li-code">New Job</code>.</li><li name="448d" id="448d" class="graf graf--li graf-after--li">Configure the job settings, including the commands to run and the schedule.</li><li name="1fb2" id="1fb2" class="graf graf--li graf-after--li graf--trailing">Save and activate the job.</li></ol></div></div></section>
+</section>
+<footer><p>By <a href="https://medium.com/@aradsouza" class="p-author h-card">Alwyn DSouza</a> on <a href="https://medium.com/p/592b23a98007"><time class="dt-published" datetime="2025-03-07T10:50:26.522Z">March 7, 2025</time></a>.</p><p><a href="https://medium.com/@aradsouza/dbt-cloud-setup-guide-with-databricks-592b23a98007" class="p-canonical">Canonical link</a></p><p>Exported from <a href="https://medium.com">Medium</a> on March 8, 2026.</p></footer></article></body></html>

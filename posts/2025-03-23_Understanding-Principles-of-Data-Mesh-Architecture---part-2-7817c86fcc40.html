@@ -1,0 +1,72 @@
+<!DOCTYPE html><html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><title>Understanding Principles of Data Mesh Architecture — part 2</title><style>
+      * {
+        font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+      }
+      html, body {
+        margin: 0;
+        padding: 0;
+      }
+      h1 {
+        font-size: 50px;
+        margin-bottom: 17px;
+        color: #333;
+      }
+      h2 {
+        font-size: 24px;
+        line-height: 1.6;
+        margin: 30px 0 0 0;
+        margin-bottom: 18px;
+        margin-top: 33px;
+        color: #333;
+      }
+      h3 {
+        font-size: 30px;
+        margin: 10px 0 20px 0;
+        color: #333;
+      }
+      header {
+        width: 640px;
+        margin: auto;
+      }
+      section {
+        width: 640px;
+        margin: auto;
+      }
+      section p {
+        margin-bottom: 27px;
+        font-size: 20px;
+        line-height: 1.6;
+        color: #333;
+      }
+      section img {
+        max-width: 640px;
+      }
+      footer {
+        padding: 0 20px;
+        margin: 50px 0;
+        text-align: center;
+        font-size: 12px;
+      }
+      .aspectRatioPlaceholder {
+        max-width: auto !important;
+        max-height: auto !important;
+      }
+      .aspectRatioPlaceholder-fill {
+        padding-bottom: 0 !important;
+      }
+      header,
+      section[data-field=subtitle],
+      section[data-field=description] {
+        display: none;
+      }
+      </style></head><body><article class="h-entry">
+<header>
+<h1 class="p-name">Understanding Principles of Data Mesh Architecture — part 2</h1>
+</header>
+<section data-field="subtitle" class="p-summary">
+In this section — we will deep dive into each of the guiding principles of data mesh
+</section>
+<section data-field="body" class="e-content">
+<section name="d910" class="section section--body section--first section--last"><div class="section-divider"><hr class="section-divider"></div><div class="section-content"><div class="section-inner sectionLayout--insetColumn"><h3 name="cf17" id="cf17" class="graf graf--h3 graf--leading graf--title">Understanding Principles of Data Mesh Architecture — part 2</h3><p name="3905" id="3905" class="graf graf--p graf-after--h3">In this section — we will deep dive into each of the guiding principles of data mesh</p><h3 name="7a67" id="7a67" class="graf graf--h3 graf-after--p">Domain-Driven Data Ownership (Soul)</h3><p name="08f9" id="08f9" class="graf graf--p graf-after--h3">Domain Driven Data Ownership decentralises data ownership and management across different domains within an organisation. Each domain operates autonomously, handling its own data extraction, loading, transformation (ELT), and data modeling processes locally.</p><p name="8d82" id="8d82" class="graf graf--p graf-after--p">This approach allows each domain to develop and manage its own data products independently. It enhances scalability, flexibility, and agility, as domains tailor their data practices to specific needs and respond quickly to changes. Teams within each domain leverage their expertise, ensuring higher data quality and relevant insights.</p><p name="7731" id="7731" class="graf graf--p graf-after--p">This reduces bottlenecks, fosters innovation, and promotes clear ownership and accountability. Overall, it significantly improves an organisation’s ability to manage and utilise data effectively, driving better business outcomes.</p><figure name="061a" id="061a" class="graf graf--figure graf-after--p"><img class="graf-image" data-image-id="0*ORJBwjmAD8AUIMnD.png" data-width="1320" data-height="600" data-is-featured="true" src="https://cdn-images-1.medium.com/max/800/0*ORJBwjmAD8AUIMnD.png"><figcaption class="imageCaption">Illustration of different domains — by author</figcaption></figure><h3 name="fb06" id="fb06" class="graf graf--h3 graf-after--figure">Data as a Product (Heart)</h3><p name="65af" id="65af" class="graf graf--p graf-after--h3">Data product is a domain-specific, consumable entity designed to transform data into actionable insights for stakeholders and AI systems, facilitating informed decision-making processes.</p><figure name="d3e4" id="d3e4" class="graf graf--figure graf-after--p"><img class="graf-image" data-image-id="0*-7dLPopM6EIfU_2_.png" data-width="1400" data-height="578" src="https://cdn-images-1.medium.com/max/800/0*-7dLPopM6EIfU_2_.png"><figcaption class="imageCaption">illustration of data product — by Author</figcaption></figure><p name="3ca6" id="3ca6" class="graf graf--p graf-after--figure"><strong class="markup--strong markup--p-strong">Key Components of a data product are :</strong></p><ul class="postList"><li name="cbc3" id="cbc3" class="graf graf--li graf-after--p"><strong class="markup--strong markup--li-strong">Input Ports:</strong> The interfaces through which data enters the data product, connected to various data sources like databases, APIs, or files. A sales data product might ingest data from CRM systems, e-commerce platforms, and customer feedback forms</li><li name="0ea5" id="0ea5" class="graf graf--li graf-after--li"><strong class="markup--strong markup--li-strong">Output Ports:</strong> Interfaces through which processed data or results exit the data product, delivering information to other systems, dashboards, or users. The same sales data product might output sales forecasts to a business intelligence dashboard or send alerts to sales managers.</li><li name="b55e" id="b55e" class="graf graf--li graf-after--li"><strong class="markup--strong markup--li-strong">Metadata:</strong> In a data product, metadata refers to the descriptive information about the data being processed. It provides context and details that help users understand the data’s characteristics and how it should be used. Metadata for a customer data product might include customer ID, purchase history, and demographic information.</li><li name="995f" id="995f" class="graf graf--li graf-after--li"><strong class="markup--strong markup--li-strong">Observability:</strong> In a data product, the observability refers to the ability to understand and monitor the internal state of the system based on its outputs. It involves tracking various metrics, logs, and traces to ensure the data product is functioning correctly and efficiently.</li><li name="7499" id="7499" class="graf graf--li graf-after--li"><strong class="markup--strong markup--li-strong">Quality:</strong> In a data product, the quality ensures the accuracy and reliability of the processed data by validating input data for errors and inconsistencies.</li></ul><h3 name="5777" id="5777" class="graf graf--h3 graf-after--li">Self-Serve Data Platform (Body)</h3><p name="4e5e" id="4e5e" class="graf graf--p graf-after--h3">A self-serve data platform is an infrastructure that empowers users to access, manage, and analyse data independently, without needing extensive support from IT or data engineering teams.</p><p name="5f3e" id="5f3e" class="graf graf--p graf-after--p">Think of it as a separate environment created for each domain, equipped with the necessary tools to build their own data products. Data domain teams can develop their own ELT pipelines to extract data from a central data domain (hub). While domain users have the freedom to work with data as needed, there are still overarching guidelines and policies in place to maintain data quality and compliance.</p><figure name="85c7" id="85c7" class="graf graf--figure graf-after--p"><img class="graf-image" data-image-id="0*rGjsNlwlFIVl4_iG.png" data-width="1044" data-height="504" src="https://cdn-images-1.medium.com/max/800/0*rGjsNlwlFIVl4_iG.png"></figure><h3 name="67c3" id="67c3" class="graf graf--h3 graf-after--figure">Federated Data Governance (Mind)</h3><p name="c691" id="c691" class="graf graf--p graf-after--h3">Federated governance in a data mesh is a model that balances centralised governance with decentralised execution. This approach ensures that data governance standards are defined centrally, but local domain teams have the autonomy and resources to implement these standards in a way that best suits their specific environments.</p><figure name="6ab6" id="6ab6" class="graf graf--figure graf-after--p"><img class="graf-image" data-image-id="0*X2q6gUJOR0CCqCDP.png" data-width="1400" data-height="539" src="https://cdn-images-1.medium.com/max/800/0*X2q6gUJOR0CCqCDP.png"><figcaption class="imageCaption">Illustration of federated governance — by author</figcaption></figure><p name="3126" id="3126" class="graf graf--p graf-after--figure">Central governance sets the overarching guidelines, standards, and best practices for data management. It establishes boundaries and policies to ensure consistency and compliance across the organisation. And acts as a center of excellence, offering expertise and support to federated domains.</p><h3 name="3fc0" id="3fc0" class="graf graf--h3 graf-after--p">Data Mesh Logical Architecture</h3><p name="5de6" id="5de6" class="graf graf--p graf-after--h3">The below logical architecture depicts how a data mesh typical looks with 4 guiding principles.</p><figure name="95a8" id="95a8" class="graf graf--figure graf-after--p"><img class="graf-image" data-image-id="0*gIn7Jlc6orJ5fbKH.png" data-width="660" data-height="543" src="https://cdn-images-1.medium.com/max/800/0*gIn7Jlc6orJ5fbKH.png"><figcaption class="imageCaption">Logical Architecture of Data Mesh</figcaption></figure><h3 name="aa5a" id="aa5a" class="graf graf--h3 graf-after--figure">References</h3><p name="e65c" id="e65c" class="graf graf--p graf-after--h3 graf--trailing"><a href="https://www.oreilly.com/library/view/data-mesh/9781492092384/" data-href="https://www.oreilly.com/library/view/data-mesh/9781492092384/" class="markup--anchor markup--p-anchor" rel="noopener ugc nofollow noopener" target="_blank">https://www.oreilly.com/library/view/data-mesh/9781492092384/</a><br><a href="https://martinfowler.com/articles/data-mesh-principles.html" data-href="https://martinfowler.com/articles/data-mesh-principles.html" class="markup--anchor markup--p-anchor" rel="noopener ugc nofollow noopener" target="_blank">https://martinfowler.com/articles/data-mesh-principles.html</a><br><a href="https://aws.amazon.com/what-is/data-mesh/" data-href="https://aws.amazon.com/what-is/data-mesh/" class="markup--anchor markup--p-anchor" rel="noopener ugc nofollow noopener" target="_blank">https://aws.amazon.com/what-is/data-mesh/</a><br><a href="https://www.ovaledge.com/blog/data-mesh" data-href="https://www.ovaledge.com/blog/data-mesh" class="markup--anchor markup--p-anchor" rel="noopener ugc nofollow noopener" target="_blank">https://www.ovaledge.com/blog/data-mesh</a></p></div></div></section>
+</section>
+<footer><p>By <a href="https://medium.com/@aradsouza" class="p-author h-card">Alwyn DSouza</a> on <a href="https://medium.com/p/7817c86fcc40"><time class="dt-published" datetime="2025-03-23T08:54:04.953Z">March 23, 2025</time></a>.</p><p><a href="https://medium.com/@aradsouza/understanding-principles-of-data-mesh-architecture-part-2-7817c86fcc40" class="p-canonical">Canonical link</a></p><p>Exported from <a href="https://medium.com">Medium</a> on March 8, 2026.</p></footer></article></body></html>

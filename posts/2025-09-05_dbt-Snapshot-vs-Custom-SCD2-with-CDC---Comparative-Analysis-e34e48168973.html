@@ -1,0 +1,72 @@
+<!DOCTYPE html><html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><title>dbt Snapshot vs Custom SCD2 with CDC — Comparative Analysis</title><style>
+      * {
+        font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+      }
+      html, body {
+        margin: 0;
+        padding: 0;
+      }
+      h1 {
+        font-size: 50px;
+        margin-bottom: 17px;
+        color: #333;
+      }
+      h2 {
+        font-size: 24px;
+        line-height: 1.6;
+        margin: 30px 0 0 0;
+        margin-bottom: 18px;
+        margin-top: 33px;
+        color: #333;
+      }
+      h3 {
+        font-size: 30px;
+        margin: 10px 0 20px 0;
+        color: #333;
+      }
+      header {
+        width: 640px;
+        margin: auto;
+      }
+      section {
+        width: 640px;
+        margin: auto;
+      }
+      section p {
+        margin-bottom: 27px;
+        font-size: 20px;
+        line-height: 1.6;
+        color: #333;
+      }
+      section img {
+        max-width: 640px;
+      }
+      footer {
+        padding: 0 20px;
+        margin: 50px 0;
+        text-align: center;
+        font-size: 12px;
+      }
+      .aspectRatioPlaceholder {
+        max-width: auto !important;
+        max-height: auto !important;
+      }
+      .aspectRatioPlaceholder-fill {
+        padding-bottom: 0 !important;
+      }
+      header,
+      section[data-field=subtitle],
+      section[data-field=description] {
+        display: none;
+      }
+      </style></head><body><article class="h-entry">
+<header>
+<h1 class="p-name">dbt Snapshot vs Custom SCD2 with CDC — Comparative Analysis</h1>
+</header>
+<section data-field="subtitle" class="p-summary">
+Choosing Your Historical Data Strategy: Comparing dbt Snapshots and CDC-Driven Custom SCD2
+</section>
+<section data-field="body" class="e-content">
+<section name="e76b" class="section section--body section--first section--last"><div class="section-divider"><hr class="section-divider"></div><div class="section-content"><div class="section-inner sectionLayout--insetColumn"><h3 name="3bd4" id="3bd4" class="graf graf--h3 graf--leading graf--title">dbt Snapshot vs Custom SCD2 with CDC — Comparative Analysis</h3><blockquote name="8a86" id="8a86" class="graf graf--blockquote graf-after--h3">Choosing Your Historical Data Strategy: Comparing dbt Snapshots and CDC-Driven Custom SCD2</blockquote><p name="0661" id="0661" class="graf graf--p graf-after--blockquote">Slowly Changing Dimensions (SCD Type 2) are foundational for tracking historical data in analytics and compliance. In modern data stacks, two dominant approaches emerge: dbt Snapshots and Custom SCD2 logic (especially enhanced with Change Data Capture, or CDC). Each serves different needs, and understanding their differences is critical for making the right choice in data engineering.</p><h3 name="1b35" id="1b35" class="graf graf--h3 graf-after--p">What Are dbt Snapshots?</h3><p name="9bfa" id="9bfa" class="graf graf--p graf-after--h3">dbt Snapshots are a declarative configuration within dbt that automatically version row-level changes in a source table over time. When a change is detected during each dbt run, Snapshots create new entries, managing validity intervals (via <code class="markup--code markup--p-code">dbt_valid_from</code> and <code class="markup--code markup--p-code">dbt_valid_to</code>) and maintaining a “history” without custom CDC logic or extensive SQL development.</p><ul class="postList"><li name="1732" id="1732" class="graf graf--li graf-after--p">Architecture: Select query + YAML snapshot configuration.</li><li name="1171" id="1171" class="graf graf--li graf-after--li">Automation: dbt manages inserts/updates, tracks changes, and versioning in snapshot tables.</li><li name="c366" id="c366" class="graf graf--li graf-after--li">Efficiency: Best suited for analytical, batch workloads where near real-time tracking isn’t required.</li></ul><h3 name="4c06" id="4c06" class="graf graf--h3 graf-after--li">What Is Custom SCD2 Logic (with CDC)?</h3><p name="50e9" id="50e9" class="graf graf--p graf-after--h3">Custom SCD2 Logic involves manually written SQL models that implement Type 2 behavior — new rows for each change, explicit “valid from/to” columns, versioning logic, and, often, CDC integrations for higher granularity and timeliness.</p><ul class="postList"><li name="1556" id="1556" class="graf graf--li graf-after--p">CDC Integration: CDC tracks each source change in real time (or near-real time), often parsing database logs, triggers, or streams to collect every data change and send those as events to downstream systems.</li><li name="2abd" id="2abd" class="graf graf--li graf-after--li">Flexibility: Engineers can design bespoke change detection, apply custom business rules, and extend beyond Type 2 for advanced audit/compliance requirements.</li><li name="ac30" id="ac30" class="graf graf--li graf-after--li">Complexity and Cost: Requires orchestration, monitoring, development, and additional infrastructure.</li></ul><h3 name="c601" id="c601" class="graf graf--h3 graf-after--li">Technical and Functional Comparison</h3><figure name="7175" id="7175" class="graf graf--figure graf-after--h3"><img class="graf-image" data-image-id="1*f8ph40oIpgzTRcLeW8YiSw.png" data-width="1073" data-height="252" data-is-featured="true" src="https://cdn-images-1.medium.com/max/800/1*f8ph40oIpgzTRcLeW8YiSw.png"></figure><h3 name="d37c" id="d37c" class="graf graf--h3 graf-after--figure">When Best to Use Snapshot and Custom SCD Type 2 Logic</h3><h4 name="18ce" id="18ce" class="graf graf--h4 graf-after--h3">dbt Snapshot Works Best When:</h4><ul class="postList"><li name="e44a" id="e44a" class="graf graf--li graf-after--h4">Historical analysis is performed in scheduled batches</li><li name="f55b" id="f55b" class="graf graf--li graf-after--li">Data changes infrequently</li><li name="da20" id="da20" class="graf graf--li graf-after--li">Simplicity, speed to implementation, and low operational overhead are prioritized</li><li name="2391" id="2391" class="graf graf--li graf-after--li">Example: Monthly reporting on customer tier, annual compliance audits</li></ul><h4 name="abc2" id="abc2" class="graf graf--h4 graf-after--li">Custom SCD2 with CDC Is Better When:</h4><ul class="postList"><li name="ef8a" id="ef8a" class="graf graf--li graf-after--h4">High change velocity, frequent data mutability</li><li name="1a0a" id="1a0a" class="graf graf--li graf-after--li">Regulatory environments requiring full transactional history and precise audit trails</li><li name="8040" id="8040" class="graf graf--li graf-after--li">Operational dashboards and real-time systems powering product features</li><li name="daa8" id="daa8" class="graf graf--li graf-after--li">Schema must be strictly validated at every layer</li><li name="b9a9" id="b9a9" class="graf graf--li graf-after--li">Example: Financial transactions, healthcare records, fraud detection analytics</li></ul><h3 name="15cf" id="15cf" class="graf graf--h3 graf-after--li">Final Thoughts</h3><p name="1772" id="1772" class="graf graf--p graf-after--h3">dbt Snapshots and Custom SCD2 with CDC both enable SCD2, but their design philosophies differ:</p><ul class="postList"><li name="cefb" id="cefb" class="graf graf--li graf-after--p">dbt Snapshots are ideal for analytical, batch-driven, lower-complexity environments with moderate history needs.</li><li name="d3ed" id="d3ed" class="graf graf--li graf-after--li">Custom SCD2 with CDC deliver best-in-class historical fidelity, real-time data, and strict contract enforcement for high-compliance and operational workloads.</li></ul><p name="65b7" id="65b7" class="graf graf--p graf-after--li">Choosing between them depends on the organization’s requirements for change granularity, cost, compliance, and engineering investment. Carefully consider your business needs — and the full data contract lifecycle — before architecting your solution.</p><h3 name="552d" id="552d" class="graf graf--h3 graf-after--p"><strong class="markup--strong markup--h3-strong">References</strong></h3><div name="7993" id="7993" class="graf graf--mixtapeEmbed graf-after--h3"><a href="https://docs.getdbt.com/docs/build/snapshots" data-href="https://docs.getdbt.com/docs/build/snapshots" class="markup--anchor markup--mixtapeEmbed-anchor" title="https://docs.getdbt.com/docs/build/snapshots"><strong class="markup--strong markup--mixtapeEmbed-strong">Add snapshots to your DAG | dbt Developer Hub</strong><br><em class="markup--em markup--mixtapeEmbed-em">Configure snapshots in dbt to track changes to your data over time.</em>docs.getdbt.com</a><a href="https://docs.getdbt.com/docs/build/snapshots" class="js-mixtapeImage mixtapeImage u-ignoreBlock" data-media-id="5882294b058b28e7e14ad54140abbd79" data-thumbnail-img-id="0*QY3xQaZVSsJXalsK" style="background-image: url(https://cdn-images-1.medium.com/fit/c/160/160/0*QY3xQaZVSsJXalsK);"></a></div><div name="bc66" id="bc66" class="graf graf--mixtapeEmbed graf-after--mixtapeEmbed"><a href="https://www.thoughtspot.com/data-trends/data-modeling/slowly-changing-dimensions-in-data-warehouse" data-href="https://www.thoughtspot.com/data-trends/data-modeling/slowly-changing-dimensions-in-data-warehouse" class="markup--anchor markup--mixtapeEmbed-anchor" title="https://www.thoughtspot.com/data-trends/data-modeling/slowly-changing-dimensions-in-data-warehouse"><strong class="markup--strong markup--mixtapeEmbed-strong">Slowly Changing Dimensions (SCD): 4 Types &amp; How to Implement</strong><br><em class="markup--em markup--mixtapeEmbed-em">Slowly changing dimensions refer to how data in your data warehouse changes over time. As your data changes, it allows…</em>www.thoughtspot.com</a><a href="https://www.thoughtspot.com/data-trends/data-modeling/slowly-changing-dimensions-in-data-warehouse" class="js-mixtapeImage mixtapeImage u-ignoreBlock" data-media-id="bd74ca63c4ef49a46440041d228b6ecc" data-thumbnail-img-id="0*4UMB4MEZdLFm2VEG" style="background-image: url(https://cdn-images-1.medium.com/fit/c/160/160/0*4UMB4MEZdLFm2VEG);"></a></div><div name="aacf" id="aacf" class="graf graf--mixtapeEmbed graf-after--mixtapeEmbed graf--trailing"><a href="https://xebia.com/blog/a-practical-guide-to-creating-slowly-changing-dimensions-type-2-in-dbt-part-1/" data-href="https://xebia.com/blog/a-practical-guide-to-creating-slowly-changing-dimensions-type-2-in-dbt-part-1/" class="markup--anchor markup--mixtapeEmbed-anchor" title="https://xebia.com/blog/a-practical-guide-to-creating-slowly-changing-dimensions-type-2-in-dbt-part-1/"><strong class="markup--strong markup--mixtapeEmbed-strong">A Practical Guide To Creating Slowly Changing Dimensions Type 2 In Dbt | Part 1 | Xebia</strong><br><em class="markup--em markup--mixtapeEmbed-em">Many companies are using the Kimball dimensional modelling framework to model their data and will undoubtedly think of…</em>xebia.com</a><a href="https://xebia.com/blog/a-practical-guide-to-creating-slowly-changing-dimensions-type-2-in-dbt-part-1/" class="js-mixtapeImage mixtapeImage u-ignoreBlock" data-media-id="42ebbf16a4ba63276c305a9ffaa8ccec" data-thumbnail-img-id="0*TJrY23ys9YhfGNPZ" style="background-image: url(https://cdn-images-1.medium.com/fit/c/160/160/0*TJrY23ys9YhfGNPZ);"></a></div></div></div></section>
+</section>
+<footer><p>By <a href="https://medium.com/@aradsouza" class="p-author h-card">Alwyn DSouza</a> on <a href="https://medium.com/p/e34e48168973"><time class="dt-published" datetime="2025-09-05T11:49:37.863Z">September 5, 2025</time></a>.</p><p><a href="https://medium.com/@aradsouza/dbt-snapshot-vs-custom-scd2-with-cdc-comparative-analysis-e34e48168973" class="p-canonical">Canonical link</a></p><p>Exported from <a href="https://medium.com">Medium</a> on March 8, 2026.</p></footer></article></body></html>

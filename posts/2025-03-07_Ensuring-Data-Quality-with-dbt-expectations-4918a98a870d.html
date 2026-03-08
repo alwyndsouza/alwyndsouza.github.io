@@ -1,0 +1,72 @@
+<!DOCTYPE html><html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><title>Ensuring Data Quality with dbt-expectations</title><style>
+      * {
+        font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+      }
+      html, body {
+        margin: 0;
+        padding: 0;
+      }
+      h1 {
+        font-size: 50px;
+        margin-bottom: 17px;
+        color: #333;
+      }
+      h2 {
+        font-size: 24px;
+        line-height: 1.6;
+        margin: 30px 0 0 0;
+        margin-bottom: 18px;
+        margin-top: 33px;
+        color: #333;
+      }
+      h3 {
+        font-size: 30px;
+        margin: 10px 0 20px 0;
+        color: #333;
+      }
+      header {
+        width: 640px;
+        margin: auto;
+      }
+      section {
+        width: 640px;
+        margin: auto;
+      }
+      section p {
+        margin-bottom: 27px;
+        font-size: 20px;
+        line-height: 1.6;
+        color: #333;
+      }
+      section img {
+        max-width: 640px;
+      }
+      footer {
+        padding: 0 20px;
+        margin: 50px 0;
+        text-align: center;
+        font-size: 12px;
+      }
+      .aspectRatioPlaceholder {
+        max-width: auto !important;
+        max-height: auto !important;
+      }
+      .aspectRatioPlaceholder-fill {
+        padding-bottom: 0 !important;
+      }
+      header,
+      section[data-field=subtitle],
+      section[data-field=description] {
+        display: none;
+      }
+      </style></head><body><article class="h-entry">
+<header>
+<h1 class="p-name">Ensuring Data Quality with dbt-expectations</h1>
+</header>
+<section data-field="subtitle" class="p-summary">
+In the world of data engineering, ensuring the accuracy and reliability of your data is paramount. Enter dbt-expectations, an extension…
+</section>
+<section data-field="body" class="e-content">
+<section name="cd96" class="section section--body section--first section--last"><div class="section-divider"><hr class="section-divider"></div><div class="section-content"><div class="section-inner sectionLayout--insetColumn"><h3 name="61a6" id="61a6" class="graf graf--h3 graf--leading graf--title">Ensuring Data Quality with dbt-expectations</h3><p name="9669" id="9669" class="graf graf--p graf-after--h3">In the world of data engineering, ensuring the accuracy and reliability of your data is paramount. Enter dbt-expectations, an extension package for dbt (data build tool), inspired by the Great Expectations package for Python. This powerful tool allows dbt users to deploy Great Expectations-like tests directly within their data warehouse, eliminating the need for additional integrations.</p><h4 name="c02a" id="c02a" class="graf graf--h4 graf-after--p">Why Use dbt-expectations?</h4><p name="cca4" id="cca4" class="graf graf--p graf-after--h4">Data quality is critical for making informed business decisions. dbt-expectations provides a robust framework for defining and validating expectations for your data. Whether it’s the expected number of rows in a table or the expected value of a column, dbt-expectations ensures your data meets these criteria and reports any discrepancies.</p><h4 name="2d16" id="2d16" class="graf graf--h4 graf-after--p">Installing the Package</h4><p name="6fb8" id="6fb8" class="graf graf--p graf-after--h4">To get started with dbt-expectations, you need to add it to your <code class="markup--code markup--p-code">packages.yml</code> file in your dbt project folder. Here’s how:</p><pre data-code-block-mode="1" spellcheck="false" data-code-block-lang="bash" name="aab9" id="aab9" class="graf graf--pre graf-after--p graf--preV2"><span class="pre--content">packages:<br />  - package: calogica/dbt_expectations<br />    version: [<span class="hljs-string">&quot;&gt;=0.10.0&quot;</span>, <span class="hljs-string">&quot;&lt;0.11.0&quot;</span>]</span></pre><p name="4652" id="4652" class="graf graf--p graf-after--pre">Next, define the necessary variables in your <code class="markup--code markup--p-code">dbt_project.yml</code> file:</p><pre data-code-block-mode="1" spellcheck="false" data-code-block-lang="python" name="e5d7" id="e5d7" class="graf graf--pre graf-after--p graf--preV2"><span class="pre--content"><span class="hljs-built_in">vars</span>:<br />  <span class="hljs-string">&#x27;dbt_date:time_zone&#x27;</span>: <span class="hljs-string">&#x27;Australia/Sydney&#x27;</span></span></pre><p name="70b8" id="70b8" class="graf graf--p graf-after--pre">You can specify any valid timezone string in place of <code class="markup--code markup--p-code">Australia/Sydney</code>. For example, use <code class="markup--code markup--p-code">America/New_York</code> for East Coast Time.</p><p name="0781" id="0781" class="graf graf--p graf-after--p">Once you have set up the project definition, install the package using the following command:</p><pre data-code-block-mode="1" spellcheck="false" data-code-block-lang="typescript" name="0264" id="0264" class="graf graf--pre graf-after--p graf--preV2"><span class="pre--content">dbt deps</span></pre><p name="417f" id="417f" class="graf graf--p graf-after--pre">With the package installed, you can now leverage a powerful arsenal of tests to ensure your data’s integrity.</p><h4 name="bbfb" id="bbfb" class="graf graf--h4 graf-after--p">Writing Tests</h4><p name="ad73" id="ad73" class="graf graf--p graf-after--h4">dbt-expectations allows you to define tests at both the model and column levels. Here’s an example to illustrate:</p><pre data-code-block-mode="1" spellcheck="false" data-code-block-lang="yaml" name="710f" id="710f" class="graf graf--pre graf-after--p graf--preV2"><span class="pre--content"><span class="hljs-attr">model:</span><br />  <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">my_test_model</span><br />    <span class="hljs-attr">description:</span> <span class="hljs-string">this</span> <span class="hljs-string">is</span> <span class="hljs-string">a</span> <span class="hljs-string">test</span> <span class="hljs-string">model</span> <span class="hljs-string">for</span> <span class="hljs-string">demo</span> <span class="hljs-string">purposes</span><br />    <span class="hljs-attr">tests:</span><br />      <span class="hljs-bullet">-</span> <span class="hljs-attr">dbt_expectations.expect_table_row_count_to_equal_other_table:</span><br />          <span class="hljs-attr">compare_model:</span> <span class="hljs-string">ref(&quot;staging_accountd&quot;)</span><br />      <span class="hljs-bullet">-</span> <span class="hljs-attr">dbt_expectations.expect_grouped_row_values_to_have_recent_data:</span><br />          <span class="hljs-attr">group_by:</span> [<span class="hljs-string">group_id</span>]<br />          <span class="hljs-attr">timestamp_column:</span> <span class="hljs-string">date_day</span><br />          <span class="hljs-attr">datepart:</span> <span class="hljs-string">day</span><br />          <span class="hljs-attr">interval:</span> <span class="hljs-number">1</span><br />          <span class="hljs-attr">row_condition:</span> <span class="hljs-string">&quot;id is not null&quot;</span> <span class="hljs-comment"># optional</span><br />    <span class="hljs-attr">columns:</span><br />      <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">created_at</span><br />        <span class="hljs-attr">tests:</span><br />          <span class="hljs-bullet">-</span> <span class="hljs-attr">dbt_expectations.expect_column_values_to_be_of_type:</span><br />              <span class="hljs-attr">column_type:</span> <span class="hljs-string">timestamp</span><br />          <span class="hljs-bullet">-</span> <span class="hljs-attr">dbt_expectations.expect_row_values_to_have_recent_data:</span><br />              <span class="hljs-attr">datepart:</span> <span class="hljs-string">hour</span><br />              <span class="hljs-attr">interval:</span> <span class="hljs-number">3</span></span></pre><p name="4857" id="4857" class="graf graf--p graf-after--pre">In this example, we define a model named <code class="markup--code markup--p-code">my_test_model</code> with two table-level tests and two column-level tests. The table-level tests ensure the row count matches another table and that grouped row values have recent data. The column-level tests check that the <code class="markup--code markup--p-code">created_at</code> column values are of type <code class="markup--code markup--p-code">timestamp</code> and that the row values have recent data within the last three hours.</p><p name="0acf" id="0acf" class="graf graf--p graf-after--p graf--trailing">dbt-expectations is a powerful tool for maintaining data quality within your dbt projects. By integrating Great Expectations-like tests directly into your data warehouse, you can ensure your data is accurate, reliable, and ready for analysis. Start using dbt-expectations today to take your data quality to the next level!</p></div></div></section>
+</section>
+<footer><p>By <a href="https://medium.com/@aradsouza" class="p-author h-card">Alwyn DSouza</a> on <a href="https://medium.com/p/4918a98a870d"><time class="dt-published" datetime="2025-03-07T10:42:22.874Z">March 7, 2025</time></a>.</p><p><a href="https://medium.com/@aradsouza/ensuring-data-quality-with-dbt-expectations-4918a98a870d" class="p-canonical">Canonical link</a></p><p>Exported from <a href="https://medium.com">Medium</a> on March 8, 2026.</p></footer></article></body></html>
