@@ -83,7 +83,7 @@ export function Layout() {
             </div>
             <div className="flex items-center gap-4">
               <a href="https://github.com/alwyndsouza" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">GitHub</a>
-              <a href="https://linkedin.com/in/alwyndsouza" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">LinkedIn</a>
+              <a href="https://www.linkedin.com/in/alwynanildsouza/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">LinkedIn</a>
             </div>
           </div>
         </div>
