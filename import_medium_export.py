@@ -5,21 +5,31 @@ from datetime import datetime
 from pathlib import Path
 
 def slugify(text):
-    """Create a URL-friendly slug from the given text."""
+    """
+    Create a URL-friendly slug from the given text.
+    
+    Parameters:
+        text (str): Input string to convert into a slug.
+    
+    Returns:
+        slug (str): Lowercased string containing only ASCII letters, digits, and hyphens; sequences of non-alphanumeric characters are replaced by a single hyphen and leading/trailing hyphens are removed.
+    """
     text = text.lower()
     text = re.sub(r'[^a-z0-9]+', '-', text)
     return text.strip('-')
 
 def categorize_article(title, content=""):
     """
-    Determine the category based on article title and content.
+    Determine an article category and associated tag slugs based on its title and optional content.
     
     Parameters:
-        title (str): Article title
-        content (str): Article content (optional)
-        
+        title (str): Article title; matching is attempted against the title first.
+        content (str, optional): Article content used as a fallback when the title does not yield a category.
+    
     Returns:
-        tuple: (category, tags list)
+        tuple: (category, tags)
+            category (str): Short hyphenated category slug (e.g., 'data-engineering', 'mlops').
+            tags (list[str]): List of related tag slugs prioritized for the inferred category. Defaults to ('data-engineering',) when no matches are found.
     """
     title_lower = title.lower()
     content_lower = content.lower() if content else ""
@@ -74,13 +84,22 @@ def categorize_article(title, content=""):
 
 def extract_article_from_html(html_file_path):
     """
-    Extract article content from Medium's exported HTML file.
+    Parse a Medium-exported HTML file and extract article metadata and cleaned HTML content.
     
     Parameters:
-        html_file_path (str): Path to the exported HTML file
-        
+        html_file_path (str): Path to the Medium-exported HTML file to parse.
+    
     Returns:
-        dict: Article metadata and content, or None if parsing fails
+        dict: A mapping with the extracted article data:
+            - title (str): Article title (defaults to "Untitled" if not found).
+            - slug (str): URL-friendly slug generated from the title.
+            - date (str): Publication date in 'YYYY-MM-DD' format (defaults to current date on failure).
+            - category (str): Category inferred from title/content.
+            - excerpt (str): First paragraph text trimmed to ~160 characters.
+            - tags (list[str]): List of tag slugs (limited to 6); falls back to categorized tags when none are found.
+            - coverImage (str): URL of the first image found in the article HTML or empty string.
+            - content (str): Cleaned HTML content with an appended canonical-link note when available.
+        or None if the file cannot be parsed.
     """
     try:
         with open(html_file_path, 'r', encoding='utf-8') as f:

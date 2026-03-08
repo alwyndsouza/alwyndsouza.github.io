@@ -16,6 +16,11 @@ const timeline = [
   { year: '2019–22', role: 'Data Engineer', company: 'Various', desc: 'Kimball modelling, ETL pipelines, Redshift, Snowflake.' },
 ];
 
+/**
+ * Render the "About" page with a hero section, feature bio cards, skills grid, and career timeline.
+ *
+ * @returns A JSX element representing the complete About page layout containing the hero, bio grid, skills & tech stack cards, and career timeline.
+ */
 export function About() {
   return (
     <div className="max-w-2xl mx-auto px-4 py-12">
