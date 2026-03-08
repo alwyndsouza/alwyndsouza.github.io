@@ -7,78 +7,194 @@ Topics covered: Data Engineering · DataOps · dbt · Databricks · AI Agents ·
 
 ---
 
-## Site Structure
+## Tech Stack
+
+| Layer | Technology |
+|-------|-----------|
+| Framework | React 18 + TypeScript |
+| Build tool | Vite + SWC |
+| Styling | Tailwind CSS v4 |
+| Components | shadcn/ui (Badge, Button, Card) |
+| Routing | React Router v7 |
+| Markdown | marked + marked-highlight + highlight.js |
+| Hosting | GitHub Pages (via GitHub Actions) |
+
+Articles, projects, and trading posts are written in **Markdown with YAML frontmatter** and rendered at build time via `import.meta.glob`.
+
+---
+
+## Repository Structure
 
 ```
 /
-├── index.html          # Homepage
-├── about.html          # About page
-├── articles.html       # Articles listing
-├── projects.html       # Projects listing
-├── trading.html        # Trading & Macro listing
+├── index.html                   # Vite entry point (React SPA root)
+├── package.json
+├── vite.config.ts
+├── tsconfig.json
 │
-├── css/
-│   └── style.css       # All styles (responsive, minimal)
+├── frontend/
+│   ├── src/
+│   │   ├── main.tsx             # React entry point
+│   │   ├── App.tsx
+│   │   ├── routes.tsx           # React Router routes
+│   │   │
+│   │   ├── pages/               # Page components
+│   │   │   ├── Home.tsx
+│   │   │   ├── Articles.tsx
+│   │   │   ├── ArticlePost.tsx
+│   │   │   ├── Projects.tsx
+│   │   │   ├── ProjectDetail.tsx
+│   │   │   ├── Trading.tsx
+│   │   │   ├── TradingPost.tsx
+│   │   │   └── About.tsx
+│   │   │
+│   │   ├── components/
+│   │   │   ├── Layout.tsx       # Sticky nav + footer
+│   │   │   └── ui/              # shadcn/ui components
+│   │   │
+│   │   ├── data/                # Content loaders (markdown → JS objects)
+│   │   │   ├── articles.ts
+│   │   │   ├── projects.ts
+│   │   │   └── trading.ts
+│   │   │
+│   │   ├── articles/            # Article markdown files
+│   │   │   └── *.md
+│   │   ├── projects/            # Project markdown files
+│   │   │   └── *.md
+│   │   ├── trading/             # Trading post markdown files
+│   │   │   └── *.md
+│   │   │
+│   │   └── styles/
+│   │       └── globals.css      # Tailwind v4 + design tokens
+│   │
+│   └── public/
+│       └── images/              # Static images referenced in markdown
 │
-├── js/
-│   └── main.js         # Lightweight JavaScript (active nav highlight)
-│
-├── articles/
-│   ├── dbt-databricks.html   # Article: Using dbt with Databricks
-│   └── ai-agents.html        # Article: Building AI Agents for DataOps
-│
-├── projects/
-│   └── asx-stock-agent.html  # Project: ASX Stock Analysis Agent
-│
-└── trading/
-    └── wyckoff-sp500.html    # Research: Wyckoff Model on S&P 500
+└── .github/
+    └── workflows/
+        └── deploy.yml           # Build → GitHub Pages
+```
+
+---
+
+## Local Development
+
+### Prerequisites
+
+- Node.js v18 or higher
+
+```bash
+node --version   # should be v18+
+npm --version
+```
+
+### Quick Start
+
+```bash
+# Install dependencies
+npm install
+
+# Start dev server (hot reload)
+npm run dev
+# → http://localhost:3000
+
+# Production build
+npm run build
+
+# Preview production build
+npm run preview
 ```
 
 ---
 
 ## Deploying on GitHub Pages
 
-1. Push this repository to GitHub under the name `<username>.github.io`  
-   (e.g. `alwyndsouza/alwyndsouza.github.io`).
+Deployment is fully automated via **GitHub Actions** (`.github/workflows/deploy.yml`).
 
-2. Go to **Settings → Pages** in the repository.
+Every push to `main`:
+1. Installs dependencies with `npm ci`
+2. Runs `npm run build` (output in `build/`)
+3. Uploads the `build/` directory to GitHub Pages
 
-3. Under **Source**, select **Deploy from a branch** and choose `main` / `(root)`.
-
-4. Click **Save**. GitHub Pages will build and serve the site at  
-   `https://<username>.github.io` within a minute or two.
-
-No build step is required — the site is plain HTML, CSS, and JavaScript.
+To enable GitHub Pages for the first time:
+1. Go to **Settings → Pages** in the repository
+2. Under **Source**, select **GitHub Actions**
+3. Push to `main` — the workflow handles the rest
 
 ---
 
 ## Adding a New Article
 
-1. Copy an existing article file as a template, e.g.:
+1. Create a new Markdown file in `frontend/src/articles/`:
+
    ```
-   cp articles/dbt-databricks.html articles/my-new-article.html
+   cp frontend/src/articles/dbt-databricks.md frontend/src/articles/my-new-article.md
    ```
 
-2. Update the `<title>`, `<meta name="description">`, `<h1>`, publish date, tags, and body content.
+2. Update the YAML frontmatter at the top of the file:
 
-3. Add an entry to **`articles.html`** (copy an existing `<li>` block and update the href, title, date, and excerpt).
+   ```yaml
+   ---
+   title: "My Article Title"
+   slug: "my-article-slug"
+   date: 2025-06-01
+   category: Data Engineering
+   excerpt: "A short description shown on listing pages."
+   published: true
+   tags:
+     - tag-one
+     - tag-two
+   ---
+   ```
 
-4. Optionally add a teaser card to the **homepage** (`index.html`) in the "Latest Articles" section.
+3. Write the article body in standard Markdown below the frontmatter.
 
-5. Commit and push — GitHub Pages deploys automatically.
+4. To include an image, add it to `frontend/public/images/` and reference it in frontmatter:
+
+   ```yaml
+   coverImage: "/images/my-diagram.png"
+   ```
+
+   Or inline in the Markdown body:
+
+   ```markdown
+   ![Alt text](/images/my-diagram.png)
+   ```
+
+5. Commit and push — GitHub Actions deploys automatically.
 
 ---
 
 ## Adding a New Project
 
-1. Copy the existing project page as a template:
+1. Create a new Markdown file in `frontend/src/projects/`:
+
    ```
-   cp projects/asx-stock-agent.html projects/my-new-project.html
+   cp frontend/src/projects/asx-stock-agent.md frontend/src/projects/my-project.md
    ```
 
-2. Update the title, description, tech stack, and status sections.
+2. Update the frontmatter:
 
-3. Add a `<div class="project-card">` entry to **`projects.html`**.
+   ```yaml
+   ---
+   id: "my-project"
+   title: "My Project"
+   description: "Short description shown on the listing card."
+   status: development        # production | development | beta | archived
+   category: Finance
+   featured: true
+   draft: false
+   tech:
+     - Python
+     - PostgreSQL
+   links:
+     github: "https://github.com/alwyndsouza/my-project"
+     demo: "https://my-project.example.com"
+   coverImage: "/images/my-project.png"   # optional
+   ---
+   ```
+
+3. Write the project description in Markdown below.
 
 4. Commit and push.
 
@@ -86,30 +202,32 @@ No build step is required — the site is plain HTML, CSS, and JavaScript.
 
 ## Adding a New Trading / Macro Post
 
-1. Copy the existing trading page:
+1. Create a new Markdown file in `frontend/src/trading/`:
+
    ```
-   cp trading/wyckoff-sp500.html trading/my-new-analysis.html
+   cp frontend/src/trading/wyckoff-sp500.md frontend/src/trading/my-analysis.md
    ```
 
-2. Update the content.
+2. Update the frontmatter:
 
-3. Add a new `<li>` entry to **`trading.html`**.
+   ```yaml
+   ---
+   title: "My Market Analysis"
+   slug: "my-analysis"
+   date: 2025-06-15
+   category: Macro Economics
+   excerpt: "Brief description."
+   published: true
+   tags:
+     - macro
+     - equities
+   coverImage: "/images/chart.png"   # optional
+   ---
+   ```
+
+3. Write the analysis in Markdown below.
 
 4. Commit and push.
-
----
-
-## Tech Stack
-
-| Layer | Technology |
-|-------|-----------|
-| Static site generator | None required — plain HTML |
-| Styles | Vanilla CSS (`css/style.css`) |
-| JavaScript | Vanilla JS (`js/main.js`) |
-| Hosting | GitHub Pages |
-| Build step | None |
-
-The site intentionally avoids frameworks and build tools to keep it fast, dependency-free, and easy to maintain long-term.
 
 ---
 
