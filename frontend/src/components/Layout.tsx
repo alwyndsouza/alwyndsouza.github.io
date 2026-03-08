@@ -1,5 +1,6 @@
 import { Outlet, Link, useLocation } from 'react-router';
 import { Database, Code2 } from 'lucide-react';
+import { ThemeToggle } from './ThemeToggle';
 
 /**
  * App layout component that renders a header with route-aware navigation, a main content Outlet, and a footer.
@@ -62,6 +63,9 @@ export function Layout() {
               >
                 About
               </Link>
+              <div className="pl-2 border-l border-border">
+                <ThemeToggle />
+              </div>
             </div>
           </div>
         </nav>
