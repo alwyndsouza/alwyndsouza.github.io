@@ -14,7 +14,7 @@ export function TradingPost() {
 
   return (
     <div className="container mx-auto px-4 py-12">
-      <div className="max-w-3xl mx-auto">
+      <div className="max-w-2xl mx-auto">
         <Link to="/trading" className="inline-flex items-center gap-2 text-muted-foreground hover:text-primary mb-8 transition-colors text-sm">
           <ArrowLeft className="size-4" />
           Back to Trading & Macro

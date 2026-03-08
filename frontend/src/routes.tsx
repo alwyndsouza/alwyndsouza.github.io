@@ -20,8 +20,6 @@ export const router = createBrowserRouter([
       { path: 'articles/:slug', Component: ArticlePost },
       { path: 'projects', Component: Projects },
       { path: 'projects/:id', Component: ProjectDetail },
-      { path: 'trading', Component: Trading },
-      { path: 'trading/:slug', Component: TradingPost },
     ],
   },
 ]);
