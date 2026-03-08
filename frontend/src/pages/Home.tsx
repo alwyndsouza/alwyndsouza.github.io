@@ -5,11 +5,9 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { articles } from '@/data/articles';
 import { featuredProjects } from '@/data/projects';
-import { tradingPosts } from '@/data/trading';
 
 export function Home() {
   const latestArticles = articles.slice(0, 2);
-  const latestTrading = tradingPosts.slice(0, 1);
 
   return (
     <div className="max-w-2xl mx-auto px-4 py-12">

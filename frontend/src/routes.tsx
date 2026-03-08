@@ -5,8 +5,6 @@ import { Articles } from './pages/Articles';
 import { ArticlePost } from './pages/ArticlePost';
 import { Projects } from './pages/Projects';
 import { ProjectDetail } from './pages/ProjectDetail';
-import { Trading } from './pages/Trading';
-import { TradingPost } from './pages/TradingPost';
 import { Layout } from './components/Layout';
 
 export const router = createBrowserRouter([
