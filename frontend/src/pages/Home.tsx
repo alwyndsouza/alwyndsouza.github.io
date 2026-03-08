@@ -21,12 +21,12 @@ export function Home() {
     <div className="max-w-2xl mx-auto px-4 py-12">
       {/* Hero */}
       <section className="py-16">
-        <Badge variant="secondary" className="mb-4">Lead Data Engineer</Badge>
+        <Badge variant="secondary" className="mb-4">DataOps Engineer</Badge>
         <h1 className="text-5xl font-bold tracking-tight mb-4">
           Alwyn Dsouza
         </h1>
         <p className="text-xl text-muted-foreground mb-3">
-          Lead Data Engineer | DataOps | AI | Markets
+          DataOps Engineer | DataOps | AI
         </p>
         <p className="text-base text-muted-foreground mb-8">
           I build scalable data platforms and write about the tools, patterns, and ideas that make

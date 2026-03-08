@@ -1,9 +1,9 @@
 # alwyndsouza.github.io
 
-Personal technical website for **Alwyn Dsouza** — Lead Data Engineer.  
+Personal technical website for **Alwyn Dsouza** — DataOps Engineer.
 Live at: **https://alwyndsouza.github.io**
 
-Topics covered: Data Engineering · DataOps · dbt · Databricks · AI Agents · Trading & Macro Economics.
+Topics covered: Data Engineering · DataOps · dbt · Databricks · AI Agents.
 
 ---
 
