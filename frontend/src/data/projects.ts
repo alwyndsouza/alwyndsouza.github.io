@@ -62,7 +62,7 @@ const projectFiles = import.meta.glob('../projects/*.md', {
   eager: true,
 });
 
-const isDev = import.meta.env.DEV;
+const showUnpublished = import.meta.env.DEV;
 
 export const projects: Project[] = Object.entries(projectFiles)
   .map(([filepath, file]) => {
@@ -82,7 +82,7 @@ export const projects: Project[] = Object.entries(projectFiles)
     };
   })
   .filter((project): project is Project => project !== null)
-  .filter(project => isDev || !project.draft)
+  .filter(project => showUnpublished || !project.draft)
   .sort((a, b) => {
     if (a.status === 'archived' && b.status !== 'archived') return 1;
     if (a.status !== 'archived' && b.status === 'archived') return -1;

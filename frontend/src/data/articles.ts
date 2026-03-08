@@ -60,7 +60,7 @@ function calculateReadTime(content: string): string {
   return `${minutes} min read`;
 }
 
-const isDev = import.meta.env.DEV;
+const showUnpublished = import.meta.env.DEV;
 
 export const articles: Article[] = Object.entries(articleFiles)
   .map(([, file]) => {
@@ -81,5 +81,5 @@ export const articles: Article[] = Object.entries(articleFiles)
       tags: (frontmatter.tags as string[]) ?? [],
     };
   })
-  .filter(post => isDev || post.published)
+  .filter(post => showUnpublished || post.published)
   .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
