@@ -7,21 +7,7 @@ import { Badge } from '@/components/ui/badge';
 import { articles } from '@/data/articles';
 import { featuredProjects } from '@/data/projects';
 
-<<<<<<< HEAD
 const consoleLines = [
-=======
-const CARD_COLORS = ['#a855f7', '#3b82f6', '#06b6d4', '#8b5cf6'];
-const BADGE_GRADIENT = 'linear-gradient(135deg, #a855f7, #3b82f6)';
-
-const TOPIC_CARDS = [
-  { icon: Layers,     label: 'Data Engineering', desc: 'dbt, Databricks, Spark',          color: '#a855f7' },
-  { icon: BookOpen,   label: 'DataOps',           desc: 'CI/CD for data, observability',   color: '#3b82f6' },
-  { icon: Bot,        label: 'AI in Data',         desc: 'Automation, LLM pipelines',       color: '#06b6d4' },
-  { icon: TrendingUp, label: 'Data Governance',    desc: 'Data contracts, Quality',         color: '#8b5cf6' },
-];
-
-const CONSOLE_LINES = [
->>>>>>> 85288d1 (chore: fix card colors)
   '$ alwyn --role "DataOps Engineer"',
   '> Initialising data platform...',
   '> Loading dbt models         ✓',
@@ -37,22 +23,13 @@ function ConsolePrompt() {
   const [showCursor, setShowCursor] = useState(true);
 
   useEffect(() => {
-<<<<<<< HEAD
     if (currentLine >= consoleLines.length) return;
     if (currentChar < consoleLines[currentLine].length) {
-=======
-    if (currentLine >= CONSOLE_LINES.length) return;
-    if (currentChar < CONSOLE_LINES[currentLine].length) {
->>>>>>> 85288d1 (chore: fix card colors)
       const t = setTimeout(() => setCurrentChar(c => c + 1), 35);
       return () => clearTimeout(t);
     } else {
       const t = setTimeout(() => {
-<<<<<<< HEAD
         setVisibleLines(prev => [...prev, consoleLines[currentLine]]);
-=======
-        setVisibleLines(prev => [...prev, CONSOLE_LINES[currentLine]]);
->>>>>>> 85288d1 (chore: fix card colors)
         setCurrentLine(l => l + 1);
         setCurrentChar(0);
       }, 300);
@@ -65,13 +42,8 @@ function ConsolePrompt() {
     return () => clearInterval(t);
   }, []);
 
-<<<<<<< HEAD
   const typing = currentLine < consoleLines.length
     ? consoleLines[currentLine].slice(0, currentChar)
-=======
-  const typing = currentLine < CONSOLE_LINES.length
-    ? CONSOLE_LINES[currentLine].slice(0, currentChar)
->>>>>>> 85288d1 (chore: fix card colors)
     : '';
 
   return (
@@ -87,27 +59,18 @@ function ConsolePrompt() {
           {line}
         </div>
       ))}
-<<<<<<< HEAD
       {currentLine < consoleLines.length && (
         <div className={`leading-relaxed ${typing.startsWith('$') ? 'text-white' : 'text-green-400'}`}>
           {typing}<span className={`${showCursor ? 'opacity-100' : 'opacity-0'}`}>█</span>
-=======
-      {currentLine < CONSOLE_LINES.length && (
-        <div className={`leading-relaxed ${typing.startsWith('$') ? 'text-white' : 'text-green-400'}`}>
-          {typing}<span className={showCursor ? 'opacity-100' : 'opacity-0'}>█</span>
->>>>>>> 85288d1 (chore: fix card colors)
         </div>
       )}
     </div>
   );
 }
 
-<<<<<<< HEAD
 /**
  * Renders the homepage with a hero, topics grid, latest articles, and featured projects.
  */
-=======
->>>>>>> 85288d1 (chore: fix card colors)
 export function Home() {
   const latestArticles = articles.slice(0, 2);
 
@@ -116,30 +79,28 @@ export function Home() {
       {/* Hero */}
       <section className="py-16">
         <Badge variant="secondary" className="mb-4">Lead Data Engineer</Badge>
-<<<<<<< HEAD
         <h1 className="text-5xl font-bold tracking-tight mb-4">
           Alwyn Dsouza
         </h1>
         <p className="text-xl text-muted-foreground mb-3">
           DataOps Engineer | DataOps | AI
         </p>
-=======
-        <h1 className="text-5xl font-bold tracking-tight mb-4">Alwyn Dsouza</h1>
-        <p className="text-xl text-muted-foreground mb-3">DataOps Engineer | DataOps | AI</p>
->>>>>>> 85288d1 (chore: fix card colors)
         <p className="text-base text-muted-foreground mb-8">
           I build scalable data platforms and write about the tools, patterns, and ideas that make
-          modern data engineering work — from dbt models and Databricks pipelines to DataOps and governance.
+          modern data engineering work — from dbt models and Databricks pipelines to DataOps
+          and governance.
         </p>
         <div className="flex gap-3 flex-wrap">
           <Link to="/articles">
             <Button size="lg" className="gap-2">
-              <BookOpen className="size-4" /> Read Articles
+              <BookOpen className="size-4" />
+              Read Articles
             </Button>
           </Link>
           <Link to="/projects">
             <Button size="lg" variant="outline" className="gap-2">
-              View Projects <ArrowRight className="size-4" />
+              View Projects
+              <ArrowRight className="size-4" />
             </Button>
           </Link>
         </div>
@@ -150,16 +111,12 @@ export function Home() {
       <section className="py-10">
         <h2 className="text-2xl font-semibold mb-6">What I Write About</h2>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-<<<<<<< HEAD
           {[
             { icon: Layers, label: 'Data Engineering', desc: 'dbt, Databricks, Spark', color: '#a855f7' },
             { icon: BookOpen, label: 'DataOps', desc: 'CI/CD for data, observability', color: '#3b82f6' },
             { icon: Bot, label: 'AI in Data', desc: 'Automation, LLM pipelines', color: '#06b6d4' },
             { icon: TrendingUp, label: 'Data Governance', desc: 'Data contracts, Quality', color: '#8b5cf6' },
           ].map(({ icon: Icon, label, desc, color }) => (
-=======
-          {TOPIC_CARDS.map(({ icon: Icon, label, desc, color }) => (
->>>>>>> 85288d1 (chore: fix card colors)
             <Card key={label} className="hover:shadow-md transition-shadow overflow-hidden">
               <div className="h-1 w-full" style={{ background: `linear-gradient(90deg, ${color}, transparent)` }} />
               <CardContent className="pt-4">
@@ -182,19 +139,14 @@ export function Home() {
             </Link>
           </div>
           <div className="space-y-4">
-            {latestArticles.map((article, i) => (
+            {latestArticles.map(article => (
               <Link key={article.slug} to={`/articles/${article.slug}`} className="block">
-                <Card className="hover:shadow-md transition-shadow overflow-hidden">
-                  <div className="h-1 w-full" style={{ background: `linear-gradient(90deg, ${CARD_COLORS[i % 4]}, transparent)` }} />
-                  <CardContent className="pt-4">
+                <Card className="hover:shadow-md transition-shadow">
+                  <CardContent className="pt-5">
                     <div className="flex flex-wrap gap-2 mb-2">
-<<<<<<< HEAD
                       <span className="px-2 py-0.5 rounded-full text-xs font-semibold text-white" style={{ background: 'linear-gradient(135deg, #a855f7, #3b82f6)' }}>
                         {article.category}
                       </span>
-=======
-                      <span className="px-2 py-0.5 rounded-full text-xs font-semibold text-white" style={{ background: BADGE_GRADIENT }}>{article.category}</span>
->>>>>>> 85288d1 (chore: fix card colors)
                     </div>
                     <h3 className="font-semibold mb-1">{article.title}</h3>
                     <p className="text-sm text-muted-foreground line-clamp-2">{article.excerpt}</p>
@@ -217,12 +169,11 @@ export function Home() {
             </Link>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {featuredProjects.map((project, i) => (
+            {featuredProjects.map(project => (
               <Link key={project.id} to={`/projects/${project.id}`}>
-                <Card className="h-full hover:shadow-md transition-shadow overflow-hidden">
-                  <div className="h-1 w-full" style={{ background: `linear-gradient(90deg, ${CARD_COLORS[i % 4]}, transparent)` }} />
-                  <CardContent className="pt-4">
-                    <span className="px-2 py-0.5 rounded-full text-xs font-semibold text-white mb-3 inline-block" style={{ background: BADGE_GRADIENT }}>{project.category}</span>
+                <Card className="h-full hover:shadow-md transition-shadow">
+                  <CardContent className="pt-5">
+                    <Badge variant="secondary" className="mb-3">{project.category}</Badge>
                     <h3 className="font-semibold mb-2">{project.title}</h3>
                     <p className="text-sm text-muted-foreground mb-3 line-clamp-2">{project.description}</p>
                     <div className="flex flex-wrap gap-1">
