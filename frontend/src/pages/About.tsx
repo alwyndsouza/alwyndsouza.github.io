@@ -4,17 +4,15 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 
 const skills = [
-  { category: 'Data Platforms', items: ['dbt', 'Databricks', 'Redshift', 'Snowflake', 'Delta Lake'] },
-  { category: 'Cloud & Infra', items: ['AWS', 'CDK', 'Glue', 'S3', 'Lambda', 'ECS'] },
-  { category: 'AI & Automation', items: ['LLM Agents', 'GitHub Copilot', 'MCP Servers', 'RAG', 'MetricFlow'] },
+  { category: 'Data Platforms', items: ['dbt', 'Databricks', 'Redshift', 'Google BigQuery', 'Delta Lake'] },
+  { category: 'Cloud & Infra', items: ['AWS', 'GCP', 'CDK', 'Glue', 'S3', 'Lambda', 'ECS', 'Docker', 'Terraform'] },
+  { category: 'AI & Automation', items: ['LLM Agents', 'GitHub Copilot', 'Claude Code', 'Ollama', 'MCP Servers', 'RAG', 'MetricFlow'] },
   { category: 'Frameworks', items: ['Data Mesh', 'DataOps', 'dlt', 'Airflow', 'Spark'] },
+  { category: 'Languages', items: ['Python', 'SQL', 'C', 'Groovy'] },
+  { category: 'DevOps & CI/CD', items: ['Jenkins', 'BuildKite', 'Docker', 'Terraform'] },
+  { category: 'Legacy & Enterprise', items: ['Oracle Apex', 'Oracle Database', 'PL/SQL', 'Proc*C'] },
 ];
 
-const timeline = [
-  { year: '2024–now', role: 'DataOps Engineer', company: 'TPG Telecom', desc: 'Centre of Excellence — data mesh, dbt, Databricks, AI-augmented engineering.' },
-  { year: '2022–24', role: 'Senior Data Engineer', company: 'TPG Telecom', desc: 'Built data platforms on AWS and Databricks. Led dbt migration and DataOps practices.' },
-  { year: '2019–22', role: 'Data Engineer', company: 'Various', desc: 'Kimball modelling, ETL pipelines, Redshift, Snowflake.' },
-];
 
 /**
  * Render the "About" page with a hero section, feature bio cards, skills grid, and career timeline.
@@ -40,7 +38,7 @@ export function About() {
               <BookOpen size={14} /> Medium
             </Button>
           </a>
-          <a href="https://linkedin.com/in/alwyndsouza" target="_blank" rel="noreferrer">
+          <a href="https://www.linkedin.com/in/alwynanildsouza/" target="_blank" rel="noreferrer">
             <Button variant="outline" className="gap-2">
               <Linkedin size={14} /> LinkedIn
             </Button>
@@ -94,22 +92,6 @@ export function About() {
         </div>
       </section>
 
-      {/* Timeline */}
-      <section className="py-10">
-        <h2 className="text-2xl font-semibold mb-6">Career Timeline</h2>
-        <div className="space-y-8">
-          {timeline.map((item, i) => (
-            <div key={i} className="relative pl-6 border-l border-border">
-              <div className="absolute -left-[5px] top-1.5 w-2.5 h-2.5 rounded-full bg-primary" />
-              <span className="text-xs font-mono text-muted-foreground mb-1 block">{item.year}</span>
-              <h4 className="font-semibold text-base">
-                {item.role} <span className="text-muted-foreground font-normal">· {item.company}</span>
-              </h4>
-              <p className="text-sm text-muted-foreground mt-2 leading-relaxed">{item.desc}</p>
-            </div>
-          ))}
-        </div>
-      </section>
     </div>
   );
 }

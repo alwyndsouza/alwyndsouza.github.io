@@ -22,7 +22,7 @@ export function Layout() {
     <div className="min-h-screen bg-background flex flex-col">
       {/* Header/Navigation */}
       <header className="border-b border-border sticky top-0 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 z-50">
-        <nav className="max-w-2xl mx-auto px-4 py-4">
+        <nav className="w-full px-6 py-4">
           <div className="flex items-center justify-between">
             <Link to="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
               <Database className="size-5" />
@@ -74,7 +74,7 @@ export function Layout() {
 
       {/* Footer */}
       <footer className="border-t border-border py-8">
-        <div className="max-w-2xl mx-auto px-4">
+        <div className="w-full px-6">
           <div className="flex items-center justify-between text-sm text-muted-foreground">
             <div className="flex items-center gap-2">
               <Code2 className="size-4" />

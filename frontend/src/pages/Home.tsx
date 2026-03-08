@@ -1,4 +1,5 @@
 import { Link } from 'react-router';
+import { useState, useEffect } from 'react';
 import { ArrowRight, BookOpen, TrendingUp, Layers, Bot } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -6,13 +7,69 @@ import { Badge } from '@/components/ui/badge';
 import { articles } from '@/data/articles';
 import { featuredProjects } from '@/data/projects';
 
+const consoleLines = [
+  '$ alwyn --role "DataOps Engineer"',
+  '> Initialising data platform...',
+  '> Loading dbt models         ✓',
+  '> Connecting Databricks      ✓',
+  '> Deploying AI pipelines     ✓',
+  '> All systems operational    ✓',
+];
+
+function ConsolePrompt() {
+  const [visibleLines, setVisibleLines] = useState<string[]>([]);
+  const [currentLine, setCurrentLine] = useState(0);
+  const [currentChar, setCurrentChar] = useState(0);
+  const [showCursor, setShowCursor] = useState(true);
+
+  useEffect(() => {
+    if (currentLine >= consoleLines.length) return;
+    if (currentChar < consoleLines[currentLine].length) {
+      const t = setTimeout(() => setCurrentChar(c => c + 1), 35);
+      return () => clearTimeout(t);
+    } else {
+      const t = setTimeout(() => {
+        setVisibleLines(prev => [...prev, consoleLines[currentLine]]);
+        setCurrentLine(l => l + 1);
+        setCurrentChar(0);
+      }, 300);
+      return () => clearTimeout(t);
+    }
+  }, [currentLine, currentChar]);
+
+  useEffect(() => {
+    const t = setInterval(() => setShowCursor(c => !c), 500);
+    return () => clearInterval(t);
+  }, []);
+
+  const typing = currentLine < consoleLines.length
+    ? consoleLines[currentLine].slice(0, currentChar)
+    : '';
+
+  return (
+    <div className="bg-[#0d1117] rounded-lg p-4 font-mono text-sm text-green-400 w-full mt-8 shadow-lg border border-[#30363d]">
+      <div className="flex items-center gap-2 mb-3">
+        <span className="w-3 h-3 rounded-full bg-red-500" />
+        <span className="w-3 h-3 rounded-full bg-yellow-400" />
+        <span className="w-3 h-3 rounded-full bg-green-500" />
+        <span className="text-xs text-gray-500 ml-2">alwyn@dev ~ zsh</span>
+      </div>
+      {visibleLines.map((line, i) => (
+        <div key={i} className={`leading-relaxed ${line.startsWith('$') ? 'text-white' : 'text-green-400'}`}>
+          {line}
+        </div>
+      ))}
+      {currentLine < consoleLines.length && (
+        <div className={`leading-relaxed ${typing.startsWith('$') ? 'text-white' : 'text-green-400'}`}>
+          {typing}<span className={`${showCursor ? 'opacity-100' : 'opacity-0'}`}>█</span>
+        </div>
+      )}
+    </div>
+  );
+}
+
 /**
  * Renders the homepage with a hero, topics grid, latest articles, and featured projects.
- *
- * The "Latest Articles" and "Featured Projects" sections are rendered only when there are items
- * in the corresponding data arrays.
- *
- * @returns A React element representing the homepage layout
  */
 export function Home() {
   const latestArticles = articles.slice(0, 2);
@@ -21,7 +78,7 @@ export function Home() {
     <div className="max-w-2xl mx-auto px-4 py-12">
       {/* Hero */}
       <section className="py-16">
-        <Badge variant="secondary" className="mb-4">DataOps Engineer</Badge>
+        <Badge variant="secondary" className="mb-4">Lead Data Engineer</Badge>
         <h1 className="text-5xl font-bold tracking-tight mb-4">
           Alwyn Dsouza
         </h1>
@@ -47,6 +104,7 @@ export function Home() {
             </Button>
           </Link>
         </div>
+        <ConsolePrompt />
       </section>
 
       {/* Topics */}
