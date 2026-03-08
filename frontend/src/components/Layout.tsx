@@ -1,6 +1,13 @@
 import { Outlet, Link, useLocation } from 'react-router';
 import { Database, Code2 } from 'lucide-react';
 
+/**
+ * App layout component that renders a header with route-aware navigation, a main content Outlet, and a footer.
+ *
+ * The header highlights a navigation link as active when the current pathname exactly matches `/` or starts with the link's path.
+ *
+ * @returns The rendered layout element containing the header, the Outlet for nested routes, and the footer.
+ */
 export function Layout() {
   const location = useLocation();
 
@@ -15,7 +22,7 @@ export function Layout() {
     <div className="min-h-screen bg-background flex flex-col">
       {/* Header/Navigation */}
       <header className="border-b border-border sticky top-0 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 z-50">
-        <nav className="container mx-auto px-4 py-4">
+        <nav className="max-w-2xl mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <Link to="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
               <Database className="size-5" />
@@ -48,14 +55,6 @@ export function Layout() {
                 Projects
               </Link>
               <Link
-                to="/trading"
-                className={`transition-colors hover:text-primary text-sm ${
-                  isActive('/trading') ? 'text-primary font-medium' : 'text-muted-foreground'
-                }`}
-              >
-                Trading & Macro
-              </Link>
-              <Link
                 to="/about"
                 className={`transition-colors hover:text-primary text-sm ${
                   isActive('/about') ? 'text-primary font-medium' : 'text-muted-foreground'
@@ -75,7 +74,7 @@ export function Layout() {
 
       {/* Footer */}
       <footer className="border-t border-border py-8">
-        <div className="container mx-auto px-4">
+        <div className="max-w-2xl mx-auto px-4">
           <div className="flex items-center justify-between text-sm text-muted-foreground">
             <div className="flex items-center gap-2">
               <Code2 className="size-4" />

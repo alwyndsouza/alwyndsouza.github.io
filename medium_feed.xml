@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:cc="http://cyber.law.harvard.edu/rss/creativeCommonsRssModule.html">
+    <channel>
+        <title><![CDATA[Stories by Alwyn DSouza on Medium]]></title>
+        <description><![CDATA[Stories by Alwyn DSouza on Medium]]></description>
+        <link>https://medium.com/@aradsouza?source=rss-670f6306e3c0------2</link>
+        <image>
+            <url>https://cdn-images-1.medium.com/fit/c/150/150/1*S2jxKxlzRPic3dko06hU-w.png</url>
+            <title>Stories by Alwyn DSouza on Medium</title>
+            <link>https://medium.com/@aradsouza?source=rss-670f6306e3c0------2</link>
+        </image>
+        <generator>Medium</generator>
+        <lastBuildDate>Sun, 08 Mar 2026 02:46:17 GMT</lastBuildDate>
+        <atom:link href="https://medium.com/@aradsouza/feed" rel="self" type="application/rss+xml"/>
+        <webMaster><![CDATA[yourfriends@medium.com]]></webMaster>
+        <atom:link href="http://medium.superfeedr.com" rel="hub"/>
+        <item>
+            <title><![CDATA[dbt fusion — Under the Hood — The Technical Architecture]]></title>
+            <description><![CDATA[<div class="medium-feed-item"><p class="medium-feed-image"><a href="https://medium.com/towards-data-engineering/dbt-fusion-under-the-hood-the-technical-architecture-ca28d7f5ba0d?source=rss-670f6306e3c0------2"><img src="https://cdn-images-1.medium.com/max/753/1*hTWf2vUUa-46kp1V9yXj0A.png" width="753"></a></p><p class="medium-feed-snippet">More Than Just &#x201C;Faster&#x201D;</p><p class="medium-feed-link"><a href="https://medium.com/towards-data-engineering/dbt-fusion-under-the-hood-the-technical-architecture-ca28d7f5ba0d?source=rss-670f6306e3c0------2">Continue reading on Towards Data Engineering »</a></p></div>]]></description>
+            <link>https://medium.com/towards-data-engineering/dbt-fusion-under-the-hood-the-technical-architecture-ca28d7f5ba0d?source=rss-670f6306e3c0------2</link>
+            <guid isPermaLink="false">https://medium.com/p/ca28d7f5ba0d</guid>
+            <category><![CDATA[dbt-labs]]></category>
+            <category><![CDATA[data-transformation]]></category>
+            <category><![CDATA[dbt]]></category>
+            <category><![CDATA[data-engineering]]></category>
+            <category><![CDATA[developer-experience]]></category>
+            <dc:creator><![CDATA[Alwyn DSouza]]></dc:creator>
+            <pubDate>Sat, 13 Dec 2025 16:59:21 GMT</pubDate>
+            <atom:updated>2026-01-14T11:45:47.956Z</atom:updated>
+        </item>
+        <item>
+            <title><![CDATA[The Evolution — Why dbt Needed a Revolution]]></title>
+            <description><![CDATA[<div class="medium-feed-item"><p class="medium-feed-image"><a href="https://medium.com/towards-data-engineering/the-evolution-why-dbt-needed-a-revolution-8099efbf4522?source=rss-670f6306e3c0------2"><img src="https://cdn-images-1.medium.com/max/2600/1*b7rnonvZvBCphARODxMoaA.png" width="4214"></a></p><p class="medium-feed-snippet">You are an analytics engineer at 3 PM on a Friday. Your stakeholder needs a new metric for Monday&#x2019;s board meeting. You write the SQL, hit&#x2026;</p><p class="medium-feed-link"><a href="https://medium.com/towards-data-engineering/the-evolution-why-dbt-needed-a-revolution-8099efbf4522?source=rss-670f6306e3c0------2">Continue reading on Towards Data Engineering »</a></p></div>]]></description>
+            <link>https://medium.com/towards-data-engineering/the-evolution-why-dbt-needed-a-revolution-8099efbf4522?source=rss-670f6306e3c0------2</link>
+            <guid isPermaLink="false">https://medium.com/p/8099efbf4522</guid>
+            <category><![CDATA[dbt]]></category>
+            <category><![CDATA[rust]]></category>
+            <category><![CDATA[dbt-cloud]]></category>
+            <category><![CDATA[dbt-core]]></category>
+            <category><![CDATA[dbt-labs]]></category>
+            <dc:creator><![CDATA[Alwyn DSouza]]></dc:creator>
+            <pubDate>Sat, 13 Dec 2025 06:16:26 GMT</pubDate>
+            <atom:updated>2026-02-13T08:49:16.997Z</atom:updated>
+        </item>
+        <item>
+            <title><![CDATA[Speed Up Your dbt Development with Sample Mode]]></title>
+            <description><![CDATA[<div class="medium-feed-item"><p class="medium-feed-image"><a href="https://medium.com/towards-data-engineering/speed-up-your-dbt-development-with-sample-mode-fbf9ec131a9d?source=rss-670f6306e3c0------2"><img src="https://cdn-images-1.medium.com/max/2018/1*PO39m9rVniIUkhLWH2_k1g.png" width="2018"></a></p><p class="medium-feed-snippet">We have all been there. You make a small change to your dbt model, run dbt build, and then wait. And wait. Sometimes for minutes&#x2026;</p><p class="medium-feed-link"><a href="https://medium.com/towards-data-engineering/speed-up-your-dbt-development-with-sample-mode-fbf9ec131a9d?source=rss-670f6306e3c0------2">Continue reading on Towards Data Engineering »</a></p></div>]]></description>
+            <link>https://medium.com/towards-data-engineering/speed-up-your-dbt-development-with-sample-mode-fbf9ec131a9d?source=rss-670f6306e3c0------2</link>
+            <guid isPermaLink="false">https://medium.com/p/fbf9ec131a9d</guid>
+            <category><![CDATA[code-quality]]></category>
+            <category><![CDATA[ci-cd-pipeline]]></category>
+            <category><![CDATA[developer-experience]]></category>
+            <category><![CDATA[speed]]></category>
+            <category><![CDATA[dbt]]></category>
+            <dc:creator><![CDATA[Alwyn DSouza]]></dc:creator>
+            <pubDate>Sun, 07 Dec 2025 15:27:45 GMT</pubDate>
+            <atom:updated>2026-02-13T15:45:45.066Z</atom:updated>
+        </item>
+        <item>
+            <title><![CDATA[Customizing Your dbt Documentation with node_color]]></title>
+            <description><![CDATA[<div class="medium-feed-item"><p class="medium-feed-image"><a href="https://medium.com/towards-data-engineering/customizing-your-dbt-documentation-with-node-color-2e7eda74434b?source=rss-670f6306e3c0------2"><img src="https://cdn-images-1.medium.com/max/1794/1*6I0up47vTmbrO6KnmQ_Row.png" width="1794"></a></p><p class="medium-feed-snippet">dbt node_clor</p><p class="medium-feed-link"><a href="https://medium.com/towards-data-engineering/customizing-your-dbt-documentation-with-node-color-2e7eda74434b?source=rss-670f6306e3c0------2">Continue reading on Towards Data Engineering »</a></p></div>]]></description>
+            <link>https://medium.com/towards-data-engineering/customizing-your-dbt-documentation-with-node-color-2e7eda74434b?source=rss-670f6306e3c0------2</link>
+            <guid isPermaLink="false">https://medium.com/p/2e7eda74434b</guid>
+            <category><![CDATA[dbt]]></category>
+            <category><![CDATA[dbt-labs]]></category>
+            <category><![CDATA[documentation]]></category>
+            <category><![CDATA[dbt-cloud]]></category>
+            <category><![CDATA[data-lineage]]></category>
+            <dc:creator><![CDATA[Alwyn DSouza]]></dc:creator>
+            <pubDate>Sat, 06 Dec 2025 05:53:33 GMT</pubDate>
+            <atom:updated>2026-02-21T06:48:19.659Z</atom:updated>
+        </item>
+        <item>
+            <title><![CDATA[The Business Case for Data Contracts: Quantifying ROI]]></title>
+            <description><![CDATA[<div class="medium-feed-item"><p class="medium-feed-image"><a href="https://aradsouza.medium.com/the-business-case-for-data-contracts-quantifying-roi-43e7dee65308?source=rss-670f6306e3c0------2"><img src="https://cdn-images-1.medium.com/max/1302/1*LZLF61Hv6hAHrXjDvfKx5Q.png" width="1302"></a></p><p class="medium-feed-snippet">Show your CTO the numbers that justify the investment</p><p class="medium-feed-link"><a href="https://aradsouza.medium.com/the-business-case-for-data-contracts-quantifying-roi-43e7dee65308?source=rss-670f6306e3c0------2">Continue reading on Medium »</a></p></div>]]></description>
+            <link>https://aradsouza.medium.com/the-business-case-for-data-contracts-quantifying-roi-43e7dee65308?source=rss-670f6306e3c0------2</link>
+            <guid isPermaLink="false">https://medium.com/p/43e7dee65308</guid>
+            <category><![CDATA[data-contract]]></category>
+            <category><![CDATA[proactive]]></category>
+            <category><![CDATA[dbt]]></category>
+            <category><![CDATA[data-quality]]></category>
+            <category><![CDATA[data-governance]]></category>
+            <dc:creator><![CDATA[Alwyn DSouza]]></dc:creator>
+            <pubDate>Mon, 01 Dec 2025 07:45:04 GMT</pubDate>
+            <atom:updated>2026-01-06T11:30:09.183Z</atom:updated>
+        </item>
+        <item>
+            <title><![CDATA[Implementing Data Contracts with dbt: From Theory to Practice]]></title>
+            <description><![CDATA[<div class="medium-feed-item"><p class="medium-feed-image"><a href="https://aradsouza.medium.com/implementing-data-contracts-with-dbt-from-theory-to-practice-eb03d568667f?source=rss-670f6306e3c0------2"><img src="https://cdn-images-1.medium.com/max/1100/1*hO1A1yGBeyos4sluhuHC5Q.png" width="1100"></a></p><p class="medium-feed-snippet">Real code, real patterns, real results</p><p class="medium-feed-link"><a href="https://aradsouza.medium.com/implementing-data-contracts-with-dbt-from-theory-to-practice-eb03d568667f?source=rss-670f6306e3c0------2">Continue reading on Medium »</a></p></div>]]></description>
+            <link>https://aradsouza.medium.com/implementing-data-contracts-with-dbt-from-theory-to-practice-eb03d568667f?source=rss-670f6306e3c0------2</link>
+            <guid isPermaLink="false">https://medium.com/p/eb03d568667f</guid>
+            <category><![CDATA[data-quality]]></category>
+            <category><![CDATA[data-contract]]></category>
+            <category><![CDATA[data-governance]]></category>
+            <category><![CDATA[dbt]]></category>
+            <dc:creator><![CDATA[Alwyn DSouza]]></dc:creator>
+            <pubDate>Mon, 01 Dec 2025 07:44:43 GMT</pubDate>
+            <atom:updated>2026-01-06T11:31:02.990Z</atom:updated>
+        </item>
+        <item>
+            <title><![CDATA[Shift Left Governance: Why You Are Fixing Data Problems at the Wrong Time]]></title>
+            <description><![CDATA[<div class="medium-feed-item"><p class="medium-feed-image"><a href="https://aradsouza.medium.com/shift-left-governance-why-you-are-fixing-data-problems-at-the-wrong-time-dbaf7895520d?source=rss-670f6306e3c0------2"><img src="https://cdn-images-1.medium.com/max/1150/1*uSmKk5lVeetSqShFjpHQRw.png" width="1150"></a></p><p class="medium-feed-snippet">What DevOps taught us about preventing problems instead of reacting to them</p><p class="medium-feed-link"><a href="https://aradsouza.medium.com/shift-left-governance-why-you-are-fixing-data-problems-at-the-wrong-time-dbaf7895520d?source=rss-670f6306e3c0------2">Continue reading on Medium »</a></p></div>]]></description>
+            <link>https://aradsouza.medium.com/shift-left-governance-why-you-are-fixing-data-problems-at-the-wrong-time-dbaf7895520d?source=rss-670f6306e3c0------2</link>
+            <guid isPermaLink="false">https://medium.com/p/dbaf7895520d</guid>
+            <category><![CDATA[data-reliability]]></category>
+            <category><![CDATA[data-quality]]></category>
+            <category><![CDATA[data-engineering]]></category>
+            <category><![CDATA[data-contract]]></category>
+            <category><![CDATA[data-governance]]></category>
+            <dc:creator><![CDATA[Alwyn DSouza]]></dc:creator>
+            <pubDate>Sun, 30 Nov 2025 02:23:39 GMT</pubDate>
+            <atom:updated>2026-01-06T11:31:17.916Z</atom:updated>
+        </item>
+        <item>
+            <title><![CDATA[Data Contracts: The Missing Link in Your Data Engineering Strategy]]></title>
+            <description><![CDATA[<div class="medium-feed-item"><p class="medium-feed-image"><a href="https://medium.com/towards-data-engineering/data-contracts-the-missing-link-in-your-data-engineering-strategy-7dbc1e95e208?source=rss-670f6306e3c0------2"><img src="https://cdn-images-1.medium.com/max/1522/1*a_SgvtYjnwO6lW2IGaS1tw.png" width="1522"></a></p><p class="medium-feed-snippet">Turning 60&#x2013;80% firefighting time into proactive innovation</p><p class="medium-feed-link"><a href="https://medium.com/towards-data-engineering/data-contracts-the-missing-link-in-your-data-engineering-strategy-7dbc1e95e208?source=rss-670f6306e3c0------2">Continue reading on Towards Data Engineering »</a></p></div>]]></description>
+            <link>https://medium.com/towards-data-engineering/data-contracts-the-missing-link-in-your-data-engineering-strategy-7dbc1e95e208?source=rss-670f6306e3c0------2</link>
+            <guid isPermaLink="false">https://medium.com/p/7dbc1e95e208</guid>
+            <category><![CDATA[data-engineering]]></category>
+            <category><![CDATA[data-governance]]></category>
+            <category><![CDATA[data-quality]]></category>
+            <category><![CDATA[innovation]]></category>
+            <category><![CDATA[data-contract]]></category>
+            <dc:creator><![CDATA[Alwyn DSouza]]></dc:creator>
+            <pubDate>Sun, 30 Nov 2025 01:30:44 GMT</pubDate>
+            <atom:updated>2026-01-14T11:44:21.107Z</atom:updated>
+        </item>
+        <item>
+            <title><![CDATA[The Code Review Journey: From Manual Slog to AI-Powered Efficiency]]></title>
+            <description><![CDATA[<div class="medium-feed-item"><p class="medium-feed-image"><a href="https://aradsouza.medium.com/the-code-review-journey-from-manual-slog-to-ai-powered-efficiency-51e7fa477877?source=rss-670f6306e3c0------2"><img src="https://cdn-images-1.medium.com/max/919/1*SQ1vnbIqVMuI1XPk100_lw.png" width="919"></a></p><p class="medium-feed-snippet">I will be honest&#x200A;&#x2014;&#x200A;code reviews used to be the part of my day I would quietly dread. Not because I didn&#x2019;t value them, but because they&#x2026;</p><p class="medium-feed-link"><a href="https://aradsouza.medium.com/the-code-review-journey-from-manual-slog-to-ai-powered-efficiency-51e7fa477877?source=rss-670f6306e3c0------2">Continue reading on Medium »</a></p></div>]]></description>
+            <link>https://aradsouza.medium.com/the-code-review-journey-from-manual-slog-to-ai-powered-efficiency-51e7fa477877?source=rss-670f6306e3c0------2</link>
+            <guid isPermaLink="false">https://medium.com/p/51e7fa477877</guid>
+            <category><![CDATA[artificial-intelligence]]></category>
+            <category><![CDATA[code-review]]></category>
+            <category><![CDATA[github-copilot]]></category>
+            <category><![CDATA[code-quality]]></category>
+            <dc:creator><![CDATA[Alwyn DSouza]]></dc:creator>
+            <pubDate>Thu, 27 Nov 2025 10:56:04 GMT</pubDate>
+            <atom:updated>2026-01-06T11:32:59.038Z</atom:updated>
+        </item>
+        <item>
+            <title><![CDATA[Building Context-Aware AI for Your Team]]></title>
+            <description><![CDATA[<div class="medium-feed-item"><p class="medium-feed-image"><a href="https://aradsouza.medium.com/building-context-aware-ai-for-your-team-cc808474ed6f?source=rss-670f6306e3c0------2"><img src="https://cdn-images-1.medium.com/max/2600/1*8oBb2mJdow7cxTlOPnh5fA.png" width="2816"></a></p><p class="medium-feed-snippet">Part 3: A Practical Implementation Guide</p><p class="medium-feed-link"><a href="https://aradsouza.medium.com/building-context-aware-ai-for-your-team-cc808474ed6f?source=rss-670f6306e3c0------2">Continue reading on Medium »</a></p></div>]]></description>
+            <link>https://aradsouza.medium.com/building-context-aware-ai-for-your-team-cc808474ed6f?source=rss-670f6306e3c0------2</link>
+            <guid isPermaLink="false">https://medium.com/p/cc808474ed6f</guid>
+            <category><![CDATA[artificial-intelligence]]></category>
+            <category><![CDATA[code-review]]></category>
+            <category><![CDATA[code-quality]]></category>
+            <category><![CDATA[github-copilot]]></category>
+            <dc:creator><![CDATA[Alwyn DSouza]]></dc:creator>
+            <pubDate>Wed, 26 Nov 2025 11:41:47 GMT</pubDate>
+            <atom:updated>2025-11-26T11:48:48.652Z</atom:updated>
+        </item>
+    </channel>
+</rss>

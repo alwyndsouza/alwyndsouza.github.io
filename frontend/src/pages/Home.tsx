@@ -5,16 +5,22 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { articles } from '@/data/articles';
 import { featuredProjects } from '@/data/projects';
-import { tradingPosts } from '@/data/trading';
 
+/**
+ * Renders the homepage with a hero, topics grid, latest articles, and featured projects.
+ *
+ * The "Latest Articles" and "Featured Projects" sections are rendered only when there are items
+ * in the corresponding data arrays.
+ *
+ * @returns A React element representing the homepage layout
+ */
 export function Home() {
   const latestArticles = articles.slice(0, 2);
-  const latestTrading = tradingPosts.slice(0, 1);
 
   return (
-    <div className="container mx-auto px-4 py-12">
+    <div className="max-w-2xl mx-auto px-4 py-12">
       {/* Hero */}
-      <section className="py-16 max-w-3xl">
+      <section className="py-16">
         <Badge variant="secondary" className="mb-4">Lead Data Engineer</Badge>
         <h1 className="text-5xl font-bold tracking-tight mb-4">
           Alwyn Dsouza
@@ -22,10 +28,10 @@ export function Home() {
         <p className="text-xl text-muted-foreground mb-3">
           Lead Data Engineer | DataOps | AI | Markets
         </p>
-        <p className="text-base text-muted-foreground mb-8 max-w-2xl">
+        <p className="text-base text-muted-foreground mb-8">
           I build scalable data platforms and write about the tools, patterns, and ideas that make
-          modern data engineering work — from dbt models and Databricks pipelines to AI agents
-          and macro market analysis.
+          modern data engineering work — from dbt models and Databricks pipelines to DataOps
+          and governance.
         </p>
         <div className="flex gap-3 flex-wrap">
           <Link to="/articles">
@@ -44,14 +50,14 @@ export function Home() {
       </section>
 
       {/* Topics */}
-      <section className="py-10 max-w-5xl">
+      <section className="py-10">
         <h2 className="text-2xl font-semibold mb-6">What I Write About</h2>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {[
             { icon: Layers, label: 'Data Engineering', desc: 'dbt, Databricks, Spark' },
-            { icon: Bot, label: 'AI Agents', desc: 'LLMs, DataOps automation' },
-            { icon: TrendingUp, label: 'Trading & Macro', desc: 'Market structure, Wyckoff' },
             { icon: BookOpen, label: 'DataOps', desc: 'CI/CD for data, observability' },
+            { icon: Bot, label: 'AI in Data', desc: 'Automation, LLM pipelines' },
+            { icon: TrendingUp, label: 'Data Governance', desc: 'Data contracts, Quality' },
           ].map(({ icon: Icon, label, desc }) => (
             <Card key={label} className="hover:shadow-md transition-shadow">
               <CardContent className="pt-5">
@@ -66,7 +72,7 @@ export function Home() {
 
       {/* Latest Articles */}
       {latestArticles.length > 0 && (
-        <section className="py-10 max-w-3xl">
+        <section className="py-10">
           <div className="flex items-center justify-between mb-6">
             <h2 className="text-2xl font-semibold">Latest Articles</h2>
             <Link to="/articles">
@@ -94,7 +100,7 @@ export function Home() {
 
       {/* Featured Projects */}
       {featuredProjects.length > 0 && (
-        <section className="py-10 max-w-5xl">
+        <section className="py-10">
           <div className="flex items-center justify-between mb-6">
             <h2 className="text-2xl font-semibold">Featured Projects</h2>
             <Link to="/projects">
@@ -122,31 +128,6 @@ export function Home() {
         </section>
       )}
 
-      {/* Trading & Macro */}
-      {latestTrading.length > 0 && (
-        <section className="py-10 max-w-3xl">
-          <div className="flex items-center justify-between mb-6">
-            <h2 className="text-2xl font-semibold">Trading & Macro</h2>
-            <Link to="/trading">
-              <Button variant="ghost" className="gap-1 text-sm">View all <ArrowRight className="size-3" /></Button>
-            </Link>
-          </div>
-          <div className="space-y-4">
-            {latestTrading.map(post => (
-              <Link key={post.slug} to={`/trading/${post.slug}`} className="block">
-                <Card className="hover:shadow-md transition-shadow">
-                  <CardContent className="pt-5">
-                    <Badge variant="secondary" className="mb-2">{post.category}</Badge>
-                    <h3 className="font-semibold mb-1">{post.title}</h3>
-                    <p className="text-sm text-muted-foreground line-clamp-2">{post.excerpt}</p>
-                    <p className="text-xs text-muted-foreground mt-2">{new Date(post.date).toLocaleDateString('en-AU', { year: 'numeric', month: 'long' })} · {post.readTime}</p>
-                  </CardContent>
-                </Card>
-              </Link>
-            ))}
-          </div>
-        </section>
-      )}
     </div>
   );
 }
