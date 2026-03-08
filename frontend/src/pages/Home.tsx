@@ -7,13 +7,27 @@ import { Badge } from '@/components/ui/badge';
 import { articles } from '@/data/articles';
 import { featuredProjects } from '@/data/projects';
 
+// const consoleLines = [
+//   '$ alwyn --role "DataOps Engineer"',
+//   '> Initialising data platform...',
+//   '> Loading dbt models         ✓',
+//   '> Connecting Databricks      ✓',
+//   '> Deploying AI pipelines     ✓',
+//   '> All systems operational    ✓',
+// ];
+
 const consoleLines = [
-  '$ alwyn --role "DataOps Engineer"',
-  '> Initialising data platform...',
-  '> Loading dbt models         ✓',
-  '> Connecting Databricks      ✓',
-  '> Deploying AI pipelines     ✓',
-  '> All systems operational    ✓',
+  '❯ alwyn.init --profile "DataOps-Lead" --env "Production"',
+  '[08:30:01] INF [Terraform]   Applying state: AWS [Provisioning VPC...]',
+  '[08:30:03] INF [Terraform]   Applying state: Databricks [Provisioning Clusters...]',
+  '[08:30:04] INF [Docker]      Orchestrating 12 containers via K8s...',
+  '[08:30:07] INF [dlthub]      Ingesting raw streams to Bronze Lakehouse...',
+  '[08:30:10] INF [dbt Cloud]   Running 400+ models... [█████████] 100%',
+  '[08:30:14] INF [Databricks]  Cluster "Gold-Tier" optimized (Delta Engine)',
+  '[08:30:17] INF [AI Agent]    Vector Indexing & LLM context-warmup...',
+  '[08:30:20] SUCCESS: All Pipeline is now ACTIVE.',
+  '-----------------------------------------------------------------',
+  'System Health: 100% | Cost Efficiency: +89% | CI/CD: Green',
 ];
 
 function ConsolePrompt() {
