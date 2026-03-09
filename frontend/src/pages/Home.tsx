@@ -9,25 +9,18 @@ import { featuredProjects } from '@/data/projects';
 
 
 const consoleLines = [
-  '❯ alwyn.init --profile "DataOps-Lead" --env "Production"',
-  '[08:30:01] INF [Terraform]  Applying state: AWS [Provisioning VPC...]',
-  '[08:30:03] INF [Terraform]  Applying state: Databricks [Provisioning Clusters...]',
-  '[08:30:04] INF [Docker]     Orchestrating 12 containers via K8s...',
-  '[08:30:07] INF [dlthub]     Ingesting raw streams to Bronze Lakehouse...',
-  '[08:30:10] INF [dbt Cloud]  Running 400+ models... [████████░] 92%',
+  '❯ alwyn.deploy --stack "DataOps-MLOps" --env "Prod"',
+  '⠿ [Terraform] Provisioning AWS & Databricks clusters... [OK]',
+  '⠿ [K8s/Docker] Orchestrating 12 containers... [OK]',
+  '⠿ [dlthub] Ingesting raw streams ➔ Delta Lake... [OK]',
   '-----------------------------------------------------------------',
-  '[08:30:12] ERR [dbt-fusion]   Critical Failure: Schema Drift detected in "stg_orders"',
-  '[08:30:13] WRN [dbt-fusion]   Pipeline Halted. Expected column "discount_code" missing.',
-  '[08:30:14] INF [AI-Agent]   Analyzing error logs via dbt-mcp-server...',
-  '[08:30:16] INF [AI-Agent]   Generating patch: Adding null-safe casting for "discount_code".',
-  '[08:30:18] INF [AI-Agent]   Applying hotfix to dbt-layer... FIXED ✔',
+  '✖ [dbt] CRITICAL: Schema drift in "stg_orders" (col missing)',
+  '✦ [AI-Agent] Patching model via dbt-mcp-server... FIXED ✔',
   '-----------------------------------------------------------------',
-  '[08:30:20] INF [dbt Cloud]  Resuming build... [█████████] 100%',
-  '[08:30:22] INF [Databricks] Cluster "Gold-Tier" optimized (Delta Engine)',
-  '[08:30:24] INF [AI-Agent]   Vector Indexing & LLM context-warmup... DONE',
-  '[08:30:26] SUCCESS: All Pipelines are now ACTIVE & Self-Healed.',
-  '-----------------------------------------------------------------',
-  'System Health: 100% | Cost Efficiency: +89% | Agents: 8 Online'
+  '⠿ [dbt] Building 400+ models... [█████████] 100%',
+  '⠿ [LLM/AI] Vector indexing & context-warmup... [OK]',
+  '✔ SUCCESS: All Pipelines ACTIVE & Self-Healed.',
+  'Health: 100% | Cost: +89% | CI/CD: Green',
 ];
 
 function ConsolePrompt() {
