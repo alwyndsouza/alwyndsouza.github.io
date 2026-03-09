@@ -85,18 +85,22 @@ export function Home() {
     <div className="max-w-5xl mx-auto px-6 py-12">
       {/* Hero */}
       <section className="py-16">
-        <Badge variant="secondary" className="mb-4">Lead Data Engineer</Badge>
         <h1 className="text-5xl font-bold tracking-tight mb-4">
           Alwyn Dsouza
         </h1>
         <p className="text-xl text-muted-foreground mb-3">
-          DataOps Engineer | DataOps | AI
+          Lead Data Engineer · DataOps · AI
         </p>
-        <p className="text-base text-muted-foreground mb-8">
-          I build scalable data platforms and write about the tools, patterns, and ideas that make
-          modern data engineering work — from dbt models and Databricks pipelines to DataOps
-          and governance.
+        <p className="text-base text-muted-foreground mb-6">
+          Builder at heart — I love to learn, collaborate, and share. By day I build data platforms with dbt, Databricks, and AWS. By night I'm usually tinkering with AI agents, reading about macro economics, or mapping out business cycles and market trends.
         </p>
+        <p className="text-base text-muted-foreground mb-6">
+          Everything I know came from the community — open-source projects, blog posts, and people who shared without asking for anything in return. Giving back isn't optional. It's a responsibility. Dont just consume, contribute. If you find my work useful, consider sharing it with someone else who might benefit.
+        </p>
+        <blockquote className="border-l-4 border-primary pl-4 mb-8 italic text-muted-foreground text-sm">
+          "If you want to go fast, go alone. But if you want to go further, go together."
+          <span className="block mt-1 not-italic font-medium text-xs">— African Proverb</span>
+        </blockquote>
         <div className="flex gap-3 flex-wrap">
           <Link to="/articles">
             <Button size="lg" className="gap-2">
