@@ -82,7 +82,7 @@ export function Home() {
   const latestArticles = articles.slice(0, 2);
 
   return (
-    <div className="max-w-2xl mx-auto px-4 py-12">
+    <div className="max-w-5xl mx-auto px-6 py-12">
       {/* Hero */}
       <section className="py-16">
         <Badge variant="secondary" className="mb-4">Lead Data Engineer</Badge>
