@@ -4,12 +4,12 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 
 const skills = [
-  { category: 'Data Platforms', items: ['dbt', 'Databricks', 'Redshift', 'Google BigQuery', 'Delta Lake'] },
+  { category: 'Data Platforms', items: ['dbt', 'dbt Cloud', 'Databricks', 'Redshift', 'Google BigQuery', 'Delta Lake', 'Apache Iceberg'] },
   { category: 'Cloud & Infra', items: ['AWS', 'GCP', 'CDK', 'Glue', 'S3', 'Lambda', 'ECS', 'Docker', 'Terraform'] },
   { category: 'AI & Automation', items: ['LLM Agents', 'GitHub Copilot', 'Claude Code', 'Ollama', 'MCP Servers', 'RAG', 'MetricFlow'] },
-  { category: 'Frameworks', items: ['Data Mesh', 'DataOps', 'dlt', 'Airflow', 'Spark'] },
-  { category: 'Languages', items: ['Python', 'SQL', 'C', 'Groovy'] },
-  { category: 'DevOps & CI/CD', items: ['Jenkins', 'BuildKite', 'Docker', 'Terraform'] },
+  { category: 'Frameworks', items: ['Data Mesh', 'DataOps', 'dlt', 'Airflow', 'Spark', 'Great Expectations'] },
+  { category: 'Languages', items: ['Python', 'SQL', 'Bash', 'YAML', 'Jinja', 'C', 'Groovy'] },
+  { category: 'DevOps & CI/CD', items: ['GitHub Actions', 'Jenkins', 'BuildKite', 'Docker', 'Terraform'] },
   { category: 'Legacy & Enterprise', items: ['Oracle Apex', 'Oracle Database', 'PL/SQL', 'Proc*C'] },
 ];
 
