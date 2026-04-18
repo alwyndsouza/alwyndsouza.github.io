@@ -11,7 +11,7 @@ import { featuredProjects } from '@/data/projects';
 const consoleLines = [
   '❯ alwyn.deploy --stack "DataOps-MLOps" --env "Prod"',
   '⠿ [Terraform] Provisioning AWS & Databricks clusters... [OK]',
-  '⠿ [K8s/Docker] Orchestrating 12 containers... [OK]',
+  '⠿ [ECS/Docker] Orchestrating containers... [OK]',
   '⠿ [dlthub] Ingesting raw streams ➔ Delta Lake... [OK]',
   '-----------------------------------------------------------------',
   '✖ [dbt] CRITICAL: Schema drift in "stg_orders" (col missing)',
@@ -20,7 +20,7 @@ const consoleLines = [
   '⠿ [dbt] Building 400+ models... [█████████] 100%',
   '⠿ [LLM/AI] Vector indexing & context-warmup... [OK]',
   '✔ SUCCESS: All Pipelines ACTIVE & Self-Healed.',
-  'Health: 100% | Cost: +89% | CI/CD: Green',
+  'Health: 100% | Lead Time: <2h | MTTR: 12min | CI/CD: Green',
 ];
 
 function ConsolePrompt() {
@@ -85,9 +85,6 @@ export function Home() {
         <h1 className="text-5xl font-bold tracking-tight mb-4">
           Alwyn Dsouza
         </h1>
-        <p className="text-xl text-muted-foreground mb-3">
-          Lead Data Engineer · DataOps · AI
-        </p>
         <p className="text-base text-muted-foreground mb-6">
           Builder at heart — I love to learn, collaborate, and share. By day I build data platforms with dbt, Databricks, and AWS. By night I'm usually tinkering with AI agents, reading about macro economics, or mapping out business cycles and market trends.
         </p>

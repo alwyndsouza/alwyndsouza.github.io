@@ -28,7 +28,7 @@ export function About() {
           I write, build in the open, and share everything I learn about data engineering and AI.
         </p>
         <p className="text-base text-muted-foreground mb-8">
-          Lead Data Engineer by day, community contributor by choice. I believe the best way to learn is to teach — so everything I build, I document. Everything I figure out, I share. The data engineering community gave me a head start; this is how I pay it forward.
+          Community contributor by choice. I believe the best way to learn is to teach — so everything I build, I document. Everything I figure out, I share. The data engineering community gave me a head start; this is how I pay it forward.
         </p>
         <div className="flex gap-3 flex-wrap">
           <a href="https://medium.com/@aradsouza" target="_blank" rel="noreferrer">
