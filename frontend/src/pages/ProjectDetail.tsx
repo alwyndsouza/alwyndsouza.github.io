@@ -48,7 +48,10 @@ export function ProjectDetail() {
               <div className="flex gap-3">
                 {project.links.github && (
                   <a href={project.links.github} target="_blank" rel="noopener noreferrer">
-                    <Button variant="outline" size="sm" className="gap-2"><Github className="size-4" />GitHub</Button>
+                    <Button variant="outline" size="sm" className="gap-2">
+                      <Github className="size-4" />
+                      {project.links.github.replace('https://github.com/', 'github.com/')}
+                    </Button>
                   </a>
                 )}
                 {project.links.demo && (

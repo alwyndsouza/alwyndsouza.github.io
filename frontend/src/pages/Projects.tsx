@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router';
+import { Github } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { projects } from '@/data/projects';
@@ -53,12 +54,24 @@ export function Projects() {
                   </div>
                   <h2 className="text-lg font-semibold mb-2">{project.title}</h2>
                   <p className="text-sm text-muted-foreground mb-4 line-clamp-2">{project.description}</p>
-                  <div className="flex flex-wrap gap-1">
+                  <div className="flex flex-wrap gap-1 mb-4">
                     {project.tech.slice(0, 5).map(tech => (
                       <span key={tech} className="px-2 py-0.5 bg-accent text-xs rounded">{tech}</span>
                     ))}
                     {project.tech.length > 5 && <span className="text-xs text-muted-foreground px-1">+{project.tech.length - 5}</span>}
                   </div>
+                  {project.links?.github && (
+                    <a
+                      href={project.links.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 text-xs text-muted-foreground hover:text-primary transition-colors"
+                      onClick={e => e.stopPropagation()}
+                    >
+                      <Github className="size-3.5" />
+                      {project.links.github.replace('https://github.com/', '')}
+                    </a>
+                  )}
                 </CardContent>
               </Card>
             </Link>
