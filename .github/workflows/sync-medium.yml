@@ -2,7 +2,7 @@ name: Sync Medium Articles
 
 on:
   schedule:
-    - cron: '0 6 * * *'  # daily at 6:00 UTC
+    - cron: '0 */6 * * *'  # every 6 hours
   workflow_dispatch:
 
 permissions:
