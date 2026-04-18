@@ -95,7 +95,7 @@ export const projects: Project[] = Object.entries(projectFiles)
     return 0;
   });
 
-export const featuredProjects = projects.filter(p => p.featured && !p.draft);
+export const featuredProjects = projects.filter(p => p.featured && !p.draft && p.status === 'production');
 
 export function getProjectById(id: string): Project | undefined {
   return projects.find(p => p.id === id);

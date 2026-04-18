@@ -1,0 +1,53 @@
+name: Sync Medium Articles
+
+on:
+  schedule:
+    - cron: '0 6 * * *'  # daily at 6:00 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install Python dependencies
+        run: pip install markdownify
+
+      - name: Fetch Medium RSS feed
+        run: curl -s "https://medium.com/feed/@aradsouza" -o medium_feed.xml
+
+      - name: Import articles
+        run: python3 import_medium.py
+
+      - name: Check for new articles
+        id: check
+        run: |
+          NEW=$(git ls-files --others --exclude-standard frontend/src/articles/)
+          if [ -n "$NEW" ]; then
+            echo "has_new=true" >> $GITHUB_OUTPUT
+            echo "New articles found:"
+            echo "$NEW"
+          else
+            echo "has_new=false" >> $GITHUB_OUTPUT
+            echo "No new articles."
+          fi
+
+      - name: Commit and push
+        if: steps.check.outputs.has_new == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add frontend/src/articles/
+          git add frontend/public/images/ 2>/dev/null || true
+          git commit -m "sync: import new articles from Medium"
+          git push
