@@ -24,4 +24,4 @@ A typical `databricks.yml` defines your resources simply:
 
 ---
 
-*This article was originally published at <https://aradsouza.medium.com/transitioning-to-the-direct-deployment-engine-for-declarative-automation-bundles-e0e5a45bb9db?source=rss-670f6306e3c0------2>*
+*This article was originally published at <https://medium.com/towards-data-engineering/transitioning-to-the-direct-deployment-engine-for-declarative-automation-bundles-e0e5a45bb9db?source=rss-670f6306e3c0------2>*

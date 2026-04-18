@@ -1,6 +1,6 @@
 import { Link } from 'react-router';
 import { useState, useEffect } from 'react';
-import { ArrowRight, BookOpen, TrendingUp, Layers, Bot } from 'lucide-react';
+import { ArrowRight, BookOpen, TrendingUp, Layers, Bot, FileText, Github, Linkedin } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -75,11 +75,8 @@ function ConsolePrompt() {
   );
 }
 
-/**
- * Renders the homepage with a hero, topics grid, latest articles, and featured projects.
- */
 export function Home() {
-  const latestArticles = articles.slice(0, 2);
+  const latestArticles = articles.slice(0, 3);
 
   return (
     <div className="max-w-5xl mx-auto px-6 py-12">
@@ -94,14 +91,23 @@ export function Home() {
         <p className="text-base text-muted-foreground mb-6">
           Builder at heart — I love to learn, collaborate, and share. By day I build data platforms with dbt, Databricks, and AWS. By night I'm usually tinkering with AI agents, reading about macro economics, or mapping out business cycles and market trends.
         </p>
-        <p className="text-base text-muted-foreground mb-6">
-          Everything I know came from the community — open-source projects, blog posts, and people who shared without asking for anything in return. Giving back isn't optional. It's a responsibility. Dont just consume, contribute. If you find my work useful, consider sharing it with someone else who might benefit.
-        </p>
-        <blockquote className="border-l-4 border-primary pl-4 mb-8 italic text-muted-foreground text-sm">
+
+        {/* Community callout */}
+        <div className="border-l-4 border-primary pl-4 mb-6 bg-accent/30 py-3 pr-4 rounded-r-lg">
+          <p className="text-base text-foreground font-medium mb-1">
+            Everything I know came from the community.
+          </p>
+          <p className="text-sm text-muted-foreground">
+            Open-source projects, blog posts, people who shared without asking for anything in return. Giving back isn't optional — it's a responsibility. Don't just consume, contribute. If you find my work useful, share it with someone who might benefit.
+          </p>
+        </div>
+
+        <blockquote className="border-l-4 border-muted pl-4 mb-8 italic text-muted-foreground text-sm">
           "If you want to go fast, go alone. But if you want to go further, go together."
           <span className="block mt-1 not-italic font-medium text-xs">— African Proverb</span>
         </blockquote>
-        <div className="flex gap-3 flex-wrap">
+
+        <div className="flex gap-3 flex-wrap mb-8">
           <Link to="/articles">
             <Button size="lg" className="gap-2">
               <BookOpen className="size-4" />
@@ -114,28 +120,62 @@ export function Home() {
               <ArrowRight className="size-4" />
             </Button>
           </Link>
+          <a href="https://medium.com/@aradsouza" target="_blank" rel="noopener noreferrer">
+            <Button size="lg" variant="outline" className="gap-2">
+              Follow on Medium
+              <ArrowRight className="size-4" />
+            </Button>
+          </a>
         </div>
+
+        {/* Community stats */}
+        <div className="flex flex-wrap gap-6 py-4 border-t border-border">
+          <div className="flex items-center gap-2 text-sm text-muted-foreground">
+            <FileText className="size-4 text-primary" />
+            <span><strong className="text-foreground">{articles.length}</strong> articles published</span>
+          </div>
+          <div className="flex items-center gap-2 text-sm text-muted-foreground">
+            <BookOpen className="size-4 text-primary" />
+            <span>Published in <strong className="text-foreground">Towards Data Engineering</strong></span>
+          </div>
+          <div className="flex items-center gap-2 text-sm text-muted-foreground">
+            <Github className="size-4 text-primary" />
+            <a href="https://github.com/alwyndsouza" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+              Open source on <strong className="text-foreground">GitHub</strong>
+            </a>
+          </div>
+          <div className="flex items-center gap-2 text-sm text-muted-foreground">
+            <Linkedin className="size-4 text-primary" />
+            <a href="https://www.linkedin.com/in/alwynanildsouza/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+              Connect on <strong className="text-foreground">LinkedIn</strong>
+            </a>
+          </div>
+        </div>
+
         <ConsolePrompt />
       </section>
 
       {/* Topics */}
       <section className="py-10">
-        <h2 className="text-2xl font-semibold mb-6">What I Write About</h2>
+        <h2 className="text-2xl font-semibold mb-2">Topics I Write About</h2>
+        <p className="text-sm text-muted-foreground mb-6">Practical writing for the data engineering community — no fluff, just things that work in production.</p>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {[
-            { icon: Layers, label: 'Data Engineering', desc: 'dbt, Databricks, Spark', color: '#a855f7' },
-            { icon: BookOpen, label: 'DataOps', desc: 'CI/CD for data, observability', color: '#3b82f6' },
-            { icon: Bot, label: 'AI in Data', desc: 'Automation, LLM pipelines', color: '#06b6d4' },
-            { icon: TrendingUp, label: 'Data Governance', desc: 'Data contracts, Quality', color: '#8b5cf6' },
+            { icon: Layers, label: 'Data Engineering', desc: 'dbt, Databricks, Spark', color: '#a855f7', category: 'data-engineering' },
+            { icon: BookOpen, label: 'DataOps', desc: 'CI/CD for data, observability', color: '#3b82f6', category: 'dataops' },
+            { icon: Bot, label: 'AI in Data', desc: 'Automation, LLM pipelines', color: '#06b6d4', category: 'ai' },
+            { icon: TrendingUp, label: 'Data Governance', desc: 'Data contracts, Quality', color: '#8b5cf6', category: 'data-governance' },
           ].map(({ icon: Icon, label, desc, color }) => (
-            <Card key={label} className="hover:shadow-md transition-shadow overflow-hidden">
-              <div className="h-1 w-full" style={{ background: `linear-gradient(90deg, ${color}, transparent)` }} />
-              <CardContent className="pt-4">
-                <Icon className="size-5 mb-3" style={{ color }} />
-                <p className="font-medium text-sm mb-1">{label}</p>
-                <p className="text-xs text-muted-foreground">{desc}</p>
-              </CardContent>
-            </Card>
+            <Link key={label} to="/articles">
+              <Card className="hover:shadow-md transition-shadow overflow-hidden cursor-pointer h-full">
+                <div className="h-1 w-full" style={{ background: `linear-gradient(90deg, ${color}, transparent)` }} />
+                <CardContent className="pt-4">
+                  <Icon className="size-5 mb-3" style={{ color }} />
+                  <p className="font-medium text-sm mb-1">{label}</p>
+                  <p className="text-xs text-muted-foreground">{desc}</p>
+                </CardContent>
+              </Card>
+            </Link>
           ))}
         </div>
       </section>

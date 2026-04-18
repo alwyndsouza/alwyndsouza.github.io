@@ -1,0 +1,26 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "WebFetch(domain:github.com)",
+      "Bash(grep *)",
+      "Bash(npm run *)",
+      "Bash(npx vite *)",
+      "Bash(npm install *)",
+      "Bash(node_modules/.bin/vite --port 3001)",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git push *)",
+      "Bash(curl -s \"https://medium.com/feed/@aradsouza\" -o medium_feed.xml)",
+      "Bash(python3 *)",
+      "Bash(pip install *)",
+      "Bash(pip3 install *)",
+      "Bash(/tmp/medium_venv/bin/pip install *)",
+      "Bash(/tmp/medium_venv/bin/python import_medium.py)",
+      "Bash(curl *)",
+      "Bash(git -c user.email=alwyn.anil@gmail.com -c user.name=alwyndsouza commit -m ' *)",
+      "Bash(git check-ignore *)",
+      "Bash(git config *)"
+    ]
+  }
+}

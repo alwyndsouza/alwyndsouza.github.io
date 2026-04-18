@@ -50,9 +50,10 @@ Articles and projects are written in **Markdown with YAML frontmatter** and rend
 │   │   │   ├── Layout.tsx       # Sticky nav + footer
 │   │   │   └── ui/              # shadcn/ui components
 │   │   │
-│   │   ├── data/                # Content loaders (markdown → JS objects)
-│   │   │   ├── articles.ts
-│   │   │   └── projects.ts
+│   │   ├── data/                # Content loaders + site config
+│   │   │   ├── articles.ts      # Markdown → article objects
+│   │   │   ├── projects.ts      # Markdown → project objects
+│   │   │   └── config.ts        # Site-wide config (e.g. currentlyExploring)
 │   │   │
 │   │   ├── articles/            # Article markdown files
 │   │   │   └── *.md
@@ -66,11 +67,12 @@ Articles and projects are written in **Markdown with YAML frontmatter** and rend
 │       └── images/              # Static images referenced in markdown
 │
 ├── import_medium_export.py      # Import from Medium HTML export (ZIP download)
-├── import_medium.py             # Import from Medium RSS feed (medium_feed.xml)
+├── import_medium.py             # Import from Medium RSS feed
 │
 └── .github/
     └── workflows/
-        └── deploy.yml           # Build → GitHub Pages
+        ├── deploy.yml           # Build → GitHub Pages on push to main
+        └── sync-medium.yml      # Auto-import new Medium articles (every 6 hours)
 ```
 
 ---
@@ -123,11 +125,15 @@ To enable GitHub Pages for the first time:
 
 ## Importing Articles from Medium
 
-Two scripts are provided to import articles from Medium into Markdown format. Both convert HTML content to clean Markdown automatically.
+### Automated sync (recommended)
 
-### Option 1 — Medium HTML Export (recommended)
+A GitHub Actions workflow (`.github/workflows/sync-medium.yml`) runs every 6 hours and automatically imports any new articles published on Medium. No manual steps required — just publish on Medium and the portfolio updates within 6 hours.
 
-Use this when you have downloaded your Medium data export (ZIP file).
+The workflow can also be triggered manually from the **Actions** tab in GitHub using **Run workflow**.
+
+### Option 1 — Medium HTML Export (full backfill)
+
+Use this to import your entire Medium history from a ZIP export.
 
 1. Go to [https://medium.com/me/settings/security](https://medium.com/me/settings/security)
 2. Click **Download your information** and extract the ZIP
@@ -146,11 +152,12 @@ Use this when you have downloaded your Medium data export (ZIP file).
    python3 import_medium_export.py path/to/posts/
    ```
 
-### Option 2 — Medium RSS Feed
+### Option 2 — Medium RSS Feed (latest 10 articles)
 
-Use this when you have a `medium_feed.xml` RSS export.
+Use this to manually pull the most recent articles.
 
 ```bash
+curl -s "https://medium.com/feed/@aradsouza" -o medium_feed.xml
 pip install markdownify
 python3 import_medium.py
 ```
@@ -160,6 +167,7 @@ Both scripts will:
 - Convert all HTML body content to clean Markdown
 - Write `.md` files into `frontend/src/articles/`
 - Append a canonical link footer pointing back to Medium
+- Skip articles that already exist (no overwrites)
 
 > **Note:** `posts/` and `medium_feed.xml` are listed in `.gitignore` and are not committed to the repository.
 
@@ -170,11 +178,10 @@ Both scripts will:
 1. Create a new Markdown file in `frontend/src/articles/`:
 
    ```bash
-   cp frontend/src/articles/dbt-fusion-under-the-hood-the-technical-architecture.md \
-      frontend/src/articles/my-new-article.md
+   touch frontend/src/articles/my-new-article.md
    ```
 
-2. Update the YAML frontmatter at the top of the file:
+2. Add YAML frontmatter at the top:
 
    ```yaml
    ---
@@ -193,13 +200,7 @@ Both scripts will:
 
 3. Write the article body in standard Markdown below the frontmatter.
 
-4. To include an image inline:
-
-   ```markdown
-   ![Alt text](https://cdn-images-1.medium.com/max/800/your-image.png)
-   ```
-
-5. Commit and push — GitHub Actions deploys automatically.
+4. Commit and push — GitHub Actions deploys automatically.
 
 ---
 
@@ -208,10 +209,10 @@ Both scripts will:
 1. Create a new Markdown file in `frontend/src/projects/`:
 
    ```bash
-   cp frontend/src/projects/example.md frontend/src/projects/my-project.md
+   touch frontend/src/projects/my-project.md
    ```
 
-2. Update the frontmatter:
+2. Add frontmatter:
 
    ```yaml
    ---
@@ -222,6 +223,7 @@ Both scripts will:
    category: "data-engineering"
    featured: true
    draft: false
+   order: 5
    tech:
      - Python
      - dbt
@@ -238,6 +240,22 @@ Both scripts will:
 
 ---
 
+## Site Configuration
+
+Edit `frontend/src/data/config.ts` to update site-wide content that doesn't live in Markdown:
+
+```ts
+// Currently Exploring section on the About page
+export const currentlyExploring = [
+  'dbt Fusion Engine',
+  'AI Agents + MCP',
+  'Semantic Layers',
+  'BI-as-Code',
+];
+```
+
+---
+
 ## License
 
-Content © 2025 Alwyn Dsouza. All rights reserved.
+Content © 2026 Alwyn Dsouza. All rights reserved.
