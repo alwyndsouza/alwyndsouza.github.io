@@ -38,11 +38,11 @@ jobs:
       - name: Check for new or updated articles
         id: check
         run: |
-          NEW=$(git status --porcelain frontend/src/articles/ frontend/public/images/ 2>/dev/null)
-          if [ -n "$NEW" ]; then
+          CHANGES=$(git status --porcelain frontend/src/articles/ frontend/public/images/ 2>/dev/null)
+          if [ -n "$CHANGES" ]; then
             echo "has_new=true" >> $GITHUB_OUTPUT
             echo "New or updated articles found:"
-            echo "$NEW"
+            echo "$CHANGES"
           else
             echo "has_new=false" >> $GITHUB_OUTPUT
             echo "No new or updated articles."
