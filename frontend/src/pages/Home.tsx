@@ -6,6 +6,8 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { articles } from '@/data/articles';
 import { featuredProjects } from '@/data/projects';
+import { site } from '@/data/config';
+import { useDocumentMeta } from '@/lib/useDocumentMeta';
 
 
 const consoleLines = [
@@ -77,6 +79,8 @@ function ConsolePrompt() {
 
 export function Home() {
   const latestArticles = articles.slice(0, 3);
+
+  useDocumentMeta({ title: site.title, full: true, path: '/' });
 
   return (
     <div className="max-w-5xl mx-auto px-6 py-12">

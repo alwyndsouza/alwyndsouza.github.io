@@ -2,6 +2,7 @@ import { useParams, Link, Navigate } from 'react-router';
 import { Calendar, Clock, ArrowLeft, Tag } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import { articles } from '@/data/articles';
+import { useDocumentMeta } from '@/lib/useDocumentMeta';
 import 'highlight.js/styles/github-dark.css';
 
 /**
@@ -12,6 +13,14 @@ import 'highlight.js/styles/github-dark.css';
 export function ArticlePost() {
   const { slug } = useParams();
   const article = articles.find(a => a.slug === slug);
+
+  useDocumentMeta({
+    title: article?.title ?? 'Article not found',
+    description: article?.excerpt,
+    path: article ? `/articles/${article.slug}` : '/articles',
+    image: article?.coverImage,
+    type: 'article',
+  });
 
   if (!article) {
     return <Navigate to="/articles" replace />;

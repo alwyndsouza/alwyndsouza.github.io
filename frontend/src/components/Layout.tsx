@@ -1,5 +1,5 @@
 import { Outlet, Link, useLocation } from 'react-router';
-import { Database, Code2 } from 'lucide-react';
+import { Database, Code2, Rss } from 'lucide-react';
 import { ThemeToggle } from './ThemeToggle';
 
 /**
@@ -82,11 +82,20 @@ export function Layout() {
           <div className="flex items-center justify-between text-sm text-muted-foreground">
             <div className="flex items-center gap-2">
               <Code2 className="size-4" />
-              <span>© 2025 Alwyn Dsouza. All rights reserved.</span>
+              <span>© {new Date().getFullYear()} Alwyn Dsouza. All rights reserved.</span>
             </div>
             <div className="flex items-center gap-4">
               <a href="https://github.com/alwyndsouza" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">GitHub</a>
               <a href="https://www.linkedin.com/in/alwynanildsouza/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">LinkedIn</a>
+              <a
+                href="/rss.xml"
+                title="RSS feed"
+                aria-label="RSS feed"
+                className="inline-flex items-center gap-1 hover:text-primary transition-colors"
+              >
+                <Rss className="size-4" />
+                <span className="sr-only">RSS</span>
+              </a>
             </div>
           </div>
         </div>

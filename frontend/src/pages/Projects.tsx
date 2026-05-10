@@ -4,6 +4,7 @@ import { Github } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { projects } from '@/data/projects';
+import { useDocumentMeta } from '@/lib/useDocumentMeta';
 
 const statusColor: Record<string, string> = {
   production: 'bg-green-100 text-green-800',
@@ -53,6 +54,13 @@ function ProjectCard({ project, i }: { project: (typeof projects)[0]; i: number 
 export function Projects() {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const categories = Array.from(new Set(projects.map(p => p.category)));
+
+  useDocumentMeta({
+    title: 'Projects',
+    description:
+      'Open-source side projects and engineering experiments — dbt, data contracts, semantic layers, and more.',
+    path: '/projects',
+  });
 
   const filtered = selectedCategory === null ? projects : projects.filter(p => p.category === selectedCategory);
   const production = filtered.filter(p => p.status === 'production');

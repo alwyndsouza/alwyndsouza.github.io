@@ -5,6 +5,7 @@ import { Articles } from './pages/Articles';
 import { ArticlePost } from './pages/ArticlePost';
 import { Projects } from './pages/Projects';
 import { ProjectDetail } from './pages/ProjectDetail';
+import { NotFound } from './pages/NotFound';
 import { Layout } from './components/Layout';
 
 export const router = createBrowserRouter([
@@ -18,6 +19,7 @@ export const router = createBrowserRouter([
       { path: 'articles/:slug', Component: ArticlePost },
       { path: 'projects', Component: Projects },
       { path: 'projects/:id', Component: ProjectDetail },
+      { path: '*', Component: NotFound },
     ],
   },
 ]);

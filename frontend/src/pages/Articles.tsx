@@ -5,6 +5,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { articles } from '@/data/articles';
 import { articleCategories, getArticleCategoryBucket } from '@/data/config';
+import { useDocumentMeta } from '@/lib/useDocumentMeta';
 
 /**
  * Renders a lean, filterable articles listing: a small set of curated
@@ -15,6 +16,13 @@ import { articleCategories, getArticleCategoryBucket } from '@/data/config';
 export function Articles() {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [query, setQuery] = useState('');
+
+  useDocumentMeta({
+    title: 'Articles',
+    description:
+      'Practical writing on Data Engineering, DataOps, AI, dbt, Databricks, and the modern data stack.',
+    path: '/articles',
+  });
 
   const trimmedQuery = query.trim().toLowerCase();
 

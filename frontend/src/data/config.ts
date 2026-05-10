@@ -1,3 +1,25 @@
+/**
+ * Canonical site metadata. Used both at runtime (for `document.title`,
+ * og: tags managed in React) and at build time by the SEO/RSS plugin
+ * which generates per-route static HTML, sitemap.xml and rss.xml.
+ *
+ * If the site moves to a custom domain, only `siteUrl` needs to change.
+ */
+export const site = {
+  url: 'https://alwyndsouza.github.io',
+  name: 'Alwyn Dsouza',
+  title: 'Alwyn Dsouza — Data Engineering, DataOps & AI',
+  description:
+    'Practical writing on Data Engineering, DataOps, dbt, Databricks, and AI Agents. Articles, open-source projects, and lessons from production data platforms.',
+  author: {
+    name: 'Alwyn Dsouza',
+    email: 'alwyn.anil@gmail.com',
+    twitter: '', // e.g. '@alwyndsouza' if the user has a handle
+  },
+  defaultOgImage: '/og-default.svg',
+  language: 'en',
+} as const;
+
 export const currentlyExploring = [
   'dbt Fusion Engine',
   'AI Agents + MCP',

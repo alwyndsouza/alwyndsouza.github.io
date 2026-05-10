@@ -3,6 +3,7 @@ import { ArrowLeft, Github, ExternalLink } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { getProjectById } from '@/data/projects';
+import { useDocumentMeta } from '@/lib/useDocumentMeta';
 import 'highlight.js/styles/github-dark.css';
 
 /**
@@ -13,6 +14,13 @@ import 'highlight.js/styles/github-dark.css';
 export function ProjectDetail() {
   const { id } = useParams();
   const project = getProjectById(id ?? '');
+
+  useDocumentMeta({
+    title: project?.title ?? 'Project not found',
+    description: project?.description,
+    path: project ? `/projects/${project.id}` : '/projects',
+    image: project?.coverImage,
+  });
 
   if (!project) {
     return <Navigate to="/projects" replace />;

@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { articles } from '@/data/articles';
 import { currentlyExploring } from '@/data/config';
+import { useDocumentMeta } from '@/lib/useDocumentMeta';
 
 const skills = [
   { category: 'Data Platforms', items: ['dbt', 'dbt Cloud', 'Databricks', 'Redshift', 'Google BigQuery', 'Delta Lake', 'Apache Iceberg'] },
@@ -16,6 +17,13 @@ const skills = [
 ];
 
 export function About() {
+  useDocumentMeta({
+    title: 'About',
+    description:
+      'Alwyn Dsouza — Data Engineering & AI builder. Writing, open-source projects, community contributions.',
+    path: '/about',
+  });
+
   return (
     <div className="max-w-5xl mx-auto px-6 py-12">
       {/* Hero */}
