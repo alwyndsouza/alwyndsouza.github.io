@@ -18,4 +18,4 @@ coverImage: "https://cdn-images-1.medium.com/max/1662/1*Kl2j6CISQUVWzBaxEHnFww.p
 
 ---
 
-*This article was originally published at <https://aradsouza.medium.com/mcp-vs-agentic-skills-which-architecture-should-you-choose-b103f4b2d364?source=rss-670f6306e3c0------2>*
+*This article was originally published at <https://medium.com/towards-data-engineering/mcp-vs-agentic-skills-which-architecture-should-you-choose-b103f4b2d364?source=rss-670f6306e3c0------2>*
