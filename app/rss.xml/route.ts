@@ -1,5 +1,7 @@
 import { getAllArticles } from "@/lib/articles";
 
+export const dynamic = "force-static";
+
 const SITE_URL = "https://alwyndsouza.github.io";
 const SITE_NAME = "Alwyn Dsouza";
 const SITE_DESCRIPTION =

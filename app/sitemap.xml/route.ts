@@ -1,6 +1,8 @@
 import { getAllArticles } from "@/lib/articles";
 import { getAllProjects } from "@/lib/projects";
 
+export const dynamic = "force-static";
+
 const SITE_URL = "https://alwyndsouza.github.io";
 
 function isoDate(s: string): string {
