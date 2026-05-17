@@ -286,6 +286,13 @@ code:not(pre code) {
 /* Applied when the `dark` class is absent from <html>.             */
 /* The site is dark-first; these rules invert the zinc palette.     */
 
+/* Darken the gradient text so it's legible on light backgrounds.
+   Dark mode: indigo-400 / violet-400 / cyan-300 (light pastels on dark bg)
+   Light mode: indigo-600 / violet-600 / cyan-600 (vivid on white bg)    */
+html:not(.dark) .text-gradient {
+  background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 50%, #0891b2 100%);
+}
+
 html:not(.dark) {
   background-color: #f8fafc;
   color: #18181b;
@@ -331,23 +338,29 @@ html:not(.dark) .border-zinc-700\/50 { border-color: rgba(203,213,225,0.6) !impo
 html:not(.dark) .border-zinc-700\/40 { border-color: rgba(203,213,225,0.5) !important; }
 html:not(.dark) .border-zinc-700\/30 { border-color: rgba(203,213,225,0.4) !important; }
 
-/* Text — flip the dark palette */
+/* Text — flip the dark palette (higher number = lighter/more muted in light mode) */
 html:not(.dark) .text-zinc-100 { color: #18181b !important; }
 html:not(.dark) .text-zinc-200 { color: #27272a !important; }
 html:not(.dark) .text-zinc-300 { color: #3f3f46 !important; }
 html:not(.dark) .text-zinc-400 { color: #52525b !important; }
 html:not(.dark) .text-zinc-500 { color: #71717a !important; }
-html:not(.dark) .text-zinc-600 { color: #a1a1aa !important; }
-html:not(.dark) .text-zinc-700 { color: #a1a1aa !important; }
-html:not(.dark) .text-zinc-800 { color: #d4d4d8 !important; }
+html:not(.dark) .text-zinc-600 { color: #6b7280 !important; } /* was #a1a1aa — improved contrast for metadata/counts */
+html:not(.dark) .text-zinc-700 { color: #94a3b8 !important; } /* was #a1a1aa — differentiated from zinc-600 */
+html:not(.dark) .text-zinc-800 { color: #94a3b8 !important; } /* was #d4d4d8 — slightly more visible for subtle icons */
 
 /* Hover backgrounds */
+html:not(.dark) .hover\:bg-zinc-700:hover  { background-color: #e2e8f0 !important; } /* About/Button secondary hover */
 html:not(.dark) .hover\:bg-zinc-800:hover  { background-color: #e2e8f0 !important; }
 html:not(.dark) .hover\:bg-zinc-800\/50:hover { background-color: rgba(226,232,240,0.5) !important; }
 html:not(.dark) .hover\:bg-zinc-900:hover  { background-color: #f1f5f9 !important; }
 html:not(.dark) .hover\:bg-zinc-900\/80:hover { background-color: rgba(241,245,249,0.8) !important; }
 
+/* group-hover backgrounds — icon backgrounds that change on parent hover */
+html:not(.dark) .group:hover .group-hover\:bg-zinc-700 { background-color: #e2e8f0 !important; }
+html:not(.dark) .group:hover .group-hover\:bg-zinc-800 { background-color: #e2e8f0 !important; }
+
 /* Hover borders */
+html:not(.dark) .hover\:border-zinc-800:hover { border-color: #e2e8f0 !important; } /* article-list-item border on hover */
 html:not(.dark) .hover\:border-zinc-700:hover { border-color: #cbd5e1 !important; }
 html:not(.dark) .hover\:border-zinc-600:hover { border-color: #94a3b8 !important; }
 
@@ -422,8 +435,10 @@ html:not(.dark) .bg-indigo-950\/20  { background-color: rgba(224,231,255,0.3) !i
 html:not(.dark) .bg-indigo-900\/50  { background-color: rgba(199,210,254,0.5) !important; }  /* "Currently Exploring" icon bg */
 html:not(.dark) .bg-indigo-900\/30  { background-color: rgba(199,210,254,0.4) !important; }  /* "Currently Exploring" chips   */
 html:not(.dark) .bg-violet-950\/60  { background-color: rgba(237,233,254,0.8) !important; }
+html:not(.dark) .bg-violet-950\/40  { background-color: rgba(237,233,254,0.6) !important; }  /* AboutSection "AI Agent Systems" pillar */
 html:not(.dark) .bg-violet-950\/30  { background-color: rgba(237,233,254,0.5) !important; }
 html:not(.dark) .bg-emerald-950\/60 { background-color: rgba(209,250,229,0.8) !important; }
+html:not(.dark) .bg-emerald-950\/40 { background-color: rgba(209,250,229,0.6) !important; }  /* AboutSection "Semantic Layers" pillar */
 html:not(.dark) .bg-emerald-950\/30 { background-color: rgba(209,250,229,0.5) !important; }
 html:not(.dark) .bg-cyan-950\/60    { background-color: rgba(207,250,254,0.8) !important; }
 html:not(.dark) .bg-cyan-950\/30    { background-color: rgba(207,250,254,0.5) !important; }
@@ -435,22 +450,27 @@ html:not(.dark) .bg-rose-950\/60    { background-color: rgba(255,228,230,0.8) !i
 
 html:not(.dark) .border-orange-800\/60  { border-color: rgba(154,52,18,0.35)  !important; }
 html:not(.dark) .border-orange-800\/40  { border-color: rgba(154,52,18,0.25)  !important; }
+html:not(.dark) .border-orange-800\/30  { border-color: rgba(154,52,18,0.18)  !important; }  /* AboutSection pillar chip */
 html:not(.dark) .border-orange-700\/50  { border-color: rgba(194,65,12,0.3)   !important; }
 html:not(.dark) .border-amber-800\/60   { border-color: rgba(146,64,14,0.35)  !important; }
 html:not(.dark) .border-amber-800\/40   { border-color: rgba(146,64,14,0.25)  !important; }
 html:not(.dark) .border-yellow-800\/60  { border-color: rgba(133,77,14,0.35)  !important; }
 html:not(.dark) .border-blue-800\/60    { border-color: rgba(30,64,175,0.3)   !important; }
+html:not(.dark) .border-blue-800\/50    { border-color: rgba(30,64,175,0.25)  !important; }  /* ContactSection LinkedIn icon border */
 html:not(.dark) .border-blue-800\/40    { border-color: rgba(30,64,175,0.2)   !important; }
 html:not(.dark) .border-indigo-900\/40  { border-color: rgba(55,48,163,0.25)  !important; }  /* "Currently Exploring" container */
 html:not(.dark) .border-indigo-800\/60  { border-color: rgba(55,48,163,0.3)   !important; }
 html:not(.dark) .border-indigo-800\/50  { border-color: rgba(55,48,163,0.25)  !important; }
 html:not(.dark) .border-indigo-800\/40  { border-color: rgba(55,48,163,0.2)   !important; }
+html:not(.dark) .border-indigo-800\/30  { border-color: rgba(55,48,163,0.15)  !important; }  /* AboutSection pillar chip */
 html:not(.dark) .border-indigo-700\/50  { border-color: rgba(67,56,202,0.3)   !important; }  /* icon ring                       */
 html:not(.dark) .border-indigo-700\/40  { border-color: rgba(67,56,202,0.25)  !important; }  /* "Currently Exploring" chip borders */
 html:not(.dark) .border-violet-800\/60  { border-color: rgba(91,33,182,0.3)   !important; }
 html:not(.dark) .border-violet-800\/40  { border-color: rgba(91,33,182,0.2)   !important; }
+html:not(.dark) .border-violet-800\/30  { border-color: rgba(91,33,182,0.15)  !important; }  /* AboutSection pillar chip */
 html:not(.dark) .border-emerald-800\/60 { border-color: rgba(6,78,59,0.3)     !important; }
 html:not(.dark) .border-emerald-800\/40 { border-color: rgba(6,78,59,0.2)     !important; }
+html:not(.dark) .border-emerald-800\/30 { border-color: rgba(6,78,59,0.15)    !important; }  /* AboutSection pillar chip */
 html:not(.dark) .border-cyan-800\/50    { border-color: rgba(21,94,117,0.3)   !important; }
 html:not(.dark) .border-cyan-800\/40    { border-color: rgba(21,94,117,0.2)   !important; }
 html:not(.dark) .border-pink-800\/60    { border-color: rgba(131,24,67,0.3)   !important; }
