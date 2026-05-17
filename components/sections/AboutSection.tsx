@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Image from "next/image";
 import Link from "next/link";
 import {
   ArrowRight,
@@ -127,13 +126,11 @@ export function AboutSection() {
               className="relative"
             >
               <div className="relative overflow-hidden rounded-2xl border border-zinc-800 bg-zinc-900/60 aspect-[4/3] max-w-sm">
-                <Image
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
                   src="/images/alwyn-dsouza.jpg"
                   alt="Alwyn D'Souza"
-                  fill
-                  className="object-cover object-top"
-                  sizes="(max-width: 768px) 100vw, 384px"
-                  priority
+                  className="absolute inset-0 h-full w-full object-cover object-top"
                 />
                 {/* Corner accent */}
                 <div className="absolute bottom-4 right-4">
