@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowRight, Github, Linkedin, FileText } from "lucide-react";
+import { ArrowRight, Github, Linkedin, FileText, Layers, GitBranch, Sparkles, Building2 } from "lucide-react";
 import { getAllArticles } from "@/lib/articles";
 import { formatDateShort } from "@/lib/utils";
 
@@ -9,6 +9,57 @@ export const metadata: Metadata = {
   description:
     "Alwyn D'Souza — Data & AI Engineering Leader specializing in DataOps, dbt, Databricks, AI Agents, and Modern Data Platforms.",
 };
+
+const CORE_FOCUS = [
+  {
+    title: "Lakehouse Architecture",
+    description:
+      "Modern cloud-native analytics architectures using Databricks, Delta Lake, and scalable data platforms.",
+    icon: Layers,
+    iconBg: "bg-indigo-950/60 border-indigo-800/40 group-hover:border-indigo-600/60 group-hover:bg-indigo-950/80",
+    iconColor: "text-indigo-400",
+    hoverBorder: "hover:border-indigo-700/40",
+    hoverShadow: "hover:shadow-indigo-950/50",
+    gradientHover: "from-indigo-500/[0.07] via-violet-500/[0.04] to-transparent",
+    accentBar: "bg-indigo-500/50",
+  },
+  {
+    title: "DataOps & Platform Engineering",
+    description:
+      "Automated CI/CD, testing, observability, governance, and reliable data engineering workflows.",
+    icon: GitBranch,
+    iconBg: "bg-emerald-950/60 border-emerald-800/40 group-hover:border-emerald-600/60 group-hover:bg-emerald-950/80",
+    iconColor: "text-emerald-400",
+    hoverBorder: "hover:border-emerald-700/40",
+    hoverShadow: "hover:shadow-emerald-950/40",
+    gradientHover: "from-emerald-500/[0.07] via-cyan-500/[0.04] to-transparent",
+    accentBar: "bg-emerald-500/50",
+  },
+  {
+    title: "AI Agent Systems",
+    description:
+      "Agentic workflows, orchestration frameworks, MCP tooling, and AI-enabled engineering systems.",
+    icon: Sparkles,
+    iconBg: "bg-violet-950/60 border-violet-800/40 group-hover:border-violet-600/60 group-hover:bg-violet-950/80",
+    iconColor: "text-violet-400",
+    hoverBorder: "hover:border-violet-700/40",
+    hoverShadow: "hover:shadow-violet-950/40",
+    gradientHover: "from-violet-500/[0.07] via-purple-500/[0.04] to-transparent",
+    accentBar: "bg-violet-500/50",
+  },
+  {
+    title: "Enterprise Data Platforms",
+    description:
+      "Scalable enterprise modernization initiatives focused on cloud analytics and platform engineering.",
+    icon: Building2,
+    iconBg: "bg-orange-950/60 border-orange-800/40 group-hover:border-orange-600/60 group-hover:bg-orange-950/80",
+    iconColor: "text-orange-400",
+    hoverBorder: "hover:border-orange-700/40",
+    hoverShadow: "hover:shadow-orange-950/40",
+    gradientHover: "from-orange-500/[0.07] via-amber-500/[0.04] to-transparent",
+    accentBar: "bg-orange-500/50",
+  },
+];
 
 const SKILLS = [
   {
@@ -77,6 +128,7 @@ export default function AboutPage() {
   return (
     <div className="min-h-screen pt-24 pb-24">
       <div className="section-container">
+
         {/* Hero */}
         <div className="mb-16 border-b border-zinc-800 pb-16">
           <p className="text-xs font-semibold uppercase tracking-widest text-indigo-400 mb-4">
@@ -108,9 +160,9 @@ export default function AboutPage() {
                   metrics first-class citizens.
                 </p>
                 <p>
-                  I write extensively on these topics
-                  and build open-source reference architectures that teams can
-                  actually use in production.
+                  I write extensively on these topics and build open-source
+                  reference architectures that teams can actually use in
+                  production.
                 </p>
               </div>
 
@@ -159,7 +211,80 @@ export default function AboutPage() {
           </div>
         </div>
 
-        {/* Skills */}
+        {/* Core Focus Areas */}
+        <div className="mb-16">
+          <div className="mb-8">
+            <h2 className="text-2xl font-bold text-zinc-100">Core Focus Areas</h2>
+            <p className="mt-1 text-sm text-zinc-500">Established expertise</p>
+          </div>
+          <div className="grid gap-4 sm:grid-cols-2">
+            {CORE_FOCUS.map(({ title, description, icon: Icon, iconBg, iconColor, hoverBorder, hoverShadow, gradientHover, accentBar }) => (
+              <div
+                key={title}
+                className={`group relative overflow-hidden rounded-xl border border-zinc-800 bg-zinc-900/30 p-6 transition-all duration-300 ${hoverBorder} hover:bg-zinc-900/60 hover:-translate-y-0.5 hover:shadow-xl ${hoverShadow}`}
+              >
+                {/* Gradient wash on hover */}
+                <div
+                  className={`absolute inset-0 bg-gradient-to-br ${gradientHover} opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none`}
+                />
+                {/* Subtle top accent line */}
+                <div
+                  className={`absolute top-0 left-6 right-6 h-px ${accentBar} opacity-0 group-hover:opacity-100 transition-opacity duration-300`}
+                />
+
+                <div className="relative">
+                  {/* Icon */}
+                  <div
+                    className={`mb-4 flex h-10 w-10 items-center justify-center rounded-lg border transition-all duration-300 ${iconBg} group-hover:scale-105`}
+                  >
+                    <Icon
+                      className={`h-5 w-5 ${iconColor} transition-transform duration-300 group-hover:scale-110`}
+                    />
+                  </div>
+
+                  {/* Title */}
+                  <h3 className="text-sm font-semibold text-zinc-200 mb-2 group-hover:text-zinc-100 transition-colors duration-200">
+                    {title}
+                  </h3>
+
+                  {/* Description */}
+                  <p className="text-xs text-zinc-500 leading-relaxed group-hover:text-zinc-400 transition-colors duration-200">
+                    {description}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Currently Exploring */}
+        <div className="mb-16 rounded-xl border border-indigo-900/40 bg-indigo-950/20 p-8">
+          <div className="flex items-start gap-4">
+            <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-indigo-700/50 bg-indigo-900/50">
+              <span className="h-2 w-2 rounded-full bg-indigo-400 animate-pulse" />
+            </div>
+            <div>
+              <h2 className="text-sm font-semibold text-indigo-300">
+                Currently Exploring
+              </h2>
+              <p className="mt-0.5 text-xs text-indigo-400/60 mb-4">
+                Future-facing innovation
+              </p>
+              <div className="flex flex-wrap gap-2">
+                {CURRENTLY_EXPLORING.map((topic) => (
+                  <span
+                    key={topic}
+                    className="rounded-full border border-indigo-700/40 bg-indigo-900/30 px-3 py-1 text-xs font-medium text-indigo-300"
+                  >
+                    {topic}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Technical Expertise */}
         <div className="mb-16">
           <h2 className="text-2xl font-bold text-zinc-100 mb-8">
             Technical Expertise
@@ -188,36 +313,10 @@ export default function AboutPage() {
           </div>
         </div>
 
-        {/* Currently exploring */}
-        <div className="mb-16 rounded-xl border border-indigo-900/40 bg-indigo-950/20 p-8">
-          <div className="flex items-start gap-4">
-            <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-indigo-700/50 bg-indigo-900/50">
-              <span className="h-2 w-2 rounded-full bg-indigo-400 animate-pulse" />
-            </div>
-            <div>
-              <h2 className="text-sm font-semibold text-indigo-300 mb-3">
-                Currently Exploring
-              </h2>
-              <div className="flex flex-wrap gap-2">
-                {CURRENTLY_EXPLORING.map((topic) => (
-                  <span
-                    key={topic}
-                    className="rounded-full border border-indigo-700/40 bg-indigo-900/30 px-3 py-1 text-xs font-medium text-indigo-300"
-                  >
-                    {topic}
-                  </span>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Recent articles */}
+        {/* Recent Writing */}
         <div>
           <div className="mb-8 flex items-center justify-between">
-            <h2 className="text-2xl font-bold text-zinc-100">
-              Recent Writing
-            </h2>
+            <h2 className="text-2xl font-bold text-zinc-100">Recent Writing</h2>
             <Link
               href="/articles"
               className="inline-flex items-center gap-1 text-sm text-zinc-400 hover:text-zinc-200 transition-colors"
@@ -245,6 +344,7 @@ export default function AboutPage() {
             ))}
           </div>
         </div>
+
       </div>
     </div>
   );
