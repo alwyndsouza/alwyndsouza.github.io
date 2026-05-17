@@ -422,3 +422,57 @@ html:not(.dark) .border-cyan-800\/50    { border-color: rgba(21,94,117,0.3)   !i
 html:not(.dark) .border-cyan-800\/40    { border-color: rgba(21,94,117,0.2)   !important; }
 html:not(.dark) .border-pink-800\/60    { border-color: rgba(131,24,67,0.3)   !important; }
 html:not(.dark) .border-pink-800\/40    { border-color: rgba(131,24,67,0.2)   !important; }
+
+/* ── Light mode: hero background ───────────────────────────────── */
+/* Grid uses white lines in dark mode; swap to faint dark lines.   */
+.hero-grid {
+  background-image:
+    linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+  background-size: 72px 72px;
+}
+html:not(.dark) .hero-grid {
+  background-image:
+    linear-gradient(rgba(0,0,0,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,0,0,0.04) 1px, transparent 1px);
+}
+
+/* Vignette fades to page bg; hardcoded #09090b breaks in light mode. */
+.hero-vignette {
+  background: radial-gradient(ellipse 80% 60% at 50% 50%, transparent 40%, #09090b 100%);
+}
+html:not(.dark) .hero-vignette {
+  background: radial-gradient(ellipse 80% 60% at 50% 50%, transparent 40%, #f8fafc 100%);
+}
+
+/* ── Light mode: prose-invert → readable dark text ─────────────── */
+/* Article pages use `prose prose-invert` unconditionally.          */
+/* Override the CSS custom properties so body text stays dark.      */
+html:not(.dark) .prose-invert {
+  --tw-prose-body:          #374151;
+  --tw-prose-headings:      #111827;
+  --tw-prose-lead:          #4b5563;
+  --tw-prose-links:         #4338ca;
+  --tw-prose-bold:          #111827;
+  --tw-prose-counters:      #6b7280;
+  --tw-prose-bullets:       #9ca3af;
+  --tw-prose-hr:            #e5e7eb;
+  --tw-prose-quotes:        #374151;
+  --tw-prose-quote-borders: #6366f1;
+  --tw-prose-captions:      #6b7280;
+  --tw-prose-kbd:           #111827;
+  --tw-prose-kbd-shadows:   17 24 39;
+  --tw-prose-code:          #1e1b4b;
+  --tw-prose-pre-code:      #e5e7eb;
+  --tw-prose-pre-bg:        #1f2937;
+  --tw-prose-th-borders:    #d1d5db;
+  --tw-prose-td-borders:    #e5e7eb;
+}
+
+/* Inline code inside prose: ensure bg and text are both visible. */
+html:not(.dark) .prose-invert code:not(pre code) {
+  background-color: #e8eaf6 !important;
+  color: #1e1b4b !important;
+  border-radius: 4px;
+  padding: 0.1em 0.35em;
+}

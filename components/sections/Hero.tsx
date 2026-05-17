@@ -191,22 +191,9 @@ function HeroBackground() {
   return (
     <div className="pointer-events-none absolute inset-0 overflow-hidden">
       {/* Grid */}
-      <div
-        className="absolute inset-0 opacity-30"
-        style={{
-          backgroundImage:
-            "linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px)",
-          backgroundSize: "72px 72px",
-        }}
-      />
+      <div className="hero-grid absolute inset-0 opacity-30" />
       {/* Radial vignette */}
-      <div
-        className="absolute inset-0"
-        style={{
-          background:
-            "radial-gradient(ellipse 80% 60% at 50% 50%, transparent 40%, #09090b 100%)",
-        }}
-      />
+      <div className="hero-vignette absolute inset-0" />
       {/* Orb 1 — indigo, top-left */}
       <div className="hero-orb-1 absolute left-1/4 top-1/4 h-96 w-96 -translate-x-1/2 -translate-y-1/2 rounded-full bg-indigo-600/12 blur-3xl" />
       {/* Orb 2 — violet, center-right */}
