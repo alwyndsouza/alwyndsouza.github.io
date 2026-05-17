@@ -291,6 +291,9 @@ code:not(pre code) {
    Light mode: indigo-600 / violet-600 / cyan-600 (vivid on white bg)    */
 html:not(.dark) .text-gradient {
   background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 50%, #0891b2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 html:not(.dark) {
