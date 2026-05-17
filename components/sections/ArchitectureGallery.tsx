@@ -583,12 +583,13 @@ function MLOpsPipelinePreview() {
       <Arrow x1="244" y1="90" x2="256" y2="90" color="#f97316" />
 
       {/* Monitor arrows */}
-      <Arrow x1="284" y1="110" x2="284" y2="134" color="#fbbf24" />
-      <Arrow x1="160" y1="138" x2="58"  y2="110" color="#fbbf24" />
+      <Arrow x1="284" y1="110" x2="284" y2="134" color="#fbbf24" />  {/* Serve → Monitor           */}
+      <Arrow x1="160" y1="138" x2="158" y2="110" color="#fbbf24" />  {/* Monitor → Train (retrain) */}
 
-      {/* Registry node */}
+      {/* Registry node + model lifecycle arrows */}
       <Node x="134" y="24" w="52" h="28" fill="#2e1065" stroke="#818cf8" label="Registry"  subLabel="MLflow"         textColor="#c4b5fd" />
-      <Arrow x1="158" y1="70" x2="160" y2="52" color="#a78bfa" />
+      <Arrow x1="158" y1="70"  x2="158" y2="52"  color="#a78bfa" />  {/* Train → Registry (register)  */}
+      <Arrow x1="162" y1="52"  x2="218" y2="70"  color="#a78bfa" />  {/* Registry → Validate (deploy) */}
 
       {/* Drift indicator */}
       <circle cx="204" cy="60" r="6" fill="#ef4444" opacity="0.15" />
@@ -636,28 +637,41 @@ function MLOpsDetail() {
       <Node x="396" y="268" w="84" h="20" fill="#14261f" stroke="#34d399" label="CI/CD deploy"   fontSize={7} textColor="#6ee7b7" />
       <Node x="490" y="268" w="54" h="20" fill="#292524" stroke="#fbbf24" label="Alerting"       fontSize={7} textColor="#fde68a" />
 
-      {/* Forward arrows */}
-      <Arrow x1="90"  y1="135" x2="108" y2="135" color="#38bdf8" />
-      <Arrow x1="190" y1="135" x2="208" y2="135" color="#3b82f6" />
-      <Arrow x1="290" y1="135" x2="308" y2="135" color="#f97316" />
-      <Arrow x1="390" y1="135" x2="408" y2="135" color="#f97316" />
-      <Arrow x1="490" y1="135" x2="504" y2="118" color="#34d399" />
+      {/* ── Forward data-flow arrows (left → right) ── */}
+      <Arrow x1="90"  y1="135" x2="110" y2="135" color="#38bdf8" />  {/* Data Sources → Feature Store */}
+      <Arrow x1="190" y1="135" x2="210" y2="135" color="#3b82f6" />  {/* Feature Store → Training    */}
+      <Arrow x1="290" y1="135" x2="310" y2="135" color="#f97316" />  {/* Training → Validation       */}
+      <Arrow x1="390" y1="135" x2="410" y2="135" color="#34d399" />  {/* Validation → Serving        */}
+      {/* Serving and Feedback are directly adjacent (no gap) — connection implied visually */}
 
-      {/* Registry arrows */}
-      <Arrow x1="250" y1="100" x2="260" y2="78"  color="#a78bfa" />
-      <Arrow x1="280" y1="78"  x2="330" y2="100" color="#a78bfa" />
+      {/* ── Model Registry arrows ──
+            Reference architecture:
+            1. Training registers model artifact → Registry  (UP)
+            2. Registry sends model to Validation for testing (DOWN-RIGHT)
+            Validated model is then deployed via Validation → Serving arrow above.       */}
+      <Arrow x1="250" y1="100" x2="250" y2="76"  color="#a78bfa" />  {/* Training → Registry (straight up)      */}
+      <Arrow x1="280" y1="76"  x2="328" y2="100" color="#a78bfa" />  {/* Registry → Validation (diagonal down)  */}
 
-      {/* Monitor feedback */}
-      <Arrow x1="490" y1="170" x2="490" y2="238" color="#fbbf24" />
-      <Arrow x1="302" y1="288" x2="250" y2="240" color="#fbbf24" />
+      {/* ── Monitor / feedback arrows ── */}
+      {/* Serving production metrics flow down into monitor bar */}
+      <Arrow x1="450" y1="170" x2="450" y2="240" color="#fbbf24" />
+      {/* Feedback logs flow down into monitor bar */}
+      <Arrow x1="521" y1="170" x2="521" y2="240" color="#fbbf24" />
+      {/* Auto-retrain trigger: stepped path from monitor → Training bottom
+            302,240 = top-left of Auto-retrain node  →  up to clear the pipeline
+            302,192 = above Training/Validation row  →  left to Training center
+            250,192 = aligned with Training           →  up to Training bottom  */}
+      <path d="M 302 240 L 302 192 L 250 192 L 250 170"
+        stroke="#fbbf24" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"
+        fill="none" markerEnd="url(#arrowHead-fbbf24)" />
 
-      {/* Drift pulse */}
-      <circle cx="350" cy="80" r="5" fill="#ef4444" opacity="0.2" />
-      <circle cx="350" cy="80" r="3" fill="#ef4444" opacity="0.7">
+      {/* ── Drift indicator (production serving drift, triggers monitor) ── */}
+      <circle cx="430" cy="82" r="5" fill="#ef4444" opacity="0.2" />
+      <circle cx="430" cy="82" r="3" fill="#ef4444" opacity="0.7">
         <animate attributeName="r" values="2;5;2" dur="2.5s" repeatCount="indefinite" />
         <animate attributeName="opacity" values="0.7;0.1;0.7" dur="2.5s" repeatCount="indefinite" />
       </circle>
-      <text x="358" y="76" fill="#ef4444" fontSize={7} fontFamily="ui-monospace,monospace">drift detected</text>
+      <text x="438" y="78" fill="#ef4444" fontSize={7} fontFamily="ui-monospace,monospace">drift detected</text>
     </svg>
   );
 }
