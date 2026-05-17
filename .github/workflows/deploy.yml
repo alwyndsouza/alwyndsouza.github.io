@@ -39,10 +39,6 @@ jobs:
         if: github.event_name == 'push'
         run: touch build/.nojekyll
 
-      - name: Copy 404.html for SPA routing
-        if: github.event_name == 'push'
-        run: cp build/index.html build/404.html
-
       - name: Setup Pages
         if: github.event_name == 'push'
         uses: actions/configure-pages@v4

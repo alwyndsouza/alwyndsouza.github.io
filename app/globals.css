@@ -1,0 +1,197 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── Design tokens ─────────────────────────────────────────────── */
+:root {
+  /* Surfaces */
+  --color-bg-primary: #09090b;
+  --color-bg-secondary: #18181b;
+  --color-surface-elevated: #1c1c1f;
+
+  /* Text */
+  --color-text-primary: #fafafa;
+  --color-text-secondary: #a1a1aa;
+  --color-text-muted: #71717a;
+
+  /* Borders */
+  --color-border: #27272a;
+  --color-border-strong: #3f3f46;
+
+  /* Accent – indigo */
+  --color-accent: #818cf8;
+  --color-accent-hover: #6366f1;
+  --color-accent-dim: rgba(99, 102, 241, 0.1);
+
+  /* Status */
+  --color-success: #4ade80;
+  --color-warning: #facc15;
+  --color-info: #60a5fa;
+}
+
+/* Force dark mode always */
+html {
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ── Typography helpers ─────────────────────────────────────────── */
+@layer utilities {
+  .text-gradient {
+    background: linear-gradient(135deg, #818cf8 0%, #a78bfa 50%, #67e8f9 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .text-gradient-subtle {
+    background: linear-gradient(135deg, #fafafa 0%, #a1a1aa 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .border-gradient {
+    border-image: linear-gradient(135deg, #818cf8, #67e8f9) 1;
+  }
+}
+
+/* ── Surface helpers ────────────────────────────────────────────── */
+@layer components {
+  .card-base {
+    @apply rounded-xl border border-zinc-800 bg-zinc-900/50 backdrop-blur-sm transition-all duration-200;
+  }
+
+  .card-hover {
+    @apply hover:border-zinc-700 hover:bg-zinc-900/80 hover:shadow-lg hover:shadow-black/20;
+  }
+
+  .section-container {
+    @apply mx-auto max-w-6xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .section-padding {
+    @apply py-20 sm:py-28;
+  }
+
+  .tag-base {
+    @apply inline-flex items-center rounded-md px-2 py-0.5 text-xs font-medium font-mono;
+  }
+}
+
+/* ── Code highlighting (highlight.js) ──────────────────────────── */
+pre {
+  @apply overflow-x-auto rounded-lg border border-zinc-800 bg-zinc-950 p-4 text-sm leading-relaxed;
+}
+
+code:not(pre code) {
+  @apply rounded bg-zinc-800 px-1.5 py-0.5 text-xs font-mono text-zinc-200;
+}
+
+/* ── Prose overrides ────────────────────────────────────────────── */
+.prose {
+  @apply text-zinc-300;
+}
+
+.prose h1,
+.prose h2,
+.prose h3,
+.prose h4 {
+  @apply text-zinc-100 font-semibold;
+}
+
+.prose a {
+  @apply text-indigo-400 no-underline hover:text-indigo-300 transition-colors;
+}
+
+.prose blockquote {
+  @apply border-l-4 border-indigo-500 bg-indigo-950/20 pl-4 py-1 not-italic text-zinc-300;
+}
+
+.prose img {
+  @apply rounded-xl border border-zinc-800;
+}
+
+.prose table {
+  @apply border-collapse w-full text-sm;
+}
+
+.prose thead tr {
+  @apply border-b border-zinc-700;
+}
+
+.prose th {
+  @apply text-zinc-200 font-semibold text-left py-2 px-3;
+}
+
+.prose td {
+  @apply text-zinc-300 py-2 px-3 border-b border-zinc-800/50;
+}
+
+/* ── Scrollbar ─────────────────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply rounded-full bg-zinc-700;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-zinc-600;
+}
+
+/* ── Selection ─────────────────────────────────────────────────── */
+::selection {
+  background-color: rgba(99, 102, 241, 0.3);
+  color: #fafafa;
+}
+
+/* ── Animations ────────────────────────────────────────────────── */
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.animate-shimmer {
+  background: linear-gradient(90deg, transparent 25%, rgba(255,255,255,0.04) 50%, transparent 75%);
+  background-size: 200% 100%;
+  animation: shimmer 3s infinite;
+}
+
+/* highlight.js theme overrides */
+.hljs {
+  background: transparent !important;
+  padding: 0 !important;
+}
+
+.hljs-keyword, .hljs-selector-tag, .hljs-title, .hljs-section, .hljs-doctag, .hljs-name, .hljs-strong {
+  color: #818cf8;
+}
+.hljs-string, .hljs-title.class_, .hljs-title.class_.inherited__, .hljs-addition {
+  color: #86efac;
+}
+.hljs-comment, .hljs-quote {
+  color: #71717a;
+  font-style: italic;
+}
+.hljs-number, .hljs-symbol, .hljs-bullet, .hljs-link, .hljs-meta, .hljs-deletion, .hljs-regexp {
+  color: #f9a8d4;
+}
+.hljs-attr, .hljs-attribute {
+  color: #67e8f9;
+}
+.hljs-variable, .hljs-template-variable, .hljs-type, .hljs-selector-class, .hljs-selector-attr, .hljs-selector-pseudo {
+  color: #fbbf24;
+}
+.hljs-built_in, .hljs-literal, .hljs-params {
+  color: #fb923c;
+}
