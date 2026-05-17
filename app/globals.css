@@ -305,21 +305,31 @@ html:not(.dark) .bg-zinc-700 { background-color: #cbd5e1 !important; }
 /* Surfaces with opacity */
 html:not(.dark) .bg-zinc-950\/92 { background-color: rgba(248,250,252,0.92) !important; }
 html:not(.dark) .bg-zinc-950\/98 { background-color: rgba(248,250,252,0.98) !important; }
+html:not(.dark) .bg-zinc-950\/85 { background-color: rgba(248,250,252,0.85) !important; }
+html:not(.dark) .bg-zinc-950\/60 { background-color: rgba(248,250,252,0.7) !important; }
 html:not(.dark) .bg-zinc-950\/40 { background-color: rgba(248,250,252,0.6) !important; }
-html:not(.dark) .bg-zinc-900\/50 { background-color: rgba(241,245,249,0.7) !important; }
-html:not(.dark) .bg-zinc-900\/70 { background-color: rgba(241,245,249,0.9) !important; }
+html:not(.dark) .bg-zinc-900\/90 { background-color: rgba(241,245,249,0.97) !important; }
 html:not(.dark) .bg-zinc-900\/80 { background-color: rgba(241,245,249,0.95) !important; }
-html:not(.dark) .bg-zinc-800\/50 { background-color: rgba(226,232,240,0.5) !important; }
+html:not(.dark) .bg-zinc-900\/70 { background-color: rgba(241,245,249,0.9) !important; }
+html:not(.dark) .bg-zinc-900\/60 { background-color: rgba(241,245,249,0.8) !important; }
+html:not(.dark) .bg-zinc-900\/50 { background-color: rgba(241,245,249,0.7) !important; }
+html:not(.dark) .bg-zinc-900\/30 { background-color: rgba(241,245,249,0.5) !important; }  /* About page skill cards */
+html:not(.dark) .bg-zinc-800\/80 { background-color: rgba(226,232,240,0.9) !important; }  /* About page skill chips */
 html:not(.dark) .bg-zinc-800\/60 { background-color: rgba(226,232,240,0.6) !important; }
+html:not(.dark) .bg-zinc-800\/50 { background-color: rgba(226,232,240,0.5) !important; }
 html:not(.dark) .bg-zinc-800\/40 { background-color: rgba(226,232,240,0.4) !important; }
+html:not(.dark) .bg-zinc-600\/60 { background-color: rgba(148,163,184,0.4) !important; }
 
 /* Borders */
 html:not(.dark) .border-zinc-800 { border-color: #e2e8f0 !important; }
 html:not(.dark) .border-zinc-700 { border-color: #cbd5e1 !important; }
-html:not(.dark) .border-zinc-800\/50 { border-color: rgba(226,232,240,0.5) !important; }
-html:not(.dark) .border-zinc-800\/60 { border-color: rgba(226,232,240,0.6) !important; }
-html:not(.dark) .border-zinc-800\/70 { border-color: rgba(226,232,240,0.7) !important; }
 html:not(.dark) .border-zinc-800\/80 { border-color: rgba(226,232,240,0.8) !important; }
+html:not(.dark) .border-zinc-800\/70 { border-color: rgba(226,232,240,0.7) !important; }
+html:not(.dark) .border-zinc-800\/60 { border-color: rgba(226,232,240,0.6) !important; }
+html:not(.dark) .border-zinc-800\/50 { border-color: rgba(226,232,240,0.5) !important; }
+html:not(.dark) .border-zinc-700\/50 { border-color: rgba(203,213,225,0.6) !important; }  /* About page skill chip borders */
+html:not(.dark) .border-zinc-700\/40 { border-color: rgba(203,213,225,0.5) !important; }
+html:not(.dark) .border-zinc-700\/30 { border-color: rgba(203,213,225,0.4) !important; }
 
 /* Text — flip the dark palette */
 html:not(.dark) .text-zinc-100 { color: #18181b !important; }
@@ -409,6 +419,8 @@ html:not(.dark) .bg-indigo-950\/60  { background-color: rgba(224,231,255,0.8) !i
 html:not(.dark) .bg-indigo-950\/40  { background-color: rgba(224,231,255,0.6) !important; }
 html:not(.dark) .bg-indigo-950\/30  { background-color: rgba(224,231,255,0.5) !important; }
 html:not(.dark) .bg-indigo-950\/20  { background-color: rgba(224,231,255,0.3) !important; }
+html:not(.dark) .bg-indigo-900\/50  { background-color: rgba(199,210,254,0.5) !important; }  /* "Currently Exploring" icon bg */
+html:not(.dark) .bg-indigo-900\/30  { background-color: rgba(199,210,254,0.4) !important; }  /* "Currently Exploring" chips   */
 html:not(.dark) .bg-violet-950\/60  { background-color: rgba(237,233,254,0.8) !important; }
 html:not(.dark) .bg-violet-950\/30  { background-color: rgba(237,233,254,0.5) !important; }
 html:not(.dark) .bg-emerald-950\/60 { background-color: rgba(209,250,229,0.8) !important; }
@@ -429,9 +441,12 @@ html:not(.dark) .border-amber-800\/40   { border-color: rgba(146,64,14,0.25)  !i
 html:not(.dark) .border-yellow-800\/60  { border-color: rgba(133,77,14,0.35)  !important; }
 html:not(.dark) .border-blue-800\/60    { border-color: rgba(30,64,175,0.3)   !important; }
 html:not(.dark) .border-blue-800\/40    { border-color: rgba(30,64,175,0.2)   !important; }
+html:not(.dark) .border-indigo-900\/40  { border-color: rgba(55,48,163,0.25)  !important; }  /* "Currently Exploring" container */
 html:not(.dark) .border-indigo-800\/60  { border-color: rgba(55,48,163,0.3)   !important; }
 html:not(.dark) .border-indigo-800\/50  { border-color: rgba(55,48,163,0.25)  !important; }
 html:not(.dark) .border-indigo-800\/40  { border-color: rgba(55,48,163,0.2)   !important; }
+html:not(.dark) .border-indigo-700\/50  { border-color: rgba(67,56,202,0.3)   !important; }  /* icon ring                       */
+html:not(.dark) .border-indigo-700\/40  { border-color: rgba(67,56,202,0.25)  !important; }  /* "Currently Exploring" chip borders */
 html:not(.dark) .border-violet-800\/60  { border-color: rgba(91,33,182,0.3)   !important; }
 html:not(.dark) .border-violet-800\/40  { border-color: rgba(91,33,182,0.2)   !important; }
 html:not(.dark) .border-emerald-800\/60 { border-color: rgba(6,78,59,0.3)     !important; }
