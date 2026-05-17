@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import Link from "next/link";
 import {
   ArrowRight,
@@ -126,23 +127,17 @@ export function AboutSection() {
               className="relative"
             >
               <div className="relative overflow-hidden rounded-2xl border border-zinc-800 bg-zinc-900/60 aspect-[4/3] max-w-sm">
-                {/* Placeholder pattern */}
-                <div
-                  className="absolute inset-0"
-                  style={{
-                    backgroundImage:
-                      "radial-gradient(circle at 30% 40%, rgba(99,102,241,0.15) 0%, transparent 55%), radial-gradient(circle at 70% 70%, rgba(139,92,246,0.1) 0%, transparent 50%)",
-                  }}
+                <Image
+                  src="/images/alwyn-dsouza.jpg"
+                  alt="Alwyn D'Souza"
+                  fill
+                  className="object-cover object-top"
+                  sizes="(max-width: 768px) 100vw, 384px"
+                  priority
                 />
-                <div className="absolute inset-0 flex flex-col items-center justify-center gap-3">
-                  <div className="h-20 w-20 rounded-full border-2 border-zinc-700 bg-zinc-800 flex items-center justify-center">
-                    <span className="text-3xl font-bold text-zinc-400 select-none">A</span>
-                  </div>
-                  <p className="text-xs text-zinc-600 font-mono tracking-wider">alwyndsouza.github.io</p>
-                </div>
                 {/* Corner accent */}
                 <div className="absolute bottom-4 right-4">
-                  <span className="inline-flex items-center gap-1.5 rounded-full border border-indigo-800/60 bg-indigo-950/60 px-2.5 py-1 text-xs font-medium text-indigo-300">
+                  <span className="inline-flex items-center gap-1.5 rounded-full border border-indigo-800/60 bg-indigo-950/60 px-2.5 py-1 text-xs font-medium text-indigo-300 backdrop-blur-sm">
                     <span className="h-1.5 w-1.5 rounded-full bg-indigo-400 animate-pulse" />
                     Open to consulting
                   </span>
