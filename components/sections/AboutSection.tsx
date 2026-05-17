@@ -11,7 +11,6 @@ import {
   GitMerge,
   BrainCircuit,
   Database,
-  TrendingUp,
 } from "lucide-react";
 
 const METRICS = [
@@ -58,7 +57,7 @@ const PILLARS = [
   },
   {
     icon: GitMerge,
-    label: "DataOps & CI/CD",
+    label: "DataOps & Platform Engineering",
     color: "text-indigo-400",
     bg: "bg-indigo-950/40 border-indigo-800/30",
   },
@@ -69,8 +68,8 @@ const PILLARS = [
     bg: "bg-violet-950/40 border-violet-800/30",
   },
   {
-    icon: TrendingUp,
-    label: "Semantic Layers",
+    icon: Building2,
+    label: "Enterprise Data Platforms",
     color: "text-emerald-400",
     bg: "bg-emerald-950/40 border-emerald-800/30",
   },
