@@ -563,7 +563,7 @@ function DbtLineageDetail() {
 function MLOpsPipelinePreview() {
   return (
     <svg viewBox="0 0 320 180" className="w-full h-full" role="img" aria-label="MLOps Pipeline">
-      <ArrowDefs colors={["#52525b", "#38bdf8", "#34d399", "#f97316"]} />
+      <ArrowDefs colors={["#52525b", "#38bdf8", "#34d399", "#f97316", "#fbbf24", "#a78bfa"]} />
       <rect width="320" height="180" fill="#18181b" rx="8" />
 
       {/* Pipeline stages */}
