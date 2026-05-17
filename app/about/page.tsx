@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowRight, Github, Linkedin, FileText, Mail } from "lucide-react";
+import { ArrowRight, Github, Linkedin, FileText } from "lucide-react";
 import { getAllArticles } from "@/lib/articles";
 import { formatDateShort } from "@/lib/utils";
 
@@ -56,7 +56,7 @@ const SOCIAL = [
     icon: Github,
   },
   {
-    href: "https://linkedin.com/in/alwyndsouza",
+    href: "https://linkedin.com/in/alwynanildsouza",
     label: "LinkedIn",
     sub: "alwyndsouza",
     icon: Linkedin,
@@ -66,12 +66,6 @@ const SOCIAL = [
     label: "Medium",
     sub: "@aradsouza",
     icon: FileText,
-  },
-  {
-    href: "mailto:alwyn.anil@gmail.com",
-    label: "Email",
-    sub: "alwyn.anil@gmail.com",
-    icon: Mail,
   },
 ];
 
@@ -112,7 +106,7 @@ export default function AboutPage() {
                   metrics first-class citizens.
                 </p>
                 <p>
-                  I write extensively on these topics (66+ published articles)
+                  I write extensively on these topics
                   and build open-source reference architectures that teams can
                   actually use in production.
                 </p>

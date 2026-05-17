@@ -1,25 +1,24 @@
 # alwyndsouza.github.io
 
-Personal technical website for **Alwyn Dsouza** — Lead Data Engineer.
+Personal technical portfolio for **Alwyn D'Souza** — Data & AI Engineering Leader.  
 Live at: **https://alwyndsouza.github.io**
 
-Topics covered: Data Engineering · DataOps · dbt · Databricks · AI Agents · MLOps
+Topics: DataOps · dbt · Databricks · AI Agents · Apache Spark · AWS · GCP · MLOps
 
 ---
 
 ## Tech Stack
 
 | Layer | Technology |
-|-------|-----------|
-| Framework | React 18 + TypeScript |
-| Build tool | Vite + SWC |
-| Styling | Tailwind CSS v4 |
-| Components | shadcn/ui (Badge, Button, Card) |
-| Routing | React Router v7 |
-| Markdown | marked + marked-highlight + highlight.js |
-| Hosting | GitHub Pages (via GitHub Actions) |
+|-------|------------|
+| Framework | Next.js 15 (App Router) + TypeScript |
+| Styling | Tailwind CSS v3 |
+| Animations | Framer Motion |
+| Fonts | Inter + JetBrains Mono (Google Fonts) |
+| Markdown | gray-matter + remark |
+| Hosting | GitHub Pages (static export via GitHub Actions) |
 
-Articles and projects are written in **Markdown with YAML frontmatter** and rendered at build time via `import.meta.glob`.
+Articles and projects are **Markdown files with YAML frontmatter** loaded at build time from the `content/` directory using Node's `fs` module via server components.
 
 ---
 
@@ -27,52 +26,44 @@ Articles and projects are written in **Markdown with YAML frontmatter** and rend
 
 ```
 /
-├── index.html                   # Vite entry point (React SPA root)
-├── package.json
-├── vite.config.ts
-├── tsconfig.json
+├── app/                         # Next.js App Router
+│   ├── layout.tsx               # Root layout (header, footer, theme provider)
+│   ├── page.tsx                 # Homepage
+│   ├── globals.css              # Tailwind base + design tokens + light/dark mode
+│   ├── about/page.tsx           # About page
+│   ├── articles/                # Articles listing + individual article pages
+│   └── projects/                # Projects listing + individual project pages
 │
-├── frontend/
-│   ├── src/
-│   │   ├── main.tsx             # React entry point
-│   │   ├── App.tsx
-│   │   ├── routes.tsx           # React Router routes
-│   │   │
-│   │   ├── pages/               # Page components
-│   │   │   ├── Home.tsx
-│   │   │   ├── Articles.tsx
-│   │   │   ├── ArticlePost.tsx
-│   │   │   ├── Projects.tsx
-│   │   │   ├── ProjectDetail.tsx
-│   │   │   └── About.tsx
-│   │   │
-│   │   ├── components/
-│   │   │   ├── Layout.tsx       # Sticky nav + footer
-│   │   │   └── ui/              # shadcn/ui components
-│   │   │
-│   │   ├── data/                # Content loaders + site config
-│   │   │   ├── articles.ts      # Markdown → article objects
-│   │   │   ├── projects.ts      # Markdown → project objects
-│   │   │   └── config.ts        # Site-wide config (e.g. currentlyExploring)
-│   │   │
-│   │   ├── articles/            # Article markdown files
-│   │   │   └── *.md
-│   │   ├── projects/            # Project markdown files
-│   │   │   └── *.md
-│   │   │
-│   │   └── styles/
-│   │       └── globals.css      # Tailwind v4 + design tokens
-│   │
-│   └── public/
-│       └── images/              # Static images referenced in markdown
+├── components/
+│   ├── layout/                  # Header, Footer
+│   ├── providers/               # ThemeProvider (system/light/dark)
+│   ├── sections/                # Homepage sections (Hero, About, Projects, etc.)
+│   └── ui/                      # Shared UI primitives
 │
-├── import_medium_export.py      # Import from Medium HTML export (ZIP download)
-├── import_medium.py             # Import from Medium RSS feed
+├── content/
+│   ├── articles/                # Article Markdown files (*.md)
+│   └── projects/                # Project Markdown files (*.md)
 │
-└── .github/
-    └── workflows/
-        ├── deploy.yml           # Build → GitHub Pages on push to main
-        └── sync-medium.yml      # Auto-import new Medium articles (every 6 hours)
+├── lib/
+│   ├── articles.ts              # Server-side article loader (uses fs)
+│   ├── projects.ts              # Server-side project loader (uses fs)
+│   ├── types.ts                 # Shared TypeScript types
+│   └── utils.ts                 # Utility helpers
+│
+├── public/
+│   ├── favicon.svg
+│   ├── og-default.svg           # Open Graph image
+│   └── images/                  # Static images referenced in Markdown
+│
+├── next.config.ts               # output: "export", distDir: "build"
+├── tailwind.config.ts
+│
+├── import_medium.py             # Import latest articles from Medium RSS
+├── import_medium_export.py      # Full backfill from Medium ZIP export
+│
+└── .github/workflows/
+    ├── deploy.yml               # Build → GitHub Pages on push to main
+    └── sync-medium.yml          # Auto-import new Medium articles (every 6 hours)
 ```
 
 ---
@@ -85,7 +76,6 @@ Articles and projects are written in **Markdown with YAML frontmatter** and rend
 
 ```bash
 node --version   # should be v18+
-npm --version
 ```
 
 ### Quick Start
@@ -94,32 +84,32 @@ npm --version
 # Install dependencies
 npm install
 
-# Start dev server (hot reload)
+# Start dev server with hot reload
 npm run dev
 # → http://localhost:3000
 
-# Production build
+# Production build (outputs to build/)
 npm run build
 
-# Preview production build
+# Preview the production build locally
 npm run preview
 ```
 
 ---
 
-## Deploying on GitHub Pages
+## Deployment
 
-Deployment is fully automated via **GitHub Actions** (`.github/workflows/deploy.yml`).
+Deployment is automated via **GitHub Actions** (`.github/workflows/deploy.yml`).
 
-Every push to `main`:
+On every push to `main`:
 1. Installs dependencies with `npm ci`
-2. Runs `npm run build` (output in `build/`)
+2. Runs `npm run build` (Next.js static export → `build/`)
 3. Uploads the `build/` directory to GitHub Pages
 
-To enable GitHub Pages for the first time:
-1. Go to **Settings → Pages** in the repository
+**First-time setup:**
+1. Go to **Settings → Pages** in your repository
 2. Under **Source**, select **GitHub Actions**
-3. Push to `main` — the workflow handles the rest
+3. Push to `main` — the workflow handles everything else
 
 ---
 
@@ -127,34 +117,20 @@ To enable GitHub Pages for the first time:
 
 ### Automated sync (recommended)
 
-A GitHub Actions workflow (`.github/workflows/sync-medium.yml`) runs every 6 hours and automatically imports any new articles published on Medium. No manual steps required — just publish on Medium and the portfolio updates within 6 hours.
+`.github/workflows/sync-medium.yml` runs every 6 hours, fetches the Medium RSS feed, and commits any new articles to `content/articles/`. Trigger it manually anytime from the **Actions** tab.
 
-The workflow can also be triggered manually from the **Actions** tab in GitHub using **Run workflow**.
+### Option 1 — Full backfill from Medium export
 
-### Option 1 — Medium HTML Export (full backfill)
+1. Download your data from [medium.com/me/settings/security](https://medium.com/me/settings/security)
+2. Extract the ZIP and place the `posts/` folder at `medium-export/posts/`
+3. Run:
 
-Use this to import your entire Medium history from a ZIP export.
+```bash
+pip install markdownify
+python3 import_medium_export.py
+```
 
-1. Go to [https://medium.com/me/settings/security](https://medium.com/me/settings/security)
-2. Click **Download your information** and extract the ZIP
-3. Place the `posts/` folder in the repo root as `medium-export/posts/`
-4. Install the required Python dependency:
-
-   ```bash
-   pip install markdownify
-   ```
-
-5. Run the import script:
-
-   ```bash
-   python3 import_medium_export.py
-   # or specify a custom path:
-   python3 import_medium_export.py path/to/posts/
-   ```
-
-### Option 2 — Medium RSS Feed (latest 10 articles)
-
-Use this to manually pull the most recent articles.
+### Option 2 — Latest articles from RSS
 
 ```bash
 curl -s "https://medium.com/feed/@aradsouza" -o medium_feed.xml
@@ -162,100 +138,80 @@ pip install markdownify
 python3 import_medium.py
 ```
 
-Both scripts will:
-- Parse the article title, date, tags, and cover image
-- Convert all HTML body content to clean Markdown
-- Write `.md` files into `frontend/src/articles/`
-- Append a canonical link footer pointing back to Medium
-- Skip articles that already exist (no overwrites)
-
-> **Note:** `posts/` and `medium_feed.xml` are listed in `.gitignore` and are not committed to the repository.
+Both scripts convert HTML to Markdown, write files to `content/articles/`, and skip existing articles.
 
 ---
 
-## Adding a New Article Manually
+## Adding an Article
 
-1. Create a new Markdown file in `frontend/src/articles/`:
+1. Create a Markdown file in `content/articles/`:
 
-   ```bash
-   touch frontend/src/articles/my-new-article.md
-   ```
-
-2. Add YAML frontmatter at the top:
-
-   ```yaml
-   ---
-   title: "My Article Title"
-   slug: "my-article-slug"
-   date: 2025-06-01
-   category: "data-engineering"
-   excerpt: "A short description shown on listing pages."
-   published: true
-   tags:
-     - data-engineering
-     - dbt
-   coverImage: "https://cdn-images-1.medium.com/max/800/your-image.png"
-   ---
-   ```
-
-3. Write the article body in standard Markdown below the frontmatter.
-
-4. Commit and push — GitHub Actions deploys automatically.
-
----
-
-## Adding a New Project
-
-1. Create a new Markdown file in `frontend/src/projects/`:
-
-   ```bash
-   touch frontend/src/projects/my-project.md
-   ```
-
-2. Add frontmatter:
-
-   ```yaml
-   ---
-   id: "my-project"
-   title: "My Project"
-   description: "Short description shown on the listing card."
-   status: development        # production | development | beta | archived
-   category: "data-engineering"
-   featured: true
-   draft: false
-   order: 5
-   tech:
-     - Python
-     - dbt
-   links:
-     github: "https://github.com/alwyndsouza/my-project"
-     demo: "https://my-project.example.com"
-   coverImage: "/images/my-project.png"
-   ---
-   ```
-
-3. Write the project description in Markdown below.
-
-4. Commit and push.
-
----
-
-## Site Configuration
-
-Edit `frontend/src/data/config.ts` to update site-wide content that doesn't live in Markdown:
-
-```ts
-// Currently Exploring section on the About page
-export const currentlyExploring = [
-  'dbt Fusion Engine',
-  'AI Agents + MCP',
-  'Semantic Layers',
-  'BI-as-Code',
-];
+```bash
+touch content/articles/my-article.md
 ```
+
+2. Add YAML frontmatter:
+
+```yaml
+---
+title: "Article Title"
+slug: "article-slug"
+date: 2026-01-01
+category: "data-engineering"
+excerpt: "Short description shown on listing pages."
+published: true
+tags:
+  - dbt
+  - databricks
+coverImage: "https://cdn-images-1.medium.com/max/800/your-image.png"
+---
+```
+
+3. Write Markdown content below the frontmatter, then commit and push.
+
+---
+
+## Adding a Project
+
+1. Create a Markdown file in `content/projects/`:
+
+```bash
+touch content/projects/my-project.md
+```
+
+2. Add YAML frontmatter:
+
+```yaml
+---
+id: "my-project"
+title: "Project Name"
+description: "Short description for the project card."
+status: production          # production | development | beta | archived
+category: "data-engineering"
+featured: true
+draft: false
+order: 5
+tech:
+  - Python
+  - dbt
+  - Databricks
+links:
+  github: "https://github.com/alwyndsouza/my-project"
+  demo: "https://my-project.example.com"
+coverImage: "/images/my-project.png"
+---
+```
+
+3. Write the project description in Markdown below, commit and push.
+
+---
+
+## Theme
+
+The site supports **system / light / dark** themes. The preference is stored in `localStorage` under `alwyn-dev-theme`. A blocking inline script prevents flash of the wrong theme on load. The toggle button is in the header.
 
 ---
 
 ## License
 
-Content © 2026 Alwyn Dsouza. All rights reserved.
+Content © 2026 Alwyn D'Souza. All rights reserved.

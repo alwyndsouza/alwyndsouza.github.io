@@ -6,6 +6,13 @@ export const metadata: Metadata = {
   title: "Projects",
   description:
     "Open-source data engineering projects: real-time fraud detection, dbt CI/CD pipelines, AI agents, semantic layers, and more.",
+  openGraph: {
+    title: "Projects — Alwyn D'Souza",
+    description:
+      "Production-grade reference architectures and open-source tools for the modern data stack.",
+    images: [{ url: "/og-default.svg", width: 1200, height: 630 }],
+  },
+  twitter: { card: "summary_large_image", images: ["/og-default.svg"] },
 };
 
 export default function ProjectsPage() {

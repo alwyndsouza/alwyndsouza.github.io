@@ -5,7 +5,14 @@ import { ArticlesClient } from "./ArticlesClient";
 export const metadata: Metadata = {
   title: "Writing",
   description:
-    "66+ articles on data engineering, dbt, Databricks, AI agents, DataOps, and modern data platform architecture.",
+    "Articles on data engineering, dbt, Databricks, AI agents, DataOps, and modern data platform architecture.",
+  openGraph: {
+    title: "Writing — Alwyn D'Souza",
+    description:
+      "Practical guides and deep dives on data engineering, DataOps, dbt, Databricks, AI agents, and modern platform architecture.",
+    images: [{ url: "/og-default.svg", width: 1200, height: 630 }],
+  },
+  twitter: { card: "summary_large_image", images: ["/og-default.svg"] },
 };
 
 export default function ArticlesPage() {

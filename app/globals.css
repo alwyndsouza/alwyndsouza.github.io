@@ -27,6 +27,9 @@
   --color-success: #4ade80;
   --color-warning: #facc15;
   --color-info: #60a5fa;
+
+  /* Layout */
+  --header-height: 64px;
 }
 
 /* Force dark mode always */
@@ -34,8 +37,11 @@ html {
   background-color: var(--color-bg-primary);
   color: var(--color-text-primary);
   scroll-behavior: smooth;
+  /* offset anchors so sticky header doesn't cover them */
+  scroll-padding-top: calc(var(--header-height) + 1.5rem);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 /* ── Typography helpers ─────────────────────────────────────────── */
@@ -155,6 +161,47 @@ code:not(pre code) {
   color: #fafafa;
 }
 
+/* ── Focus visible ──────────────────────────────────────────────── */
+:focus-visible {
+  outline: 2px solid rgba(99, 102, 241, 0.7);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* Remove focus ring for mouse users but keep for keyboard */
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* ── Reduced motion ─────────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ── Section separator utility ──────────────────────────────────── */
+@layer utilities {
+  .section-divider {
+    @apply border-t border-zinc-800/50;
+  }
+
+  /* Ink-dark inset shadow for depth between sections */
+  .section-inset {
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.03);
+  }
+
+  /* Subtle inter-section gradient transition */
+  .section-fade-top {
+    mask-image: linear-gradient(to bottom, transparent 0%, black 10%);
+  }
+}
+
 /* ── Animations ────────────────────────────────────────────────── */
 @keyframes shimmer {
   0% { background-position: -200% 0; }
@@ -166,6 +213,27 @@ code:not(pre code) {
   background-size: 200% 100%;
   animation: shimmer 3s infinite;
 }
+
+@keyframes heroOrb1 {
+  0%, 100% { transform: translate(-50%, -50%) scale(1); }
+  33%       { transform: translate(-46%, -54%) scale(1.08); }
+  66%       { transform: translate(-54%, -46%) scale(0.95); }
+}
+
+@keyframes heroOrb2 {
+  0%, 100% { transform: translate(-50%, -50%) scale(1); }
+  40%       { transform: translate(-44%, -56%) scale(1.12); }
+  70%       { transform: translate(-56%, -42%) scale(0.92); }
+}
+
+@keyframes heroOrb3 {
+  0%, 100% { transform: translateX(-50%) scale(1); }
+  50%       { transform: translateX(-46%) scale(1.1); }
+}
+
+.hero-orb-1 { animation: heroOrb1 18s ease-in-out infinite; }
+.hero-orb-2 { animation: heroOrb2 22s ease-in-out infinite; }
+.hero-orb-3 { animation: heroOrb3 26s ease-in-out infinite; }
 
 /* highlight.js theme overrides */
 .hljs {
@@ -195,3 +263,88 @@ code:not(pre code) {
 .hljs-built_in, .hljs-literal, .hljs-params {
   color: #fb923c;
 }
+
+/* ── Light mode overrides ───────────────────────────────────────── */
+/* Applied when the `dark` class is absent from <html>.             */
+/* The site is dark-first; these rules invert the zinc palette.     */
+
+html:not(.dark) {
+  background-color: #f8fafc;
+  color: #18181b;
+}
+
+html:not(.dark) body {
+  background-color: #f8fafc;
+  color: #18181b;
+}
+
+/* Surfaces */
+html:not(.dark) .bg-zinc-950 { background-color: #f8fafc !important; }
+html:not(.dark) .bg-zinc-900 { background-color: #f1f5f9 !important; }
+html:not(.dark) .bg-zinc-800 { background-color: #e2e8f0 !important; }
+html:not(.dark) .bg-zinc-700 { background-color: #cbd5e1 !important; }
+
+/* Surfaces with opacity */
+html:not(.dark) .bg-zinc-950\/92 { background-color: rgba(248,250,252,0.92) !important; }
+html:not(.dark) .bg-zinc-950\/98 { background-color: rgba(248,250,252,0.98) !important; }
+html:not(.dark) .bg-zinc-950\/40 { background-color: rgba(248,250,252,0.6) !important; }
+html:not(.dark) .bg-zinc-900\/50 { background-color: rgba(241,245,249,0.7) !important; }
+html:not(.dark) .bg-zinc-900\/70 { background-color: rgba(241,245,249,0.9) !important; }
+html:not(.dark) .bg-zinc-900\/80 { background-color: rgba(241,245,249,0.95) !important; }
+html:not(.dark) .bg-zinc-800\/50 { background-color: rgba(226,232,240,0.5) !important; }
+html:not(.dark) .bg-zinc-800\/60 { background-color: rgba(226,232,240,0.6) !important; }
+html:not(.dark) .bg-zinc-800\/40 { background-color: rgba(226,232,240,0.4) !important; }
+
+/* Borders */
+html:not(.dark) .border-zinc-800 { border-color: #e2e8f0 !important; }
+html:not(.dark) .border-zinc-700 { border-color: #cbd5e1 !important; }
+html:not(.dark) .border-zinc-800\/50 { border-color: rgba(226,232,240,0.5) !important; }
+html:not(.dark) .border-zinc-800\/60 { border-color: rgba(226,232,240,0.6) !important; }
+html:not(.dark) .border-zinc-800\/70 { border-color: rgba(226,232,240,0.7) !important; }
+html:not(.dark) .border-zinc-800\/80 { border-color: rgba(226,232,240,0.8) !important; }
+
+/* Text — flip the dark palette */
+html:not(.dark) .text-zinc-100 { color: #18181b !important; }
+html:not(.dark) .text-zinc-200 { color: #27272a !important; }
+html:not(.dark) .text-zinc-300 { color: #3f3f46 !important; }
+html:not(.dark) .text-zinc-400 { color: #52525b !important; }
+html:not(.dark) .text-zinc-500 { color: #71717a !important; }
+html:not(.dark) .text-zinc-600 { color: #a1a1aa !important; }
+html:not(.dark) .text-zinc-700 { color: #a1a1aa !important; }
+html:not(.dark) .text-zinc-800 { color: #d4d4d8 !important; }
+
+/* Hover backgrounds */
+html:not(.dark) .hover\:bg-zinc-800:hover  { background-color: #e2e8f0 !important; }
+html:not(.dark) .hover\:bg-zinc-800\/50:hover { background-color: rgba(226,232,240,0.5) !important; }
+html:not(.dark) .hover\:bg-zinc-900:hover  { background-color: #f1f5f9 !important; }
+html:not(.dark) .hover\:bg-zinc-900\/80:hover { background-color: rgba(241,245,249,0.8) !important; }
+
+/* Hover borders */
+html:not(.dark) .hover\:border-zinc-700:hover { border-color: #cbd5e1 !important; }
+html:not(.dark) .hover\:border-zinc-600:hover { border-color: #94a3b8 !important; }
+
+/* Hover text */
+html:not(.dark) .hover\:text-zinc-100:hover { color: #18181b !important; }
+html:not(.dark) .hover\:text-zinc-200:hover { color: #27272a !important; }
+html:not(.dark) .hover\:text-zinc-300:hover { color: #3f3f46 !important; }
+
+/* Shadows — lighter on white backgrounds */
+html:not(.dark) .shadow-2xl        { box-shadow: 0 25px 50px -12px rgba(0,0,0,0.08) !important; }
+html:not(.dark) .shadow-lg         { box-shadow: 0 10px 15px -3px rgba(0,0,0,0.06), 0 4px 6px -2px rgba(0,0,0,0.04) !important; }
+html:not(.dark) .shadow-black\/40  { box-shadow: none !important; }
+
+/* Scrollbar */
+html:not(.dark) ::-webkit-scrollbar-thumb { background-color: #cbd5e1 !important; }
+html:not(.dark) ::-webkit-scrollbar-thumb:hover { background-color: #94a3b8 !important; }
+
+/* Code / prose */
+html:not(.dark) pre { background-color: #f1f5f9 !important; border-color: #e2e8f0 !important; }
+html:not(.dark) code:not(pre code) { background-color: #e2e8f0 !important; color: #3f3f46 !important; }
+html:not(.dark) .prose { color: #3f3f46; }
+html:not(.dark) .prose h1,
+html:not(.dark) .prose h2,
+html:not(.dark) .prose h3,
+html:not(.dark) .prose h4 { color: #18181b; }
+
+/* Active nav item */
+html:not(.dark) .bg-zinc-800.text-zinc-100 { background-color: #e2e8f0 !important; color: #18181b !important; }

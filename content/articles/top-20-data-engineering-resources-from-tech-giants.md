@@ -53,7 +53,7 @@ Messaging infrastructure, real-time communication systems, and collaboration pla
 
 ### 10. Engineering@Microsoft
 
-Cloud infrastructure, Azure services, and enterprise-scale data solutions. **URL:** <https://devblogs.microsoft.com/engineering-at-microsoft>
+Cloud infrastructure, distributed systems, and enterprise-scale data solutions. **URL:** <https://devblogs.microsoft.com/engineering-at-microsoft>
 
 ### 11. Airbnb Tech Blog
 

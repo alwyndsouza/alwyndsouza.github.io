@@ -42,7 +42,7 @@ First, establish a connection between your Databricks workspace and dbt Cloud us
 
 Next, configure Single Sign-On (SSO) for seamless access management for your team of developers.
 
-1. In your identity provider’s admin console (e.g., Okta or Azure AD), create a new SAML application for dbt Cloud.
+1. In your identity provider’s admin console (e.g., Okta), create a new SAML application for dbt Cloud.
 2. Obtain the SAML metadata URL or XML file from your identity provider.
 3. In another tab, go back to `Account Settings` > `SSO` in dbt Cloud.
 4. Upload the SAML metadata or paste the URL.
