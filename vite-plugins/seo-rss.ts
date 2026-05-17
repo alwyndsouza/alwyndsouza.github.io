@@ -290,12 +290,29 @@ export interface SeoRssOptions {
   root: string;
 }
 
+interface PluginConfigLike {
+  root: string;
+  build: { outDir: string };
+}
+
+interface DevResponseLike {
+  setHeader(name: string, value: string): void;
+  end(body?: string): void;
+}
+
+interface DevServerLike {
+  middlewares: {
+    use(handler: (req: { url?: string }, res: DevResponseLike, next: () => void) => void): void;
+  };
+  config: { logger: { error(message: string): void } };
+}
+
 export function seoRssPlugin(options: SeoRssOptions) {
   const { site, root } = options;
   let resolvedOutDir = path.join(root, 'build');
   return {
     name: 'alwyn-seo-rss',
-    configResolved(config) {
+    configResolved(config: PluginConfigLike) {
       resolvedOutDir = path.isAbsolute(config.build.outDir)
         ? config.build.outDir
         : path.join(config.root, config.build.outDir);
@@ -305,7 +322,7 @@ export function seoRssPlugin(options: SeoRssOptions) {
      * time. The articles/projects readers re-run on each request so newly
      * added markdown files show up without a server restart.
      */
-    configureServer(server) {
+    configureServer(server: DevServerLike) {
       server.middlewares.use((req, res, next) => {
         if (!req.url) return next();
         const url = req.url.split('?')[0];
@@ -338,7 +355,7 @@ export function seoRssPlugin(options: SeoRssOptions) {
      * Build: pre-render per-route HTML with baked meta tags and write
      * sitemap.xml / rss.xml / robots.txt into the build output.
      */
-    closeBundle() {
+    closeBundle(this: { warn(message: string): void; info(message: string): void }) {
       const buildDir = resolvedOutDir;
       const indexPath = path.join(buildDir, 'index.html');
       if (!fs.existsSync(indexPath)) {
