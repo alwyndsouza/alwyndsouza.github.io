@@ -22,7 +22,6 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import yaml from 'js-yaml';
-import type { Plugin } from 'vite';
 
 interface SiteMeta {
   url: string;
@@ -291,7 +290,7 @@ export interface SeoRssOptions {
   root: string;
 }
 
-export function seoRssPlugin(options: SeoRssOptions): Plugin {
+export function seoRssPlugin(options: SeoRssOptions) {
   const { site, root } = options;
   let resolvedOutDir = path.join(root, 'build');
   return {
