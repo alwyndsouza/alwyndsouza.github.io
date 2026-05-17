@@ -42,10 +42,12 @@ const SKILLS = [
 ];
 
 const CURRENTLY_EXPLORING = [
-  "dbt Fusion Engine",
-  "AI Agents + MCP",
-  "BI-as-Code",
-  "Semantic Layers",
+  "Agentic AI Systems",
+  "MCP Tooling",
+  "Enterprise AI Orchestration",
+  "Spec-Driven Development",
+  "Databricks Optimization",
+  "AI-Augmented DataOps",
 ];
 
 const SOCIAL = [
