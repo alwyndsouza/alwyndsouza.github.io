@@ -517,8 +517,8 @@ html:not(.dark) .prose-invert {
   --tw-prose-kbd-shadows:   17 24 39;
   --tw-prose-code:          #1e1b4b;
   --tw-prose-invert-code:   #1e1b4b;
-  --tw-prose-pre-code:      #e5e7eb;
-  --tw-prose-pre-bg:        #1f2937;
+  --tw-prose-pre-code:      #1f2937;
+  --tw-prose-pre-bg:        #f1f5f9;
   --tw-prose-th-borders:    #d1d5db;
   --tw-prose-td-borders:    #e5e7eb;
 }
@@ -570,4 +570,64 @@ html:not(.dark) .prose-invert blockquote {
 }
 html:not(.dark) .prose-invert hr {
   border-color: #e5e7eb !important;
+}
+
+/* Explicit pre/code dark text for prose-invert in light mode */
+html:not(.dark) .prose-invert pre {
+  background-color: #f1f5f9 !important;
+  border-color: #e2e8f0 !important;
+  color: #1f2937 !important;
+}
+html:not(.dark) .prose-invert pre code {
+  color: #1f2937 !important;
+  background-color: transparent !important;
+}
+
+/* ── Light mode: hljs token overrides ─────────────────────────── */
+/* Dark-mode hljs colors are light pastels; on light pre bg they  */
+/* must be shifted to darker, saturated equivalents.              */
+html:not(.dark) .hljs-keyword,
+html:not(.dark) .hljs-selector-tag,
+html:not(.dark) .hljs-title,
+html:not(.dark) .hljs-section,
+html:not(.dark) .hljs-doctag,
+html:not(.dark) .hljs-name,
+html:not(.dark) .hljs-strong {
+  color: #3730a3 !important; /* indigo-800 — replaces #818cf8 */
+}
+html:not(.dark) .hljs-string,
+html:not(.dark) .hljs-title.class_,
+html:not(.dark) .hljs-title.class_.inherited__,
+html:not(.dark) .hljs-addition {
+  color: #166534 !important; /* green-800 — replaces #86efac */
+}
+html:not(.dark) .hljs-comment,
+html:not(.dark) .hljs-quote {
+  color: #6b7280 !important; /* gray-500 — same as dark, OK on light */
+}
+html:not(.dark) .hljs-number,
+html:not(.dark) .hljs-symbol,
+html:not(.dark) .hljs-bullet,
+html:not(.dark) .hljs-link,
+html:not(.dark) .hljs-meta,
+html:not(.dark) .hljs-deletion,
+html:not(.dark) .hljs-regexp {
+  color: #9d174d !important; /* pink-800 — replaces #f9a8d4 */
+}
+html:not(.dark) .hljs-attr,
+html:not(.dark) .hljs-attribute {
+  color: #155e75 !important; /* cyan-800 — replaces #67e8f9 */
+}
+html:not(.dark) .hljs-variable,
+html:not(.dark) .hljs-template-variable,
+html:not(.dark) .hljs-type,
+html:not(.dark) .hljs-selector-class,
+html:not(.dark) .hljs-selector-attr,
+html:not(.dark) .hljs-selector-pseudo {
+  color: #92400e !important; /* amber-800 — replaces #fbbf24 */
+}
+html:not(.dark) .hljs-built_in,
+html:not(.dark) .hljs-literal,
+html:not(.dark) .hljs-params {
+  color: #c2410c !important; /* orange-700 — replaces #fb923c */
 }

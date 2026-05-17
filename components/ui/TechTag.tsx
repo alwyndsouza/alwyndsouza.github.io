@@ -10,7 +10,7 @@ export function TechTag({ label, className }: TechTagProps) {
     <span
       className={cn(
         "inline-flex items-center rounded px-1.5 py-0.5 text-xs font-mono font-medium",
-        "bg-zinc-800/80 text-zinc-400 border border-zinc-700/50",
+        "bg-slate-100 text-zinc-600 border border-slate-200 dark:bg-zinc-800/80 dark:text-zinc-400 dark:border-zinc-700/50",
         className
       )}
     >
