@@ -290,10 +290,7 @@ code:not(pre code) {
    Dark mode: indigo-400 / violet-400 / cyan-300 (light pastels on dark bg)
    Light mode: indigo-600 / violet-600 / cyan-600 (vivid on white bg)    */
 html:not(.dark) .text-gradient {
-  background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 50%, #0891b2 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  background-image: linear-gradient(135deg, #4f46e5 0%, #7c3aed 50%, #0891b2 100%);
 }
 
 html:not(.dark) {
