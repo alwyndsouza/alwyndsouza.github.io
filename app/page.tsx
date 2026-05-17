@@ -1,7 +1,6 @@
 import { Hero } from "@/components/sections/Hero";
 import { AboutSection } from "@/components/sections/AboutSection";
 import { Expertise } from "@/components/sections/Expertise";
-import { FeaturedProjects } from "@/components/sections/FeaturedProjects";
 import { ArchitectureGallery } from "@/components/sections/ArchitectureGallery";
 import { TechStack } from "@/components/sections/TechStack";
 import { LatestArticles } from "@/components/sections/LatestArticles";
@@ -19,7 +18,6 @@ export default function HomePage() {
       <Hero articleCount={allArticles.length} projectCount={allProjects.length} />
       <AboutSection />
       <Expertise />
-      <FeaturedProjects />
       <ArchitectureGallery />
       <TechStack />
       <LatestArticles articles={latestArticles} />
