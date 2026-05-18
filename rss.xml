@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Alwyn Dsouza — Articles</title>
+    <link>https://alwyndsouza.github.io</link>
+    <description>Practical writing on Data Engineering, DataOps, dbt, Databricks, and AI Agents. Articles, open-source projects, and lessons from production data platforms.</description>
+    <language>en</language>
+    <lastBuildDate>Mon, 18 May 2026 10:57:25 GMT</lastBuildDate>
+    <atom:link href="https://alwyndsouza.github.io/rss.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AI Agents Explained Without the Hype: A Data Engineer’s Take</title>
+      <link>https://alwyndsouza.github.io/articles/ai-agents-explained-without-the-hype-a-data-engineer-s-take</link>
+      <guid isPermaLink="true">https://alwyndsouza.github.io/articles/ai-agents-explained-without-the-hype-a-data-engineer-s-take</guid>
+      <pubDate>Sat, 09 May 2026 00:00:00 GMT</pubDate>
+      <description></description>
+      <category>python</category>
+      <category>machine-learning</category>
+      <category>artificial-intelligence</category>
+      <category>software-engineering</category>
+      <category>data-engineering</category>
+    </item>
+    <item>
+      <title>MCP vs. Agentic Skills: Which Architecture Should You Choose?</title>
+      <link>https://alwyndsouza.github.io/articles/mcp-vs-agentic-skills-which-architecture-should-you-choose</link>
+      <guid isPermaLink="true">https://alwyndsouza.github.io/articles/mcp-vs-agentic-skills-which-architecture-should-you-choose</guid>
+      <pubDate>Sat, 09 May 2026 00:00:00 GMT</pubDate>
+      <description></description>
+      <category>data-engineering</category>
+      <category>machine-learning</category>
+      <category>model-context-protocol</category>
+      <category>software-engineering</category>
+      <category>artificial-intelligence</category>
+    </item>
+    <item>
+      <title>A Better Way to Do Real-Time Streaming (Redpanda + RisingWave Explained)</title>
+      <link>https://alwyndsouza.github.io/articles/a-better-way-to-do-real-time-streaming-redpanda-risingwave-explained</link>
+      <guid isPermaLink="true">https://alwyndsouza.github.io/articles/a-better-way-to-do-real-time-streaming-redpanda-risingwave-explained</guid>
+      <pubDate>Wed, 22 Apr 2026 00:00:00 GMT</pubDate>
+      <description>If your team wants real-time streaming but keeps hitting the wall of JVM tuning, ZooKeeper management, and Flink job orchestration, this stack is worth your tim...</description>
+      <category>risingwave</category>
+      <category>data-quality</category>
+      <category>data-engineering</category>
+      <category>red-panda</category>
+      <category>streaming</category>
+    </item>
+    <item>
+      <title>BI-as-Code: Bridging the Gap Between Data Engineering and Analytics</title>
+      <link>https://alwyndsouza.github.io/articles/bi-as-code-bridging-the-gap-between-data-engineering-and-analytics</link>
+      <guid isPermaLink="true">https://alwyndsouza.github.io/articles/bi-as-code-bridging-the-gap-between-data-engineering-and-analytics</guid>
+      <pubDate>Sat, 18 Apr 2026 00:00:00 GMT</pubDate>
+      <description>BI-as-Code treats dashboards and metrics as version-controlled, testable, reusable code artefacts closing the last remaining gap in the modern data stack where...</description>
+      <category>data-quality</category>
+      <category>version-control</category>
+      <category>bi-as-code</category>
+      <category>automation</category>
+      <category>dbt</category>
+    </item>
+    <item>
+      <title>MCP vs Agentic Skills — What’s the Difference, and How Do They Work Together?</title>
+      <link>https://alwyndsouza.github.io/articles/mcp-vs-agentic-skills-what-s-the-difference-and-how-do-they-work-together</link>
+      <guid isPermaLink="true">https://alwyndsouza.github.io/articles/mcp-vs-agentic-skills-what-s-the-difference-and-how-do-they-work-together</guid>
+      <pubDate>Sat, 28 Mar 2026 00:00:00 GMT</pubDate>
+      <description>Understanding where protocol ends and intelligence begins in modern AI agent architectures.MCP (Model Context Protocol) and agentic skills are not competing con...</description>
+      <category>artificial-intelligence</category>
+      <category>ai-agent</category>
+      <category>claude-code</category>
+      <category>mcp-server</category>
+      <category>data-engineering</category>
+    </item>
+    <item>
+      <title>Databricks transitioning to the Direct Deployment Engine for Declarative Automation Bundles</title>
+      <link>https://alwyndsouza.github.io/articles/databricks-transitioning-to-the-direct-deployment-engine-for-declarative-automation-bundles</link>
+      <guid isPermaLink="true">https://alwyndsouza.github.io/articles/databricks-transitioning-to-the-direct-deployment-engine-for-declarative-automation-bundles</guid>
+      <pubDate>Sun, 22 Mar 2026 00:00:00 GMT</pubDate>
+      <description>A “Software Engineering” mindset for data, without the infrastructure tax.The landscape of Databricks automation is shifting. With the release of Databricks CLI...</description>
+      <category>software-engineering</category>
+      <category>devops</category>
+      <category>databricks</category>
+      <category>data-engineering</category>
+      <category>databricks-asset-bundles</category>
+    </item>
+    <item>
+      <title>The dbt MCP Server: How the Model Context Protocol Bridges Governed Data to AI Agents</title>
+      <link>https://alwyndsouza.github.io/articles/the-dbt-mcp-server-how-the-model-context-protocol-bridges-governed-data-to-ai-agents</link>
+      <guid isPermaLink="true">https://alwyndsouza.github.io/articles/the-dbt-mcp-server-how-the-model-context-protocol-bridges-governed-data-to-ai-agents</guid>
+      <pubDate>Sun, 15 Mar 2026 00:00:00 GMT</pubDate>
+      <description>LLMs are smart but blind. Your semantic layer is organised but silent. MCP is the bridge that lets AI see your data — and answer questions without hallucinating...</description>
+      <category>data</category>
+      <category>ai-agent</category>
+      <category>mcp-server</category>
+      <category>data-governance</category>
+      <category>dbt</category>
+    </item>
+    <item>
+      <title>Metrics as Code: Building a Semantic Layer With dbt and MetricFlow</title>
+      <link>https://alwyndsouza.github.io/articles/metrics-as-code-building-a-semantic-layer-with-dbt-and-metricflow</link>
+      <guid isPermaLink="true">https://alwyndsouza.github.io/articles/metrics-as-code-building-a-semantic-layer-with-dbt-and-metricflow</guid>
+      <pubDate>Sat, 14 Mar 2026 00:00:00 GMT</pubDate>
+      <description>How to define business metrics once, version them in Git, and serve them consistently to every dashboard, notebook, and AI agent in your stackThe Idea in One Se...</description>
+      <category>data</category>
+      <category>data-governance</category>
+      <category>dbt</category>
+    </item>
+    <item>
+      <title>Why Data Teams Need a Semantic Layer</title>
+      <link>https://alwyndsouza.github.io/articles/why-data-teams-need-a-semantic-layer</link>
+      <guid isPermaLink="true">https://alwyndsouza.github.io/articles/why-data-teams-need-a-semantic-layer</guid>
+      <pubDate>Sat, 14 Mar 2026 00:00:00 GMT</pubDate>
+      <description>The Problem: Metric Disagreement Across Tools and TeamsMost data teams have encountered this situation: two reports that should show the same number don’t. Fina...</description>
+      <category>data</category>
+      <category>data-quality</category>
+      <category>dbt</category>
+      <category>semantic-layer</category>
+      <category>data-governance</category>
+    </item>
+    <item>
+      <title>dbt fusion — Under the Hood — The Technical Architecture</title>
+      <link>https://alwyndsouza.github.io/articles/dbt-fusion-under-the-hood-the-technical-architecture</link>
+      <guid isPermaLink="true">https://alwyndsouza.github.io/articles/dbt-fusion-under-the-hood-the-technical-architecture</guid>
+      <pubDate>Sat, 13 Dec 2025 00:00:00 GMT</pubDate>
+      <description>dbt fusion : Under the Hood—The Technical ArchitectureMore Than Just “Faster”The dbt Fusion Engine represents a fundamental architectural evolution from the leg...</description>
+      <category>dbt-labs</category>
+      <category>data-transformation</category>
+      <category>dbt</category>
+      <category>data-engineering</category>
+      <category>developer-experience</category>
+    </item>
+    <item>
+      <title>The Evolution — Why dbt Needed a Revolution</title>
+      <link>https://alwyndsouza.github.io/articles/the-evolution-why-dbt-needed-a-revolution</link>
+      <guid isPermaLink="true">https://alwyndsouza.github.io/articles/the-evolution-why-dbt-needed-a-revolution</guid>
+      <pubDate>Sat, 13 Dec 2025 00:00:00 GMT</pubDate>
+      <description></description>
+      <category>dbt</category>
+      <category>rust</category>
+      <category>dbt-cloud</category>
+      <category>dbt-core</category>
+      <category>dbt-labs</category>
+    </item>
+    <item>
+      <title>Speed Up Your dbt Development with Sample Mode</title>
+      <link>https://alwyndsouza.github.io/articles/speed-up-your-dbt-development-with-sample-mode</link>
+      <guid isPermaLink="true">https://alwyndsouza.github.io/articles/speed-up-your-dbt-development-with-sample-mode</guid>
+      <pubDate>Sun, 07 Dec 2025 00:00:00 GMT</pubDate>
+      <description></description>
+      <category>code-quality</category>
+      <category>ci-cd-pipeline</category>
+      <category>developer-experience</category>
+      <category>speed</category>
+      <category>dbt</category>
+    </item>
+    <item>
+      <title>Customizing Your dbt Documentation with node_color</title>
+      <link>https://alwyndsouza.github.io/articles/customizing-your-dbt-documentation-with-node-color</link>
+      <guid isPermaLink="true">https://alwyndsouza.github.io/articles/customizing-your-dbt-documentation-with-node-color</guid>
+      <pubDate>Sat, 06 Dec 2025 00:00:00 GMT</pubDate>
+      <description>If you have ever looked at your dbt DAG and wished you could add some visual distinction to help your team quickly identify different model types, domains, or d...</description>
+      <category>dbt</category>
+      <category>dbt-labs</category>
+      <category>documentation</category>
+      <category>dbt-cloud</category>
+      <category>data-lineage</category>
+    </item>
+    <item>
+      <title>Implementing Data Contracts with dbt: From Theory to Practice</title>
+      <link>https://alwyndsouza.github.io/articles/implementing-data-contracts-with-dbt-from-theory-to-practice</link>
+      <guid isPermaLink="true">https://alwyndsouza.github.io/articles/implementing-data-contracts-with-dbt-from-theory-to-practice</guid>
+      <pubDate>Mon, 01 Dec 2025 00:00:00 GMT</pubDate>
+      <description>Real code, real patterns, real results</description>
+      <category>data-architecture</category>
+      <category>data-strategy</category>
+    </item>
+    <item>
+      <title>The Business Case for Data Contracts: Quantifying ROI</title>
+      <link>https://alwyndsouza.github.io/articles/the-business-case-for-data-contracts-quantifying-roi</link>
+      <guid isPermaLink="true">https://alwyndsouza.github.io/articles/the-business-case-for-data-contracts-quantifying-roi</guid>
+      <pubDate>Mon, 01 Dec 2025 00:00:00 GMT</pubDate>
+      <description>Show your CTO the numbers that justify the investment</description>
+      <category>data-architecture</category>
+      <category>data-strategy</category>
+    </item>
+    <item>
+      <title>Data Contracts: The Missing Link in Your Data Engineering Strategy</title>
+      <link>https://alwyndsouza.github.io/articles/data-contracts-the-missing-link-in-your-data-engineering-strategy</link>
+      <guid isPermaLink="true">https://alwyndsouza.github.io/articles/data-contracts-the-missing-link-in-your-data-engineering-strategy</guid>
+      <pubDate>Sun, 30 Nov 2025 00:00:00 GMT</pubDate>
+      <description>Here’s the uncomfortable truth: most data teams spend 60–80% of their time dealing with data quality issues instead of delivering actual business value. That’s...</description>
+      <category>data-architecture</category>
+      <category>data-strategy</category>
+    </item>
+    <item>
+      <title>Shift Left Governance: Why You Are Fixing Data Problems at the Wrong Time</title>
+      <link>https://alwyndsouza.github.io/articles/shift-left-governance-why-you-are-fixing-data-problems-at-the-wrong-time</link>
+      <guid isPermaLink="true">https://alwyndsouza.github.io/articles/shift-left-governance-why-you-are-fixing-data-problems-at-the-wrong-time</guid>
+      <pubDate>Sun, 30 Nov 2025 00:00:00 GMT</pubDate>
+      <description>What DevOps taught us about preventing problems instead of reacting to them</description>
+      <category>data-quality</category>
+      <category>testing</category>
+      <category>validation</category>
+    </item>
+    <item>
+      <title>The Code Review Journey: From Manual Slog to AI-Powered Efficiency</title>
+      <link>https://alwyndsouza.github.io/articles/the-code-review-journey-from-manual-slog-to-ai-powered-efficiency</link>
+      <guid isPermaLink="true">https://alwyndsouza.github.io/articles/the-code-review-journey-from-manual-slog-to-ai-powered-efficiency</guid>
+      <pubDate>Thu, 27 Nov 2025 00:00:00 GMT</pubDate>
+      <description>I will be honest — code reviews used to be the part of my day I would quietly dread. Not because I didn’t value them, but because they felt like pushing a bould...</description>
+      <category>ai</category>
+      <category>artificial-intelligence</category>
+      <category>automation</category>
+    </item>
+    <item>
+      <title>Building Context-Aware AI for Your Team</title>
+      <link>https://alwyndsouza.github.io/articles/building-context-aware-ai-for-your-team</link>
+      <guid isPermaLink="true">https://alwyndsouza.github.io/articles/building-context-aware-ai-for-your-team</guid>
+      <pubDate>Wed, 26 Nov 2025 00:00:00 GMT</pubDate>
+      <description>In Parts 1 and 2, we explored why code reviews are broken and how context-aware AI fixes them. Now let’s get practical: exactly how do you implement this for yo...</description>
+      <category>ai</category>
+      <category>artificial-intelligence</category>
+      <category>automation</category>
+    </item>
+    <item>
+      <title>Teaching AI to Understand Your Codebase</title>
+      <link>https://alwyndsouza.github.io/articles/teaching-ai-to-understand-your-codebase</link>
+      <guid isPermaLink="true">https://alwyndsouza.github.io/articles/teaching-ai-to-understand-your-codebase</guid>
+      <pubDate>Wed, 26 Nov 2025 00:00:00 GMT</pubDate>
+      <description>In Part 1, we explored why code reviews have become such a bottleneck and why standard AI tools don’t solve the problem. Now let’s talk about what actually work...</description>
+      <category>ai</category>
+      <category>artificial-intelligence</category>
+      <category>automation</category>
+    </item>
+    <item>
+      <title>From 4 Days to 2 Hours: How Context-Aware AI Transformed Our Code Reviews</title>
+      <link>https://alwyndsouza.github.io/articles/from-4-days-to-2-hours-how-context-aware-ai-transformed-our-code-reviews</link>
+      <guid isPermaLink="true">https://alwyndsouza.github.io/articles/from-4-days-to-2-hours-how-context-aware-ai-transformed-our-code-reviews</guid>
+      <pubDate>Mon, 24 Nov 2025 00:00:00 GMT</pubDate>
+      <description>The bottleneck you don’t talk about in standup meetings, but everyone feels: code reviews that drag on for days, developers frustrated by wait times, and review...</description>
+      <category>ai</category>
+      <category>artificial-intelligence</category>
+      <category>automation</category>
+    </item>
+    <item>
+      <title>The Code Review Bottleneck Nobody Talks About</title>
+      <link>https://alwyndsouza.github.io/articles/the-code-review-bottleneck-nobody-talks-about</link>
+      <guid isPermaLink="true">https://alwyndsouza.github.io/articles/the-code-review-bottleneck-nobody-talks-about</guid>
+      <pubDate>Mon, 24 Nov 2025 00:00:00 GMT</pubDate>
+      <description>Read the main article in the series before doing a deep dive.</description>
+      <category>ai</category>
+      <category>artificial-intelligence</category>
+      <category>automation</category>
+    </item>
+    <item>
+      <title>Don’t Nest Your Curlies: A Practical Guide to Jinja in dbt</title>
+      <link>https://alwyndsouza.github.io/articles/don-t-nest-your-curlies-a-practical-guide-to-jinja-in-dbt</link>
+      <guid isPermaLink="true">https://alwyndsouza.github.io/articles/don-t-nest-your-curlies-a-practical-guide-to-jinja-in-dbt</guid>
+      <pubDate>Sun, 09 Nov 2025 00:00:00 GMT</pubDate>
+      <description>The most common syntax mistake in dbt projects — and how to avoid it</description>
+      <category>data-engineering</category>
+      <category>dbt</category>
+      <category>analytics</category>
+    </item>
+    <item>
+      <title>Top 20 Data Engineering Resources from Tech Giants</title>
+      <link>https://alwyndsouza.github.io/articles/top-20-data-engineering-resources-from-tech-giants</link>
+      <guid isPermaLink="true">https://alwyndsouza.github.io/articles/top-20-data-engineering-resources-from-tech-giants</guid>
+      <pubDate>Mon, 27 Oct 2025 00:00:00 GMT</pubDate>
+      <description>Stay up-to-date with the latest innovations, best practices, and technical insights from leading technology companies. These engineering blogs offer invaluable...</description>
+      <category>data-engineering</category>
+    </item>
+    <item>
+      <title>Future of Data Engineering: Why Your Ontology Layer Matters More Than Ever</title>
+      <link>https://alwyndsouza.github.io/articles/future-of-data-engineering-why-your-ontology-layer-matters-more-than-ever</link>
+      <guid isPermaLink="true">https://alwyndsouza.github.io/articles/future-of-data-engineering-why-your-ontology-layer-matters-more-than-ever</guid>
+      <pubDate>Sun, 26 Oct 2025 00:00:00 GMT</pubDate>
+      <description>I have been giving a lot of thought to how we design and structure data architecture to effectively support AI initiatives.</description>
+      <category>data-architecture</category>
+      <category>data-strategy</category>
+    </item>
+    <item>
+      <title>Applying MLSecOps to Secure the AI Lifecycle</title>
+      <link>https://alwyndsouza.github.io/articles/applying-mlsecops-to-secure-the-ai-lifecycle</link>
+      <guid isPermaLink="true">https://alwyndsouza.github.io/articles/applying-mlsecops-to-secure-the-ai-lifecycle</guid>
+      <pubDate>Fri, 10 Oct 2025 00:00:00 GMT</pubDate>
+      <description>The proliferation of Artificial Intelligence (AI) and Machine Learning (ML) across enterprise environments necessitates a dedicated, rigorous security strategy....</description>
+      <category>mlops</category>
+      <category>machine-learning</category>
+      <category>ai</category>
+    </item>
+    <item>
+      <title>MLSecOps Implementation and Strategy: Securing the AI Lifecycle</title>
+      <link>https://alwyndsouza.github.io/articles/mlsecops-implementation-and-strategy-securing-the-ai-lifecycle</link>
+      <guid isPermaLink="true">https://alwyndsouza.github.io/articles/mlsecops-implementation-and-strategy-securing-the-ai-lifecycle</guid>
+      <pubDate>Fri, 10 Oct 2025 00:00:00 GMT</pubDate>
+      <description>Successfully implementing MLSecOps requires infusing security practices directly into the existing MLOps pipeline. This strategy, built on the pillars of people...</description>
+      <category>mlops</category>
+      <category>machine-learning</category>
+      <category>ai</category>
+    </item>
+    <item>
+      <title>MLSecOps: Securing the Future of AI and Machine Learning</title>
+      <link>https://alwyndsouza.github.io/articles/mlsecops-securing-the-future-of-ai-and-machine-learning</link>
+      <guid isPermaLink="true">https://alwyndsouza.github.io/articles/mlsecops-securing-the-future-of-ai-and-machine-learning</guid>
+      <pubDate>Fri, 10 Oct 2025 00:00:00 GMT</pubDate>
+      <description>Artificial intelligence is no longer a futuristic concept — it’s embedded in our daily lives. From voice assistants that understand our commands to automated fi...</description>
+      <category>mlops</category>
+      <category>machine-learning</category>
+      <category>ai</category>
+    </item>
+    <item>
+      <title>The MLSecOps Dream Team: Building Cross-Collaborative AI Security</title>
+      <link>https://alwyndsouza.github.io/articles/the-mlsecops-dream-team-building-cross-collaborative-ai-security</link>
+      <guid isPermaLink="true">https://alwyndsouza.github.io/articles/the-mlsecops-dream-team-building-cross-collaborative-ai-security</guid>
+      <pubDate>Fri, 10 Oct 2025 00:00:00 GMT</pubDate>
+      <description>In the age of AI, software security isn’t just about code — it’s about algorithms, data pipelines, and complex models. This shift demands a radical evolution fr...</description>
+      <category>mlops</category>
+      <category>machine-learning</category>
+      <category>ai</category>
+    </item>
+    <item>
+      <title>From Theory to Production: The dbt CI/CD Pipeline Codebase</title>
+      <link>https://alwyndsouza.github.io/articles/from-theory-to-production-the-dbt-ci-cd-pipeline-codebase</link>
+      <guid isPermaLink="true">https://alwyndsouza.github.io/articles/from-theory-to-production-the-dbt-ci-cd-pipeline-codebase</guid>
+      <pubDate>Mon, 15 Sep 2025 00:00:00 GMT</pubDate>
+      <description>If you haven’t explored my full dbt CI/CD pipeline series yet, I highly recommend starting with the complete article collection here:</description>
+      <category>devops</category>
+      <category>automation</category>
+      <category>ci-cd</category>
+    </item>
+  </channel>
+</rss>
