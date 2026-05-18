@@ -7,7 +7,7 @@ import { formatDateShort } from "@/lib/utils";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Alwyn D'Souza — Data & AI Engineering Leader specializing in DataOps, dbt, Databricks, AI Agents, and Modern Data Platforms.",
+    "Alwyn D'Souza — I build AI-native data platforms where agents and MCP tooling replace operational toil. 10+ years of enterprise delivery across Databricks, dbt, and DataOps.",
 };
 
 const CORE_FOCUS = [
@@ -140,24 +140,25 @@ export default function AboutPage() {
                 Alwyn D&apos;Souza
               </h1>
               <p className="text-lg text-indigo-400 font-medium mb-6">
-                Data & AI Engineering Leader
+                AI-Native Data Platform Engineer & Leader
               </p>
               <div className="space-y-4 text-zinc-400 text-base leading-relaxed max-w-2xl">
                 <p>
-                  I&apos;m a data engineering leader with 10+ years building
-                  production-grade data platforms for enterprise teams. I
-                  specialize in the modern data stack —{" "}
-                  <span className="text-zinc-300">dbt</span>,{" "}
-                  <span className="text-zinc-300">Databricks</span>,{" "}
-                  <span className="text-zinc-300">DataOps</span>, and
-                  increasingly,{" "}
-                  <span className="text-zinc-300">AI-powered systems</span>.
+                  I build{" "}
+                  <span className="text-zinc-300">AI-native data platforms</span>
+                  {" "}— where{" "}
+                  <span className="text-zinc-300">AI agents</span>,{" "}
+                  <span className="text-zinc-300">MCP tooling</span>, and{" "}
+                  <span className="text-zinc-300">governed automation</span>{" "}
+                  replace the manual operational toil of running enterprise data
+                  infrastructure. That capability is grounded in 10+ years of
+                  production enterprise delivery.
                 </p>
                 <p>
-                  My work sits at the intersection of data engineering and AI —
-                  from building MCP servers that give AI agents governed access
-                  to data platforms, to implementing semantic layers that make
-                  metrics first-class citizens.
+                  My specific focus is making data platforms AI-ready — from
+                  building MCP servers that give agents governed access to
+                  Databricks and dbt, to implementing semantic layers that make
+                  metrics first-class citizens for LLMs.
                 </p>
                 <p>
                   I write extensively on these topics and build open-source

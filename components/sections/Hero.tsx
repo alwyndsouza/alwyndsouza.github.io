@@ -5,22 +5,22 @@ import Link from "next/link";
 import { ArrowRight, Github, Linkedin, FileText, ChevronDown } from "lucide-react";
 
 const SPECIALIZATIONS = [
+  { label: "AI Agents & MCP", description: "LLM-powered automation & governed data tooling" },
+  { label: "Modern Data Platforms", description: "AI-ready lakehouse & cloud-native architectures" },
   { label: "DataOps", description: "Pipeline automation & operational excellence" },
-  { label: "dbt", description: "Data transformation at enterprise scale" },
   { label: "Databricks", description: "Lakehouse architecture & Unity Catalog" },
-  { label: "AI Agents", description: "LLM-powered data automation via MCP" },
-  { label: "Modern Data Platforms", description: "Cloud-native analytics architectures" },
+  { label: "dbt", description: "Data transformation at enterprise scale" },
 ];
 
 const TECH_BADGES = [
+  { label: "AI Agents", color: "text-violet-300 border-violet-800/60 bg-violet-950/30" },
+  { label: "MCP", color: "text-indigo-300 border-indigo-800/60 bg-indigo-950/30" },
   { label: "Databricks", color: "text-orange-300 border-orange-800/60 bg-orange-950/30" },
   { label: "dbt", color: "text-amber-300 border-amber-800/60 bg-amber-950/30" },
-  { label: "Apache Spark", color: "text-orange-400 border-orange-700/50 bg-orange-950/20" },
-  { label: "AWS", color: "text-yellow-300 border-yellow-800/60 bg-yellow-950/30" },
-  { label: "Python", color: "text-blue-300 border-blue-800/60 bg-blue-950/30" },
-  { label: "SQL", color: "text-indigo-300 border-indigo-800/60 bg-indigo-950/30" },
-  { label: "AI Agents", color: "text-violet-300 border-violet-800/60 bg-violet-950/30" },
   { label: "DataOps", color: "text-emerald-300 border-emerald-800/60 bg-emerald-950/30" },
+  { label: "Apache Spark", color: "text-orange-400 border-orange-700/50 bg-orange-950/20" },
+  { label: "Python", color: "text-blue-300 border-blue-800/60 bg-blue-950/30" },
+  { label: "AWS", color: "text-yellow-300 border-yellow-800/60 bg-yellow-950/30" },
 ];
 
 const PLATFORM_SERVICES = [
@@ -101,7 +101,7 @@ export function Hero({ articleCount, projectCount }: { articleCount?: number; pr
               variants={fadeUp}
               className="mt-4 text-sm text-zinc-500 max-w-sm"
             >
-              Building production-grade data systems that scale for enterprise teams.
+              Bridging enterprise data engineering and AI-native systems — where agents, MCP tooling, and governed automation replace operational toil.
             </motion.p>
 
             {/* Specializations */}

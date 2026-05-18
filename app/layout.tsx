@@ -34,26 +34,26 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
   title: {
-    default: "Alwyn D'Souza — Data & AI Engineering Leader",
+    default: "Alwyn D'Souza — AI-Native Data Platform Engineer",
     template: "%s | Alwyn D'Souza",
   },
   description:
-    "Data & AI Engineering Leader specializing in DataOps, dbt, Databricks, AI Agents, and Modern Data Platforms. Published articles and open-source projects.",
+    "I build AI-native data platforms where agents and MCP tooling replace operational toil — grounded in 10+ years of enterprise delivery with Databricks, dbt, and DataOps.",
   authors: [{ name: "Alwyn D'Souza", url: BASE_URL }],
   creator: "Alwyn D'Souza",
   publisher: "Alwyn D'Souza",
   keywords: [
+    "AI Agents",
+    "MCP",
+    "AI-Native Data Platform",
     "Data Engineering",
     "dbt",
     "Databricks",
     "DataOps",
-    "AI Agents",
     "Semantic Layer",
-    "Data Platform",
-    "MLOps",
     "Lakehouse",
     "Unity Catalog",
-    "MCP",
+    "MLOps",
     "Enterprise Architecture",
   ],
   icons: {
@@ -65,24 +65,24 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: BASE_URL,
     siteName: "Alwyn D'Souza",
-    title: "Alwyn D'Souza — Data & AI Engineering Leader",
+    title: "Alwyn D'Souza — AI-Native Data Platform Engineer",
     description:
-      "Building production-grade data platforms, AI systems, and developer tools that scale for enterprise teams.",
+      "Bridging enterprise data engineering and AI-native systems — where agents, MCP tooling, and governed automation replace operational toil. Available for consulting.",
     images: [
       {
         url: "/og-default.svg",
         width: 1200,
         height: 630,
-        alt: "Alwyn D'Souza — Data & AI Engineering Leader",
+        alt: "Alwyn D'Souza — AI-Native Data Platform Engineer",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
     creator: "@aradsouza",
-    title: "Alwyn D'Souza — Data & AI Engineering Leader",
+    title: "Alwyn D'Souza — AI-Native Data Platform Engineer",
     description:
-      "Building production-grade data platforms, AI systems, and developer tools that scale for enterprise teams.",
+      "Bridging enterprise data engineering and AI-native systems — where agents, MCP tooling, and governed automation replace operational toil. Available for consulting.",
     images: ["/og-default.svg"],
   },
   robots: {

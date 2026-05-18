@@ -177,25 +177,28 @@ export function AboutSection() {
               className="space-y-5 text-base leading-relaxed"
             >
               <p className="text-zinc-300">
-                I&apos;m a data engineering leader who has spent a decade building{" "}
+                I build{" "}
                 <span className="text-zinc-100 font-medium">
-                  production-grade data platforms
+                  AI-native data platforms
                 </span>{" "}
-                for enterprise teams — from modernizing legacy Oracle warehouses
-                to standing up Databricks lakehouses with Unity Catalog governance.
+                — systems where AI agents and MCP tooling replace the manual
+                operational toil of running enterprise data infrastructure: schema
+                healing, lineage-aware testing, self-healing pipelines, and governed
+                LLM access to analytics surfaces.
               </p>
               <p className="text-zinc-500">
-                My current focus is the intersection of data engineering and AI —
-                specifically how{" "}
-                <span className="text-zinc-300 font-medium">AI agents</span>{" "}
-                and MCP can automate the operational toil of running data platforms:
-                schema healing, lineage-aware testing, self-healing pipelines, and
-                governed LLM access to analytics surfaces.
+                That capability is grounded in a decade of{" "}
+                <span className="text-zinc-300 font-medium">
+                  production enterprise delivery
+                </span>{" "}
+                — from modernizing legacy Oracle warehouses to standing up
+                Databricks lakehouses with Unity Catalog governance across 50+
+                shipped projects.
               </p>
               <p className="text-zinc-500">
-                I write about these patterns extensively — across published articles —
-                and build open-source reference architectures that teams can deploy
-                into their own cloud environments.
+                I write about these patterns extensively and build open-source
+                reference architectures that teams can deploy into their own cloud
+                environments.
               </p>
 
               {/* Inline quote */}
