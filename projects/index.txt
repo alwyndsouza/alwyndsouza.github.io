@@ -1,0 +1,213 @@
+1:"$Sreact.fragment"
+2:I[5293,["619","static/chunks/619-f09bc47e24909021.js","18","static/chunks/18-31950137827788de.js","177","static/chunks/app/layout-8967c3e7ec6b3be1.js"],"themeScript"]
+3:I[5293,["619","static/chunks/619-f09bc47e24909021.js","18","static/chunks/18-31950137827788de.js","177","static/chunks/app/layout-8967c3e7ec6b3be1.js"],"ThemeProvider"]
+4:I[5821,["619","static/chunks/619-f09bc47e24909021.js","18","static/chunks/18-31950137827788de.js","177","static/chunks/app/layout-8967c3e7ec6b3be1.js"],"Header"]
+5:I[9766,[],""]
+6:I[8924,[],""]
+7:I[2619,["619","static/chunks/619-f09bc47e24909021.js","18","static/chunks/18-31950137827788de.js","177","static/chunks/app/layout-8967c3e7ec6b3be1.js"],""]
+11:I[7150,[],""]
+:HL["/_next/static/media/e4af272ccee01ff0-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/css/d24fb55acf7b8c21.css","style"]
+:HL["/_next/static/css/e2c73e6d4f2f1c8a.css","style"]
+0:{"P":null,"b":"uRWTDN425n8pLrTzke42A","p":"","c":["","projects",""],"i":false,"f":[[["",{"children":["projects",{"children":["__PAGE__",{}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/d24fb55acf7b8c21.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/e2c73e6d4f2f1c8a.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"en","className":"__variable_f367f3 __variable_694534","suppressHydrationWarning":true,"children":[["$","head",null,{"children":["$","script",null,{"dangerouslySetInnerHTML":{"__html":"$2"}}]}],["$","body",null,{"className":"min-h-screen bg-zinc-950 font-sans text-zinc-100 antialiased selection:bg-indigo-600/30 selection:text-zinc-100","children":["$","$L3",null,{"children":[["$","a",null,{"href":"#main-content","className":"sr-only focus-visible:not-sr-only focus-visible:fixed focus-visible:left-4 focus-visible:top-4 focus-visible:z-[100] focus-visible:rounded-lg focus-visible:bg-indigo-600 focus-visible:px-4 focus-visible:py-2 focus-visible:text-sm focus-visible:font-medium focus-visible:text-white focus-visible:shadow-lg","children":"Skip to main content"}],["$","$L4",null,{}],["$","main",null,{"id":"main-content","tabIndex":-1,"className":"outline-none","children":["$","$L5",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","div",null,{"className":"flex min-h-screen items-center justify-center","children":["$","div",null,{"className":"text-center","children":[["$","p",null,{"className":"text-xs font-mono text-indigo-400 mb-4","children":"404"}],["$","h1",null,{"className":"text-3xl font-bold text-zinc-100 mb-3","children":"Page not found"}],["$","p",null,{"className":"text-zinc-500 mb-8 max-w-sm","children":"This page doesn't exist or has been moved."}],["$","$L7",null,{"href":"/","className":"inline-flex items-center gap-2 rounded-lg bg-indigo-600 px-5 py-2.5 text-sm font-medium text-white transition-all hover:bg-indigo-500","children":"Go home"}]]}]}],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","footer",null,{"className":"border-t border-zinc-800 bg-zinc-950","role":"contentinfo","children":["$","div",null,{"className":"mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:px-8","children":[["$","div",null,{"className":"grid grid-cols-1 gap-10 sm:grid-cols-2 md:grid-cols-3","children":[["$","div",null,{"className":"space-y-4","children":[["$","$L7",null,{"href":"/","className":"group inline-flex items-center gap-2 rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500","aria-label":"Alwyn D'Souza — home","children":[["$","div",null,{"className":"flex h-7 w-7 items-center justify-center rounded-md border border-indigo-500/30 bg-indigo-600/20 transition-colors group-hover:bg-indigo-600/30","children":["$","svg",null,{"ref":"$undefined","xmlns":"http://www.w3.org/2000/svg","width":24,"height":24,"viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":2,"strokeLinecap":"round","strokeLinejoin":"round","className":"lucide lucide-database h-3.5 w-3.5 text-indigo-400","aria-hidden":"true","children":[["$","ellipse","msslwz",{"cx":"12","cy":"5","rx":"9","ry":"3"}],["$","path","1wlel7",{"d":"M3 5V19A9 3 0 0 0 21 19V5"}],["$","path","mv7ke4",{"d":"M3 12A9 3 0 0 0 21 12"}],"$undefined"]}]}],["$","span",null,{"className":"text-sm font-semibold text-zinc-100","children":["alwyn",["$","span",null,{"className":"text-indigo-400","children":".dev"}]]}]]}],["$","p",null,{"className":"text-xs leading-relaxed text-zinc-500 max-w-xs","children":"Data & AI Engineering Leader. Building modern data platforms, AI systems, and open-source developer tools."}],["$","div",null,{"className":"flex items-center gap-3 pt-1","children":[["$","a","https://github.com/alwyndsouza",{"href":"https://github.com/alwyndsouza","target":"_blank","rel":"noopener noreferrer","aria-label":"GitHub (opens in new tab)","className":"flex h-7 w-7 items-center justify-center rounded-md text-zinc-600 transition-colors hover:bg-zinc-800 hover:text-zinc-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500","children":"$L8"}],"$L9","$La"]}]]}],"$Lb","$Lc"]}],"$Ld"]}]}]]}]}]]}]]}],{"children":["projects","$Le",{"children":["__PAGE__","$Lf",{},null,false]},null,false]},null,false],"$L10",false]],"m":"$undefined","G":["$11",[]],"s":false,"S":true}
+12:I[6422,["619","static/chunks/619-f09bc47e24909021.js","18","static/chunks/18-31950137827788de.js","893","static/chunks/app/projects/page-e66c27d22c7246de.js"],"ProjectsClient"]
+19:I[4431,[],"ViewportBoundary"]
+1b:I[4431,[],"MetadataBoundary"]
+1c:"$Sreact.suspense"
+8:["$","svg",null,{"ref":"$undefined","xmlns":"http://www.w3.org/2000/svg","width":24,"height":24,"viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":2,"strokeLinecap":"round","strokeLinejoin":"round","className":"lucide lucide-github h-3.5 w-3.5","aria-hidden":"true","children":[["$","path","tonef",{"d":"M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"}],["$","path","9comsn",{"d":"M9 18c-4.51 2-5-2-7-2"}],"$undefined"]}]
+9:["$","a","https://linkedin.com/in/alwynanildsouza",{"href":"https://linkedin.com/in/alwynanildsouza","target":"_blank","rel":"noopener noreferrer","aria-label":"LinkedIn (opens in new tab)","className":"flex h-7 w-7 items-center justify-center rounded-md text-zinc-600 transition-colors hover:bg-zinc-800 hover:text-zinc-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500","children":["$","svg",null,{"ref":"$undefined","xmlns":"http://www.w3.org/2000/svg","width":24,"height":24,"viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":2,"strokeLinecap":"round","strokeLinejoin":"round","className":"lucide lucide-linkedin h-3.5 w-3.5","aria-hidden":"true","children":[["$","path","c2jq9f",{"d":"M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"}],["$","rect","mk3on5",{"width":"4","height":"12","x":"2","y":"9"}],["$","circle","bt5ra8",{"cx":"4","cy":"4","r":"2"}],"$undefined"]}]}]
+a:["$","a","https://medium.com/@aradsouza",{"href":"https://medium.com/@aradsouza","target":"_blank","rel":"noopener noreferrer","aria-label":"Medium (opens in new tab)","className":"flex h-7 w-7 items-center justify-center rounded-md text-zinc-600 transition-colors hover:bg-zinc-800 hover:text-zinc-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500","children":["$","svg",null,{"ref":"$undefined","xmlns":"http://www.w3.org/2000/svg","width":24,"height":24,"viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":2,"strokeLinecap":"round","strokeLinejoin":"round","className":"lucide lucide-file-text h-3.5 w-3.5","aria-hidden":"true","children":[["$","path","1rqfz7",{"d":"M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"}],["$","path","tnqrlb",{"d":"M14 2v4a2 2 0 0 0 2 2h4"}],["$","path","b1mrlr",{"d":"M10 9H8"}],["$","path","t4e002",{"d":"M16 13H8"}],["$","path","z1uh3a",{"d":"M16 17H8"}],"$undefined"]}]}]
+b:["$","nav",null,{"aria-label":"Footer navigation","children":[["$","h2",null,{"className":"mb-4 text-xs font-semibold uppercase tracking-widest text-zinc-600","children":"Navigate"}],["$","ul",null,{"className":"space-y-2.5","role":"list","children":[["$","li","/projects",{"children":["$","$L7",null,{"href":"/projects","className":"text-sm text-zinc-400 transition-colors hover:text-zinc-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 rounded","children":"Projects"}]}],["$","li","/articles",{"children":["$","$L7",null,{"href":"/articles","className":"text-sm text-zinc-400 transition-colors hover:text-zinc-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 rounded","children":"Writing"}]}],["$","li","/about",{"children":["$","$L7",null,{"href":"/about","className":"text-sm text-zinc-400 transition-colors hover:text-zinc-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 rounded","children":"About"}]}]]}]]}]
+c:["$","div",null,{"children":[["$","h2",null,{"className":"mb-4 text-xs font-semibold uppercase tracking-widest text-zinc-600","children":"Connect"}],["$","ul",null,{"className":"space-y-2.5","role":"list","children":[["$","li","https://github.com/alwyndsouza",{"children":["$","a",null,{"href":"https://github.com/alwyndsouza","target":"_blank","rel":"noopener noreferrer","className":"inline-flex items-center gap-1.5 text-sm text-zinc-400 transition-colors hover:text-zinc-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 rounded","children":["GitHub",["$","span",null,{"className":"text-zinc-700 text-xs","aria-hidden":"true","children":"↗"}]]}]}],["$","li","https://linkedin.com/in/alwynanildsouza",{"children":["$","a",null,{"href":"https://linkedin.com/in/alwynanildsouza","target":"_blank","rel":"noopener noreferrer","className":"inline-flex items-center gap-1.5 text-sm text-zinc-400 transition-colors hover:text-zinc-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 rounded","children":["LinkedIn",["$","span",null,{"className":"text-zinc-700 text-xs","aria-hidden":"true","children":"↗"}]]}]}],["$","li","https://medium.com/@aradsouza",{"children":["$","a",null,{"href":"https://medium.com/@aradsouza","target":"_blank","rel":"noopener noreferrer","className":"inline-flex items-center gap-1.5 text-sm text-zinc-400 transition-colors hover:text-zinc-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 rounded","children":["Medium",["$","span",null,{"className":"text-zinc-700 text-xs","aria-hidden":"true","children":"↗"}]]}]}]]}]]}]
+d:["$","div",null,{"className":"mt-10 flex flex-col items-start justify-between gap-3 border-t border-zinc-800/70 pt-6 sm:flex-row sm:items-center","children":[["$","p",null,{"className":"text-xs text-zinc-700","children":["© ",2026," Alwyn D'Souza. Built with Next.js & deployed on GitHub Pages."]}],["$","a",null,{"href":"/rss.xml","className":"inline-flex items-center gap-1.5 text-xs text-zinc-700 transition-colors hover:text-zinc-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 rounded","aria-label":"RSS feed","children":[["$","svg",null,{"ref":"$undefined","xmlns":"http://www.w3.org/2000/svg","width":24,"height":24,"viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":2,"strokeLinecap":"round","strokeLinejoin":"round","className":"lucide lucide-rss h-3 w-3","aria-hidden":"true","children":[["$","path","pv89mb",{"d":"M4 11a9 9 0 0 1 9 9"}],["$","path","k0647b",{"d":"M4 4a16 16 0 0 1 16 16"}],["$","circle","bfqh0e",{"cx":"5","cy":"19","r":"1"}],"$undefined"]}],"RSS Feed"]}]]}]
+e:["$","$1","c",{"children":[null,["$","$L5",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}]
+13:T8a1,<p>A production-oriented, local-first reference architecture for real-time fraud detection. The system uses <strong>Redpanda</strong> for event transport via the Kafka API, <strong>RisingWave</strong> for continuous SQL and materialized views, <strong>Grafana</strong> for operational dashboards, and a <strong>Python</strong> producer for synthetic banking event generation.</p>
+<h2>Architecture</h2>
+<p>The pipeline follows a four-stage data transformation model:</p>
+<ol>
+<li><strong>Producer</strong> — Python generates transactions, logins, card events, alerts, and KYC updates</li>
+<li><strong>Event Broker</strong> — Redpanda buffers and distributes events across topics; malformed events route to a Dead Letter Queue</li>
+<li><strong>Stream Processing</strong> — RisingWave consumes topics into sources and transforms data through staging, signal, and risk/case materialized views</li>
+<li><strong>Observability</strong> — Grafana queries RisingWave directly for live operational dashboards</li>
+</ol>
+<h2>Fraud Detection Capabilities</h2>
+<p>The system implements detection logic for:</p>
+<ul>
+<li>Velocity bursts and transaction rate spikes</li>
+<li>Geographic impossibility checks</li>
+<li>Account takeover indicators</li>
+<li>Card-not-present transaction anomalies</li>
+<li>Brute-force login detection</li>
+<li>Structuring and smurfing patterns</li>
+<li>Correlated multi-alert analysis</li>
+</ul>
+<h2>Quick Start</h2>
+<pre><code class="hljs language-bash">git <span class="hljs-built_in">clone</span> https://github.com/alwyndsouza/rp-dbt-rw-fraud-monitor
+make up        <span class="hljs-comment"># start the stack (wait 90–120s)</span>
+make validate  <span class="hljs-comment"># verify everything is running</span>
+</code></pre><p>Key commands: <code>make status</code>, <code>make kpis</code>, <code>make risk</code>, <code>make psql</code>, <code>make ci</code> (runs pytest, ruff, SQL validation, and dbt tests).</p>
+<h2>Design Goals</h2>
+<p>Built for platform engineering and fraud analytics teams who need a runnable streaming baseline with clear lineage, observability, and extensible detection rules — without the operational overhead of a JVM-heavy Kafka + Flink stack.</p>
+14:T71f,<p>A production-ready CI/CD pipeline for dbt projects on Databricks — running quality checks and deploying only what changed.</p>
+<p>The pipeline triggers on pushes to <code>dev</code> and <code>feature/*</code> branches, and PRs targeting <code>main</code>. Five sequential GitHub Actions jobs handle everything end-to-end:</p>
+<table>
+<thead>
+<tr>
+<th>Job</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Setup &amp; Validation</td>
+<td>Checkout, file change detection, Python env</td>
+</tr>
+<tr>
+<td>Pre-commit</td>
+<td>Code quality hooks on modified files only</td>
+</tr>
+<tr>
+<td>Prettier</td>
+<td>YAML formatting compliance</td>
+</tr>
+<tr>
+<td>dbt Build &amp; Test</td>
+<td>Runs models in a temp schema, auto-cleans up</td>
+</tr>
+<tr>
+<td>Summary</td>
+<td>Pipeline status and artifact reporting</td>
+</tr>
+</tbody></table>
+<h2>Quality Tools</h2>
+<ul>
+<li><strong>SQLFluff</strong> — SQL linting with project-specific rules (<code>.sqlfluff</code>)</li>
+<li><strong>dbt-checkpoint</strong> — dbt-specific validations (model configs, test coverage)</li>
+<li><strong>Prettier</strong> — consistent YAML/JSON formatting via npm</li>
+<li><strong>pre-commit</strong> — enforces all checks locally before push</li>
+</ul>
+<h2>Quick Start</h2>
+<p><strong>Requirements:</strong> Python 3.8+, Node.js 16+, Databricks workspace</p>
+<pre><code class="hljs language-bash">pip install -r requirements.txt
+npm install
+pre-commit install
+</code></pre><p>Set three GitHub secrets: <code>DBT_HOST</code>, <code>DBT_HTTP_PATH</code>, <code>DBT_TOKEN</code>.</p>
+<p>Run checks locally:</p>
+<pre><code class="hljs language-bash">pre-commit run --all-files
+npm run format:check:dbt   <span class="hljs-comment"># check YAML</span>
+npm run format:dbt         <span class="hljs-comment"># auto-fix YAML</span>
+</code></pre>15:T447,<p>Query your dbt semantic layer in plain English — entirely on your own machine. No API keys, no cloud dependencies.</p>
+<p>The agent wires together <strong>dbt + MetricFlow</strong> (6 semantic models, 30+ metrics), <strong>dbt-mcp</strong> (12 callable tools via MCP), and <strong>Streamlit + Ollama</strong> into a tool-calling chat interface. Ask a question, and the LLM picks the right tool, runs it, and returns the answer.</p>
+<h2>Interfaces</h2>
+<table>
+<thead>
+<tr>
+<th>Interface</th>
+<th>Port</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Chat UI</td>
+<td>8501</td>
+<td>Natural language queries</td>
+</tr>
+<tr>
+<td>Plotly Dashboard</td>
+<td>8502</td>
+<td>KPI charts and visualisations</td>
+</tr>
+<tr>
+<td>Rill Dashboard</td>
+<td>9009</td>
+<td>Drag-and-drop BI with live filtering</td>
+</tr>
+</tbody></table>
+<h2>Quick Start</h2>
+<p><strong>Requirements:</strong> Python 3.12+, <code>uv</code>, Ollama</p>
+<pre><code class="hljs language-bash">uv <span class="hljs-built_in">sync</span>
+ollama pull llama3.2
+uv run dbt build
+uv run streamlit run streamlit_app.py
+</code></pre>16:T46f,<p>A fully local Modern Data Stack reference implementation — no cloud account required. Everything runs against a single DuckDB file.</p>
+<p>The pipeline follows a three-layer architecture:</p>
+<table>
+<thead>
+<tr>
+<th>Layer</th>
+<th>Tool</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Ingestion</td>
+<td>dlt</td>
+<td>Loads raw data into DuckDB bronze tables</td>
+</tr>
+<tr>
+<td>Transformation</td>
+<td>dbt-core + dbt-duckdb</td>
+<td>Stages, transforms, and materialises mart tables</td>
+</tr>
+<tr>
+<td>Presentation</td>
+<td>Rill</td>
+<td>Connects directly to the semantic layer for dashboards</td>
+</tr>
+</tbody></table>
+<p>A MetricFlow semantic layer sits on top of the marts, providing standardised metric definitions across revenue, customer segmentation, and store performance.</p>
+<h2>Quick Start</h2>
+<p><strong>Requirements:</strong> Python 3.11+, <code>uv</code></p>
+<pre><code class="hljs language-bash">uv venv &amp;&amp; <span class="hljs-built_in">source</span> .venv/bin/activate
+make install &amp;&amp; make run
+make rill-dev   <span class="hljs-comment"># dashboards at localhost:9009</span>
+</code></pre>17:T410,<p>A production-grade Modern Data Stack reference on Databricks, implementing Medallion Architecture within Unity Catalog.</p>
+<table>
+<thead>
+<tr>
+<th>Layer</th>
+<th>Tool</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Ingestion</td>
+<td>dlt</td>
+<td>Schema-aware loading into Bronze Delta tables</td>
+</tr>
+<tr>
+<td>Transformation</td>
+<td>dbt-core</td>
+<td>Silver staging → Gold analytics marts</td>
+</tr>
+<tr>
+<td>Governance</td>
+<td>Unity Catalog</td>
+<td>Lineage tracking and access control</td>
+</tr>
+<tr>
+<td>Metrics</td>
+<td>MetricFlow</td>
+<td>Centralised semantic layer</td>
+</tr>
+<tr>
+<td>CI/CD</td>
+<td>GitHub Actions</td>
+<td>Automated validation on every push</td>
+</tr>
+</tbody></table>
+<p>Incremental processing is built in — dlt metadata tracks what&#39;s already loaded, and dbt models run only against new data.</p>
+<h2>Quick Start</h2>
+<pre><code class="hljs language-bash">make install
+<span class="hljs-comment"># Configure .env with Databricks credentials</span>
+make run
+make query-marts
+</code></pre>f:["$","$1","c",{"children":[["$","div",null,{"className":"min-h-screen pt-24 pb-20","children":["$","div",null,{"className":"section-container","children":[["$","div",null,{"className":"mb-12 border-b border-zinc-800 pb-12","children":[["$","p",null,{"className":"text-xs font-semibold uppercase tracking-widest text-indigo-400 mb-3","children":"Work"}],["$","h1",null,{"className":"text-4xl font-bold text-zinc-100 sm:text-5xl mb-4","children":"Projects"}],["$","p",null,{"className":"max-w-2xl text-zinc-500 text-base leading-relaxed","children":["Production-grade reference architectures and open-source tools for the modern data & AI stack. ",9," projects."]}]]}],["$","$L12",null,{"projects":[{"id":"rp-dbt-rw-fraud-monitor","title":"SQL-First Real-Time Fraud Detection","description":"Production-oriented reference architecture for real-time fraud detection using Redpanda, dbt, RisingWave, and Grafana","status":"production","category":"data-engineering","tech":["Redpanda","RisingWave","dbt","Grafana","Python"],"featured":true,"draft":false,"order":0,"links":{"github":"https://github.com/alwyndsouza/rp-dbt-rw-fraud-monitor"},"coverImage":"","htmlContent":"$13"},{"id":"dbt-cicd-pipeline-slim-ci","title":"dbt CI/CD Pipeline with Slim CI","description":"A production-ready CI/CD pipeline for dbt projects using GitHub Actions and Slim CI — running only modified models and their downstream dependencies to cut build times and warehouse costs.","status":"production","category":"data-engineering","tech":["dbt","GitHub Actions","Databricks","Python","SQLFluff","dbt-checkpoint","Prettier","pre-commit"],"featured":true,"draft":false,"order":1,"links":{"github":"https://github.com/alwyndsouza/dbt-ci-cd"},"htmlContent":"$14"},{"id":"dbt-conversation-ai-local","title":"dbt Conversation AI Local","description":"A locally-running AI agent powered by Ollama and the dbt MCP server — answering questions about your semantic layer without sending data to the cloud.","status":"production","category":"ai","tech":["Python","dbt","Ollama","MCP","MetricFlow","Streamlit","DuckDB"],"featured":true,"draft":false,"order":2,"links":{"github":"https://github.com/alwyndsouza/dbt-conversation-ai-local"},"htmlContent":"$15"},{"id":"dbt-data-contracts","title":"dbt Data Contracts","description":"A framework for defining, enforcing, and monitoring data contracts across a dbt project — guaranteeing that data producers keep their promises to consumers at build time.","status":"development","category":"data-engineering","tech":["dbt","Python","Databricks","YAML"],"featured":true,"draft":false,"order":3,"htmlContent":"<p>Coming soon.</p>\n"},{"id":"dbt-docker-airflow","title":"dbt Docker + Airflow","description":"A containerised dbt + Airflow setup using Docker Compose — orchestrating dbt runs as Airflow DAGs with isolated environments, centralised logging, and easy local development.","status":"development","category":"data-engineering","tech":["dbt","Docker","Airflow","Python"],"featured":true,"draft":false,"order":4,"htmlContent":"<p>Coming soon.</p>\n"},{"id":"mds-duckdb-semantic-layer","title":"Modern Data Stack: DuckDB Semantic Layer","description":"A local-first Modern Data Stack reference using dlt for ingestion, dbt for transformation, and DuckDB as the engine — with a MetricFlow semantic layer and Rill dashboards.","status":"production","category":"data-engineering","tech":["dbt","DuckDB","dlt","MetricFlow","Rill","Python"],"featured":true,"draft":false,"order":5,"links":{"github":"https://github.com/alwyndsouza/mds-duckdb-semantic-layer"},"htmlContent":"$16"},{"id":"mds-databricks-semantic-layer","title":"Modern Data Stack: Databricks Semantic Layer","description":"Production-grade Modern Data Stack reference on Databricks Unity Catalog — Medallion architecture with dlt ingestion, dbt transformation, MetricFlow metrics, and GitHub Actions CI/CD.","status":"production","category":"data-engineering","tech":["dbt","Databricks","dlt","MetricFlow","Unity Catalog","GitHub Actions","Python"],"featured":true,"draft":false,"order":6,"links":{"github":"https://github.com/alwyndsouza/mds-databricks-semantic-layer"},"htmlContent":"$17"},{"id":"dbt-synthetic-data","title":"dbt Synthetic Data Generator","description":"An automated star-schema data generator for dbt and DuckDB — producing realistic, referentially-intact dimension and fact tables for testing and development.","status":"production","category":"data-engineering","tech":["Python","dbt","DuckDB","Parquet"],"featured":false,"draft":false,"order":7,"links":{"github":"https://github.com/alwyndsouza/dbt_synthetic_data"},"htmlContent":"<p>Generates ~500 MB of realistic, interconnected star-schema data for dbt + DuckDB development and testing.</p>\n<p><strong>Schema:</strong> 4 dimension tables (users, products, locations, devices) and 3 fact tables (transactions, sessions, events) — from 100 rows up to 5M. All output is Parquet, queried directly via <code>read_parquet()</code> in dbt models.</p>\n<p><strong>Data quality built in:</strong> referential integrity between all foreign keys, temporal consistency, and realistic business distributions (premium users at 3× transaction volume, mobile generating 60% of events, weekday peaks, seasonal Q4 spikes).</p>\n<h2>Quick Start</h2>\n<pre><code class=\"hljs language-bash\">git <span class=\"hljs-built_in\">clone</span> https://github.com/alwyndsouza/dbt_synthetic_data.git\n<span class=\"hljs-built_in\">cd</span> dbt_synthetic_data\nmake setup   <span class=\"hljs-comment\"># installs dependencies and generates all data</span>\n</code></pre>"},{"id":"asx-stock-analysis-ml","title":"ASX Stock Analysis & ML Pipeline","description":"An automated pipeline that ingests ASX mining stock data via Yahoo Finance, transforms it with dbt, generates 45+ ML features, and surfaces trading signals through Streamlit dashboards.","status":"production","category":"data-engineering","tech":["Python","dbt","DuckDB","dlt","Streamlit","GitHub Actions"],"featured":false,"draft":false,"order":8,"links":{"github":"https://github.com/alwyndsouza/asx_stock_analysis_using_ml"},"htmlContent":"<p>A fully automated stock analysis pipeline for ASX mining stocks — from raw price data to ML-ready features, running daily without any infrastructure costs.</p>\n<p><strong>Pipeline:</strong> Yahoo Finance → dlt (incremental ingestion) → DuckDB → dbt (staging → marts) → Streamlit. GitHub Actions runs the full pipeline daily at 7 PM AEST; artifacts are stored in GitHub Releases — no servers needed.</p>\n<p>Incremental processing cuts runtime from 20+ minutes to 2–3 minutes on daily runs.</p>\n<p><strong>What gets generated:</strong></p>\n<ul>\n<li>45+ technical indicators and ML features per stock</li>\n<li>35+ dbt data quality tests</li>\n<li>Three Streamlit apps: main dashboard, trading signals, and ML trainer</li>\n</ul>\n<h2>Quick Start</h2>\n<pre><code class=\"hljs language-bash\">uv <span class=\"hljs-built_in\">sync</span>\npython main.py all        <span class=\"hljs-comment\"># full pipeline</span>\npython main.py dashboard  <span class=\"hljs-comment\"># start Streamlit</span>\n</code></pre>"}]}]]}]}],null,"$L18"]}]
+10:["$","$1","h",{"children":[null,[["$","$L19",null,{"children":"$L1a"}],["$","meta",null,{"name":"next-size-adjust","content":""}]],["$","$L1b",null,{"children":["$","div",null,{"hidden":true,"children":["$","$1c",null,{"fallback":null,"children":"$L1d"}]}]}]]}]
+1e:I[4431,[],"OutletBoundary"]
+20:I[5278,[],"AsyncMetadataOutlet"]
+18:["$","$L1e",null,{"children":["$L1f",["$","$L20",null,{"promise":"$@21"}]]}]
+1a:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","2",{"name":"theme-color","media":"(prefers-color-scheme: dark)","content":"#09090b"}],["$","meta","3",{"name":"theme-color","media":"(prefers-color-scheme: light)","content":"#f8fafc"}],["$","meta","4",{"name":"color-scheme","content":"dark light"}]]
+1f:null
+22:I[622,[],"IconMark"]
+21:{"metadata":[["$","title","0",{"children":"Projects | Alwyn D'Souza"}],["$","meta","1",{"name":"description","content":"Open-source data engineering projects: real-time fraud detection, dbt CI/CD pipelines, AI agents, semantic layers, and more."}],["$","link","2",{"rel":"author","href":"https://alwyndsouza.github.io"}],["$","meta","3",{"name":"author","content":"Alwyn D'Souza"}],["$","meta","4",{"name":"keywords","content":"Data Engineering,dbt,Databricks,DataOps,AI Agents,Semantic Layer,Data Platform,MLOps,Lakehouse,Unity Catalog,MCP,Enterprise Architecture"}],["$","meta","5",{"name":"creator","content":"Alwyn D'Souza"}],["$","meta","6",{"name":"publisher","content":"Alwyn D'Souza"}],["$","meta","7",{"name":"robots","content":"index, follow"}],["$","meta","8",{"name":"googlebot","content":"index, follow, max-image-preview:large"}],["$","link","9",{"rel":"canonical","href":"https://alwyndsouza.github.io/"}],["$","link","10",{"rel":"alternate","type":"application/rss+xml","href":"https://alwyndsouza.github.io/rss.xml"}],["$","meta","11",{"property":"og:title","content":"Projects — Alwyn D'Souza"}],["$","meta","12",{"property":"og:description","content":"Production-grade reference architectures and open-source tools for the modern data stack."}],["$","meta","13",{"property":"og:image","content":"https://alwyndsouza.github.io/og-default.svg"}],["$","meta","14",{"property":"og:image:width","content":"1200"}],["$","meta","15",{"property":"og:image:height","content":"630"}],["$","meta","16",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","17",{"name":"twitter:title","content":"Projects — Alwyn D'Souza"}],["$","meta","18",{"name":"twitter:description","content":"Production-grade reference architectures and open-source tools for the modern data stack."}],["$","meta","19",{"name":"twitter:image","content":"https://alwyndsouza.github.io/og-default.svg"}],["$","link","20",{"rel":"shortcut icon","href":"/favicon.svg"}],["$","link","21",{"rel":"icon","href":"/favicon.svg","type":"image/svg+xml"}],["$","$L22","22",{}]],"error":null,"digest":"$undefined"}
+1d:"$21:metadata"

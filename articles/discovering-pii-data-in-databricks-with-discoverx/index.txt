@@ -1,0 +1,273 @@
+1:"$Sreact.fragment"
+2:I[5293,["619","static/chunks/619-f09bc47e24909021.js","18","static/chunks/18-31950137827788de.js","177","static/chunks/app/layout-8967c3e7ec6b3be1.js"],"themeScript"]
+3:I[5293,["619","static/chunks/619-f09bc47e24909021.js","18","static/chunks/18-31950137827788de.js","177","static/chunks/app/layout-8967c3e7ec6b3be1.js"],"ThemeProvider"]
+4:I[5821,["619","static/chunks/619-f09bc47e24909021.js","18","static/chunks/18-31950137827788de.js","177","static/chunks/app/layout-8967c3e7ec6b3be1.js"],"Header"]
+5:I[9766,[],""]
+6:I[8924,[],""]
+7:I[2619,["619","static/chunks/619-f09bc47e24909021.js","904","static/chunks/app/articles/%5Bslug%5D/page-262c91bff938a4bc.js"],""]
+12:I[7150,[],""]
+:HL["/_next/static/media/e4af272ccee01ff0-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/css/d24fb55acf7b8c21.css","style"]
+:HL["/_next/static/css/e2c73e6d4f2f1c8a.css","style"]
+0:{"P":null,"b":"uRWTDN425n8pLrTzke42A","p":"","c":["","articles","discovering-pii-data-in-databricks-with-discoverx",""],"i":false,"f":[[["",{"children":["articles",{"children":[["slug","discovering-pii-data-in-databricks-with-discoverx","d"],{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/d24fb55acf7b8c21.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/e2c73e6d4f2f1c8a.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"en","className":"__variable_f367f3 __variable_694534","suppressHydrationWarning":true,"children":[["$","head",null,{"children":["$","script",null,{"dangerouslySetInnerHTML":{"__html":"$2"}}]}],["$","body",null,{"className":"min-h-screen bg-zinc-950 font-sans text-zinc-100 antialiased selection:bg-indigo-600/30 selection:text-zinc-100","children":["$","$L3",null,{"children":[["$","a",null,{"href":"#main-content","className":"sr-only focus-visible:not-sr-only focus-visible:fixed focus-visible:left-4 focus-visible:top-4 focus-visible:z-[100] focus-visible:rounded-lg focus-visible:bg-indigo-600 focus-visible:px-4 focus-visible:py-2 focus-visible:text-sm focus-visible:font-medium focus-visible:text-white focus-visible:shadow-lg","children":"Skip to main content"}],["$","$L4",null,{}],["$","main",null,{"id":"main-content","tabIndex":-1,"className":"outline-none","children":["$","$L5",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","div",null,{"className":"flex min-h-screen items-center justify-center","children":["$","div",null,{"className":"text-center","children":[["$","p",null,{"className":"text-xs font-mono text-indigo-400 mb-4","children":"404"}],["$","h1",null,{"className":"text-3xl font-bold text-zinc-100 mb-3","children":"Page not found"}],["$","p",null,{"className":"text-zinc-500 mb-8 max-w-sm","children":"This page doesn't exist or has been moved."}],["$","$L7",null,{"href":"/","className":"inline-flex items-center gap-2 rounded-lg bg-indigo-600 px-5 py-2.5 text-sm font-medium text-white transition-all hover:bg-indigo-500","children":"Go home"}]]}]}],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","footer",null,{"className":"border-t border-zinc-800 bg-zinc-950","role":"contentinfo","children":["$","div",null,{"className":"mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:px-8","children":[["$","div",null,{"className":"grid grid-cols-1 gap-10 sm:grid-cols-2 md:grid-cols-3","children":[["$","div",null,{"className":"space-y-4","children":[["$","$L7",null,{"href":"/","className":"group inline-flex items-center gap-2 rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500","aria-label":"Alwyn D'Souza — home","children":[["$","div",null,{"className":"flex h-7 w-7 items-center justify-center rounded-md border border-indigo-500/30 bg-indigo-600/20 transition-colors group-hover:bg-indigo-600/30","children":["$","svg",null,{"ref":"$undefined","xmlns":"http://www.w3.org/2000/svg","width":24,"height":24,"viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":2,"strokeLinecap":"round","strokeLinejoin":"round","className":"lucide lucide-database h-3.5 w-3.5 text-indigo-400","aria-hidden":"true","children":[["$","ellipse","msslwz",{"cx":"12","cy":"5","rx":"9","ry":"3"}],["$","path","1wlel7",{"d":"M3 5V19A9 3 0 0 0 21 19V5"}],["$","path","mv7ke4",{"d":"M3 12A9 3 0 0 0 21 12"}],"$undefined"]}]}],["$","span",null,{"className":"text-sm font-semibold text-zinc-100","children":["alwyn",["$","span",null,{"className":"text-indigo-400","children":".dev"}]]}]]}],["$","p",null,{"className":"text-xs leading-relaxed text-zinc-500 max-w-xs","children":"Data & AI Engineering Leader. Building modern data platforms, AI systems, and open-source developer tools."}],["$","div",null,{"className":"flex items-center gap-3 pt-1","children":[["$","a","https://github.com/alwyndsouza",{"href":"https://github.com/alwyndsouza","target":"_blank","rel":"noopener noreferrer","aria-label":"GitHub (opens in new tab)","className":"flex h-7 w-7 items-center justify-center rounded-md text-zinc-600 transition-colors hover:bg-zinc-800 hover:text-zinc-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500","children":"$L8"}],"$L9","$La"]}]]}],"$Lb","$Lc"]}],"$Ld"]}]}]]}]}]]}]]}],{"children":["articles","$Le",{"children":[["slug","discovering-pii-data-in-databricks-with-discoverx","d"],"$Lf",{"children":["__PAGE__","$L10",{},null,false]},null,false]},null,false]},null,false],"$L11",false]],"m":"$undefined","G":["$12",[]],"s":false,"S":true}
+14:I[4431,[],"OutletBoundary"]
+16:I[5278,[],"AsyncMetadataOutlet"]
+18:I[4431,[],"ViewportBoundary"]
+1a:I[4431,[],"MetadataBoundary"]
+1b:"$Sreact.suspense"
+8:["$","svg",null,{"ref":"$undefined","xmlns":"http://www.w3.org/2000/svg","width":24,"height":24,"viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":2,"strokeLinecap":"round","strokeLinejoin":"round","className":"lucide lucide-github h-3.5 w-3.5","aria-hidden":"true","children":[["$","path","tonef",{"d":"M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"}],["$","path","9comsn",{"d":"M9 18c-4.51 2-5-2-7-2"}],"$undefined"]}]
+9:["$","a","https://linkedin.com/in/alwynanildsouza",{"href":"https://linkedin.com/in/alwynanildsouza","target":"_blank","rel":"noopener noreferrer","aria-label":"LinkedIn (opens in new tab)","className":"flex h-7 w-7 items-center justify-center rounded-md text-zinc-600 transition-colors hover:bg-zinc-800 hover:text-zinc-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500","children":["$","svg",null,{"ref":"$undefined","xmlns":"http://www.w3.org/2000/svg","width":24,"height":24,"viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":2,"strokeLinecap":"round","strokeLinejoin":"round","className":"lucide lucide-linkedin h-3.5 w-3.5","aria-hidden":"true","children":[["$","path","c2jq9f",{"d":"M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"}],["$","rect","mk3on5",{"width":"4","height":"12","x":"2","y":"9"}],["$","circle","bt5ra8",{"cx":"4","cy":"4","r":"2"}],"$undefined"]}]}]
+a:["$","a","https://medium.com/@aradsouza",{"href":"https://medium.com/@aradsouza","target":"_blank","rel":"noopener noreferrer","aria-label":"Medium (opens in new tab)","className":"flex h-7 w-7 items-center justify-center rounded-md text-zinc-600 transition-colors hover:bg-zinc-800 hover:text-zinc-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500","children":["$","svg",null,{"ref":"$undefined","xmlns":"http://www.w3.org/2000/svg","width":24,"height":24,"viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":2,"strokeLinecap":"round","strokeLinejoin":"round","className":"lucide lucide-file-text h-3.5 w-3.5","aria-hidden":"true","children":[["$","path","1rqfz7",{"d":"M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"}],["$","path","tnqrlb",{"d":"M14 2v4a2 2 0 0 0 2 2h4"}],["$","path","b1mrlr",{"d":"M10 9H8"}],["$","path","t4e002",{"d":"M16 13H8"}],["$","path","z1uh3a",{"d":"M16 17H8"}],"$undefined"]}]}]
+b:["$","nav",null,{"aria-label":"Footer navigation","children":[["$","h2",null,{"className":"mb-4 text-xs font-semibold uppercase tracking-widest text-zinc-600","children":"Navigate"}],["$","ul",null,{"className":"space-y-2.5","role":"list","children":[["$","li","/projects",{"children":["$","$L7",null,{"href":"/projects","className":"text-sm text-zinc-400 transition-colors hover:text-zinc-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 rounded","children":"Projects"}]}],["$","li","/articles",{"children":["$","$L7",null,{"href":"/articles","className":"text-sm text-zinc-400 transition-colors hover:text-zinc-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 rounded","children":"Writing"}]}],["$","li","/about",{"children":["$","$L7",null,{"href":"/about","className":"text-sm text-zinc-400 transition-colors hover:text-zinc-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 rounded","children":"About"}]}]]}]]}]
+c:["$","div",null,{"children":[["$","h2",null,{"className":"mb-4 text-xs font-semibold uppercase tracking-widest text-zinc-600","children":"Connect"}],["$","ul",null,{"className":"space-y-2.5","role":"list","children":[["$","li","https://github.com/alwyndsouza",{"children":["$","a",null,{"href":"https://github.com/alwyndsouza","target":"_blank","rel":"noopener noreferrer","className":"inline-flex items-center gap-1.5 text-sm text-zinc-400 transition-colors hover:text-zinc-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 rounded","children":["GitHub",["$","span",null,{"className":"text-zinc-700 text-xs","aria-hidden":"true","children":"↗"}]]}]}],["$","li","https://linkedin.com/in/alwynanildsouza",{"children":["$","a",null,{"href":"https://linkedin.com/in/alwynanildsouza","target":"_blank","rel":"noopener noreferrer","className":"inline-flex items-center gap-1.5 text-sm text-zinc-400 transition-colors hover:text-zinc-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 rounded","children":["LinkedIn",["$","span",null,{"className":"text-zinc-700 text-xs","aria-hidden":"true","children":"↗"}]]}]}],["$","li","https://medium.com/@aradsouza",{"children":["$","a",null,{"href":"https://medium.com/@aradsouza","target":"_blank","rel":"noopener noreferrer","className":"inline-flex items-center gap-1.5 text-sm text-zinc-400 transition-colors hover:text-zinc-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 rounded","children":["Medium",["$","span",null,{"className":"text-zinc-700 text-xs","aria-hidden":"true","children":"↗"}]]}]}]]}]]}]
+d:["$","div",null,{"className":"mt-10 flex flex-col items-start justify-between gap-3 border-t border-zinc-800/70 pt-6 sm:flex-row sm:items-center","children":[["$","p",null,{"className":"text-xs text-zinc-700","children":["© ",2026," Alwyn D'Souza. Built with Next.js & deployed on GitHub Pages."]}],["$","a",null,{"href":"/rss.xml","className":"inline-flex items-center gap-1.5 text-xs text-zinc-700 transition-colors hover:text-zinc-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 rounded","aria-label":"RSS feed","children":[["$","svg",null,{"ref":"$undefined","xmlns":"http://www.w3.org/2000/svg","width":24,"height":24,"viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":2,"strokeLinecap":"round","strokeLinejoin":"round","className":"lucide lucide-rss h-3 w-3","aria-hidden":"true","children":[["$","path","pv89mb",{"d":"M4 11a9 9 0 0 1 9 9"}],["$","path","k0647b",{"d":"M4 4a16 16 0 0 1 16 16"}],["$","circle","bfqh0e",{"cx":"5","cy":"19","r":"1"}],"$undefined"]}],"RSS Feed"]}]]}]
+e:["$","$1","c",{"children":[null,["$","$L5",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}]
+f:["$","$1","c",{"children":[null,["$","$L5",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}]
+10:["$","$1","c",{"children":["$L13",null,["$","$L14",null,{"children":["$L15",["$","$L16",null,{"promise":"$@17"}]]}]]}]
+11:["$","$1","h",{"children":[null,[["$","$L18",null,{"children":"$L19"}],["$","meta",null,{"name":"next-size-adjust","content":""}]],["$","$L1a",null,{"children":["$","div",null,{"hidden":true,"children":["$","$1b",null,{"fallback":null,"children":"$L1c"}]}]}]]}]
+1d:T2de1,<p><code>discoverx</code>, a project from Databricks Labs, is a powerful &quot;Swiss-Army-knife&quot; toolkit designed to automate administrative tasks across your Databricks Lakehouse. It simplifies complex operations that would otherwise require manual inspection or extensive custom coding. One of its most valuable use cases is the automated detection of Personally Identifiable Information (PII), which is essential for data governance and compliance.</p>
+<h3>What is <code>discoverx</code>?</h3>
+<p><code>discoverx</code> is a Python library that allows you to perform operations on a large number of tables with a single command. It works by applying SQL templates or predefined functions concurrently to tables that match a specified pattern. This makes it an ideal tool for tasks like table maintenance (e.g., <code>VACUUM</code> and <code>OPTIMIZE</code>), data governance, and, as we&#39;ll explore, PII detection.</p>
+<p>It’s important to note that <code>discoverx</code> is a Databricks Labs project, meaning it&#39;s provided for exploration and is not officially supported with Databricks Service Level Agreements (SLAs).</p>
+<h3>How to Use <code>discoverx</code> for PII Detection</h3>
+<p>The library includes functionality for semantic classification, which can be leveraged for PII detection. The process generally involves these steps:</p>
+<ol>
+<li><strong>Installation:</strong> You first need to install the <code>discoverx</code> library in your Databricks notebook using the <code>%pip</code> command.</li>
+<li>Python</li>
+</ol>
+<pre><code>%pip install dbl-discoverx
+</code></pre><p><strong>Initialization:</strong> Once installed, you can import the <code>DX</code> class and create an instance to start your operations.</p>
+<pre><code>from discoverx import DX dx = DX()
+</code></pre><p><strong>PII Scanning:</strong> <code>discoverx</code> integrates with other tools like <strong>Presidio</strong> to perform PII detection. It can scan your entire lakehouse, or a specific subset of tables, to identify columns and values that match known PII patterns. It uses predefined rules for semantic classes like <code>email</code>, <code>phone number</code>, and <code>IP address</code>.</p>
+<p><strong>Actionable Results:</strong> The output of the scan is a DataFrame that provides a clear overview of where PII was found. You can then use this information to:</p>
+<p><strong>Tag Data:</strong> Apply metadata tags to PII columns within Databricks Unity Catalog for easier tracking and governance.</p>
+<p><strong>Secure Data:</strong> Implement access controls, masking, or encryption on the identified tables to protect the sensitive information.</p>
+<p><strong>Audit and Report:</strong> Use the scan results to build dashboards and reports to monitor your PII landscape and demonstrate compliance.</p>
+<h3>Benefits of <code>discoverx</code> for PII Discovery</h3>
+<ul>
+<li><strong>Scalability:</strong> <code>discoverx</code> is designed for the Databricks Lakehouse, allowing you to scan and manage PII across hundreds or thousands of tables in a scalable, efficient manner.</li>
+<li><strong>Automation:</strong> It automates a tedious and error-prone manual process, ensuring that PII detection is a consistent and repeatable part of your data pipeline.</li>
+<li><strong>Integration:</strong> By integrating with tools like Presidio, it provides a robust and intelligent way to classify and manage sensitive data.</li>
+</ul>
+<p>Using <code>discoverx</code> for PII discovery can significantly streamline your data governance efforts on Databricks, enabling you to maintain a secure and compliant data environment.</p>
+<h3>Example on using discoverx</h3>
+<pre><code># Databricks notebook source
+# MAGIC %md
+# MAGIC # Lakehouse PII Scanner
+# MAGIC This notebook is designed to scan the lakehouse and discover columns that hold Personally Identifiable Information (PII). 
+# MAGIC It systematically examines the content, identifies potential PII, and classifies the findings for further analysis. 
+# MAGIC
+# MAGIC ### Rules and Score
+# MAGIC We define rules using regex and scan through all the columns to identify the occurrence and create a score. 
+# MAGIC Scores are defined between 0 to 1. If the score is 1, the rule perfectly matches. Any score greater than 0.9 is a good score.
+# MAGIC
+# MAGIC ### How It Works
+# MAGIC 1. **Data Collection**: The scanner collects metadata and samples from the lakehouse.
+# MAGIC 2. **Regex Matching**: It applies predefined regex patterns to identify potential PII.
+# MAGIC 3. **Scoring**: Each match is scored based on its confidence level.
+# MAGIC
+# MAGIC ### Benefits
+# MAGIC - **Automated Detection**: Reduces manual effort in identifying PII.
+# MAGIC - **Accuracy**: High precision in detecting PII with regex rules.
+# MAGIC - **Compliance**: Helps in maintaining data privacy and compliance.
+
+# COMMAND ----------
+
+# DBTITLE 1,Get job input through Widgets
+# Create text widgets for user input
+dbutils.widgets.dropdown(
+ &quot;environment&quot;,
+ &quot;prod&quot;,
+ [&quot;prod&quot;,&quot;dev&quot;,&quot;preprod&quot;],
+)
+dbutils.widgets.text(&quot;catalogs&quot;, &quot;shared&quot;)
+dbutils.widgets.text(&quot;schemas&quot;, &quot;*&quot;)
+dbutils.widgets.text(&quot;tables&quot;, &quot;*&quot;)
+
+# Retrieve the values entered by the user in the widgets
+catalogs = dbutils.widgets.get(&quot;catalogs&quot;)
+schemas = dbutils.widgets.get(&quot;schemas&quot;)
+tables = dbutils.widgets.get(&quot;tables&quot;)
+environment = dbutils.widgets.get(&quot;environment&quot;)
+
+# Get the Databricks workspace URL from the Spark configuration
+workspace_url = spark.conf.get(&quot;spark.databricks.workspaceUrl&quot;)
+display(workspace_url)
+
+
+# Display all widget values
+display({&quot;catalogs&quot;: catalogs, &quot;schemas&quot;: schemas, &quot;tables&quot;: tables, &quot;environment&quot;: environment})
+
+# Construct the table reference string
+from_table_statement = &quot;.&quot;.join([catalogs, schemas, tables])
+
+# Display the constructed table reference string
+display(from_table_statement)
+
+# COMMAND ----------
+
+# DBTITLE 1,Define Regex Rules for Validation
+from discoverx.rules import RegexRule
+
+# Define a rule for phone numbers
+phone_number_rule = {
+ &quot;name&quot;: &quot;phone_number&quot;,
+ &quot;description&quot;: &quot;Australian phone number&quot;,
+ &quot;definition&quot;: r&quot;^61\d{9}$&quot;,
+ &quot;match_example&quot;: [&quot;61123456789&quot;],
+ &quot;nomatch_example&quot;: [&quot;123456789&quot;],
+}
+
+# Create a RegexRule object for Australian phone numbers
+phone_number_rule = RegexRule(**phone_number_rule)
+
+# Define a rule for postcodes
+postcode_rule = {
+ &quot;name&quot;: &quot;postcode&quot;,
+ &quot;description&quot;: &quot;Australian postcode&quot;,
+ &quot;definition&quot;: r&quot;^\d{4}$&quot;,
+ &quot;match_example&quot;: [&quot;2000&quot;, &quot;3000&quot;],
+ &quot;nomatch_example&quot;: [&quot;123&quot;, &quot;12345&quot;],
+}
+
+# Create a RegexRule object for postcodes
+postcode_rule = RegexRule(**postcode_rule)
+
+# Define a rule for IMEI
+imei_rule = {
+ &quot;name&quot;: &quot;imei&quot;,
+ &quot;description&quot;: &quot;International Mobile Equipment Identity&quot;,
+ &quot;definition&quot;: r&quot;^\d{15}$&quot;,
+ &quot;match_example&quot;: [&quot;490154203237518&quot;],
+ &quot;nomatch_example&quot;: [&quot;49015420323751&quot;, &quot;4901542032375189&quot;, &quot;abc123456789012&quot;],
+}
+
+# Create a RegexRule object for IMEI
+imei_rule = RegexRule(**imei_rule)
+
+# Define a rule for Australian Medicare card
+medicare_card_rule = {
+ &quot;name&quot;: &quot;medicare&quot;,
+ &quot;description&quot;: &quot;Australian Medicare card&quot;,
+ &quot;definition&quot;: r&quot;^\d{4}\s\d{5}\s\d{1}$&quot;,
+ &quot;match_example&quot;: [&quot;1234 56789 1&quot;],
+ &quot;nomatch_example&quot;: [&quot;1234567891&quot;, &quot;1234 5678 91&quot;, &quot;abc 56789 1&quot;],
+}
+
+# Create a RegexRule object for Australian Medicare card
+medicare_card_rule = RegexRule(**medicare_card_rule)
+
+# Define a rule for IMSI
+imsi_rule = {
+ &quot;name&quot;: &quot;imsi&quot;,
+ &quot;description&quot;: &quot;International Mobile Subscriber Identity&quot;,
+ &quot;definition&quot;: r&quot;^\d{15}$&quot;,
+ &quot;match_example&quot;: [&quot;310150123456789&quot;],
+ &quot;nomatch_example&quot;: [&quot;31015012345678&quot;, &quot;3101501234567890&quot;, &quot;abc123456789012&quot;],
+}
+
+# Create a RegexRule object for IMSI
+imsi_rule = RegexRule(**imsi_rule)
+
+# Define a rule for Australian passport number
+passport_number_rule = {
+ &quot;name&quot;: &quot;passport_number&quot;,
+ &quot;description&quot;: &quot;Australian passport number&quot;,
+ &quot;definition&quot;: r&quot;^[A-Z]{2}\d{7}$&quot;,
+ &quot;match_example&quot;: [&quot;AB1234567&quot;],
+ &quot;nomatch_example&quot;: [&quot;1234567&quot;, &quot;ABC1234567&quot;, &quot;AB123456&quot;],
+}
+
+# Create a RegexRule object for Australian passport number
+passport_number_rule = RegexRule(**passport_number_rule)
+
+# Define a rule for Australian mobile number starting with 04
+mobile_number_rule = {
+ &quot;name&quot;: &quot;mobile_number&quot;,
+ &quot;description&quot;: &quot;Australian mobile number starting with 04&quot;,
+ &quot;definition&quot;: r&quot;^04\d{8}$&quot;,
+ &quot;match_example&quot;: [&quot;0478111628&quot;],
+ &quot;nomatch_example&quot;: [&quot;1478111628&quot;, &quot;048111628&quot;, &quot;abc0478111628&quot;],
+}
+
+# Create a RegexRule object for Australian mobile number starting with 04
+mobile_number_rule = RegexRule(**mobile_number_rule)
+
+# Define a rule for Australian landline number
+landline_number_rule = {
+ &quot;name&quot;: &quot;landline_number&quot;,
+ &quot;description&quot;: &quot;Australian landline number&quot;,
+ &quot;definition&quot;: r&quot;^02\s?\d{4}\s?\d{4}$&quot;,
+ &quot;match_example&quot;: [&quot;0244444444&quot;, &quot;02 4444 4444&quot;],
+ &quot;nomatch_example&quot;: [&quot;024444444&quot;, &quot;02 444 4444&quot;, &quot;abc0244444444&quot;],
+}
+
+# Create a RegexRule object for Australian landline number
+landline_number_rule = RegexRule(**landline_number_rule)
+
+# COMMAND ----------
+
+# DBTITLE 1,Review DX module documentation
+#help(DX)
+
+# COMMAND ----------
+
+# DBTITLE 1,Define and Display Custom DX Rules
+from discoverx import DX
+
+# Initialize the DX object with custom rules
+custom_rules = [
+ phone_number_rule,
+ postcode_rule,
+ imei_rule,
+ #imsi_rule,
+ passport_number_rule,
+ mobile_number_rule,
+ landline_number_rule
+]
+
+#display(custom_rules)
+dx = DX(custom_rules=custom_rules)
+
+# Display the defined rules
+dx.display_rules()
+
+# COMMAND ----------
+
+# DBTITLE 1,Scan Tables Using All Rules
+# Scan the specified tables using all defined rules
+dx.scan(from_tables=from_table_statement, rules=&quot;*&quot;)
+
+# COMMAND ----------
+
+# DBTITLE 1,Save Results to Table
+# Create schema pii_scan if it doesn&#x27;t exist
+spark.sql(f&quot;CREATE SCHEMA IF NOT EXISTS {environment}.pii_scan&quot;)
+
+# Save the DiscoverX results to the table pii_scan.pii_scan_results
+spark.sql(f&quot;DROP TABLE IF EXISTS {environment}.pii_scan.pii_scan_results&quot;)
+
+dx.save(f&quot;{environment}.pii_scan.pii_scan_results&quot;)
+
+spark.sql(f&quot;&quot;&quot;
+DELETE FROM {environment}.pii_scan.pii_scan_results
+WHERE class_name NOT IN (
+ &#x27;email&#x27;,
+ &#x27;phone_number&#x27;,
+ &#x27;mobile_number&#x27;,
+ &#x27;passport_number&#x27;,
+ &#x27;credit_card_number&#x27;,
+ &#x27;postcode&#x27;,
+ &#x27;imei&#x27;,
+ &#x27;landline_number&#x27;
+) or score &lt; 0.8
+&quot;&quot;&quot;)
+</code></pre><hr>
+<p><em>This article was originally published at <a href="https://medium.com/@aradsouza/discovering-pii-data-in-databricks-with-discoverx-8a1f525b1fb1">https://medium.com/@aradsouza/discovering-pii-data-in-databricks-with-discoverx-8a1f525b1fb1</a></em></p>
+13:["$","div",null,{"className":"min-h-screen pt-24 pb-24","children":["$","div",null,{"className":"mx-auto max-w-3xl px-4 sm:px-6","children":[["$","$L7",null,{"href":"/articles","className":"mb-10 inline-flex items-center gap-1.5 text-sm text-zinc-500 hover:text-zinc-300 transition-colors","children":[["$","svg",null,{"ref":"$undefined","xmlns":"http://www.w3.org/2000/svg","width":24,"height":24,"viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":2,"strokeLinecap":"round","strokeLinejoin":"round","className":"lucide lucide-chevron-left h-4 w-4","children":[["$","path","1wnfg3",{"d":"m15 18-6-6 6-6"}],"$undefined"]}],"All articles"]}],["$","header",null,{"className":"mb-12","children":[["$","div",null,{"className":"mb-4 flex items-center gap-3 flex-wrap","children":[["$","span",null,{"className":"inline-flex items-center rounded-md px-2 py-0.5 text-xs font-medium font-mono tracking-wide bg-indigo-950/60 text-indigo-300 border border-indigo-800/50","children":"security"}],["$","div",null,{"className":"flex items-center gap-1 text-xs text-zinc-600","children":[["$","svg",null,{"ref":"$undefined","xmlns":"http://www.w3.org/2000/svg","width":24,"height":24,"viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":2,"strokeLinecap":"round","strokeLinejoin":"round","className":"lucide lucide-calendar h-3 w-3","children":[["$","path","1cmpym",{"d":"M8 2v4"}],["$","path","4m81vk",{"d":"M16 2v4"}],["$","rect","1hopcy",{"width":"18","height":"18","x":"3","y":"4","rx":"2"}],["$","path","8toen8",{"d":"M3 10h18"}],"$undefined"]}],["$","time",null,{"dateTime":"$D2025-08-11T00:00:00.000Z","children":"August 11, 2025"}]]}],["$","div",null,{"className":"flex items-center gap-1 text-xs text-zinc-600","children":[["$","svg",null,{"ref":"$undefined","xmlns":"http://www.w3.org/2000/svg","width":24,"height":24,"viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":2,"strokeLinecap":"round","strokeLinejoin":"round","className":"lucide lucide-clock h-3 w-3","children":[["$","circle","1mglay",{"cx":"12","cy":"12","r":"10"}],["$","polyline","68esgv",{"points":"12 6 12 12 16 14"}],"$undefined"]}],"7 min read"]}]]}],["$","h1",null,{"className":"text-3xl font-bold text-zinc-100 sm:text-4xl leading-tight mb-4","children":"Discovering PII Data in Databricks with discoverx"}],["$","p",null,{"className":"text-base text-zinc-400 leading-relaxed border-l-2 border-indigo-700 pl-4","children":"discoverx, a project from Databricks Labs, is a powerful \"Swiss-Army-knife\" toolkit designed to automate administrative tasks across your Databricks Lakehouse...."}],["$","div",null,{"className":"mt-6 flex flex-wrap items-center gap-2","children":[["$","svg",null,{"ref":"$undefined","xmlns":"http://www.w3.org/2000/svg","width":24,"height":24,"viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":2,"strokeLinecap":"round","strokeLinejoin":"round","className":"lucide lucide-tag h-3.5 w-3.5 text-zinc-600","children":[["$","path","vktsd0",{"d":"M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z"}],["$","circle","kqv944",{"cx":"7.5","cy":"7.5","r":".5","fill":"currentColor"}],"$undefined"]}],[["$","span","security",{"className":"rounded px-2 py-0.5 text-xs font-mono bg-zinc-800/60 text-zinc-500 border border-zinc-700/30","children":"security"}],["$","span","privacy",{"className":"rounded px-2 py-0.5 text-xs font-mono bg-zinc-800/60 text-zinc-500 border border-zinc-700/30","children":"privacy"}],["$","span","compliance",{"className":"rounded px-2 py-0.5 text-xs font-mono bg-zinc-800/60 text-zinc-500 border border-zinc-700/30","children":"compliance"}]]]}],"$undefined"]}],["$","div",null,{"className":"mb-12 border-t border-zinc-800"}],["$","article",null,{"className":"prose prose-invert max-w-none","dangerouslySetInnerHTML":{"__html":"$1d"}}],"$L1e"]}]}]
+1e:["$","div",null,{"className":"mt-20 border-t border-zinc-800 pt-12","children":[["$","h2",null,{"className":"text-lg font-semibold text-zinc-100 mb-6","children":["More in ","security"]}],["$","div",null,{"className":"space-y-1","children":[["$","$L7","databricks-pii-identification-protection-and-management",{"href":"/articles/databricks-pii-identification-protection-and-management","className":"group flex items-center justify-between rounded-xl border border-transparent px-4 py-4 transition-all hover:border-zinc-800 hover:bg-zinc-900/50","children":[["$","div",null,{"className":"flex-1 min-w-0","children":[["$","p",null,{"className":"text-sm font-medium text-zinc-300 group-hover:text-zinc-100 transition-colors line-clamp-1","children":"Databricks PII — Identification, Protection, and Management"}],["$","p",null,{"className":"mt-0.5 text-xs text-zinc-600","children":["August 11, 2025"," · ","6 min read"]}]]}],["$","svg",null,{"ref":"$undefined","xmlns":"http://www.w3.org/2000/svg","width":24,"height":24,"viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":2,"strokeLinecap":"round","strokeLinejoin":"round","className":"lucide lucide-chevron-left ml-4 h-4 w-4 rotate-180 text-zinc-700 group-hover:text-indigo-400 transition-colors","children":[["$","path","1wnfg3",{"d":"m15 18-6-6 6-6"}],"$undefined"]}]]}]]}]]}]
+19:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","2",{"name":"theme-color","media":"(prefers-color-scheme: dark)","content":"#09090b"}],["$","meta","3",{"name":"theme-color","media":"(prefers-color-scheme: light)","content":"#f8fafc"}],["$","meta","4",{"name":"color-scheme","content":"dark light"}]]
+15:null
+1f:I[622,[],"IconMark"]
+17:{"metadata":[["$","title","0",{"children":"Discovering PII Data in Databricks with discoverx | Alwyn D'Souza"}],["$","meta","1",{"name":"description","content":"discoverx, a project from Databricks Labs, is a powerful \"Swiss-Army-knife\" toolkit designed to automate administrative tasks across your Databricks Lakehouse...."}],["$","link","2",{"rel":"author","href":"https://alwyndsouza.github.io"}],["$","meta","3",{"name":"author","content":"Alwyn D'Souza"}],["$","meta","4",{"name":"keywords","content":"Data Engineering,dbt,Databricks,DataOps,AI Agents,Semantic Layer,Data Platform,MLOps,Lakehouse,Unity Catalog,MCP,Enterprise Architecture"}],["$","meta","5",{"name":"creator","content":"Alwyn D'Souza"}],["$","meta","6",{"name":"publisher","content":"Alwyn D'Souza"}],["$","meta","7",{"name":"robots","content":"index, follow"}],["$","meta","8",{"name":"googlebot","content":"index, follow, max-image-preview:large"}],["$","link","9",{"rel":"canonical","href":"https://alwyndsouza.github.io/"}],["$","link","10",{"rel":"alternate","type":"application/rss+xml","href":"https://alwyndsouza.github.io/rss.xml"}],["$","meta","11",{"property":"og:title","content":"Discovering PII Data in Databricks with discoverx"}],["$","meta","12",{"property":"og:description","content":"discoverx, a project from Databricks Labs, is a powerful \"Swiss-Army-knife\" toolkit designed to automate administrative tasks across your Databricks Lakehouse...."}],["$","meta","13",{"property":"og:type","content":"article"}],["$","meta","14",{"property":"article:published_time","content":"Mon Aug 11 2025 00:00:00 GMT+0000 (Coordinated Universal Time)"}],["$","meta","15",{"property":"article:author","content":"Alwyn D'Souza"}],["$","meta","16",{"property":"article:tag","content":"security"}],["$","meta","17",{"property":"article:tag","content":"privacy"}],["$","meta","18",{"property":"article:tag","content":"compliance"}],["$","meta","19",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","20",{"name":"twitter:creator","content":"@aradsouza"}],["$","meta","21",{"name":"twitter:title","content":"Alwyn D'Souza — Data & AI Engineering Leader"}],["$","meta","22",{"name":"twitter:description","content":"Building production-grade data platforms, AI systems, and developer tools that scale for enterprise teams."}],["$","meta","23",{"name":"twitter:image","content":"https://alwyndsouza.github.io/og-default.svg"}],["$","link","24",{"rel":"shortcut icon","href":"/favicon.svg"}],["$","link","25",{"rel":"icon","href":"/favicon.svg","type":"image/svg+xml"}],["$","$L1f","26",{}]],"error":null,"digest":"$undefined"}
+1c:"$17:metadata"

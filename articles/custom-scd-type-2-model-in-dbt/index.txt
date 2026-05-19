@@ -1,0 +1,349 @@
+1:"$Sreact.fragment"
+2:I[5293,["619","static/chunks/619-f09bc47e24909021.js","18","static/chunks/18-31950137827788de.js","177","static/chunks/app/layout-8967c3e7ec6b3be1.js"],"themeScript"]
+3:I[5293,["619","static/chunks/619-f09bc47e24909021.js","18","static/chunks/18-31950137827788de.js","177","static/chunks/app/layout-8967c3e7ec6b3be1.js"],"ThemeProvider"]
+4:I[5821,["619","static/chunks/619-f09bc47e24909021.js","18","static/chunks/18-31950137827788de.js","177","static/chunks/app/layout-8967c3e7ec6b3be1.js"],"Header"]
+5:I[9766,[],""]
+6:I[8924,[],""]
+7:I[2619,["619","static/chunks/619-f09bc47e24909021.js","904","static/chunks/app/articles/%5Bslug%5D/page-262c91bff938a4bc.js"],""]
+12:I[7150,[],""]
+:HL["/_next/static/media/e4af272ccee01ff0-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/css/d24fb55acf7b8c21.css","style"]
+:HL["/_next/static/css/e2c73e6d4f2f1c8a.css","style"]
+0:{"P":null,"b":"uRWTDN425n8pLrTzke42A","p":"","c":["","articles","custom-scd-type-2-model-in-dbt",""],"i":false,"f":[[["",{"children":["articles",{"children":[["slug","custom-scd-type-2-model-in-dbt","d"],{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/d24fb55acf7b8c21.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/e2c73e6d4f2f1c8a.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"en","className":"__variable_f367f3 __variable_694534","suppressHydrationWarning":true,"children":[["$","head",null,{"children":["$","script",null,{"dangerouslySetInnerHTML":{"__html":"$2"}}]}],["$","body",null,{"className":"min-h-screen bg-zinc-950 font-sans text-zinc-100 antialiased selection:bg-indigo-600/30 selection:text-zinc-100","children":["$","$L3",null,{"children":[["$","a",null,{"href":"#main-content","className":"sr-only focus-visible:not-sr-only focus-visible:fixed focus-visible:left-4 focus-visible:top-4 focus-visible:z-[100] focus-visible:rounded-lg focus-visible:bg-indigo-600 focus-visible:px-4 focus-visible:py-2 focus-visible:text-sm focus-visible:font-medium focus-visible:text-white focus-visible:shadow-lg","children":"Skip to main content"}],["$","$L4",null,{}],["$","main",null,{"id":"main-content","tabIndex":-1,"className":"outline-none","children":["$","$L5",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","div",null,{"className":"flex min-h-screen items-center justify-center","children":["$","div",null,{"className":"text-center","children":[["$","p",null,{"className":"text-xs font-mono text-indigo-400 mb-4","children":"404"}],["$","h1",null,{"className":"text-3xl font-bold text-zinc-100 mb-3","children":"Page not found"}],["$","p",null,{"className":"text-zinc-500 mb-8 max-w-sm","children":"This page doesn't exist or has been moved."}],["$","$L7",null,{"href":"/","className":"inline-flex items-center gap-2 rounded-lg bg-indigo-600 px-5 py-2.5 text-sm font-medium text-white transition-all hover:bg-indigo-500","children":"Go home"}]]}]}],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","footer",null,{"className":"border-t border-zinc-800 bg-zinc-950","role":"contentinfo","children":["$","div",null,{"className":"mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:px-8","children":[["$","div",null,{"className":"grid grid-cols-1 gap-10 sm:grid-cols-2 md:grid-cols-3","children":[["$","div",null,{"className":"space-y-4","children":[["$","$L7",null,{"href":"/","className":"group inline-flex items-center gap-2 rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500","aria-label":"Alwyn D'Souza — home","children":[["$","div",null,{"className":"flex h-7 w-7 items-center justify-center rounded-md border border-indigo-500/30 bg-indigo-600/20 transition-colors group-hover:bg-indigo-600/30","children":["$","svg",null,{"ref":"$undefined","xmlns":"http://www.w3.org/2000/svg","width":24,"height":24,"viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":2,"strokeLinecap":"round","strokeLinejoin":"round","className":"lucide lucide-database h-3.5 w-3.5 text-indigo-400","aria-hidden":"true","children":[["$","ellipse","msslwz",{"cx":"12","cy":"5","rx":"9","ry":"3"}],["$","path","1wlel7",{"d":"M3 5V19A9 3 0 0 0 21 19V5"}],["$","path","mv7ke4",{"d":"M3 12A9 3 0 0 0 21 12"}],"$undefined"]}]}],["$","span",null,{"className":"text-sm font-semibold text-zinc-100","children":["alwyn",["$","span",null,{"className":"text-indigo-400","children":".dev"}]]}]]}],["$","p",null,{"className":"text-xs leading-relaxed text-zinc-500 max-w-xs","children":"Data & AI Engineering Leader. Building modern data platforms, AI systems, and open-source developer tools."}],["$","div",null,{"className":"flex items-center gap-3 pt-1","children":[["$","a","https://github.com/alwyndsouza",{"href":"https://github.com/alwyndsouza","target":"_blank","rel":"noopener noreferrer","aria-label":"GitHub (opens in new tab)","className":"flex h-7 w-7 items-center justify-center rounded-md text-zinc-600 transition-colors hover:bg-zinc-800 hover:text-zinc-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500","children":"$L8"}],"$L9","$La"]}]]}],"$Lb","$Lc"]}],"$Ld"]}]}]]}]}]]}]]}],{"children":["articles","$Le",{"children":[["slug","custom-scd-type-2-model-in-dbt","d"],"$Lf",{"children":["__PAGE__","$L10",{},null,false]},null,false]},null,false]},null,false],"$L11",false]],"m":"$undefined","G":["$12",[]],"s":false,"S":true}
+14:I[4431,[],"OutletBoundary"]
+16:I[5278,[],"AsyncMetadataOutlet"]
+18:I[4431,[],"ViewportBoundary"]
+1a:I[4431,[],"MetadataBoundary"]
+1b:"$Sreact.suspense"
+8:["$","svg",null,{"ref":"$undefined","xmlns":"http://www.w3.org/2000/svg","width":24,"height":24,"viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":2,"strokeLinecap":"round","strokeLinejoin":"round","className":"lucide lucide-github h-3.5 w-3.5","aria-hidden":"true","children":[["$","path","tonef",{"d":"M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"}],["$","path","9comsn",{"d":"M9 18c-4.51 2-5-2-7-2"}],"$undefined"]}]
+9:["$","a","https://linkedin.com/in/alwynanildsouza",{"href":"https://linkedin.com/in/alwynanildsouza","target":"_blank","rel":"noopener noreferrer","aria-label":"LinkedIn (opens in new tab)","className":"flex h-7 w-7 items-center justify-center rounded-md text-zinc-600 transition-colors hover:bg-zinc-800 hover:text-zinc-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500","children":["$","svg",null,{"ref":"$undefined","xmlns":"http://www.w3.org/2000/svg","width":24,"height":24,"viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":2,"strokeLinecap":"round","strokeLinejoin":"round","className":"lucide lucide-linkedin h-3.5 w-3.5","aria-hidden":"true","children":[["$","path","c2jq9f",{"d":"M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"}],["$","rect","mk3on5",{"width":"4","height":"12","x":"2","y":"9"}],["$","circle","bt5ra8",{"cx":"4","cy":"4","r":"2"}],"$undefined"]}]}]
+a:["$","a","https://medium.com/@aradsouza",{"href":"https://medium.com/@aradsouza","target":"_blank","rel":"noopener noreferrer","aria-label":"Medium (opens in new tab)","className":"flex h-7 w-7 items-center justify-center rounded-md text-zinc-600 transition-colors hover:bg-zinc-800 hover:text-zinc-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500","children":["$","svg",null,{"ref":"$undefined","xmlns":"http://www.w3.org/2000/svg","width":24,"height":24,"viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":2,"strokeLinecap":"round","strokeLinejoin":"round","className":"lucide lucide-file-text h-3.5 w-3.5","aria-hidden":"true","children":[["$","path","1rqfz7",{"d":"M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"}],["$","path","tnqrlb",{"d":"M14 2v4a2 2 0 0 0 2 2h4"}],["$","path","b1mrlr",{"d":"M10 9H8"}],["$","path","t4e002",{"d":"M16 13H8"}],["$","path","z1uh3a",{"d":"M16 17H8"}],"$undefined"]}]}]
+b:["$","nav",null,{"aria-label":"Footer navigation","children":[["$","h2",null,{"className":"mb-4 text-xs font-semibold uppercase tracking-widest text-zinc-600","children":"Navigate"}],["$","ul",null,{"className":"space-y-2.5","role":"list","children":[["$","li","/projects",{"children":["$","$L7",null,{"href":"/projects","className":"text-sm text-zinc-400 transition-colors hover:text-zinc-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 rounded","children":"Projects"}]}],["$","li","/articles",{"children":["$","$L7",null,{"href":"/articles","className":"text-sm text-zinc-400 transition-colors hover:text-zinc-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 rounded","children":"Writing"}]}],["$","li","/about",{"children":["$","$L7",null,{"href":"/about","className":"text-sm text-zinc-400 transition-colors hover:text-zinc-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 rounded","children":"About"}]}]]}]]}]
+c:["$","div",null,{"children":[["$","h2",null,{"className":"mb-4 text-xs font-semibold uppercase tracking-widest text-zinc-600","children":"Connect"}],["$","ul",null,{"className":"space-y-2.5","role":"list","children":[["$","li","https://github.com/alwyndsouza",{"children":["$","a",null,{"href":"https://github.com/alwyndsouza","target":"_blank","rel":"noopener noreferrer","className":"inline-flex items-center gap-1.5 text-sm text-zinc-400 transition-colors hover:text-zinc-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 rounded","children":["GitHub",["$","span",null,{"className":"text-zinc-700 text-xs","aria-hidden":"true","children":"↗"}]]}]}],["$","li","https://linkedin.com/in/alwynanildsouza",{"children":["$","a",null,{"href":"https://linkedin.com/in/alwynanildsouza","target":"_blank","rel":"noopener noreferrer","className":"inline-flex items-center gap-1.5 text-sm text-zinc-400 transition-colors hover:text-zinc-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 rounded","children":["LinkedIn",["$","span",null,{"className":"text-zinc-700 text-xs","aria-hidden":"true","children":"↗"}]]}]}],["$","li","https://medium.com/@aradsouza",{"children":["$","a",null,{"href":"https://medium.com/@aradsouza","target":"_blank","rel":"noopener noreferrer","className":"inline-flex items-center gap-1.5 text-sm text-zinc-400 transition-colors hover:text-zinc-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 rounded","children":["Medium",["$","span",null,{"className":"text-zinc-700 text-xs","aria-hidden":"true","children":"↗"}]]}]}]]}]]}]
+d:["$","div",null,{"className":"mt-10 flex flex-col items-start justify-between gap-3 border-t border-zinc-800/70 pt-6 sm:flex-row sm:items-center","children":[["$","p",null,{"className":"text-xs text-zinc-700","children":["© ",2026," Alwyn D'Souza. Built with Next.js & deployed on GitHub Pages."]}],["$","a",null,{"href":"/rss.xml","className":"inline-flex items-center gap-1.5 text-xs text-zinc-700 transition-colors hover:text-zinc-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 rounded","aria-label":"RSS feed","children":[["$","svg",null,{"ref":"$undefined","xmlns":"http://www.w3.org/2000/svg","width":24,"height":24,"viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":2,"strokeLinecap":"round","strokeLinejoin":"round","className":"lucide lucide-rss h-3 w-3","aria-hidden":"true","children":[["$","path","pv89mb",{"d":"M4 11a9 9 0 0 1 9 9"}],["$","path","k0647b",{"d":"M4 4a16 16 0 0 1 16 16"}],["$","circle","bfqh0e",{"cx":"5","cy":"19","r":"1"}],"$undefined"]}],"RSS Feed"]}]]}]
+e:["$","$1","c",{"children":[null,["$","$L5",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}]
+f:["$","$1","c",{"children":[null,["$","$L5",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}]
+10:["$","$1","c",{"children":["$L13",null,["$","$L14",null,{"children":["$L15",["$","$L16",null,{"promise":"$@17"}]]}]]}]
+11:["$","$1","h",{"children":[null,[["$","$L18",null,{"children":"$L19"}],["$","meta",null,{"name":"next-size-adjust","content":""}]],["$","$L1a",null,{"children":["$","div",null,{"hidden":true,"children":["$","$1b",null,{"fallback":null,"children":"$L1c"}]}]}]]}]
+1d:T329d,<p><em>Building robust data warehouses that preserve historical context</em></p>
+<p>Building a custom SCD Type 2 model in dbt is a powerful way to track historical changes without relying solely on the built-in <code>snapshot</code> functionality, giving you more control over the logic. While dbt snapshots are a great, simple solution for many use cases, a custom approach is often necessary when handling more complex scenarios, such as specific merge strategies, backfilling historical data, or dealing with source systems that lack a reliable <code>updated_at</code> column.</p>
+<p>The core of the custom logic involves a few key steps within a dbt model materialized as an <code>incremental</code> table.</p>
+<h3>Step-by-Step Logic for Custom SCD Type 2</h3>
+<p>Your dbt model will use the <code>incremental</code> materialization, which allows dbt to smartly update and insert records based on your logic, rather than rebuilding the entire table every time. Here&#39;s a breakdown of the SQL logic you&#39;d write:</p>
+<ol>
+<li><strong>Identify New and Changed Records:</strong> You’ll start by selecting all records from your source table (e.g., <code>stg_customers</code>). A common and robust way to detect changes is to create a hash of the columns you want to track. The <code>dbt-utils</code> package has a handy <code>surrogate_key</code> macro for this. If the hash of a new record is different from the hash of the latest version of that record in your dimension table, you know a change has occurred.</li>
+<li><strong>Expire Old Records:</strong> This is the most critical part of the SCD Type 2 logic. For every record in your source data that has a new, different version (detected in the previous step), you need to “close out” the old, currently active record in your dimension table. You do this by setting its <code>end_date</code> to the timestamp of the new record&#39;s arrival and changing its <code>active_flag</code> from <code>Y</code> to <code>N</code>.</li>
+<li><strong>Insert New Records:</strong> For every new or changed record from your source data, you’ll insert a new row into your dimension table. This new row will have the updated information, a <code>start_date</code> set to the current timestamp, and the <code>end_date</code> set to a future value (like &#39;9999-12-31&#39;) to indicate it&#39;s the current, active version. Its <code>active_flag</code> will be <code>Y</code>.</li>
+</ol>
+<p>This process ensures that your dimension table is always up-to-date with the latest information, while also preserving a full, historical timeline of every change. The <code>dbt-utils</code> package and <code>incremental</code> materialization make writing this custom logic much simpler than writing raw SQL.</p>
+<p>Let’s illustrate this with a simple example:</p>
+<h3>Before Change:</h3>
+<pre><code>customer_id | name | city | active_flag | start_date | end_date
+1001 | John Smith | New York | Y | 2023-01-01 | 9999-12-31
+</code></pre><h3>After John moves to Boston:</h3>
+<pre><code>customer_id | name | city | active_flag | start_date | end_date
+1001 | John Smith | New York | N | 2023-01-01 | 2023-06-15
+1001 | John Smith | Boston | Y | 2023-06-15 | 9999-12-31
+</code></pre><h3>dbt Implementation Architecture</h3>
+<p>Our SCD Type 2 implementation follows a three-layer architecture:</p>
+<pre><code>Source System (CRM) → Staging Layer → Intermediate Layer → Mart Layer
+</code></pre><h3>1. The Staging Layer</h3>
+<p>First, we extract raw customer data from TechMart’s CRM system:</p>
+<pre><code>-- models/staging/stg_crm__customers.sql
+select
+ customer_id,
+ row_id,
+ customer_name,
+ first_name,
+ last_name,
+ email_address,
+ phone_number,
+ annual_income,
+ city,
+ marketing_consent_email,
+ marketing_consent_sms,
+ contact_preference,
+ last_modified_date,
+ operation_type -- INSERT, UPDATE, DELETE
+from {{ source(&#x27;crm&#x27;, &#x27;customers&#x27;) }}
+</code></pre><h3>2. The Intermediate Layer</h3>
+<p>Here we add SCD-specific logic and generate unique identifiers:</p>
+<pre><code>-- models/intermediate/int_crm__customers_scd.sql
+select
+ *,
+ {{ dbt.generate_surrogate_key([
+ &#x27;customer_id&#x27;, 
+ &#x27;customer_name&#x27;, 
+ &#x27;email_address&#x27;,
+ &#x27;phone_number&#x27;,
+ &#x27;city&#x27;,
+ &#x27;marketing_consent_email&#x27;
+ ]) }} as scd_id,
+ coalesce(last_modified_date, current_timestamp) as effective_start_date
+from {{ ref(&#x27;stg_crm__customers&#x27;) }}
+</code></pre><h3>3. The Mart Layer — The SCD Type 2 Magic</h3>
+<p>Now comes the complex part — the actual SCD Type 2 implementation:</p>
+<pre><code>-- models/marts/dim_customers.sql
+{{
+ config(
+ materialized=&#x27;incremental&#x27;,
+ unique_key=&#x27;scd_id&#x27;,
+ incremental_strategy=&#x27;delete+insert&#x27;
+ )
+}}
+
+with source_rows as (
+ select
+ customer_id,
+ customer_name,
+ first_name,
+ last_name,
+ email_address,
+ phone_number,
+ annual_income,
+ city,
+ marketing_consent_email,
+ marketing_consent_sms,
+ contact_preference,
+ effective_start_date,
+ null as effective_end_date,
+ scd_id
+ from {{ ref(&#x27;int_crm__customers_scd&#x27;) }}
+)
+
+{% if is_incremental() %}
+ , destination_rows as (
+ select
+ customer_id,
+ customer_name,
+ first_name,
+ last_name,
+ email_address,
+ phone_number,
+ annual_income,
+ city,
+ marketing_consent_email,
+ marketing_consent_sms,
+ contact_preference,
+ effective_start_date,
+ effective_end_date,
+ scd_id
+ from {{ this }} 
+ where active_flag = &#x27;Y&#x27;
+ )
+
+ , new_valid_to as (
+ select
+ d.customer_id,
+ s.effective_start_date as effective_end_date
+ from source_rows s
+ join destination_rows d
+ on s.customer_id = d.customer_id
+ and s.scd_id != d.scd_id
+
+ )
+
+ , add_new_valid_to as (
+ select
+ d.customer_id,
+ d.customer_name,
+ d.first_name,
+ d.last_name,
+ d.email_address,
+ d.phone_number,
+ d.annual_income,
+ d.city,
+ d.marketing_consent_email,
+ d.marketing_consent_sms,
+ d.contact_preference,
+ d.effective_start_date,
+ n.effective_end_date,
+ d.scd_id,
+ case when n.effective_end_date is null then &#x27;Y&#x27; else &#x27;N&#x27; end as active_flag
+ from destination_rows d
+ left join new_valid_to n
+ on d.customer_id = n.customer_id
+
+ )
+
+ select
+ customer_id,
+ customer_name,
+ first_name,
+ last_name,
+ email_address,
+ phone_number,
+ annual_income,
+ city,
+ marketing_consent_email,
+ marketing_consent_sms,
+ contact_preference,
+ effective_start_date,
+ effective_end_date,
+ active_flag,
+ scd_id
+ from add_new_valid_to n
+ union
+{% endif %}
+
+select
+ s.customer_id,
+ s.customer_name,
+ s.first_name,
+ s.last_name,
+ s.email_address,
+ s.phone_number,
+ s.annual_income,
+ s.city,
+ s.marketing_consent_email,
+ s.marketing_consent_sms,
+ s.contact_preference,
+ s.effective_start_date,
+ coalesce(
+ lead(s.effective_start_date, 1) over (
+ partition by s.customer_id
+ order by s.effective_start_date
+ ),
+ &#x27;9999-12-31&#x27;::timestamp
+ ) as effective_end_date,
+ case
+ when lead(s.effective_start_date, 1) over (
+ partition by s.customer_id
+ order by s.effective_start_date
+ ) is null then &#x27;Y&#x27;
+ else &#x27;N&#x27;
+ end as active_flag,
+ s.scd_id
+from source_rows s
+</code></pre><h3>Breaking Down the Complex Logic</h3>
+<p>Let’s examine the key components:</p>
+<h3>1. Window Functions for Temporal Logic</h3>
+<p>The heart of SCD Type 2 lies in understanding temporal relationships:</p>
+<pre><code>lead(effective_start_date) over (
+ partition by customer_id 
+ order by effective_start_date
+)
+</code></pre><p>This window function looks at the <strong>next</strong> record for the same customer. If there’s no next record, this is the current active version.</p>
+<h3>2. Active Flag Determination</h3>
+<pre><code>case
+ when lead(effective_start_date) over (...) is null then &#x27;Y&#x27;
+ else &#x27;N&#x27;
+end as active_flag
+</code></pre><p>Only the latest record for each customer gets an active flag of ‘Y’.</p>
+<h3>3. Effective End Date Calculation</h3>
+<pre><code>coalesce(
+ lead(effective_start_date) over (...), 
+ &#x27;9999-12-31&#x27;
+) as effective_end_date
+</code></pre><p>The end date is either the start date of the next record, or our “forever” date (9999–12–31).</p>
+<h3>Incremental Processing</h3>
+<p>The real complexity emerges in incremental runs. We need to:</p>
+<ol>
+<li><strong>Identify</strong> existing active records that need to be closed</li>
+<li><strong>Update</strong> their end dates and active flags</li>
+<li><strong>Insert</strong> new records from the source</li>
+</ol>
+<pre><code>{% if is_incremental() %}
+ , destination_rows as (
+ select
+ customer_id,
+ customer_name,
+ first_name,
+ last_name,
+ email_address,
+ phone_number,
+ annual_income,
+ city,
+ marketing_consent_email,
+ marketing_consent_sms,
+ contact_preference,
+ effective_start_date,
+ effective_end_date,
+ scd_id
+ from {{ this }} 
+ where active_flag = &#x27;Y&#x27;
+ )
+
+ , new_valid_to as (
+ select
+ d.customer_id,
+ s.effective_start_date as effective_end_date
+ from source_rows s
+ join destination_rows d
+ on s.customer_id = d.customer_id
+ and s.scd_id != d.scd_id
+ )
+
+ , add_new_valid_to as (
+ select
+ d.customer_id,
+ d.customer_name,
+ d.first_name,
+ d.last_name,
+ d.email_address,
+ d.phone_number,
+ d.annual_income,
+ d.city,
+ d.marketing_consent_email,
+ d.marketing_consent_sms,
+ d.contact_preference,
+ d.effective_start_date,
+ n.effective_end_date,
+ d.scd_id,
+ case when n.effective_end_date is null then &#x27;Y&#x27; else &#x27;N&#x27; end as active_flag
+ from destination_rows d
+ left join new_valid_to n
+ on d.customer_id = n.customer_id
+ )
+
+ select
+ customer_id,
+ customer_name,
+ first_name,
+ last_name,
+ email_address,
+ phone_number,
+ annual_income,
+ city,
+ marketing_consent_email,
+ marketing_consent_sms,
+ contact_preference,
+ effective_start_date,
+ effective_end_date,
+ active_flag,
+ scd_id
+ from add_new_valid_to n
+ union
+{% endif %}
+</code></pre><p>Here’s a brief breakdown of each part:</p>
+<ul>
+<li><code>destination_rows</code>: This section queries the existing dimension table (<code>{{ this }}</code>) to find all currently <strong>active records</strong> (<code>where active_flag = &#39;Y&#39;</code>). It&#39;s the &quot;before&quot; snapshot of the most recent data.</li>
+<li><code>new_valid_to</code>: This is the core logic for expiring old records. It performs a <code>JOIN</code> between the new incoming data (<code>source_rows</code>) and the current active records (<code>destination_rows</code>). It identifies where a <code>customer_id</code> matches but the <code>scd_id</code> (the hash of the record) is different. This tells the model, &quot;A new version of this customer record exists, so the old one needs to be ended.&quot; It then sets the <code>effective_end_date</code> for the old record to be the <code>effective_start_date</code> of the new one.</li>
+<li><code>add_new_valid_to</code>: This part takes all of the currently active records (<code>destination_rows</code>) and &quot;adds&quot; the new <code>effective_end_date</code> to them, based on the results from <code>new_valid_to</code>. It also updates the <code>active_flag</code> to <code>&#39;N&#39;</code> for any records that are about to be expired.</li>
+<li><code>union</code>: The final <code>select</code> statement combines two datasets: the records from <code>add_new_valid_to</code> (which now includes both expired and still-active records) and the brand new records from <code>source_rows</code>. This union creates the complete result set that dbt will use to <code>delete+insert</code> and replace the data in the final table. This ensures the historical integrity is maintained by correctly closing out old records and adding new ones.</li>
+</ul>
+<h3>Real-World Example Walkthrough</h3>
+<p>Let’s trace through TechMart’s customer John Smith:</p>
+<p><strong>Day 1 — Initial Load:</strong></p>
+<pre><code>customer_id | name | email | city | active | start_date | end_date
+1001 | John Smith | john@email.com | New York | Y | 2023-01-01 | 9999-12-31
+</code></pre><p><strong>Day 30 — Email Change:</strong></p>
+<pre><code>customer_id | name | email | city | active | start_date | end_date
+1001 | John Smith | john@email.com | New York | N | 2023-01-01 | 2023-01-30
+1001 | John Smith | j.smith@new.com | New York | Y | 2023-01-30 | 9999-12-31
+</code></pre><p><strong>Day 60 — Moves to Boston:</strong></p>
+<pre><code>customer_id | name | email | city | active | start_date | end_date
+1001 | John Smith | john@email.com | New York | N | 2023-01-01 | 2023-01-30
+1001 | John Smith | j.smith@new.com | New York | N | 2023-01-30 | 2023-03-01
+1001 | John Smith | j.smith@new.com | Boston | Y | 2023-03-01 | 9999-12-31
+</code></pre><h3>References</h3>
+<p><a href="https://gist.github.com/jeremyyeo/3a23f3fbcb72f10a17fc4d31b8a47854">https://gist.github.com/jeremyyeo/3a23f3fbcb72f10a17fc4d31b8a47854</a></p>
+<hr>
+<p><em>This article was originally published at <a href="https://medium.com/@aradsouza/custom-scd-type-2-model-in-dbt-1b4aa03025ee">https://medium.com/@aradsouza/custom-scd-type-2-model-in-dbt-1b4aa03025ee</a></em></p>
+13:["$","div",null,{"className":"min-h-screen pt-24 pb-24","children":["$","div",null,{"className":"mx-auto max-w-3xl px-4 sm:px-6","children":[["$","$L7",null,{"href":"/articles","className":"mb-10 inline-flex items-center gap-1.5 text-sm text-zinc-500 hover:text-zinc-300 transition-colors","children":[["$","svg",null,{"ref":"$undefined","xmlns":"http://www.w3.org/2000/svg","width":24,"height":24,"viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":2,"strokeLinecap":"round","strokeLinejoin":"round","className":"lucide lucide-chevron-left h-4 w-4","children":[["$","path","1wnfg3",{"d":"m15 18-6-6 6-6"}],"$undefined"]}],"All articles"]}],["$","header",null,{"className":"mb-12","children":[["$","div",null,{"className":"mb-4 flex items-center gap-3 flex-wrap","children":[["$","span",null,{"className":"inline-flex items-center rounded-md px-2 py-0.5 text-xs font-medium font-mono tracking-wide bg-indigo-950/60 text-indigo-300 border border-indigo-800/50","children":"data-engineering"}],["$","div",null,{"className":"flex items-center gap-1 text-xs text-zinc-600","children":[["$","svg",null,{"ref":"$undefined","xmlns":"http://www.w3.org/2000/svg","width":24,"height":24,"viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":2,"strokeLinecap":"round","strokeLinejoin":"round","className":"lucide lucide-calendar h-3 w-3","children":[["$","path","1cmpym",{"d":"M8 2v4"}],["$","path","4m81vk",{"d":"M16 2v4"}],["$","rect","1hopcy",{"width":"18","height":"18","x":"3","y":"4","rx":"2"}],["$","path","8toen8",{"d":"M3 10h18"}],"$undefined"]}],["$","time",null,{"dateTime":"$D2025-08-29T00:00:00.000Z","children":"August 29, 2025"}]]}],["$","div",null,{"className":"flex items-center gap-1 text-xs text-zinc-600","children":[["$","svg",null,{"ref":"$undefined","xmlns":"http://www.w3.org/2000/svg","width":24,"height":24,"viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":2,"strokeLinecap":"round","strokeLinejoin":"round","className":"lucide lucide-clock h-3 w-3","children":[["$","circle","1mglay",{"cx":"12","cy":"12","r":"10"}],["$","polyline","68esgv",{"points":"12 6 12 12 16 14"}],"$undefined"]}],"8 min read"]}]]}],["$","h1",null,{"className":"text-3xl font-bold text-zinc-100 sm:text-4xl leading-tight mb-4","children":"Custom SCD Type 2 Model in dbt"}],["$","p",null,{"className":"text-base text-zinc-400 leading-relaxed border-l-2 border-indigo-700 pl-4","children":"Building robust data warehouses that preserve historical context"}],["$","div",null,{"className":"mt-6 flex flex-wrap items-center gap-2","children":[["$","svg",null,{"ref":"$undefined","xmlns":"http://www.w3.org/2000/svg","width":24,"height":24,"viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":2,"strokeLinecap":"round","strokeLinejoin":"round","className":"lucide lucide-tag h-3.5 w-3.5 text-zinc-600","children":[["$","path","vktsd0",{"d":"M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z"}],["$","circle","kqv944",{"cx":"7.5","cy":"7.5","r":".5","fill":"currentColor"}],"$undefined"]}],[["$","span","data-engineering",{"className":"rounded px-2 py-0.5 text-xs font-mono bg-zinc-800/60 text-zinc-500 border border-zinc-700/30","children":"data-engineering"}],["$","span","dbt",{"className":"rounded px-2 py-0.5 text-xs font-mono bg-zinc-800/60 text-zinc-500 border border-zinc-700/30","children":"dbt"}],["$","span","analytics",{"className":"rounded px-2 py-0.5 text-xs font-mono bg-zinc-800/60 text-zinc-500 border border-zinc-700/30","children":"analytics"}]]]}],["$","div",null,{"className":"mt-8 overflow-hidden rounded-xl border border-zinc-800","children":["$","img",null,{"src":"https://cdn-images-1.medium.com/max/800/1*P9BqS445rjmq1s5U7AHGvw.png","alt":"Custom SCD Type 2 Model in dbt","className":"w-full object-cover max-h-80"}]}]]}],["$","div",null,{"className":"mb-12 border-t border-zinc-800"}],["$","article",null,{"className":"prose prose-invert max-w-none","dangerouslySetInnerHTML":{"__html":"$1d"}}],"$L1e"]}]}]
+1e:["$","div",null,{"className":"mt-20 border-t border-zinc-800 pt-12","children":[["$","h2",null,{"className":"text-lg font-semibold text-zinc-100 mb-6","children":["More in ","data-engineering"]}],["$","div",null,{"className":"space-y-1","children":[["$","$L7","mcp-vs-agentic-skills-which-architecture-should-you-choose",{"href":"/articles/mcp-vs-agentic-skills-which-architecture-should-you-choose","className":"group flex items-center justify-between rounded-xl border border-transparent px-4 py-4 transition-all hover:border-zinc-800 hover:bg-zinc-900/50","children":[["$","div",null,{"className":"flex-1 min-w-0","children":[["$","p",null,{"className":"text-sm font-medium text-zinc-300 group-hover:text-zinc-100 transition-colors line-clamp-1","children":"MCP vs. Agentic Skills: Which Architecture Should You Choose?"}],["$","p",null,{"className":"mt-0.5 text-xs text-zinc-600","children":["May 9, 2026"," · ","1 min read"]}]]}],["$","svg",null,{"ref":"$undefined","xmlns":"http://www.w3.org/2000/svg","width":24,"height":24,"viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":2,"strokeLinecap":"round","strokeLinejoin":"round","className":"lucide lucide-chevron-left ml-4 h-4 w-4 rotate-180 text-zinc-700 group-hover:text-indigo-400 transition-colors","children":[["$","path","1wnfg3",{"d":"m15 18-6-6 6-6"}],"$undefined"]}]]}],["$","$L7","don-t-nest-your-curlies-a-practical-guide-to-jinja-in-dbt",{"href":"/articles/don-t-nest-your-curlies-a-practical-guide-to-jinja-in-dbt","className":"group flex items-center justify-between rounded-xl border border-transparent px-4 py-4 transition-all hover:border-zinc-800 hover:bg-zinc-900/50","children":[["$","div",null,{"className":"flex-1 min-w-0","children":[["$","p",null,{"className":"text-sm font-medium text-zinc-300 group-hover:text-zinc-100 transition-colors line-clamp-1","children":"Don’t Nest Your Curlies: A Practical Guide to Jinja in dbt"}],["$","p",null,{"className":"mt-0.5 text-xs text-zinc-600","children":["November 9, 2025"," · ","1 min read"]}]]}],["$","svg",null,{"ref":"$undefined","xmlns":"http://www.w3.org/2000/svg","width":24,"height":24,"viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":2,"strokeLinecap":"round","strokeLinejoin":"round","className":"lucide lucide-chevron-left ml-4 h-4 w-4 rotate-180 text-zinc-700 group-hover:text-indigo-400 transition-colors","children":[["$","path","1wnfg3",{"d":"m15 18-6-6 6-6"}],"$undefined"]}]]}],["$","$L7","top-20-data-engineering-resources-from-tech-giants",{"href":"/articles/top-20-data-engineering-resources-from-tech-giants","className":"group flex items-center justify-between rounded-xl border border-transparent px-4 py-4 transition-all hover:border-zinc-800 hover:bg-zinc-900/50","children":[["$","div",null,{"className":"flex-1 min-w-0","children":[["$","p",null,{"className":"text-sm font-medium text-zinc-300 group-hover:text-zinc-100 transition-colors line-clamp-1","children":"Top 20 Data Engineering Resources from Tech Giants"}],["$","p",null,{"className":"mt-0.5 text-xs text-zinc-600","children":["October 27, 2025"," · ","2 min read"]}]]}],["$","svg",null,{"ref":"$undefined","xmlns":"http://www.w3.org/2000/svg","width":24,"height":24,"viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":2,"strokeLinecap":"round","strokeLinejoin":"round","className":"lucide lucide-chevron-left ml-4 h-4 w-4 rotate-180 text-zinc-700 group-hover:text-indigo-400 transition-colors","children":[["$","path","1wnfg3",{"d":"m15 18-6-6 6-6"}],"$undefined"]}]]}]]}]]}]
+19:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","2",{"name":"theme-color","media":"(prefers-color-scheme: dark)","content":"#09090b"}],["$","meta","3",{"name":"theme-color","media":"(prefers-color-scheme: light)","content":"#f8fafc"}],["$","meta","4",{"name":"color-scheme","content":"dark light"}]]
+15:null
+1f:I[622,[],"IconMark"]
+17:{"metadata":[["$","title","0",{"children":"Custom SCD Type 2 Model in dbt | Alwyn D'Souza"}],["$","meta","1",{"name":"description","content":"Building robust data warehouses that preserve historical context"}],["$","link","2",{"rel":"author","href":"https://alwyndsouza.github.io"}],["$","meta","3",{"name":"author","content":"Alwyn D'Souza"}],["$","meta","4",{"name":"keywords","content":"Data Engineering,dbt,Databricks,DataOps,AI Agents,Semantic Layer,Data Platform,MLOps,Lakehouse,Unity Catalog,MCP,Enterprise Architecture"}],["$","meta","5",{"name":"creator","content":"Alwyn D'Souza"}],["$","meta","6",{"name":"publisher","content":"Alwyn D'Souza"}],["$","meta","7",{"name":"robots","content":"index, follow"}],["$","meta","8",{"name":"googlebot","content":"index, follow, max-image-preview:large"}],["$","link","9",{"rel":"canonical","href":"https://alwyndsouza.github.io/"}],["$","link","10",{"rel":"alternate","type":"application/rss+xml","href":"https://alwyndsouza.github.io/rss.xml"}],["$","meta","11",{"property":"og:title","content":"Custom SCD Type 2 Model in dbt"}],["$","meta","12",{"property":"og:description","content":"Building robust data warehouses that preserve historical context"}],["$","meta","13",{"property":"og:type","content":"article"}],["$","meta","14",{"property":"article:published_time","content":"Fri Aug 29 2025 00:00:00 GMT+0000 (Coordinated Universal Time)"}],["$","meta","15",{"property":"article:author","content":"Alwyn D'Souza"}],["$","meta","16",{"property":"article:tag","content":"data-engineering"}],["$","meta","17",{"property":"article:tag","content":"dbt"}],["$","meta","18",{"property":"article:tag","content":"analytics"}],["$","meta","19",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","20",{"name":"twitter:creator","content":"@aradsouza"}],["$","meta","21",{"name":"twitter:title","content":"Alwyn D'Souza — Data & AI Engineering Leader"}],["$","meta","22",{"name":"twitter:description","content":"Building production-grade data platforms, AI systems, and developer tools that scale for enterprise teams."}],["$","meta","23",{"name":"twitter:image","content":"https://alwyndsouza.github.io/og-default.svg"}],["$","link","24",{"rel":"shortcut icon","href":"/favicon.svg"}],["$","link","25",{"rel":"icon","href":"/favicon.svg","type":"image/svg+xml"}],["$","$L1f","26",{}]],"error":null,"digest":"$undefined"}
+1c:"$17:metadata"
