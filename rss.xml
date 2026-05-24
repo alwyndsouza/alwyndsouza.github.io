@@ -5,8 +5,20 @@
     <link>https://alwyndsouza.github.io</link>
     <description>Practical writing on Data Engineering, DataOps, dbt, Databricks, and AI Agents. Articles, open-source projects, and lessons from production data platforms.</description>
     <language>en</language>
-    <lastBuildDate>Tue, 19 May 2026 15:36:45 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 24 May 2026 13:46:29 GMT</lastBuildDate>
     <atom:link href="https://alwyndsouza.github.io/rss.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The Complete Guide to Agent Skills for Agile: Four Skills for Better Scrum</title>
+      <link>https://alwyndsouza.github.io/articles/the-complete-guide-to-agent-skills-for-agile-four-skills-for-better-scrum</link>
+      <guid isPermaLink="true">https://alwyndsouza.github.io/articles/the-complete-guide-to-agent-skills-for-agile-four-skills-for-better-scrum</guid>
+      <pubDate>Sun, 24 May 2026 00:00:00 GMT</pubDate>
+      <description></description>
+      <category>data-engineering</category>
+      <category>agile</category>
+      <category>ai-agent</category>
+      <category>ai</category>
+      <category>software-engineering</category>
+    </item>
     <item>
       <title>AI Agents Explained Without the Hype: A Data Engineer’s Take</title>
       <link>https://alwyndsouza.github.io/articles/ai-agents-explained-without-the-hype-a-data-engineer-s-take</link>
@@ -314,16 +326,6 @@
       <category>mlops</category>
       <category>machine-learning</category>
       <category>ai</category>
-    </item>
-    <item>
-      <title>From Theory to Production: The dbt CI/CD Pipeline Codebase</title>
-      <link>https://alwyndsouza.github.io/articles/from-theory-to-production-the-dbt-ci-cd-pipeline-codebase</link>
-      <guid isPermaLink="true">https://alwyndsouza.github.io/articles/from-theory-to-production-the-dbt-ci-cd-pipeline-codebase</guid>
-      <pubDate>Mon, 15 Sep 2025 00:00:00 GMT</pubDate>
-      <description>If you haven’t explored my full dbt CI/CD pipeline series yet, I highly recommend starting with the complete article collection here:</description>
-      <category>devops</category>
-      <category>automation</category>
-      <category>ci-cd</category>
     </item>
   </channel>
 </rss>
