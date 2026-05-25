@@ -5,14 +5,38 @@
     <link>https://alwyndsouza.github.io</link>
     <description>Practical writing on Data Engineering, DataOps, dbt, Databricks, and AI Agents. Articles, open-source projects, and lessons from production data platforms.</description>
     <language>en</language>
-    <lastBuildDate>Sun, 24 May 2026 13:46:29 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 25 May 2026 13:01:31 GMT</lastBuildDate>
     <atom:link href="https://alwyndsouza.github.io/rss.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>My Copilot Agent Skill Splits Stories Better Than Most Agile Teams</title>
+      <link>https://alwyndsouza.github.io/articles/my-copilot-agent-skill-splits-stories-better-than-most-agile-teams</link>
+      <guid isPermaLink="true">https://alwyndsouza.github.io/articles/my-copilot-agent-skill-splits-stories-better-than-most-agile-teams</guid>
+      <pubDate>Mon, 25 May 2026 00:00:00 GMT</pubDate>
+      <description>How eight proven story-splitting patterns turn 13-point sprint killers into vertical slices that actually ship value.The agile-story-splitter Copilot Agent Skil...</description>
+      <category>ai-agent</category>
+      <category>software-development</category>
+      <category>product-management</category>
+      <category>data-engineering</category>
+      <category>agile</category>
+    </item>
+    <item>
+      <title>Why Your User Stories Are Broken (And How a Copilot Agent Skill Can Fix Them)</title>
+      <link>https://alwyndsouza.github.io/articles/why-your-user-stories-are-broken-and-how-a-copilot-agent-skill-can-fix-them</link>
+      <guid isPermaLink="true">https://alwyndsouza.github.io/articles/why-your-user-stories-are-broken-and-how-a-copilot-agent-skill-can-fix-them</guid>
+      <pubDate>Mon, 25 May 2026 00:00:00 GMT</pubDate>
+      <description>Injecting Deterministic Requirements, BDD Acceptance Criteria, and Automated Quality Gates Directly into Your BacklogSkills Repository: https://github.com/alwyn...</description>
+      <category>agile</category>
+      <category>artificial-intelligence</category>
+      <category>software-engineering</category>
+      <category>product-management</category>
+      <category>github-copilot</category>
+    </item>
     <item>
       <title>The Complete Guide to Agent Skills for Agile: Four Skills for Better Scrum</title>
       <link>https://alwyndsouza.github.io/articles/the-complete-guide-to-agent-skills-for-agile-four-skills-for-better-scrum</link>
       <guid isPermaLink="true">https://alwyndsouza.github.io/articles/the-complete-guide-to-agent-skills-for-agile-four-skills-for-better-scrum</guid>
       <pubDate>Sun, 24 May 2026 00:00:00 GMT</pubDate>
-      <description></description>
+      <description>Most agile teams lose 20–30% of every sprint rewriting stories that were unclear from the start.I have written Agile Story Skills for :problem‑framingagile-stor...</description>
       <category>data-engineering</category>
       <category>agile</category>
       <category>ai-agent</category>
@@ -303,26 +327,6 @@
       <guid isPermaLink="true">https://alwyndsouza.github.io/articles/mlsecops-implementation-and-strategy-securing-the-ai-lifecycle</guid>
       <pubDate>Fri, 10 Oct 2025 00:00:00 GMT</pubDate>
       <description>Successfully implementing MLSecOps requires infusing security practices directly into the existing MLOps pipeline. This strategy, built on the pillars of people...</description>
-      <category>mlops</category>
-      <category>machine-learning</category>
-      <category>ai</category>
-    </item>
-    <item>
-      <title>MLSecOps: Securing the Future of AI and Machine Learning</title>
-      <link>https://alwyndsouza.github.io/articles/mlsecops-securing-the-future-of-ai-and-machine-learning</link>
-      <guid isPermaLink="true">https://alwyndsouza.github.io/articles/mlsecops-securing-the-future-of-ai-and-machine-learning</guid>
-      <pubDate>Fri, 10 Oct 2025 00:00:00 GMT</pubDate>
-      <description>Artificial intelligence is no longer a futuristic concept — it’s embedded in our daily lives. From voice assistants that understand our commands to automated fi...</description>
-      <category>mlops</category>
-      <category>machine-learning</category>
-      <category>ai</category>
-    </item>
-    <item>
-      <title>The MLSecOps Dream Team: Building Cross-Collaborative AI Security</title>
-      <link>https://alwyndsouza.github.io/articles/the-mlsecops-dream-team-building-cross-collaborative-ai-security</link>
-      <guid isPermaLink="true">https://alwyndsouza.github.io/articles/the-mlsecops-dream-team-building-cross-collaborative-ai-security</guid>
-      <pubDate>Fri, 10 Oct 2025 00:00:00 GMT</pubDate>
-      <description>In the age of AI, software security isn’t just about code — it’s about algorithms, data pipelines, and complex models. This shift demands a radical evolution fr...</description>
       <category>mlops</category>
       <category>machine-learning</category>
       <category>ai</category>

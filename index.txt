@@ -9,269 +9,340 @@
 :HL["/_next/static/media/e4af272ccee01ff0-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/_next/static/css/c621f4da8d7d884c.css","style"]
 :HL["/_next/static/css/e2c73e6d4f2f1c8a.css","style"]
-0:{"P":null,"b":"VCiZ2-ej6eSOjQxMTEASx","p":"","c":["",""],"i":false,"f":[[["",{"children":["__PAGE__",{}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/c621f4da8d7d884c.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/e2c73e6d4f2f1c8a.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"en","className":"__variable_f367f3 __variable_694534","suppressHydrationWarning":true,"children":[["$","head",null,{"children":["$","script",null,{"dangerouslySetInnerHTML":{"__html":"$2"}}]}],["$","body",null,{"className":"min-h-screen bg-zinc-950 font-sans text-zinc-100 antialiased selection:bg-indigo-600/30 selection:text-zinc-100","children":["$","$L3",null,{"children":[["$","a",null,{"href":"#main-content","className":"sr-only focus-visible:not-sr-only focus-visible:fixed focus-visible:left-4 focus-visible:top-4 focus-visible:z-[100] focus-visible:rounded-lg focus-visible:bg-indigo-600 focus-visible:px-4 focus-visible:py-2 focus-visible:text-sm focus-visible:font-medium focus-visible:text-white focus-visible:shadow-lg","children":"Skip to main content"}],["$","$L4",null,{}],["$","main",null,{"id":"main-content","tabIndex":-1,"className":"outline-none","children":["$","$L5",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","div",null,{"className":"flex min-h-screen items-center justify-center","children":["$","div",null,{"className":"text-center","children":[["$","p",null,{"className":"text-xs font-mono text-indigo-400 mb-4","children":"404"}],["$","h1",null,{"className":"text-3xl font-bold text-zinc-100 mb-3","children":"Page not found"}],["$","p",null,{"className":"text-zinc-500 mb-8 max-w-sm","children":"This page doesn't exist or has been moved."}],["$","$L7",null,{"href":"/","className":"inline-flex items-center gap-2 rounded-lg bg-indigo-600 px-5 py-2.5 text-sm font-medium text-white transition-all hover:bg-indigo-500","children":"Go home"}]]}]}],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","footer",null,{"className":"border-t border-zinc-800 bg-zinc-950","role":"contentinfo","children":["$","div",null,{"className":"mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:px-8","children":[["$","div",null,{"className":"grid grid-cols-1 gap-10 sm:grid-cols-2 md:grid-cols-3","children":[["$","div",null,{"className":"space-y-4","children":[["$","$L7",null,{"href":"/","className":"group inline-flex items-center gap-2 rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500","aria-label":"Alwyn D'Souza — home","children":[["$","div",null,{"className":"flex h-7 w-7 items-center justify-center rounded-md border border-indigo-500/30 bg-indigo-600/20 transition-colors group-hover:bg-indigo-600/30","children":["$","svg",null,{"ref":"$undefined","xmlns":"http://www.w3.org/2000/svg","width":24,"height":24,"viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":2,"strokeLinecap":"round","strokeLinejoin":"round","className":"lucide lucide-database h-3.5 w-3.5 text-indigo-400","aria-hidden":"true","children":[["$","ellipse","msslwz",{"cx":"12","cy":"5","rx":"9","ry":"3"}],["$","path","1wlel7",{"d":"M3 5V19A9 3 0 0 0 21 19V5"}],["$","path","mv7ke4",{"d":"M3 12A9 3 0 0 0 21 12"}],"$undefined"]}]}],["$","span",null,{"className":"text-sm font-semibold text-zinc-100","children":["alwyn",["$","span",null,{"className":"text-indigo-400","children":".dev"}]]}]]}],["$","p",null,{"className":"text-xs leading-relaxed text-zinc-500 max-w-xs","children":"Data & AI Engineering Leader. Building modern data platforms, AI systems, and open-source developer tools."}],["$","div",null,{"className":"flex items-center gap-3 pt-1","children":[["$","a","https://github.com/alwyndsouza",{"href":"https://github.com/alwyndsouza","target":"_blank","rel":"noopener noreferrer","aria-label":"GitHub (opens in new tab)","className":"flex h-7 w-7 items-center justify-center rounded-md text-zinc-600 transition-colors hover:bg-zinc-800 hover:text-zinc-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500","children":"$L8"}],"$L9","$La"]}]]}],"$Lb","$Lc"]}],"$Ld"]}]}]]}]}]]}]]}],{"children":["__PAGE__","$Le",{},null,false]},null,false],"$Lf",false]],"m":"$undefined","G":["$10",[]],"s":false,"S":true}
+0:{"P":null,"b":"dF1kLeLxQslPYDl3Wr1ZM","p":"","c":["",""],"i":false,"f":[[["",{"children":["__PAGE__",{}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/c621f4da8d7d884c.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/e2c73e6d4f2f1c8a.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"en","className":"__variable_f367f3 __variable_694534","suppressHydrationWarning":true,"children":[["$","head",null,{"children":["$","script",null,{"dangerouslySetInnerHTML":{"__html":"$2"}}]}],["$","body",null,{"className":"min-h-screen bg-zinc-950 font-sans text-zinc-100 antialiased selection:bg-indigo-600/30 selection:text-zinc-100","children":["$","$L3",null,{"children":[["$","a",null,{"href":"#main-content","className":"sr-only focus-visible:not-sr-only focus-visible:fixed focus-visible:left-4 focus-visible:top-4 focus-visible:z-[100] focus-visible:rounded-lg focus-visible:bg-indigo-600 focus-visible:px-4 focus-visible:py-2 focus-visible:text-sm focus-visible:font-medium focus-visible:text-white focus-visible:shadow-lg","children":"Skip to main content"}],["$","$L4",null,{}],["$","main",null,{"id":"main-content","tabIndex":-1,"className":"outline-none","children":["$","$L5",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","div",null,{"className":"flex min-h-screen items-center justify-center","children":["$","div",null,{"className":"text-center","children":[["$","p",null,{"className":"text-xs font-mono text-indigo-400 mb-4","children":"404"}],["$","h1",null,{"className":"text-3xl font-bold text-zinc-100 mb-3","children":"Page not found"}],["$","p",null,{"className":"text-zinc-500 mb-8 max-w-sm","children":"This page doesn't exist or has been moved."}],["$","$L7",null,{"href":"/","className":"inline-flex items-center gap-2 rounded-lg bg-indigo-600 px-5 py-2.5 text-sm font-medium text-white transition-all hover:bg-indigo-500","children":"Go home"}]]}]}],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","footer",null,{"className":"border-t border-zinc-800 bg-zinc-950","role":"contentinfo","children":["$","div",null,{"className":"mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:px-8","children":[["$","div",null,{"className":"grid grid-cols-1 gap-10 sm:grid-cols-2 md:grid-cols-3","children":[["$","div",null,{"className":"space-y-4","children":[["$","$L7",null,{"href":"/","className":"group inline-flex items-center gap-2 rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500","aria-label":"Alwyn D'Souza — home","children":[["$","div",null,{"className":"flex h-7 w-7 items-center justify-center rounded-md border border-indigo-500/30 bg-indigo-600/20 transition-colors group-hover:bg-indigo-600/30","children":["$","svg",null,{"ref":"$undefined","xmlns":"http://www.w3.org/2000/svg","width":24,"height":24,"viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":2,"strokeLinecap":"round","strokeLinejoin":"round","className":"lucide lucide-database h-3.5 w-3.5 text-indigo-400","aria-hidden":"true","children":[["$","ellipse","msslwz",{"cx":"12","cy":"5","rx":"9","ry":"3"}],["$","path","1wlel7",{"d":"M3 5V19A9 3 0 0 0 21 19V5"}],["$","path","mv7ke4",{"d":"M3 12A9 3 0 0 0 21 12"}],"$undefined"]}]}],["$","span",null,{"className":"text-sm font-semibold text-zinc-100","children":["alwyn",["$","span",null,{"className":"text-indigo-400","children":".dev"}]]}]]}],["$","p",null,{"className":"text-xs leading-relaxed text-zinc-500 max-w-xs","children":"Data & AI Engineering Leader. Building modern data platforms, AI systems, and open-source developer tools."}],["$","div",null,{"className":"flex items-center gap-3 pt-1","children":[["$","a","https://github.com/alwyndsouza",{"href":"https://github.com/alwyndsouza","target":"_blank","rel":"noopener noreferrer","aria-label":"GitHub (opens in new tab)","className":"flex h-7 w-7 items-center justify-center rounded-md text-zinc-600 transition-colors hover:bg-zinc-800 hover:text-zinc-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500","children":"$L8"}],"$L9","$La"]}]]}],"$Lb","$Lc"]}],"$Ld"]}]}]]}]}]]}]]}],{"children":["__PAGE__","$Le",{},null,false]},null,false],"$Lf",false]],"m":"$undefined","G":["$10",[]],"s":false,"S":true}
 11:I[8637,["619","static/chunks/619-f09bc47e24909021.js","18","static/chunks/18-31950137827788de.js","881","static/chunks/881-a356c50b127e16a2.js","974","static/chunks/app/page-62ae8289db37ab7f.js"],"Hero"]
 12:I[4421,["619","static/chunks/619-f09bc47e24909021.js","18","static/chunks/18-31950137827788de.js","881","static/chunks/881-a356c50b127e16a2.js","974","static/chunks/app/page-62ae8289db37ab7f.js"],"AboutSection"]
 13:I[6434,["619","static/chunks/619-f09bc47e24909021.js","18","static/chunks/18-31950137827788de.js","881","static/chunks/881-a356c50b127e16a2.js","974","static/chunks/app/page-62ae8289db37ab7f.js"],"Expertise"]
 14:I[5394,["619","static/chunks/619-f09bc47e24909021.js","18","static/chunks/18-31950137827788de.js","881","static/chunks/881-a356c50b127e16a2.js","974","static/chunks/app/page-62ae8289db37ab7f.js"],"ArchitectureGallery"]
 15:I[5059,["619","static/chunks/619-f09bc47e24909021.js","18","static/chunks/18-31950137827788de.js","881","static/chunks/881-a356c50b127e16a2.js","974","static/chunks/app/page-62ae8289db37ab7f.js"],"TechStack"]
 16:I[5209,["619","static/chunks/619-f09bc47e24909021.js","18","static/chunks/18-31950137827788de.js","881","static/chunks/881-a356c50b127e16a2.js","974","static/chunks/app/page-62ae8289db37ab7f.js"],"LatestArticles"]
-1b:I[4431,[],"ViewportBoundary"]
-1d:I[4431,[],"MetadataBoundary"]
-1e:"$Sreact.suspense"
+1c:I[4431,[],"ViewportBoundary"]
+1e:I[4431,[],"MetadataBoundary"]
+1f:"$Sreact.suspense"
 8:["$","svg",null,{"ref":"$undefined","xmlns":"http://www.w3.org/2000/svg","width":24,"height":24,"viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":2,"strokeLinecap":"round","strokeLinejoin":"round","className":"lucide lucide-github h-3.5 w-3.5","aria-hidden":"true","children":[["$","path","tonef",{"d":"M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"}],["$","path","9comsn",{"d":"M9 18c-4.51 2-5-2-7-2"}],"$undefined"]}]
 9:["$","a","https://linkedin.com/in/alwynanildsouza",{"href":"https://linkedin.com/in/alwynanildsouza","target":"_blank","rel":"noopener noreferrer","aria-label":"LinkedIn (opens in new tab)","className":"flex h-7 w-7 items-center justify-center rounded-md text-zinc-600 transition-colors hover:bg-zinc-800 hover:text-zinc-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500","children":["$","svg",null,{"ref":"$undefined","xmlns":"http://www.w3.org/2000/svg","width":24,"height":24,"viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":2,"strokeLinecap":"round","strokeLinejoin":"round","className":"lucide lucide-linkedin h-3.5 w-3.5","aria-hidden":"true","children":[["$","path","c2jq9f",{"d":"M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"}],["$","rect","mk3on5",{"width":"4","height":"12","x":"2","y":"9"}],["$","circle","bt5ra8",{"cx":"4","cy":"4","r":"2"}],"$undefined"]}]}]
 a:["$","a","https://medium.com/@aradsouza",{"href":"https://medium.com/@aradsouza","target":"_blank","rel":"noopener noreferrer","aria-label":"Medium (opens in new tab)","className":"flex h-7 w-7 items-center justify-center rounded-md text-zinc-600 transition-colors hover:bg-zinc-800 hover:text-zinc-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500","children":["$","svg",null,{"ref":"$undefined","xmlns":"http://www.w3.org/2000/svg","width":24,"height":24,"viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":2,"strokeLinecap":"round","strokeLinejoin":"round","className":"lucide lucide-file-text h-3.5 w-3.5","aria-hidden":"true","children":[["$","path","1rqfz7",{"d":"M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"}],["$","path","tnqrlb",{"d":"M14 2v4a2 2 0 0 0 2 2h4"}],["$","path","b1mrlr",{"d":"M10 9H8"}],["$","path","t4e002",{"d":"M16 13H8"}],["$","path","z1uh3a",{"d":"M16 17H8"}],"$undefined"]}]}]
 b:["$","nav",null,{"aria-label":"Footer navigation","children":[["$","h2",null,{"className":"mb-4 text-xs font-semibold uppercase tracking-widest text-zinc-600","children":"Navigate"}],["$","ul",null,{"className":"space-y-2.5","role":"list","children":[["$","li","/projects",{"children":["$","$L7",null,{"href":"/projects","className":"text-sm text-zinc-400 transition-colors hover:text-zinc-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 rounded","children":"Projects"}]}],["$","li","/articles",{"children":["$","$L7",null,{"href":"/articles","className":"text-sm text-zinc-400 transition-colors hover:text-zinc-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 rounded","children":"Writing"}]}],["$","li","/about",{"children":["$","$L7",null,{"href":"/about","className":"text-sm text-zinc-400 transition-colors hover:text-zinc-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 rounded","children":"About"}]}]]}]]}]
 c:["$","div",null,{"children":[["$","h2",null,{"className":"mb-4 text-xs font-semibold uppercase tracking-widest text-zinc-600","children":"Connect"}],["$","ul",null,{"className":"space-y-2.5","role":"list","children":[["$","li","https://github.com/alwyndsouza",{"children":["$","a",null,{"href":"https://github.com/alwyndsouza","target":"_blank","rel":"noopener noreferrer","className":"inline-flex items-center gap-1.5 text-sm text-zinc-400 transition-colors hover:text-zinc-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 rounded","children":["GitHub",["$","span",null,{"className":"text-zinc-700 text-xs","aria-hidden":"true","children":"↗"}]]}]}],["$","li","https://linkedin.com/in/alwynanildsouza",{"children":["$","a",null,{"href":"https://linkedin.com/in/alwynanildsouza","target":"_blank","rel":"noopener noreferrer","className":"inline-flex items-center gap-1.5 text-sm text-zinc-400 transition-colors hover:text-zinc-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 rounded","children":["LinkedIn",["$","span",null,{"className":"text-zinc-700 text-xs","aria-hidden":"true","children":"↗"}]]}]}],["$","li","https://medium.com/@aradsouza",{"children":["$","a",null,{"href":"https://medium.com/@aradsouza","target":"_blank","rel":"noopener noreferrer","className":"inline-flex items-center gap-1.5 text-sm text-zinc-400 transition-colors hover:text-zinc-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 rounded","children":["Medium",["$","span",null,{"className":"text-zinc-700 text-xs","aria-hidden":"true","children":"↗"}]]}]}]]}]]}]
 d:["$","div",null,{"className":"mt-10 flex flex-col items-start justify-between gap-3 border-t border-zinc-800/70 pt-6 sm:flex-row sm:items-center","children":[["$","p",null,{"className":"text-xs text-zinc-700","children":["© ",2026," Alwyn D'Souza. Built with Next.js & deployed on GitHub Pages."]}],["$","a",null,{"href":"/rss.xml","className":"inline-flex items-center gap-1.5 text-xs text-zinc-700 transition-colors hover:text-zinc-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 rounded","aria-label":"RSS feed","children":[["$","svg",null,{"ref":"$undefined","xmlns":"http://www.w3.org/2000/svg","width":24,"height":24,"viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":2,"strokeLinecap":"round","strokeLinejoin":"round","className":"lucide lucide-rss h-3 w-3","aria-hidden":"true","children":[["$","path","pv89mb",{"d":"M4 11a9 9 0 0 1 9 9"}],["$","path","k0647b",{"d":"M4 4a16 16 0 0 1 16 16"}],["$","circle","bfqh0e",{"cx":"5","cy":"19","r":"1"}],"$undefined"]}],"RSS Feed"]}]]}]
-17:T75d4,<blockquote>
-<p>If your team wants real-time streaming but keeps hitting the wall of JVM tuning, ZooKeeper management, and Flink job orchestration, this stack is worth your time.</p>
+17:T455d,<blockquote>
+<p>How eight proven story-splitting patterns turn 13-point sprint killers into vertical slices that actually ship value.</p>
 </blockquote>
-<p>Redpanda + RisingWave + Grafana offers a SQL-first, operationally lean alternative to the traditional Kafka + Flink/Spark approach — without sacrificing production capability.</p>
-<p>This article explains how each component works, why they fit together, and what adopting this combination actually looks like — using a runnable fraud detection reference architecture as the worked example throughout.</p>
+<p>The agile-story-splitter Copilot Agent Skill applies Richard Lawrence&#39;s and Peter Green&#39;s eight battle-tested split patterns to break any oversized story into 2–5 sprint-sized vertical slices. Each slice&#39;s value is independent. No more &quot;backend first, frontend later&quot; horizontal cuts.</p>
+<h3>Source Code</h3>
+<p>The full skill implementation is available at:</p>
+<p><a href="https://github.com/alwyndsouza/agile-story-skills">GitHub - alwyndsouza/agile-story-skills</a></p>
+<h3>The Hidden Dysfunction at the Heart of Most Agile Teams</h3>
+<p>Agile transformations have been underway in software organisations for two decades. Scrum certifications are abundant. Story point poker is practically a professional sport. And yet, in refinement sessions the world over, teams are still doing something that silently undermines every agile principle they claim to follow: splitting stories horizontally.</p>
+<p>It’s the default instinct. A story lands in the backlog that’s clearly too big — 13 points, six acceptance criteria, and a scope that spans the UI, the API, and the database. Someone in the room says the words: <em>“Let’s just split it into backend and frontend.”</em> Heads nod. The ticket gets cloned. Two new stories appear, and nobody notices that they’ve just recreated a miniature waterfall inside a sprint that was supposed to be self-contained.</p>
+<p>This isn’t a competence problem. Most engineers and product managers understand agile in theory. The issue is that pattern recognition under time pressure defaults to technical decomposition — the mental model we use when we think about architecture — rather than value decomposition, which is the mental model agile actually requires.</p>
+<p>I built the agile-story-splitter Copilot Agent Skill to address exactly this gap. But the more I&#39;ve worked with it, the more I&#39;ve come to see it as a symptom of a larger insight: the way we split stories reveals how we think about software delivery, and most of us have been thinking about it wrong.</p>
+<h3>Two Mental Models of Software Delivery</h3>
+<p>There are two fundamentally different ways to think about how software gets built and delivered.</p>
+<p>The first is the <strong>layer model</strong>. In this view, a system is a stack — database at the bottom, business logic in the middle, interface at the top. Work flows downward: you build the foundation before you build the structure. This model is deeply intuitive for engineers because it mirrors how we think about architecture. It also maps neatly to organisational structures – backend teams, frontend teams, QA teams – which makes it feel like the natural unit of decomposition.</p>
+<p>The second is the <strong>value model</strong>. In this view, a system is a collection of user-facing capabilities. Work is organised around capabilities, not layers. Each unit of delivery is a thin vertical slice that spans all layers and produces something a user can actually experience and react to.</p>
+<p>The tension between these two models is the root cause of bad story splitting. When we default to the layer model — consciously or not — we produce horizontal cuts: stories that represent partial implementations of a capability across a single technical layer. When we apply the value model, we produce vertical slices: stories that represent complete, albeit narrow, implementations of a user-facing capability across all layers.</p>
+<p>Imagine a five-layer cake. Cutting it horizontally gives you a plate of sponge, a plate of jam, a plate of cream — technically all the components of the cake, but none of them is a cake you can eat. Cutting it vertically gives you five smaller slices, each containing sponge, jam, and cream in proportion. Each is a complete, edible piece of cake. This is the difference between horizontal and vertical story splitting. Horizontal cuts produce components. Vertical cuts produce value.</p>
+<p><img src="https://cdn-images-1.medium.com/max/1024/1*g3xgo_oBmSG4-MFfo0ziAg.png" alt=""></p>
+<p>The INVEST framework — Independent, Negotiable, Valuable, Estimable, Small, Testable — is the formal articulation of what a vertical slice looks like. A story that fails the “Independent” or “Valuable” criteria almost always does so because it’s a horizontal cut: a component that can’t be shipped or demonstrated without its counterpart layers. The framework is widely known. The failure mode it’s designed to prevent is still everywhere.</p>
+<h3>Why This Matters More Now Than It Ever Has</h3>
+<p>The argument for vertical splitting has always been theoretically sound. But I’d argue it’s become strategically urgent in the current moment for three reasons.</p>
+<p><strong>First, AI-assisted development is compressing implementation time.</strong> When it took a team a week to build an API endpoint, horizontal splitting was inefficient but survivable. When a capable engineer with Copilot can produce a working endpoint in hours, the coordination overhead of horizontal dependencies becomes proportionally more expensive. The bottleneck is no longer writing code — it’s integrating, validating, and shipping it. Stories that create dependencies between layers now consume more sprint capacity in coordination than they do in implementation.</p>
+<p><strong>Second, stakeholder feedback loops are shortening.</strong> Product teams are being asked to validate assumptions faster, to run tighter experiment cycles, and to get working software in front of users earlier. A story that can’t be demoed at the end of a sprint — because it’s waiting on its dependent layer — breaks the feedback loop entirely. Vertical slices are not just a delivery best practice; they’re a prerequisite for the kind of rapid validation that modern product development demands.</p>
+<p><strong>Third, AI tools are increasingly capable of enforcing standards at the point of work.</strong> The pattern knowledge that used to live in the heads of a few senior engineers — or in a Confluence page nobody reads — can now be embedded directly into the workflow as a skill that activates exactly when it’s needed. This is why building agile-story-splitter as a Copilot Agent Skill matters. It&#39;s not about automating story splitting; it&#39;s about making the right mental model available at the moment the wrong one would otherwise take over.</p>
+<h3>The Eight Split Patterns: A Decision Framework</h3>
+<p>The agile-story-splitter skill encodes all eight patterns from Lawrence and Green&#39;s <em>Humanizing Work</em> framework [6]. Each pattern addresses a specific structural reason why a story is too big. The skill auto-detects the best fit, but understanding the patterns transforms you from a tool user into a practitioner.</p>
+<p>Think of the eight patterns as a decision tree. You begin by asking: what is the story <em>actually</em> describing? The answer — a user journey, a set of business rules, a data volume problem, and an uncertainty about technology — points you towards the right pattern. The pattern then gives you the cut lines.</p>
+<h4>P1: Workflow Steps</h4>
+<p>The most common pattern and the right starting point for any user-facing story. If the story describes something a user <em>does</em>, that doing almost always has sequential steps. Each step is a candidate for its own story.</p>
 <blockquote>
-<p><em>Redpanda + RisingWave + dbt + Grafana Fraud Detection Reference Architecture</em> — <a href="https://github.com/alwyndsouza/rp-dbt-rw-fraud-monitor">https://github.com/alwyndsouza/rp-rw-fraud-monitor</a></p>
+<p>Original: “User can complete checkout” Split: “User can add items to cart” → “User can enter shipping info” → “User can pay and confirm”</p>
 </blockquote>
+<p>The instinct here is correct, and the pattern is forgiving. Even if the steps aren’t perfectly independent technically, they’re independent from a user-value perspective: you can demonstrate each one, get feedback on each one, and ship each one to a subset of users for validation.</p>
+<h4>P2: Business Rule Variations</h4>
+<p>Business logic is where conditional complexity accumulates silently. A story that says “apply discount logic” is hiding at least three different stories behind a single verb. Each business rule variation — each if condition in the logic — is a candidate for its own story.</p>
+<blockquote>
+<p>Original: “Apply discount logic” Split: “Apply 10% member discount” → “Apply seasonal promo code” → “Apply bulk-order discount”</p>
+</blockquote>
+<p>Splitting by business rule variation does something valuable beyond sizing: it forces acceptance criteria to be precise. You cannot write a good AC for “all discount logic&quot;. You can write one for “member discount applied at checkout&quot;.</p>
+<h4>P3: Data Variations</h4>
+<p>When a story contains the word “all” — import all customers, migrate all records, support all formats — it is almost always hiding multiple stories. Different data shapes bring different schemas, different validation rules, different edge cases, and often different regulatory requirements.</p>
+<blockquote>
+<p>Original: “Import all customer data” Split: “Import US customer data” → “Import EU customer data” → “Import APAC customer data”</p>
+</blockquote>
+<p>Beyond sizing, this pattern surfaces data-specific risk early. Discovering that EU customer data has GDPR implications <em>after</em> you’ve built a generic import mechanism is expensive. Isolating it into its own story forces the conversation to happen during planning.</p>
+<h4>P4: Acceptance Criteria Complexity</h4>
+<p>Sometimes a story is correctly scoped in concept, but its acceptance criteria are doing the work of three stories. When a single AC describes multiple independent behaviours — especially ones with additive complexity — each behaviour deserves its own story.</p>
+<blockquote>
+<p>Original: “Search returns results with filters, sorting, and pagination” Split: “Search returns basic results” → “Search with filters and sorting” → “Search with pagination”</p>
+</blockquote>
+<p>This pattern is particularly useful because it preserves the architectural coherence of the feature while giving the team room to deliver incrementally. Basic search ships first; the team gets real feedback on result quality before investing in filters and pagination.</p>
+<h4>P5: Major Effort</h4>
+<p>Some stories are large not because they’re conceptually complex, but simply because they involve a lot of repetitive or parallel work. Migrating a legacy system. Refactoring a module. Updating a data model across multiple downstream consumers.</p>
+<blockquote>
+<p>Original: “Rebuild the reporting engine” Split: “Migrate report A to new engine” → “Migrate report B” → “Migrate remaining reports”</p>
+</blockquote>
+<p>Splitting by effort does two things. First, it creates checkpoints: each migrated report is a demo, a validation that the new engine works, and a piece of evidence the approach is sound before committing to the full migration. Second, it makes the work visible in a way that a single 13-point story never does.</p>
+<h4>P6: External Dependencies</h4>
+<p>External systems — third-party APIs, partner integrations, vendor-provided SDKs — introduce a category of risk that internal architecture doesn’t: you can’t control the timeline, the reliability, or the interface. Isolating the integration into its own story contains that risk.</p>
+<blockquote>
+<p>Original: “Integrate with payment provider” Split: “Set up payment provider sandbox integration” → “Implement live payment flow” → “Handle payment webhooks”</p>
+</blockquote>
+<p>The sandbox story is particularly important. It time-boxes the discovery work — learning the API, understanding the authentication model, identifying edge cases — so that the live implementation story can be estimated with real data rather than assumptions.</p>
+<h4>P7: DevOps / Operational Steps</h4>
+<p>Operational work is systematically undervalued in backlog management. Deployment pipelines, monitoring dashboards, alerting rules, auto-scaling configuration — these are not finishing touches. They are first-class delivery requirements, and they deserve first-class stories.</p>
+<blockquote>
+<p>Original: <em>“Launch new service”</em> Split: <em>“Deploy service to staging with basic health checks” → “Add production monitoring and alerting” → “Enable auto-scaling and failover”</em></p>
+</blockquote>
+<p>Treating operational steps as separate stories has a cultural effect beyond task management. It makes the operational requirements explicit and estimable, and it creates accountability: a story about production monitoring has an owner, an acceptance criterion, and a definition of done.</p>
+<h4>P8: Tiny Acts of Discovery</h4>
+<p>This is the pattern for unknown unknowns. When a story involves technology the team hasn’t used, an integration whose behaviour is undocumented, or an algorithm whose performance characteristics are untested, the correct response is not a wide-range estimate. It’s a spike.</p>
+<blockquote>
+<p>Original: “Build ML recommendation engine” Split: “Spike: validate recommendation algorithm with sample data” → “Build MVP recommendation feature” → “Optimise and scale recommendation engine”</p>
+</blockquote>
+<p>A spike is a time-boxed investigation with a specific output: enough information to estimate the subsequent stories. It’s not a story that can “fail” — any outcome that produces that information is a success. Treating uncertainty as a first-class story type is one of the most mature things an agile team can do.</p>
+<h3>The Pattern Is in the Story</h3>
+<p>The most important principle I’ve taken away from building and using this skill: you don’t reason your way to the right pattern. You read the story and let it tell you.</p>
+<p>Picture the eight patterns arranged as a decision tree radiating outward from a central question: what is this story fundamentally about? Stories describing user journeys branch to P1. Stories hiding conditional logic branch to P2. Stories using “all” or “any” branch to P3. Stories with overlapping acceptance criteria branch to P4. Stories that are simply a large branch to P5. Stories touching external systems branch to P6. Stories with operational scope branch to P7. Stories containing uncertainty branch to P8.</p>
+<p>Each path through the tree leads to a set of 2–5 candidate sub-stories, each of which is then validated against INVEST before being accepted. The tree is not a rigid algorithm — some stories will exhibit characteristics of multiple patterns, and experienced practitioners will develop a feel for which pattern produces the cleanest slices. But the structure matters. It replaces a vague intuition about “this story is too big” with a systematic interrogation of <em>why</em> it’s too big and <em>where</em> the natural cut lines are.</p>
+<h3>Embedding Intelligence Where Decisions Happen</h3>
+<p>The agile-story-splitter skill can be invoked in multiple ways:</p>
+<p><a href="https://github.com/alwyndsouza/agile-story-skills#agile-story-splitter">GitHub - alwyndsouza/agile-story-skills</a></p>
+<p><img src="https://cdn-images-1.medium.com/max/1024/1*aIw9IywX-yvzdHejt715iA.png" alt=""></p>
+<h3>What Good Splitting Practice Signals About a Team</h3>
+<p>Teams that split well share a common characteristic: they think about delivery from the user backwards, not from the architecture forward. This sounds simple. In practice, it requires resisting a deeply ingrained instinct to decompose by technical boundary — the same instinct that makes engineers good at system design and makes them default to horizontal story splits.</p>
+<p>The eight patterns are a translation layer between the way engineers naturally think about systems and the way agile teams need to think about delivery. A practitioner who has internalised them doesn’t need a skill to apply them — they’ve updated the mental model itself. The skill just makes that mental model available to everyone on the team, regardless of experience level, at the moment it’s needed.</p>
+<p>That’s the real unlock. Not faster story splitting. A shared vocabulary and a shared standard for what “done” looks like at the story level — one that travels with the work rather than living in someone’s head.</p>
+<h3>References</h3>
+<p>[1] Alwyn D’Souza — Agile Story Skills — <a href="https://github.com/alwyndsouza/agile-story-skills">https://github.com/alwyndsouza/agile-story-skills</a></p>
+<p>[5] Bill Wake — INVEST in Good Stories, and SMART Tasks — <a href="https://xp123.com/articles/invest-in-good-stories-and-smart-tasks/">https://xp123.com/articles/invest-in-good-stories-and-smart-tasks/</a></p>
+<p>[6] Richard Lawrence &amp; Peter Green — Humanizing Work: 8 Patterns for Splitting User Stories — <a href="https://www.humanizingwork.com">https://www.humanizingwork.com</a></p>
+<p><img src="https://medium.com/_/stat?event=post.clientViewed&referrerSource=full_rss&postId=92c3130f1905" alt=""></p>
+<hr>
+<p><em>This article was originally published at <a href="https://aradsouza.medium.com/my-copilot-agent-skill-splits-stories-better-than-most-agile-teams-92c3130f1905?source=rss-670f6306e3c0------2">https://aradsouza.medium.com/my-copilot-agent-skill-splits-stories-better-than-most-agile-teams-92c3130f1905?source=rss-670f6306e3c0------2</a></em></p>
+18:T2b59,<blockquote>
+<p>Injecting Deterministic Requirements, BDD Acceptance Criteria, and Automated Quality Gates Directly into Your Backlog</p>
+</blockquote>
+<p>Skills Repository: <a href="https://github.com/alwyndsouza/agile-story-skills">https://github.com/alwyndsouza/agile-story-skills</a></p>
+<p>Most “user stories” sitting in production backlogs are just vague tasks dressed up in Agile clothing. They have no testable outcome, no scope boundary, and no shared definition of done.</p>
+<p>By building custom <strong>Copilot agent skills,</strong> we can inject deterministic engineering rigour directly into our product management workflow.</p>
+<p>The agile-story-writer skill fixes backlogs by encoding BDD-style GIVEN/WHEN/THEN acceptance criteria, INVEST validation, and DoR/DoD checklists into a single slash command.</p>
+<p>Paste a rough engineering or product idea; get a production-ready, sprint-plannable story in seconds.</p>
+<p>If you retain one idea from this article, let it be this: <strong>every story that cannot be objectively verified is not a story — it’s a wish.</strong></p>
 <h3>Overview</h3>
-<p>Real-time streaming has a complexity problem. The standard Kafka + Flink/Spark combination is powerful, but it comes with significant operational weight: ZooKeeper clusters, JVM heap tuning, Flink job JAR management, separate state backends, and a skill surface wide enough to require a dedicated platform engineering team. For many organisations, that overhead is the price of admission to real-time workloads — and it’s often too high.</p>
-<p>This article introduces a modern stack for real time streaming — <strong>Redpanda</strong> for event transport, <strong>RisingWave</strong> for streaming SQL computation, and <strong>Grafana</strong> for operational visibility — and explains what each component brings, how they connect, and where the trade-offs sit.</p>
-<p>To keep concepts grounded, we use a fraud detection reference architecture [1] throughout, because it stresses the stack in the right ways: high event volume, multi-stream joins, time-windowed aggregations, and real operational stakes. But the stack doesn’t care about fraud. It cares about events. Whatever your domain, the patterns transfer.</p>
-<p>We will cover the streaming landscape problem first, then go deep on each component, walk through the full developer experience, and close with an honest assessment of production readiness. By the end, you should have enough to decide whether this stack belongs on your evaluation list.</p>
-<h3>The Streaming Stack Landscape: Why This Combination Exists</h3>
-<h4>The Standard Pattern — and Its Weight</h4>
-<p>The dominant real-time streaming pattern is well established: <strong>Kafka</strong> handles event ingestion and durability, <strong>Flink</strong> (or Spark Structured Streaming) handles stateful computation, and something downstream, a data warehouse, a BI tool, a custom API — surfaces results. It works. It scales. Major companies run it in production at extraordinary volume.</p>
-<p>But here’s what that pattern actually requires on a typical team: Kafka brokers with ZooKeeper coordination (or KRaft, which is newer and still maturing), JVM-based brokers with heap tuning and GC pressure, Flink clusters with job managers and task managers, Flink job JARs compiled and submitted through cluster management tooling, a separate state backend (RocksDB, typically) for stateful operators, and a local development story that often involves running a truncated version of the stack on a machine that starts to sound like a jet engine.</p>
-<p>That’s before you get to the actual streaming logic.</p>
-<h4>Where Teams Get Stuck</h4>
-<p>The pattern breaks down most visibly in two places.</p>
-<p>First, <strong>local development friction</strong>: running Kafka + Flink + dependencies locally is feasible but painful, and the gap between what runs locally and what runs in production creates a class of bugs that only appear in the pipeline.</p>
-<p>Second, <strong>operational specialisation</strong>: Flink in particular has its own programming model (DataStream API or Table API), its own deployment concepts, and its own failure modes. Teams without dedicated streaming engineers often find that the logic they want to express is simple, but the operational surface required to run it is not.</p>
-<h4>The Bet This Stack Makes</h4>
-<p>The Redpanda + RisingWave combination is built on a specific set of bets:</p>
+<p>We have all been there: a product manager drops a half-sentence feature request in Slack, a production bug needs an immediate ticket, or an engineering spike lacks proper boundaries. The typical result is a backlog filled with ambiguous tickets that dissolve into lengthy debates during sprint grooming.</p>
+<p>Instead of fighting the process, we can use the GitHub Copilot extensibility model to build dedicated <strong>Agent Skills</strong> — tailored, prompt-packaged capabilities that run locally or in the cloud.</p>
+<p>This article walks through how the agile-story-writer Agent Skill encodes three foundational agile frameworks, the anatomy of the stories it generates, and how you can leverage agentic AI to build a deterministic, rock-solid backlog.</p>
+<h3>Core Concept: What Makes a Story “Good”?</h3>
+<p>Before looking at what the AI agent produces, we need to establish what it is optimising for. The agent relies on three core pillars to transform raw text into engineered requirements.</p>
+<h4>Framework 1 — INVEST: Your Quality Gate</h4>
+<p>Every single output generated by the Agent Skill is validated against the <strong>INVEST</strong> matrix. Coined by Bill Wake in 2003, this six-criterion quality heuristic remains the gold standard for requirement engineering:</p>
 <ul>
-<li>A C++ reimplementation of Kafka’s protocol can eliminate ZooKeeper and JVM overhead without sacrificing API compatibility.</li>
-<li>A streaming database with a PostgreSQL-compatible interface can replace Flink’s job model with SQL that any data engineer can write and maintain.</li>
-<li>The entire stack can run on a laptop via Docker Compose with the same architecture it uses in production.</li>
+<li><strong>Independent:</strong> Can this story be developed and shipped without waiting on another in-progress story?</li>
+<li><strong>Negotiable:</strong> Is the implementation approach open, leaving only the outcome fixed?</li>
+<li><strong>Valuable:</strong> Does it deliver clear business or user value on its own?</li>
+<li><strong>Estimable:</strong> Can the team size it in Fibonacci points with reasonable confidence?</li>
+<li><strong>Small:</strong> Can it be comfortably completed within a single sprint?</li>
+<li><strong>Testable:</strong> Can the acceptance criteria be objectively verified as pass or fail?</li>
 </ul>
-<p>These bets have trade-offs — we will get to those in each section. But the bet that simplicity and production capability don’t have to be in tension is what makes this combination worth understanding.</p>
-<p>Let’s look at each component and what it brings to the table.</p>
-<h3>Redpanda: Kafka Without the JVM</h3>
-<h4>What It Is</h4>
-<p><strong>Redpanda</strong> is a ground-up C++ rewrite of Kafka’s API. It speaks the same protocol: the same producers, the same consumers, the same Schema Registry, the same Kafka Connect interface. Any application that talks to Kafka can talk to Redpanda without modification. This isn’t a wrapper or a compatibility layer — it’s a full reimplementation, from the wire protocol down to the storage engine [2].</p>
-<p>The architectural decision that matters most is what Redpanda <em>doesn’t</em> include: no ZooKeeper, no JVM, no multi-process broker topology. A Redpanda cluster is a set of identical C++ processes with a built-in Raft consensus protocol for leader election and replication. Each node handles what previously required coordinating a broker process, a ZooKeeper ensemble, and — in many deployments — a Schema Registry service running separately.</p>
-<h4>What It Eliminates</h4>
-<p>For engineers who have operated Kafka in production, “no ZooKeeper” is significant. ZooKeeper coordination has been a source of operational complexity for years: separate ZooKeeper clusters to maintain, ZooKeeper-specific failure modes to understand, and coupling between Kafka’s metadata state and ZooKeeper’s consistency model.</p>
-<p>Apache Kafka 4.x has now made KRaft the production standard, so new Kafka deployments no longer require ZooKeeper. But “no longer required” and “already migrated” are different things — many production clusters predate KRaft and carry the operational debt of that migration path.</p>
-<p>Redpanda’s advantage here isn’t just that it lacks ZooKeeper; it’s that it was designed without it from day one, which means no migration story, no hybrid mode phase, and no institutional memory of ZooKeeper-specific incidents to manage through.</p>
-<p>The JVM elimination matters operationally, not just for performance. JVM-based services require heap sizing decisions upfront, GC tuning as load profiles change, and a class of memory pressure issues (GC pauses, heap exhaustion, metaspace growth) that have no direct equivalent in native binaries. Redpanda replaces this with a process that manages its own memory with predictable, low-latency characteristics.</p>
-<h4>What It Preserves</h4>
-<p>Here is the practical upshot: if your team has Kafka producers, Kafka consumers, or Kafka Connect pipelines, they work with Redpanda as-is. This includes tooling like kcat, Kafka UI interfaces, Schema Registry clients, and Kafka-aware Terraform providers. The compatibility story is strong enough that the reference architecture [1] uses Redpanda as a direct stand-in for Kafka across all five event streams.</p>
-<h4>In the Reference Architecture</h4>
-<p>In this stack, Redpanda handles five event topics — transactions, login_events, card_events, alert_events, and kyc_profile_events; each representing a distinct event domain. Events arrive from a Python producer that simulates a realistic banking workload, with configurable transaction rates and customer pool sizes.</p>
-<p>The <strong>dead letter queue (DLQ)</strong> pattern is worth calling out explicitly and worth being precise about how it works. Redpanda doesn’t automatically route malformed events to a DLQ; that routing is a deliberate design decision implemented at the application or transformation layer. In this reference architecture, the Python producer performs basic validation before publishing and routes events that fail schema checks to a separate dlq topic. For events that enter the pipeline and fail RisingWave parsing or transformation logic, the pipeline&#39;s staging layer handles the routing. It&#39;s an explicit pattern, not an implicit safety net — which means it only works if your team designs for it upfront.</p>
-<p>This matters for two reasons: in compliance-sensitive workloads like fraud monitoring, silent event loss creates audit gaps; and in any operational pipeline, a rising DLQ rate is one of the most useful early signals that something upstream has changed.</p>
-<p><img src="https://cdn-images-1.medium.com/max/1024/1*4Wq1KSREfuUl0fo9w9gDwQ.png" alt=""></p>
-<p>Image generated using chatgpt</p>
-<p>The key takeaway: Redpanda’s topic structure externalises event domain separation early, which makes the downstream RisingWave pipeline easier to reason about.</p>
-<h4>Trade-Offs</h4>
-<p>Redpanda’s ecosystem maturity is real. Confluent has a decade of production hardening, a significantly larger library of pre-built connectors through Confluent Hub, and enterprise governance tooling — Stream Governance, advanced Data Quality Rules, audit logging — that organisations with strict compliance requirements may need.</p>
-<p>Redpanda Cloud is newer, and while Redpanda does have robust native Tiered Storage (Shadow Indexing), the breadth of managed integrations and governance features at the Confluent enterprise tier is meaningfully wider. If your organisation is standardised on Confluent’s governance suite or depends heavily on connectors from Confluent Hub that have no Redpanda equivalent yet, that’s a real evaluation criterion.</p>
-<p>For greenfield workloads or teams evaluating their options, though — especially those who want a simpler operational profile locally and in staging — Redpanda is a credible alternative worth benchmarking.</p>
-<p>Redpanda gets events in. RisingWave is where the real work happens.</p>
-<h3>RisingWave: Streaming SQL That Thinks Like a Database</h3>
-<h4><strong>What It Is</strong></h4>
-<p><strong>RisingWave</strong> is a streaming database. That distinction matters, so let’s be precise about it. It supports the <strong>PostgreSQL dialect and wire protocol</strong> — which means you connect to it with any Postgres client, write standard SQL, and query it exactly as you would a Postgres database. But it is not a general-purpose relational database. Under the hood it’s a purpose-built streaming engine optimised for incremental computation over continuous event streams, with state stored in S3-compatible object storage rather than local disk. The Postgres interface is a deliberate developer experience choice; the engine beneath it is built for streaming, not for transactional workloads.</p>
-<p>A traditional stream processor like Flink operates on a DAG (directed acyclic graph) of operators — map, filter, join, aggregate — that you compose into a job, compile, and submit to a cluster. The cluster maintains state across operators using a configurable state backend, typically RocksDB on local disk, which introduces its own complexity around disk provisioning, checkpoint storage, and recovery behaviour after failures.</p>
-<p>RisingWave inverts this model. You write a SQL query. RisingWave maintains the result. Continuously. Incrementally. You don’t submit jobs; you create materialized views [3]. The runtime decides how to execute and maintain them — and because state lives in object storage, scaling and recovery don’t require you to think about local disk at all.</p>
-<h4>The Core Abstraction: Materialized Views</h4>
-<p>If you have used a SQL VIEW before, you have the foundation. A regular view is a saved query — every time you query it, the database executes the underlying SQL against current data. A <strong>materialized view</strong> stores the result. In traditional databases, materialised views are refreshed on a schedule or on demand.</p>
-<p>RisingWave’s materialized views are different: they update <em>continuously</em> as new events arrive. The mental model is: you write the query once, and RisingWave maintains the result as a living, always-current table that you can query at any time. This is the abstraction that eliminates the Flink job model entirely.</p>
-<h4>Incremental Computation</h4>
-<p>The performance story depends on understanding <strong>incremental computation</strong>. When a new event arrives, RisingWave doesn’t rerun the full query across the entire dataset. It processes only the <em>delta</em> — the new event and its effect on the materialized view result. For windowed aggregations over large datasets, this is the difference between microsecond update latency and second-scale batch refresh cycles.</p>
-<p>A concrete example from the reference architecture: a velocity burst view counts transactions per customer in a 5-minute tumbling window. As each new transaction event arrives, RisingWave updates only the affected customer’s window count. The SQL looks familiar:</p>
-<pre><code>CREATE MATERIALIZED VIEW mv_velocity_burst AS
-SELECT
-    customer_id,
-    window_start,
-    window_end,
-    COUNT(*) AS txn_count,
-    SUM(amount) AS total_amount
-FROM TUMBLE(transactions, event_time, INTERVAL &#x27;5 minutes&#x27;)
-GROUP BY customer_id, window_start, window_end;
-</code></pre><p>This is the key insight about incremental computation made tangible: the TUMBLE window function defines the aggregation boundary, and RisingWave maintains the running result across those windows — not as a batch job that runs on a schedule, but as a continuously-updated state that reflects the latest events.</p>
-<h4>The Layered Pipeline Pattern</h4>
-<p>The reference architecture organises RisingWave into four logical layers — a pattern worth naming explicitly: this is a <strong>Streaming Medallion Architecture</strong>. If you have worked with Databricks, Snowflake, or a dbt-based warehouse project, the Medallion pattern (Bronze → Silver → Gold) will be immediately familiar. The streaming equivalent maps directly onto those same principles, just running continuously instead of on a schedule:</p>
-<p><img src="https://cdn-images-1.medium.com/max/1024/1*6WUvxpE9ip1UR9WPlxbY8w.png" alt=""></p>
-<p>Image generated using chatgpt</p>
-<p>The key takeaway: this layered approach creates clear separation between <em>what data is</em> (source tables), <em>what it means in context</em> (staging), <em>what patterns it exhibits</em> (signals), and <em>what action it implies</em> (risk/cases) — the same separation you would apply in a dbt project or a Medallion lakehouse, now running in real time.</p>
-<p><strong>Source Tables</strong> define the ingestion points — each Redpanda topic maps to a source table that RisingWave continuously reads. <strong>Staging Views</strong> handle enrichment joins: attaching KYC profile data to transaction events, normalising field formats, filtering invalid records. <strong>Signal Views</strong> contain the detection logic — the velocity bursts, the cross-channel correlations, the threshold exceedances — expressed as SQL materialized views over the staging layer. <strong>Risk/Case Views</strong> aggregate signals into investigation-ready outputs: case summaries, risk scores, alert counts by severity.</p>
-<p>Each layer only depends on the layer below it. Adding a new signal view doesn’t require touching the ingestion logic. Changing an enrichment join in the staging layer cascades automatically to everything above it. The dependency graph is explicit and SQL-native.</p>
-<h3>Why This Matters vs. Flink</h3>
-<p>For teams where <strong>SQL fluency outweighs streaming DSL expertise</strong> — which is most data engineering teams — RisingWave’s programming model is a significant advantage. There’s no JAR to compile, no cluster to submit to, no restart semantics to configure. An engineer who can write a dbt model can write a RisingWave materialized view with minimal ramp-up.</p>
-<p>The state management story is also meaningfully different. Flink typically relies on RocksDB on local disk for state storage, which means provisioning disk capacity per task manager, thinking carefully about checkpoint sizes, and managing recovery behaviour after node failures. RisingWave stores its state in S3-compatible object storage. For cloud deployments, this eliminates a significant class of infrastructure decisions — storage scales independently of compute, and recovery means fetching state from object storage rather than rebuilding it from local disk.</p>
-<p>The trade-off is real, though. Flink’s DataStream API offers expressive power that SQL cannot match: custom operators, complex stateful logic with fine-grained control over state backends, Python UDFs with arbitrary computation, and a mature ecosystem of connectors. For workloads at the frontier of streaming complexity, Flink’s expressiveness matters. For the large middle ground — windowed aggregations, stream-stream joins, enrichment pipelines, threshold monitoring — RisingWave’s SQL model covers the territory with significantly less operational overhead [4].</p>
-<p>With events flowing through Redpanda and continuously computed in RisingWave, the final layer is making that state visible to operators.</p>
-<h3>Grafana: Operational Visibility as a First-Class Citizen</h3>
-<h4>What It Adds</h4>
-<p><strong>Grafana</strong> connects to RisingWave directly via its PostgreSQL-compatible wire protocol. No custom connector, no intermediate export layer — Grafana queries RisingWave the same way it would query a Postgres database, using standard SQL. This means RisingWave’s materialized views are queryable from dashboards immediately, without an additional serving layer [5].</p>
-<p>That same Postgres compatibility has a less obvious implication: <strong>RisingWave is AI-ready out of the box</strong>. Any tool that speaks the Postgres protocol can query it — including MCP (Model Context Protocol) servers and AI agent frameworks. If you’re building towards a world where analysts ask natural language questions against live fraud signals, or where an AI agent triggers investigation workflows based on real-time risk scores, RisingWave slots into that stack without a custom integration layer. It’s worth keeping in mind as you design the downstream interface.</p>
-<p>The reference architecture ships with pre-provisioned dashboards defined as code — Grafana JSON datasource and dashboard definitions that are loaded automatically when the stack starts. From make up to a live operational dashboard is a single command.</p>
-<h4>Why Observability Belongs in the Architecture</h4>
-<p>Silent failures are the default failure mode for streaming pipelines. An upstream schema change silently writes null values into a field your detection logic depends on. A topic partition falls behind without triggering an alert. A DLQ event rate climbs because a third-party system changed its event format over the weekend. None of these generate exceptions; they generate degraded, misleading results.</p>
-<p>Building observability in from the start — not bolted on after the first incident — is what separates a reference architecture from a demo. The stack monitors four categories of signal:</p>
+<p><strong>What’s happening under the hood:</strong> INVEST isn’t a rubric for post-hoc grading — it is an active gate.</p>
+<p><img src="https://cdn-images-1.medium.com/max/1024/1*8d1rN41k4lvLdnJfK38GBQ.png" alt=""></p>
+<p>The Copilot Agent Skill enforces it at <em>Refinement time</em>, not review time. If a story fails the <em>Estimable</em> or <em>Small</em> tests (for example, if it’s too ambiguous or massive), the agent automatically flags the blockages before they can derail sprint planning.</p>
+<h4>Framework 2 — BDD Acceptance Criteria: The GIVEN/WHEN/THEN Contract</h4>
+<p>The skill defaults to Behavior-Driven Development (BDD) format for acceptance criteria. This isn’t an aesthetic preference; it’s a shared language between product, engineering, and QA that makes criteria completely deterministic.</p>
+<p>The GIVEN/WHEN/THEN structure maps directly to verifiable system states:</p>
+<blockquote>
+<p><em><strong>GIVEN</strong></em> <em>the user is on the checkout page</em></p>
+</blockquote>
+<blockquote>
+<p><em><strong>AND</strong></em> <em>their cart total exceeds $50</em></p>
+</blockquote>
+<blockquote>
+<p><em><strong>WHEN</strong></em> <em>they click “Apply Free Shipping”</em></p>
+</blockquote>
+<blockquote>
+<p><em><strong>THEN</strong></em> <em>the shipping cost is set to $0</em></p>
+</blockquote>
+<blockquote>
+<p><em><strong>AND</strong></em> <em>a confirmation message appears within 500ms</em></p>
+</blockquote>
+<p>Compare this to the standard alternative: <em>“Free shipping should apply when eligible.”</em> A developer and a QA engineer reading that phrase in isolation will almost always build and test two completely different implementations.</p>
+<p><img src="https://cdn-images-1.medium.com/max/1024/1*su55ZIrd2rip7xy1V97A8w.png" alt=""></p>
+<p><strong>The Key Takeaway:</strong> BDD criteria are executable in your head. Anyone can read them and know exactly what &quot;done&quot; looks like, completely eliminating the interpretation gap at sprint reviews.</p>
+<h3>Framework 3 — Scope IN/OUT: The Boundary Fence</h3>
+<p>This is the most underrated section in modern project management, and the single most effective tool for preventing mid-sprint scope creep. Every story produced by the skill explicitly outlines its boundaries.</p>
+<p>For an engineering or feature task, it looks like this:</p>
 <ul>
-<li><strong>Consumer lag</strong> (Redpanda): how far behind each consumer group is on each topic</li>
-<li><strong>Materialized view freshness</strong> (RisingWave): how current the aggregated state is relative to the latest ingested events</li>
-<li><strong>DLQ event rate</strong>: the volume of malformed or unprocessable events being routed out of the main pipeline</li>
-<li><strong>Producer throughput</strong>: the rate and health of upstream event generation</li>
+<li><strong>Scope IN:</strong> Guest checkout, credit card payment, email confirmation.</li>
+<li><strong>Scope OUT:</strong> Refund logic, saved payment methods, admin reporting, multi-currency.</li>
 </ul>
-<p>In the fraud monitoring context, the operational dashboard surfaces active signal counts, case volumes by severity, and pipeline health in a single view. But the pattern is domain-agnostic: the same four categories of signal apply whether you’re monitoring fraud, logistics events, IoT telemetry, or user behaviour streams.</p>
-<p>With the individual components understood, the question becomes: what does working with this stack actually feel like?</p>
-<h3>The Full Stack in Practice: Developer Experience</h3>
-<h4>From Clone to Dashboard in Four Commands</h4>
-<p><a href="https://github.com/alwyndsouza/rp-rw-fraud-monitor">https://github.com/alwyndsouza/rp-rw-fraud-monitor</a></p>
-<p>The entire stack — Redpanda, RisingWave, Grafana, Python producers, SQL bootstrap — runs via Docker Compose. The developer workflow is intentionally minimal:</p>
-<pre><code>make up        # Start all services
-make validate  # Run smoke tests and pipeline health checks
-make status    # Check service health and consumer lag
-make logs      # Tail service logs
-</code></pre><p>make up brings all services online, waits for readiness checks, and bootstraps the SQL pipeline — source tables, staging views, signal views, risk views — automatically. By the time the command returns, the pipeline is running. make validate runs smoke tests: it checks that each source table is receiving events, that materialized views are updating, and that the DLQ rate is within acceptable bounds.</p>
-<p>These four commands cover 90% of the daily development workflow. That’s not accidental — the Makefile is a developer contract, not a convenience wrapper.</p>
-<h4>Local-First as a Production Philosophy</h4>
-<p>The reference architecture runs on a laptop. Not a stripped-down version of it — the same Docker Compose topology, the same SQL pipeline layers, the same Grafana dashboards. This is a deliberate architectural choice: if the local environment diverges significantly from production, the gap becomes a source of bugs that only manifest in the pipeline. Local-first means the architecture is the same; only the resource limits and external dependencies differ.</p>
-<h4>Configuration-Driven Behaviour</h4>
-<p>Fraud rate, transaction rate, customer pool size, and event domain weightings are all driven by environment variables. Testing a high-volume burst scenario means changing TRANSACTION_RATE_PER_SECOND=500 and restarting the producer — no code changes. This matters during development when you want to exercise the pipeline under different load profiles, and it matters in CI/CD when you want to run smoke tests at a controlled, deterministic rate.</p>
-<h4>CI/CD Integration</h4>
-<p>GitHub Actions pipelines cover SQL lint (validating DDL syntax before it reaches a running cluster), unit tests on producer logic, and pipeline smoke tests that boot the stack, run the validator, and report results. The same checks run locally via make validate. When the local and CI/CD environments execute the same tests, the definition of &quot;this works&quot; is shared — not assumed.</p>
-<p>Taking this stack to production requires a few more conversations.</p>
-<h3>Production Readiness: What the Reference Architecture Gives You and What It Doesn’t</h3>
-<h4>What’s Already Production-Oriented</h4>
-<p>The reference architecture is not a toy. Several production-grade patterns are already present:</p>
+<p><strong>The Key Takeaway:</strong> Scope OUT is not a parking lot for future work. It is an explicit contract signed during refinement that protects engineering from well-intentioned, mid-sprint “add-ons.”</p>
+<p><img src="https://cdn-images-1.medium.com/max/1024/1*N8nG9UEeWAm5AB-nA0W-uQ.png" alt=""></p>
+<h3>The Full Story Anatomy</h3>
+<blockquote>
+<p><a href="https://github.com/alwyndsouza/agile-story-skills/blob/main/.github/skills/agile-story-writer/assets/story-template.txt"><em>https://github.com/alwyndsouza/agile-story-skills/blob/main/.github/skills/agile-story-writer/assets/story-template.txt</em></a></p>
+</blockquote>
+<p>The output generated by the agile-story-writer skill is highly structured and tool-agnostic. It is ready to copy-paste directly into <strong>Jira, GitHub Issues, Linear, or Azure DevOps</strong>:</p>
 <ul>
-<li><strong>DLQ with explicit routing</strong> — malformed events are captured, not lost</li>
-<li><strong>Health check endpoints</strong> on all services — suitable for Kubernetes liveness and readiness probes</li>
-<li><strong>Version-pinned service images</strong> — no latest tags introducing silent breaking changes</li>
-<li><strong>Resource limit placeholders</strong> in the Docker Compose configuration — ready to be filled with production values</li>
-<li><strong>CI/CD gates</strong> for SQL and code quality — the same checks that run locally</li>
+<li><strong>Title:</strong> Specific, action-oriented, estimable work item name.</li>
+<li><strong>Type:</strong> Story / Bug / Spike (with a clear rationale for the classification).</li>
+<li><strong>Priority:</strong> P1–P4 with explicit business justification.</li>
+<li><strong>Story Points:</strong> Fibonacci estimate ($1, 2, 3, 5, 8, 13$) with architectural rationale.</li>
+<li><strong>Context:</strong> Why this story matters right now and the core problem it solves.</li>
+<li><strong>User Story:</strong> As a [role], I want [outcome] so that [measurable value].</li>
+<li><strong>Scope IN:</strong> Explicit list of what this story covers.</li>
+<li><strong>Scope OUT: An</strong> explicit list of what this story does <em>not</em> cover.</li>
+<li><strong>Acceptance Criteria:</strong> 3–5 deterministic, BDD-formatted scenarios.</li>
+<li><strong>Technical Notes:</strong> Implementation guidance, architectural dependencies, and data contracts.</li>
+<li><strong>NFRs:</strong> Performance, security, and observability constraints (e.g., SLAs, logging).</li>
+<li><strong>Definition of Ready (DoR):</strong> Checklist ensuring the team can actually start work.</li>
+<li><strong>Definition of Done (DoD):</strong> Checklist ensuring the team can safely ship it.</li>
 </ul>
-<h4>What You Need to Add</h4>
-<p>The reference architecture is production-<em>oriented</em>, not production-<em>complete</em>. The distinction matters when building a deployment plan:</p>
-<ul>
-<li><strong>TLS and SASL</strong> for Redpanda — the default configuration is unauthenticated, appropriate for local dev, not for production</li>
-<li><strong>Secret management</strong> — credentials and connection strings should move to a secrets manager (AWS Secrets Manager, HashiCorp Vault) rather than environment files</li>
-<li><strong>Kubernetes manifests</strong> — the Docker Compose topology translates to Kubernetes, but you’ll need to write the manifests, configure persistent volumes, and add autoscaling policies</li>
-<li><strong>State backend considerations</strong> for RisingWave at scale — particularly if you’re running large windowed aggregations with long retention windows</li>
-<li><strong>Schema evolution strategy</strong> — while the stack supports Schema Registry for schema enforcement, your team needs to define compatibility rules (Backward, Forward, or Full) before the first production event is fired. A schema change that breaks a downstream materialized view in production is significantly harder to recover from than one caught in a dev environment with a clear compatibility contract</li>
-</ul>
-<h3>Managed Service Options</h3>
-<p>For teams who want the stack’s operational profile without self-managing clusters: <strong>Redpanda Cloud</strong> offers a managed Kafka-compatible service with the same API. <strong>RisingWave Cloud</strong> offers managed RisingWave. Both are newer than the Confluent/Databricks managed offerings but are actively developed and production-viable for teams willing to be on a slightly earlier adoption curve.</p>
-<h3>Practical Takeaways</h3>
-<p>Now that you understand the full stack, here’s how to put it to use:</p>
+<h3>Agent Architecture: How the Skill Thinks</h3>
+<pre><code>INPUT: Rough description or HMW question
+   │
+   ▼
+[ Load Agent Skill Context ] ──► (SKILL.md, personas.md, templates)
+   │
+   ▼
+[ Stage 1: BDD AC Generation ]
+   │
+   ▼
+[ Stage 2: INVEST Validation Pass ]
+   │
+   ▼
+[ Stage 3: Fibonacci Estimation &amp; Rationale ]
+   │
+   ▼
+[ Stage 4: Custom DoR/DoD Checklists ]
+   │
+   ▼
+ OUTPUT: Tool-Agnostic Markdown Story
+</code></pre><p>Because the custom agent loads these precise reference artifacts on every single invocation, the quality of the output remains entirely consistent — regardless of who on the team runs the command. There is zero dependency on individual prompt-engineering skills.</p>
+<h3><strong>How to Use: Five Agent Invoke Modes</strong></h3>
+<blockquote>
+<p><a href="https://github.com/alwyndsouza/agile-story-skills#agile-story-writer">https://github.com/alwyndsouza/agile-story-skills#agile-story-writer</a></p>
+</blockquote>
+<p><img src="https://cdn-images-1.medium.com/max/1024/1*N84CMHmifHjY5b-q25821Q.png" alt=""></p>
+<h3>So What?</h3>
 <ol>
-<li><strong>Clone and run the reference architecture locally</strong> [1]. The make up → make validate workflow takes less than ten minutes on a modern laptop. Seeing the full pipeline in operation — events flowing through Redpanda into RisingWave materialized views, surfaced in live Grafana dashboards — is worth more than any architectural description.</li>
-<li><strong>Use the layered MV pipeline pattern in your own workloads</strong>. Source → Staging → Signal → Output is a generalizable pattern for any event-driven domain. The separation of concerns it provides scales to complex pipelines without becoming unmaintainable.</li>
-<li><strong>Evaluate Redpanda as a Kafka drop-in</strong>. Especially if your team is operating self-managed Kafka and spending meaningful engineering time on ZooKeeper coordination or JVM tuning, Redpanda is worth a proof of concept. The API compatibility means the evaluation risk is low.</li>
-<li><strong>Evaluate RisingWave as a Flink alternative</strong> — specifically for workloads where SQL fluency is higher than streaming DSL expertise. If your team can write dbt models, they can write RisingWave materialized views. The operational simplicity is real. The SQL expressiveness limits are also real — test your most complex logic before committing.</li>
+<li><strong>Stop accepting bullet-point ACs.</strong> If your backlog contains statements like <em>“should work on mobile&quot;,</em> put them through Rewrite Mode. Agent skills allow you to institutionalise high-quality writing standards across the whole team.</li>
+<li><strong>Write Scope OUT for everything.</strong> It takes ten seconds to write during grooming and saves hours of <em>“wait, I thought this was included”</em> arguments later.</li>
+<li><strong>Validate against INVEST before planning — not during.</strong> Run the six INVEST questions in your head before a ticket makes it to the sprint board. If it’s a “no” to any vertex, send it back to the agent for another pass.</li>
 </ol>
+<p><em><strong>Alwyn D’Souza</strong></em> <em>is working at the intersection of data mesh architectures, MLOps, and agentic AI systems. He writes about modern data engineering and practical AI implementations on Medium at @aradsouza and shares open-source tools at github.com/alwyndsouza.</em></p>
 <h3>References</h3>
-<p>[1] Alwyn D’Souza — <em>rp-rw-fraud-monitor: Redpanda + RisingWave + Grafana Fraud Detection Reference Architecture</em> — <a href="https://github.com/alwyndsouza/rp-rw-fraud-monitor">https://github.com/alwyndsouza/rp-rw-fraud-monitor</a></p>
-<p>[2] Redpanda — <em>Redpanda Documentation: Architecture Overview</em> — <a href="https://docs.redpanda.com">https://docs.redpanda.com</a></p>
-<p>[3] RisingWave — <em>RisingWave Documentation: Materialized Views</em> — <a href="https://docs.risingwave.com">https://docs.risingwave.com</a></p>
-<p>[4] RisingWave — <em>RisingWave vs. Apache Flink: A Comparison</em> — <a href="https://docs.risingwave.com/docs/current/risingwave-flink-comparison/">https://docs.risingwave.com/docs/current/risingwave-flink-comparison/</a></p>
-<p>[5] Grafana — <em>Grafana Documentation: PostgreSQL Data Source</em> — <a href="https://grafana.com/docs/grafana/latest/datasources/postgres/">https://grafana.com/docs/grafana/latest/datasources/postgres/</a></p>
-<p><em>Alwyn D’Souza specialices in real-time streaming architectures, data mesh, and AI/agentic systems. He writes about modern data stack engineering on Medium (</em><a href="https://medium.com/@aradsouza"><em>@aradsouza</em></a><em>) and shares technical content on</em> <a href="https://www.linkedin.com/in/alwynanildsouza/"><em>LinkedIn</em></a> <em>and</em><a href="https://github.com/alwyndsouza"><em>GitHub</em></a><em>.</em></p>
-<p><img src="https://medium.com/_/stat?event=post.clientViewed&referrerSource=full_rss&postId=465f780b5012" alt=""></p>
-<hr>
-<p><a href="https://blog.dataengineerthings.org/a-better-way-to-do-real-time-streaming-redpanda-risingwave-explained-465f780b5012">A Better Way to Do Real-Time Streaming (Redpanda + RisingWave Explained)</a> was originally published in <a href="https://blog.dataengineerthings.org">Data Engineer Things</a> on Medium, where people are continuing the conversation by highlighting and responding to this story.</p>
-<hr>
-<p><em>This article was originally published at <a href="https://blog.dataengineerthings.org/a-better-way-to-do-real-time-streaming-redpanda-risingwave-explained-465f780b5012?source=rss-670f6306e3c0------2">https://blog.dataengineerthings.org/a-better-way-to-do-real-time-streaming-redpanda-risingwave-explained-465f780b5012?source=rss-670f6306e3c0------2</a></em></p>
-18:T2e98,<p><strong>BI-as-Code treats dashboards and metrics as version-controlled, testable, reusable code artefacts</strong> closing the last remaining gap in the modern data stack where visualisation has traditionally lagged behind orchestration and transformation. If your team has adopted dbt for transformation and Airflow for pipelines, but still clicks through Tableau to update a dashboard, this article is for you. By the end, you will understand what BI-as-Code is, why it matters, and how tools like Rill Data make it practical today.</p>
-<p><a href="https://github.com/alwyndsouza/dbt-conversation-ai-local/tree/main/rill-dashboard">dbt-conversation-ai-local/rill-dashboard at main · alwyndsouza/dbt-conversation-ai-local</a></p>
-<h3>Overview</h3>
-<p>Most data teams have done the hard work of operationalising their pipelines. Ingestion is automated. Transformations are version-controlled in dbt. Tests run in CI before code merges. And then almost paradoxically the final step in the chain, the dashboard that stakeholders actually look at, is managed through a GUI with no Git history, no automated testing, and metric definitions duplicated across a dozen different views.</p>
-<p>This article is for data engineers, analytics engineers, and platform engineers who want to apply the same software engineering discipline to their BI layer that they’ve already applied everywhere else.</p>
-<p>We will start by defining BI-as-Code as a concept, move into a concrete architecture showing how it sits alongside dbt in the modern data stack, work through a real-world scenario that illustrates the problem it solves, and close with an honest look at its trade-offs and where this trend is heading.</p>
-<h3>The Problem: BI as an Afterthought</h3>
-<p>Walk into almost any data team and you will find a version of this story. The team runs dbt transformations on a schedule, models are peer-reviewed in Git, and data quality tests catch regressions before they reach production. But ask them how the revenue dashboard is maintained and the answer is usually some variation of: “Sarah owns that one in Tableau” — or worse, “there are three different revenue dashboards and we are not sure which one is right.”</p>
-<p>This isn’t a people problem. It’s a tooling problem. Traditional <strong>BI tools</strong> — Tableau, Power BI, Looker (in its point-and-click form) — were not designed with software engineering workflows in mind. Dashboard definitions live in proprietary formats or databases, not flat files.</p>
-<p>There is no native Git integration. Metric logic gets copy-pasted across views. When a definition changes, there’s no automated way to validate that change before it propagates to production.</p>
-<p>The result is what I call <strong>metric drift</strong>: the slow, invisible divergence of business definitions across dashboards that erodes trust in data over time. As we will see in the next section, BI-as-Code addresses this at the architectural level — not with process changes, but with a fundamentally different approach to how dashboards are built and deployed.</p>
-<h3>What Is BI-as-Code?</h3>
-<p><strong>BI-as-Code</strong> is an approach where your entire data visualisation stack — metrics, dimensions, dashboard layouts, data source connections — is defined in declarative code (SQL + YAML or similar configuration files), version-controlled in Git, and deployed through CI/CD pipelines.</p>
-<p>The analogy writes itself: if <strong>dbt</strong> brought software engineering discipline to the transformation layer, BI-as-Code does the same for the presentation layer. You are not clicking through a GUI to build a chart. You are writing a YAML file that <em>declares</em> what a chart is, referencing a SQL metric that is itself version-controlled and tested.</p>
-<p>Three principles underpin the BI-as-Code philosophy:</p>
-<h3>1. Declarative Over Imperative</h3>
-<p>Instead of imperatively building a chart through a series of GUI interactions, you declare what the chart <em>should</em> be. A dashboard becomes a configuration file — readable, diffable, and reviewable by anyone on the team with Git access. Changes are explicit, not implicit.</p>
-<h3>2. Single Source of Truth for Metrics</h3>
-<p>Define total_revenue once. Reference it everywhere. No more &quot;which revenue number is this?&quot; conversations in stand-up. This is the <strong>DRY (Don&#39;t Repeat Yourself)</strong> principle applied to metric definitions — the same principle that makes well-structured dbt models trustworthy. As we will see in the use case below, this single change eliminates an entire category of stakeholder confusion.</p>
-<h3>3. Deployable and Testable</h3>
-<p>Because dashboards are code, they inherit everything that makes code reliable: automated testing, CI/CD pipelines, environment promotion (dev → staging → prod), and rollback capabilities. A broken metric definition fails the pipeline before it reaches your stakeholders — not after.</p>
-<h3>Rill Data: A Reference Implementation</h3>
-<p><strong>Rill Data</strong> [1] is one of the leading platforms implementing BI-as-Code in practice. Its workflow is deliberately simple: everything is a flat file in a Git repository.</p>
-<p>A typical Rill project contains:</p>
 <ul>
-<li><strong>Source definitions</strong> — YAML files pointing to data sources (DuckDB databases, Parquet files, S3 paths, cloud warehouses)</li>
-<li><strong>SQL models</strong> — transformation queries that shape the data for analytics use</li>
-<li><strong>Metric views</strong> — YAML files declaring measures (e.g., SUM(revenue)) and dimensions (e.g., product_category) against a model</li>
-<li><strong>Dashboard configurations</strong> — YAML files composing metric views into interactive dashboards</li>
+<li><strong>[1] Dan North:</strong> <em>Introducing BDD</em> — <a href="https://dannorth.net/introducing-bdd/">dannorth.net/introducing-bdd</a></li>
+<li><strong>[2] Schwaber &amp; Sutherland:</strong> <em>The Scrum Guide</em> — <a href="https://scrumguides.org/scrum-guide.html">scrumguides.org</a></li>
+<li><strong>[3] Bill Wake:</strong> <em>INVEST in Good Stories, and SMART Tasks</em> — <a href="https://www.google.com/search?q=https://xp123.com/articles/invest-in-good-stories-and-smart-tasks/">xp123.com</a></li>
+<li><strong>[4] Open Source Repository:</strong> github.com/alwyndsouza/agile-story-skills</li>
 </ul>
-<h3>Architecture: Where BI-as-Code Sits in the Stack</h3>
-<p>The following diagram shows how BI-as-Code fits into the modern data stack, and — critically — where Git, CI/CD, and code review enter the picture.</p>
-<p><img src="https://cdn-images-1.medium.com/max/1009/1*jYbjbd4is9uu59GDoMKlog.png" alt=""></p>
-<p>Image created using gemini</p>
-<p>What this diagram makes clear is that the <strong>Git boundary</strong> — the point at which all changes require a peer review and pass automated tests — now extends all the way to the presentation layer. Previously, that boundary stopped at dbt. With BI-as-Code, it continues through to the dashboard configuration itself.</p>
-<p>The key takeaway: your dashboards are now as auditable and as trustworthy as your transformation models.</p>
-<h3>BI-as-Code vs Traditional BI: A Direct Comparison</h3>
-<p><img src="https://cdn-images-1.medium.com/max/744/1*iuZ8ifIkAAbiwTH2hHqFNQ.png" alt=""></p>
-<p>The trade-off in the last two rows is real, and we will address it honestly in the limitations section. But for production-grade, repeatable dashboards — the kind that stakeholders rely on daily — BI-as-Code wins across every other dimension.</p>
-<h3>A Real-World Use Case: The Revenue Dashboard Problem</h3>
-<p>Imagine a data team at a SaaS company managing a revenue dashboard in Looker. Over time, three separate dashboards have emerged: one for the sales team, one for finance, and one for the executive review. Each was built by a different analyst at a different time. Each has a slightly different definition of total_revenue — one includes refunds, one doesn&#39;t, one uses invoice date, one uses payment date.</p>
-<p>Stakeholders now distrust the numbers. Every quarterly review starts with a 20-minute debate about which dashboard is “correct.”</p>
-<p><strong>Here’s how BI-as-Code resolves this:</strong></p>
-<p><strong>Step 1 — Define the metric once.</strong> In a Rill metrics YAML file:</p>
-<pre><code># metrics/revenue.yaml
-version: 1
-type: metrics_view
-model: fct_revenue
-measures:
-  - name: total_revenue
-    label: Total Revenue
-    expression: SUM(net_revenue_after_refunds)
-    description: &quot;Revenue net of refunds, using payment date&quot;
-dimensions:
-  - name: product_category
-    column: product_category
-  - name: region
-    column: billing_region
-</code></pre><p><strong>Step 2 — Reference it across all dashboards.</strong> Each dashboard YAML simply references metrics/revenue.yaml as its source. The definition is identical everywhere because there is only <em>one</em> definition.</p>
-<p><strong>Step 3 — Test it in CI.</strong> A pipeline step validates that total_revenue returns expected values against a known test dataset before any change merges.</p>
-<p><strong>Step 4 — Track every change in Git.</strong> When finance requests a change to the revenue definition, an engineer opens a PR. The diff is visible. A second engineer reviews it. The change is approved, merged, and deployed — with a full audit trail.</p>
-<p>The 20-minute debate disappears. The trust problem — which as we noted in the overview section is a tooling problem, not a people problem — is solved at its root.</p>
-<h3>The Gap Is Closing</h3>
-<p>The modern data stack has matured in layers. First came cloud data warehouses, which commoditised storage and compute. Then came dbt, which brought software engineering to transformation. Orchestrators like Airflow and Dagster brought it to pipelines. Each layer shifted from manual, proprietary tooling toward code-first, version-controlled, testable workflows.</p>
-<p>The BI layer is the last holdout — and that’s changing fast. The teams that treat dashboards as code artefacts — not as afterthoughts managed in a GUI — will deliver faster, more reliable analytics with fewer “which number is right?” moments. The gap between engineering discipline and analytics delivery is closing, and BI-as-Code is the bridge.</p>
-<p>If you’re already using dbt for transformation (code), Airflow for orchestration (code), and Terraform for infrastructure (code) — adding Rill for visualisation (code) isn’t a philosophical leap. It’s the logical completion of a workflow you’ve already committed to.</p>
+<p><img src="https://medium.com/_/stat?event=post.clientViewed&referrerSource=full_rss&postId=14dd391d4dbb" alt=""></p>
+<hr>
+<p><em>This article was originally published at <a href="https://aradsouza.medium.com/why-your-user-stories-are-broken-and-how-a-copilot-agent-skill-can-fix-them-14dd391d4dbb?source=rss-670f6306e3c0------2">https://aradsouza.medium.com/why-your-user-stories-are-broken-and-how-a-copilot-agent-skill-can-fix-them-14dd391d4dbb?source=rss-670f6306e3c0------2</a></em></p>
+19:T1f14,<p>Most agile teams lose <strong>20–30% of every sprint</strong> rewriting stories that were unclear from the start.</p>
+<p>I have written <strong>Agile Story Skills</strong> for <strong>:</strong></p>
+<ul>
+<li><em>problem‑framing</em></li>
+<li><em>agile-story-writer</em></li>
+<li><em>agile-story-splitter</em></li>
+<li>and <em>sprint-goal-writer</em></li>
+</ul>
+<p>using proven agile frameworks directly into your IDE. The output is clean, structured, and ready for Jira, GitHub Issues, Linear, or Azure DevOps.</p>
+<blockquote>
+<p><a href="https://github.com/alwyndsouza/agile-story-skills">https://github.com/alwyndsouza/agile-story-skills</a></p>
+</blockquote>
+<h3>Why This Matters</h3>
+<p>If you have ever stared at a sprint card that says <em>“Improve the dashboard”</em> — no acceptance criteria, no boundaries, no estimate — you already know the pain.</p>
+<p>The issue isn’t lazy product owners or disengaged developers. It’s that <strong>writing good stories is a craft</strong>, and most teams never get formal training. Tools don’t enforce quality. Teams don’t share a consistent mental model. And the backlog becomes a graveyard of ambiguous work.</p>
+<p>This article introduces the <strong>Agile Story Skills Toolkit</strong> — four Copilot Agent Skills that guide a team from a vague request all the way to a sprint goal. This is the overview article in a five‑part series; each of the next four articles dives deep into one skill.</p>
+<h3>Skill 1 — Problem Framing: Prevent Solving the Wrong Problem</h3>
+<blockquote>
+<p><a href="https://github.com/alwyndsouza/agile-story-skills/tree/main/.github/skills/problem-framing">https://github.com/alwyndsouza/agile-story-skills/tree/main/.github/skills/problem-framing</a></p>
+</blockquote>
+<p>The cheapest defect is the one you never build – and the most expensive is solving the wrong problem entirely.</p>
+<p>The <strong>problem-framing</strong> skill walks teams through the <strong>MITRE Problem Framing Canvas</strong>:</p>
+<ul>
+<li><strong>Phase 1 — Look Inward</strong></li>
+<li><strong>Phase 2 — Look Outward</strong></li>
+<li><strong>Phase 3 — Reframe</strong></li>
+</ul>
+<p>It asks eight structured questions and produces the following:</p>
+<ul>
+<li>A refined problem statement</li>
+<li>A “How Might We…” (HMW) question that seeds all downstream stories</li>
+</ul>
+<p><img src="https://cdn-images-1.medium.com/max/1024/1*FvpXXVmrLlpjOuLg6r7YQA.png" alt=""></p>
+<p>Skipping this step means writing beautiful stories for the wrong thing.</p>
+<h3>Skill 2 — Story Writing: Generate INVEST‑Quality Stories Automatically</h3>
+<blockquote>
+<p><a href="https://github.com/alwyndsouza/agile-story-skills/tree/main/.github/skills/agile-story-writer">https://github.com/alwyndsouza/agile-story-skills/tree/main/.github/skills/agile-story-writer</a></p>
+</blockquote>
+<p>Once the problem is framed, <strong>agile-story-writer</strong> produces a complete, unambiguous story using industry-standard patterns:</p>
+<ul>
+<li><strong>GIVEN / WHEN / THEN</strong> acceptance criteria (BDD, per Dan North)</li>
+<li>Explicit <strong>Scope IN / OUT</strong></li>
+<li><strong>Non‑functional requirements</strong></li>
+<li><strong>Definition of Ready</strong> and <strong>Definition of Done</strong></li>
+<li>Validation against <strong>INVEST</strong> (Independent, Negotiable, Valuable, Estimable, Small, Testable)</li>
+</ul>
+<p><img src="https://cdn-images-1.medium.com/max/562/1*laz57BcN_0YU8j9WnKwFVQ.png" alt=""></p>
+<p>Every story becomes estimable, testable, and sprint‑ready. No more “I’ll know it when I see it.”</p>
+<h3>Skill 3 — Story Splitting: Break Down 13‑Point Monsters</h3>
+<blockquote>
+<p><a href="https://github.com/alwyndsouza/agile-story-skills/tree/main/.github/skills/agile-story-splitter">https://github.com/alwyndsouza/agile-story-skills/tree/main/.github/skills/agile-story-splitter</a></p>
+</blockquote>
+<p>When a story is too large (&gt;8 points), unclear, or part of an epic, <strong>agile-story-splitter</strong> applies the <strong>eight humanising work split patterns</strong> by Richard Lawrence and Peter Green.</p>
+<p>These patterns produce <strong>vertical slices</strong> — each delivering standalone user value.</p>
+<p>Patterns include:</p>
+<ul>
+<li>Workflow steps</li>
+<li>Business rule variations</li>
+<li>Data variations</li>
+<li>Acceptance criteria complexity</li>
+<li>Major effort</li>
+<li>External dependencies</li>
+<li>DevOps steps</li>
+<li>Tiny acts of discovery</li>
+</ul>
+<p>Horizontal splits (backend first, frontend later) Create work that can’t ship. Vertical splits create value.</p>
+<h3>Skill 4 — Sprint Goal Writing: The Team’s Daily Trade‑off Lever</h3>
+<blockquote>
+<p><a href="https://github.com/alwyndsouza/agile-story-skills/tree/main/.github/skills/sprint-goal-writer">https://github.com/alwyndsouza/agile-story-skills/tree/main/.github/skills/sprint-goal-writer</a></p>
+</blockquote>
+<p>Once stories are committed, <strong>sprint-goal-writer</strong> generates a single, outcome‑based sprint goal aligned with the Scrum Guide.</p>
+<p>It runs a five‑item health check to ensure the goal is the following:</p>
+<ul>
+<li>Specific</li>
+<li>Outcome‑based</li>
+<li>Beneficiary‑focused</li>
+<li>Measurable or directional</li>
+<li>Useful for trade‑offs</li>
+</ul>
+<p><img src="https://cdn-images-1.medium.com/max/1024/1*cZnaF7ozqrzKEbb9X2Al8A.png" alt=""></p>
+<p>A sprint goal isn’t a ceremony — it’s the compass for every trade‑off the team makes. Article 4 includes a full example and explains the mis‑scoped story flag.</p>
+<h3>How to install the skills:</h3>
+<p>Download the repository and copy the four skill directories into:</p>
+<ul>
+<li>.github/skills/ (repo‑scoped), or</li>
+<li>~/.copilot/skills/ (global)</li>
+</ul>
+<p>If you found this useful, follow me on Medium for more practitioner-grounded writing on data engineering and AI. I also share code and architecture patterns on GitHub at alwyndsouza and write on <a href="https://medium.com/@aradsouza">Medium</a>. You can connect with me on <strong>LinkedIn</strong> at <a href="https://www.linkedin.com/in/alwynanildsouza/">alwynanildsouza</a>.</p>
 <h3>References</h3>
-<p>Rill Data — <em>Rill: Fast Operational Dashboards</em> — <a href="https://www.rilldata.com">https://www.rilldata.com</a></p>
-<p>Evidence — <em>Evidence: Code-driven BI for data teams</em> — <a href="https://evidence.dev">https://evidence.dev</a></p>
-<p><em>Lightdash: The open-source Looker alternative</em> — <a href="https://www.lightdash.com">https://www.lightdash.com</a></p>
-<p><em>Found this useful? Follow me on Medium</em> <a href="https://medium.com/@aradsouza"><em>(aradsouza)</em></a> <em>or LinkedIn</em> <a href="https://www.linkedin.com/in/alwynanildsouza/">https://www.linkedin.com/in/alwynanildsouza/</a></p>
-<p><em>for more practitioner-voice content on dbt, data mesh, and the modern data stack.</em></p>
-<p><img src="https://medium.com/_/stat?event=post.clientViewed&referrerSource=full_rss&postId=9da47a39fb8c" alt=""></p>
+<p>[1] Alwyn D’Souza — <em>Agile Story Skills —</em><a href="https://github.com/alwyndsouza/agile-story-skills">https://github.com/alwyndsouza/agile-story-skills</a><br>[2] MITRE — <em>Problem Framing Canvas</em> — <a href="https://www.mitre.org/">https://www.mitre.org</a><br>[3] Dan North — <em>Introducing BDD</em> — <a href="https://dannorth.net/introducing-bdd/">https://dannorth.net/introducing-bdd/</a><br>[4] Scrum Guide — <em>Definition of Ready / Definition of Done</em> — <a href="https://scrumguides.org/">https://scrumguides.org</a><br>[5] Bill Wake — <em>INVEST in Good Stories, and SMART Tasks</em> — <a href="https://xp123.com/articles/invest-in-good-stories-and-smart-tasks/">https://xp123.com/articles/invest-in-good-stories-and-smart-tasks/</a><br>[6] Richard Lawrence &amp; Peter Green — <em>Humanizing Work: 8 Patterns for Splitting User Stories</em> — <a href="https://www.humanizingwork.com/">https://www.humanizingwork.com</a><br>[7] Ken Schwaber &amp; Jeff Sutherland — <em>The Scrum Guide</em> — <a href="https://scrumguides.org/">https://scrumguides.org</a></p>
+<p><img src="https://medium.com/_/stat?event=post.clientViewed&referrerSource=full_rss&postId=592e1193f2a0" alt=""></p>
 <hr>
-<p><a href="https://medium.com/towards-data-engineering/bi-as-code-bridging-the-gap-between-data-engineering-and-analytics-9da47a39fb8c">BI-as-Code: Bridging the Gap Between Data Engineering and Analytics</a> was originally published in <a href="https://medium.com/towards-data-engineering">Towards Data Engineering</a> on Medium, where people are continuing the conversation by highlighting and responding to this story.</p>
-<hr>
-<p><em>This article was originally published at <a href="https://medium.com/towards-data-engineering/bi-as-code-bridging-the-gap-between-data-engineering-and-analytics-9da47a39fb8c?source=rss-670f6306e3c0------2">https://medium.com/towards-data-engineering/bi-as-code-bridging-the-gap-between-data-engineering-and-analytics-9da47a39fb8c?source=rss-670f6306e3c0------2</a></em></p>
-e:["$","$1","c",{"children":[[["$","$L11",null,{"articleCount":67,"projectCount":9}],["$","$L12",null,{}],["$","$L13",null,{}],["$","$L14",null,{}],["$","$L15",null,{}],["$","$L16",null,{"articles":[{"slug":"the-complete-guide-to-agent-skills-for-agile-four-skills-for-better-scrum","title":"The Complete Guide to Agent Skills for Agile: Four Skills for Better Scrum","excerpt":"","date":"$D2026-05-24T00:00:00.000Z","readTime":"1 min read","category":"data-engineering","htmlContent":"<hr>\n<p><em>This article was originally published at <a href=\"https://aradsouza.medium.com/the-complete-guide-to-agent-skills-for-agile-four-skills-for-better-scrum-592e1193f2a0?source=rss-670f6306e3c0------2\">https://aradsouza.medium.com/the-complete-guide-to-agent-skills-for-agile-four-skills-for-better-scrum-592e1193f2a0?source=rss-670f6306e3c0------2</a></em></p>\n","coverImage":"https://cdn-images-1.medium.com/max/1300/1*FvpXXVmrLlpjOuLg6r7YQA.png","published":true,"tags":["data-engineering","agile","ai-agent","ai","software-engineering"]},{"slug":"ai-agents-explained-without-the-hype-a-data-engineer-s-take","title":"AI Agents Explained Without the Hype: A Data Engineer’s Take","excerpt":"","date":"$D2026-05-09T00:00:00.000Z","readTime":"1 min read","category":"python","htmlContent":"<hr>\n<p><em>This article was originally published at <a href=\"https://medium.com/towards-data-engineering/ai-agents-explained-without-the-hype-a-data-engineers-take-83633ac7cd1e?source=rss-670f6306e3c0------2\">https://medium.com/towards-data-engineering/ai-agents-explained-without-the-hype-a-data-engineers-take-83633ac7cd1e?source=rss-670f6306e3c0------2</a></em></p>\n","coverImage":"https://cdn-images-1.medium.com/max/1498/1*4cEsgqexLbhIx0aBt0ZRzA.png","published":true,"tags":["python","machine-learning","artificial-intelligence","software-engineering","data-engineering"]},{"slug":"mcp-vs-agentic-skills-which-architecture-should-you-choose","title":"MCP vs. Agentic Skills: Which Architecture Should You Choose?","excerpt":"","date":"$D2026-05-09T00:00:00.000Z","readTime":"1 min read","category":"data-engineering","htmlContent":"<hr>\n<p><em>This article was originally published at <a href=\"https://medium.com/towards-data-engineering/mcp-vs-agentic-skills-which-architecture-should-you-choose-b103f4b2d364?source=rss-670f6306e3c0------2\">https://medium.com/towards-data-engineering/mcp-vs-agentic-skills-which-architecture-should-you-choose-b103f4b2d364?source=rss-670f6306e3c0------2</a></em></p>\n","coverImage":"https://cdn-images-1.medium.com/max/1662/1*Kl2j6CISQUVWzBaxEHnFww.png","published":true,"tags":["data-engineering","machine-learning","model-context-protocol","software-engineering","artificial-intelligence"]},{"slug":"a-better-way-to-do-real-time-streaming-redpanda-risingwave-explained","title":"A Better Way to Do Real-Time Streaming (Redpanda + RisingWave Explained)","excerpt":"If your team wants real-time streaming but keeps hitting the wall of JVM tuning, ZooKeeper management, and Flink job orchestration, this stack is worth your tim...","date":"$D2026-04-22T00:00:00.000Z","readTime":"20 min read","category":"risingwave","htmlContent":"$17","coverImage":"https://cdn-images-1.medium.com/max/1024/1*4Wq1KSREfuUl0fo9w9gDwQ.png","published":true,"tags":["risingwave","data-quality","data-engineering","red-panda","streaming"]},{"slug":"bi-as-code-bridging-the-gap-between-data-engineering-and-analytics","title":"BI-as-Code: Bridging the Gap Between Data Engineering and Analytics","excerpt":"BI-as-Code treats dashboards and metrics as version-controlled, testable, reusable code artefacts closing the last remaining gap in the modern data stack where...","date":"$D2026-04-18T00:00:00.000Z","readTime":"8 min read","category":"data-quality","htmlContent":"$18","coverImage":"https://cdn-images-1.medium.com/max/1009/1*jYbjbd4is9uu59GDoMKlog.png","published":true,"tags":["data-quality","version-control","bi-as-code","automation","dbt"]}]}],"$L19"],null,"$L1a"]}]
-f:["$","$1","h",{"children":[null,[["$","$L1b",null,{"children":"$L1c"}],["$","meta",null,{"name":"next-size-adjust","content":""}]],["$","$L1d",null,{"children":["$","div",null,{"hidden":true,"children":["$","$1e",null,{"fallback":null,"children":"$L1f"}]}]}]]}]
-20:I[7976,["619","static/chunks/619-f09bc47e24909021.js","18","static/chunks/18-31950137827788de.js","881","static/chunks/881-a356c50b127e16a2.js","974","static/chunks/app/page-62ae8289db37ab7f.js"],"ContactSection"]
-21:I[4431,[],"OutletBoundary"]
-23:I[5278,[],"AsyncMetadataOutlet"]
-19:["$","$L20",null,{}]
-1a:["$","$L21",null,{"children":["$L22",["$","$L23",null,{"promise":"$@24"}]]}]
-1c:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","2",{"name":"theme-color","media":"(prefers-color-scheme: dark)","content":"#09090b"}],["$","meta","3",{"name":"theme-color","media":"(prefers-color-scheme: light)","content":"#f8fafc"}],["$","meta","4",{"name":"color-scheme","content":"dark light"}]]
-22:null
-25:I[622,[],"IconMark"]
-24:{"metadata":[["$","title","0",{"children":"Alwyn D'Souza — Data & AI Engineering Leader"}],["$","meta","1",{"name":"description","content":"Data & AI Engineering Leader specializing in DataOps, dbt, Databricks, AI Agents, and Modern Data Platforms. Published articles and open-source projects."}],["$","link","2",{"rel":"author","href":"https://alwyndsouza.github.io"}],["$","meta","3",{"name":"author","content":"Alwyn D'Souza"}],["$","meta","4",{"name":"keywords","content":"Data Engineering,dbt,Databricks,DataOps,AI Agents,Semantic Layer,Data Platform,MLOps,Lakehouse,Unity Catalog,MCP,Enterprise Architecture"}],["$","meta","5",{"name":"creator","content":"Alwyn D'Souza"}],["$","meta","6",{"name":"publisher","content":"Alwyn D'Souza"}],["$","meta","7",{"name":"robots","content":"index, follow"}],["$","meta","8",{"name":"googlebot","content":"index, follow, max-image-preview:large"}],["$","link","9",{"rel":"canonical","href":"https://alwyndsouza.github.io/"}],["$","link","10",{"rel":"alternate","type":"application/rss+xml","href":"https://alwyndsouza.github.io/rss.xml"}],["$","meta","11",{"property":"og:title","content":"Alwyn D'Souza — Data & AI Engineering Leader"}],["$","meta","12",{"property":"og:description","content":"Building production-grade data platforms, AI systems, and developer tools that scale for enterprise teams."}],["$","meta","13",{"property":"og:url","content":"https://alwyndsouza.github.io/"}],["$","meta","14",{"property":"og:site_name","content":"Alwyn D'Souza"}],["$","meta","15",{"property":"og:locale","content":"en_US"}],["$","meta","16",{"property":"og:image","content":"https://alwyndsouza.github.io/og-default.svg"}],["$","meta","17",{"property":"og:image:width","content":"1200"}],["$","meta","18",{"property":"og:image:height","content":"630"}],["$","meta","19",{"property":"og:image:alt","content":"Alwyn D'Souza — Data & AI Engineering Leader"}],["$","meta","20",{"property":"og:type","content":"website"}],["$","meta","21",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","22",{"name":"twitter:creator","content":"@aradsouza"}],["$","meta","23",{"name":"twitter:title","content":"Alwyn D'Souza — Data & AI Engineering Leader"}],["$","meta","24",{"name":"twitter:description","content":"Building production-grade data platforms, AI systems, and developer tools that scale for enterprise teams."}],["$","meta","25",{"name":"twitter:image","content":"https://alwyndsouza.github.io/og-default.svg"}],["$","link","26",{"rel":"shortcut icon","href":"/favicon.svg"}],["$","link","27",{"rel":"icon","href":"/favicon.svg","type":"image/svg+xml"}],["$","$L25","28",{}]],"error":null,"digest":"$undefined"}
-1f:"$24:metadata"
+<p><em>This article was originally published at <a href="https://aradsouza.medium.com/the-complete-guide-to-agent-skills-for-agile-four-skills-for-better-scrum-592e1193f2a0?source=rss-670f6306e3c0------2">https://aradsouza.medium.com/the-complete-guide-to-agent-skills-for-agile-four-skills-for-better-scrum-592e1193f2a0?source=rss-670f6306e3c0------2</a></em></p>
+e:["$","$1","c",{"children":[[["$","$L11",null,{"articleCount":69,"projectCount":9}],["$","$L12",null,{}],["$","$L13",null,{}],["$","$L14",null,{}],["$","$L15",null,{}],["$","$L16",null,{"articles":[{"slug":"my-copilot-agent-skill-splits-stories-better-than-most-agile-teams","title":"My Copilot Agent Skill Splits Stories Better Than Most Agile Teams","excerpt":"How eight proven story-splitting patterns turn 13-point sprint killers into vertical slices that actually ship value.The agile-story-splitter Copilot Agent Skil...","date":"$D2026-05-25T00:00:00.000Z","readTime":"12 min read","category":"ai-agent","htmlContent":"$17","coverImage":"https://cdn-images-1.medium.com/max/1024/1*g3xgo_oBmSG4-MFfo0ziAg.png","published":true,"tags":["ai-agent","software-development","product-management","data-engineering","agile"]},{"slug":"why-your-user-stories-are-broken-and-how-a-copilot-agent-skill-can-fix-them","title":"Why Your User Stories Are Broken (And How a Copilot Agent Skill Can Fix Them)","excerpt":"Injecting Deterministic Requirements, BDD Acceptance Criteria, and Automated Quality Gates Directly into Your BacklogSkills Repository: https://github.com/alwyn...","date":"$D2026-05-25T00:00:00.000Z","readTime":"6 min read","category":"agile","htmlContent":"$18","coverImage":"https://cdn-images-1.medium.com/max/1024/1*8d1rN41k4lvLdnJfK38GBQ.png","published":true,"tags":["agile","artificial-intelligence","software-engineering","product-management","github-copilot"]},{"slug":"the-complete-guide-to-agent-skills-for-agile-four-skills-for-better-scrum","title":"The Complete Guide to Agent Skills for Agile: Four Skills for Better Scrum","excerpt":"Most agile teams lose 20–30% of every sprint rewriting stories that were unclear from the start.I have written Agile Story Skills for :problem‑framingagile-stor...","date":"$D2026-05-24T00:00:00.000Z","readTime":"4 min read","category":"data-engineering","htmlContent":"$19","coverImage":"https://cdn-images-1.medium.com/max/1024/1*FvpXXVmrLlpjOuLg6r7YQA.png","published":true,"tags":["data-engineering","agile","ai-agent","ai","software-engineering"]},{"slug":"ai-agents-explained-without-the-hype-a-data-engineer-s-take","title":"AI Agents Explained Without the Hype: A Data Engineer’s Take","excerpt":"","date":"$D2026-05-09T00:00:00.000Z","readTime":"1 min read","category":"python","htmlContent":"<hr>\n<p><em>This article was originally published at <a href=\"https://medium.com/towards-data-engineering/ai-agents-explained-without-the-hype-a-data-engineers-take-83633ac7cd1e?source=rss-670f6306e3c0------2\">https://medium.com/towards-data-engineering/ai-agents-explained-without-the-hype-a-data-engineers-take-83633ac7cd1e?source=rss-670f6306e3c0------2</a></em></p>\n","coverImage":"https://cdn-images-1.medium.com/max/1498/1*4cEsgqexLbhIx0aBt0ZRzA.png","published":true,"tags":["python","machine-learning","artificial-intelligence","software-engineering","data-engineering"]},{"slug":"mcp-vs-agentic-skills-which-architecture-should-you-choose","title":"MCP vs. Agentic Skills: Which Architecture Should You Choose?","excerpt":"","date":"$D2026-05-09T00:00:00.000Z","readTime":"1 min read","category":"data-engineering","htmlContent":"<hr>\n<p><em>This article was originally published at <a href=\"https://medium.com/towards-data-engineering/mcp-vs-agentic-skills-which-architecture-should-you-choose-b103f4b2d364?source=rss-670f6306e3c0------2\">https://medium.com/towards-data-engineering/mcp-vs-agentic-skills-which-architecture-should-you-choose-b103f4b2d364?source=rss-670f6306e3c0------2</a></em></p>\n","coverImage":"https://cdn-images-1.medium.com/max/1662/1*Kl2j6CISQUVWzBaxEHnFww.png","published":true,"tags":["data-engineering","machine-learning","model-context-protocol","software-engineering","artificial-intelligence"]}]}],"$L1a"],null,"$L1b"]}]
+f:["$","$1","h",{"children":[null,[["$","$L1c",null,{"children":"$L1d"}],["$","meta",null,{"name":"next-size-adjust","content":""}]],["$","$L1e",null,{"children":["$","div",null,{"hidden":true,"children":["$","$1f",null,{"fallback":null,"children":"$L20"}]}]}]]}]
+21:I[7976,["619","static/chunks/619-f09bc47e24909021.js","18","static/chunks/18-31950137827788de.js","881","static/chunks/881-a356c50b127e16a2.js","974","static/chunks/app/page-62ae8289db37ab7f.js"],"ContactSection"]
+22:I[4431,[],"OutletBoundary"]
+24:I[5278,[],"AsyncMetadataOutlet"]
+1a:["$","$L21",null,{}]
+1b:["$","$L22",null,{"children":["$L23",["$","$L24",null,{"promise":"$@25"}]]}]
+1d:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","2",{"name":"theme-color","media":"(prefers-color-scheme: dark)","content":"#09090b"}],["$","meta","3",{"name":"theme-color","media":"(prefers-color-scheme: light)","content":"#f8fafc"}],["$","meta","4",{"name":"color-scheme","content":"dark light"}]]
+23:null
+26:I[622,[],"IconMark"]
+25:{"metadata":[["$","title","0",{"children":"Alwyn D'Souza — Data & AI Engineering Leader"}],["$","meta","1",{"name":"description","content":"Data & AI Engineering Leader specializing in DataOps, dbt, Databricks, AI Agents, and Modern Data Platforms. Published articles and open-source projects."}],["$","link","2",{"rel":"author","href":"https://alwyndsouza.github.io"}],["$","meta","3",{"name":"author","content":"Alwyn D'Souza"}],["$","meta","4",{"name":"keywords","content":"Data Engineering,dbt,Databricks,DataOps,AI Agents,Semantic Layer,Data Platform,MLOps,Lakehouse,Unity Catalog,MCP,Enterprise Architecture"}],["$","meta","5",{"name":"creator","content":"Alwyn D'Souza"}],["$","meta","6",{"name":"publisher","content":"Alwyn D'Souza"}],["$","meta","7",{"name":"robots","content":"index, follow"}],["$","meta","8",{"name":"googlebot","content":"index, follow, max-image-preview:large"}],["$","link","9",{"rel":"canonical","href":"https://alwyndsouza.github.io/"}],["$","link","10",{"rel":"alternate","type":"application/rss+xml","href":"https://alwyndsouza.github.io/rss.xml"}],["$","meta","11",{"property":"og:title","content":"Alwyn D'Souza — Data & AI Engineering Leader"}],["$","meta","12",{"property":"og:description","content":"Building production-grade data platforms, AI systems, and developer tools that scale for enterprise teams."}],["$","meta","13",{"property":"og:url","content":"https://alwyndsouza.github.io/"}],["$","meta","14",{"property":"og:site_name","content":"Alwyn D'Souza"}],["$","meta","15",{"property":"og:locale","content":"en_US"}],["$","meta","16",{"property":"og:image","content":"https://alwyndsouza.github.io/og-default.svg"}],["$","meta","17",{"property":"og:image:width","content":"1200"}],["$","meta","18",{"property":"og:image:height","content":"630"}],["$","meta","19",{"property":"og:image:alt","content":"Alwyn D'Souza — Data & AI Engineering Leader"}],["$","meta","20",{"property":"og:type","content":"website"}],["$","meta","21",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","22",{"name":"twitter:creator","content":"@aradsouza"}],["$","meta","23",{"name":"twitter:title","content":"Alwyn D'Souza — Data & AI Engineering Leader"}],["$","meta","24",{"name":"twitter:description","content":"Building production-grade data platforms, AI systems, and developer tools that scale for enterprise teams."}],["$","meta","25",{"name":"twitter:image","content":"https://alwyndsouza.github.io/og-default.svg"}],["$","link","26",{"rel":"shortcut icon","href":"/favicon.svg"}],["$","link","27",{"rel":"icon","href":"/favicon.svg","type":"image/svg+xml"}],["$","$L26","28",{}]],"error":null,"digest":"$undefined"}
+20:"$25:metadata"
