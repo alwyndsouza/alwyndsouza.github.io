@@ -7,25 +7,177 @@
 7:I[2619,["619","static/chunks/619-f09bc47e24909021.js","18","static/chunks/18-31950137827788de.js","177","static/chunks/app/layout-8967c3e7ec6b3be1.js"],""]
 10:I[7150,[],""]
 :HL["/_next/static/media/e4af272ccee01ff0-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
-:HL["/_next/static/css/c621f4da8d7d884c.css","style"]
+:HL["/_next/static/css/d7e6bdd0e2b84281.css","style"]
 :HL["/_next/static/css/e2c73e6d4f2f1c8a.css","style"]
-0:{"P":null,"b":"dF1kLeLxQslPYDl3Wr1ZM","p":"","c":["",""],"i":false,"f":[[["",{"children":["__PAGE__",{}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/c621f4da8d7d884c.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/e2c73e6d4f2f1c8a.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"en","className":"__variable_f367f3 __variable_694534","suppressHydrationWarning":true,"children":[["$","head",null,{"children":["$","script",null,{"dangerouslySetInnerHTML":{"__html":"$2"}}]}],["$","body",null,{"className":"min-h-screen bg-zinc-950 font-sans text-zinc-100 antialiased selection:bg-indigo-600/30 selection:text-zinc-100","children":["$","$L3",null,{"children":[["$","a",null,{"href":"#main-content","className":"sr-only focus-visible:not-sr-only focus-visible:fixed focus-visible:left-4 focus-visible:top-4 focus-visible:z-[100] focus-visible:rounded-lg focus-visible:bg-indigo-600 focus-visible:px-4 focus-visible:py-2 focus-visible:text-sm focus-visible:font-medium focus-visible:text-white focus-visible:shadow-lg","children":"Skip to main content"}],["$","$L4",null,{}],["$","main",null,{"id":"main-content","tabIndex":-1,"className":"outline-none","children":["$","$L5",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","div",null,{"className":"flex min-h-screen items-center justify-center","children":["$","div",null,{"className":"text-center","children":[["$","p",null,{"className":"text-xs font-mono text-indigo-400 mb-4","children":"404"}],["$","h1",null,{"className":"text-3xl font-bold text-zinc-100 mb-3","children":"Page not found"}],["$","p",null,{"className":"text-zinc-500 mb-8 max-w-sm","children":"This page doesn't exist or has been moved."}],["$","$L7",null,{"href":"/","className":"inline-flex items-center gap-2 rounded-lg bg-indigo-600 px-5 py-2.5 text-sm font-medium text-white transition-all hover:bg-indigo-500","children":"Go home"}]]}]}],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","footer",null,{"className":"border-t border-zinc-800 bg-zinc-950","role":"contentinfo","children":["$","div",null,{"className":"mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:px-8","children":[["$","div",null,{"className":"grid grid-cols-1 gap-10 sm:grid-cols-2 md:grid-cols-3","children":[["$","div",null,{"className":"space-y-4","children":[["$","$L7",null,{"href":"/","className":"group inline-flex items-center gap-2 rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500","aria-label":"Alwyn D'Souza — home","children":[["$","div",null,{"className":"flex h-7 w-7 items-center justify-center rounded-md border border-indigo-500/30 bg-indigo-600/20 transition-colors group-hover:bg-indigo-600/30","children":["$","svg",null,{"ref":"$undefined","xmlns":"http://www.w3.org/2000/svg","width":24,"height":24,"viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":2,"strokeLinecap":"round","strokeLinejoin":"round","className":"lucide lucide-database h-3.5 w-3.5 text-indigo-400","aria-hidden":"true","children":[["$","ellipse","msslwz",{"cx":"12","cy":"5","rx":"9","ry":"3"}],["$","path","1wlel7",{"d":"M3 5V19A9 3 0 0 0 21 19V5"}],["$","path","mv7ke4",{"d":"M3 12A9 3 0 0 0 21 12"}],"$undefined"]}]}],["$","span",null,{"className":"text-sm font-semibold text-zinc-100","children":["alwyn",["$","span",null,{"className":"text-indigo-400","children":".dev"}]]}]]}],["$","p",null,{"className":"text-xs leading-relaxed text-zinc-500 max-w-xs","children":"Data & AI Engineering Leader. Building modern data platforms, AI systems, and open-source developer tools."}],["$","div",null,{"className":"flex items-center gap-3 pt-1","children":[["$","a","https://github.com/alwyndsouza",{"href":"https://github.com/alwyndsouza","target":"_blank","rel":"noopener noreferrer","aria-label":"GitHub (opens in new tab)","className":"flex h-7 w-7 items-center justify-center rounded-md text-zinc-600 transition-colors hover:bg-zinc-800 hover:text-zinc-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500","children":"$L8"}],"$L9","$La"]}]]}],"$Lb","$Lc"]}],"$Ld"]}]}]]}]}]]}]]}],{"children":["__PAGE__","$Le",{},null,false]},null,false],"$Lf",false]],"m":"$undefined","G":["$10",[]],"s":false,"S":true}
+0:{"P":null,"b":"uKPsSUYdqfoCNCrLWVDBw","p":"","c":["",""],"i":false,"f":[[["",{"children":["__PAGE__",{}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/d7e6bdd0e2b84281.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/e2c73e6d4f2f1c8a.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"en","className":"__variable_f367f3 __variable_694534","suppressHydrationWarning":true,"children":[["$","head",null,{"children":["$","script",null,{"dangerouslySetInnerHTML":{"__html":"$2"}}]}],["$","body",null,{"className":"min-h-screen bg-zinc-950 font-sans text-zinc-100 antialiased selection:bg-indigo-600/30 selection:text-zinc-100","children":["$","$L3",null,{"children":[["$","a",null,{"href":"#main-content","className":"sr-only focus-visible:not-sr-only focus-visible:fixed focus-visible:left-4 focus-visible:top-4 focus-visible:z-[100] focus-visible:rounded-lg focus-visible:bg-indigo-600 focus-visible:px-4 focus-visible:py-2 focus-visible:text-sm focus-visible:font-medium focus-visible:text-white focus-visible:shadow-lg","children":"Skip to main content"}],["$","$L4",null,{}],["$","main",null,{"id":"main-content","tabIndex":-1,"className":"outline-none","children":["$","$L5",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","div",null,{"className":"flex min-h-screen items-center justify-center","children":["$","div",null,{"className":"text-center","children":[["$","p",null,{"className":"text-xs font-mono text-indigo-400 mb-4","children":"404"}],["$","h1",null,{"className":"text-3xl font-bold text-zinc-100 mb-3","children":"Page not found"}],["$","p",null,{"className":"text-zinc-500 mb-8 max-w-sm","children":"This page doesn't exist or has been moved."}],["$","$L7",null,{"href":"/","className":"inline-flex items-center gap-2 rounded-lg bg-indigo-600 px-5 py-2.5 text-sm font-medium text-white transition-all hover:bg-indigo-500","children":"Go home"}]]}]}],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","footer",null,{"className":"border-t border-zinc-800 bg-zinc-950","role":"contentinfo","children":["$","div",null,{"className":"mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:px-8","children":[["$","div",null,{"className":"grid grid-cols-1 gap-10 sm:grid-cols-2 md:grid-cols-3","children":[["$","div",null,{"className":"space-y-4","children":[["$","$L7",null,{"href":"/","className":"group inline-flex items-center gap-2 rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500","aria-label":"Alwyn D'Souza — home","children":[["$","div",null,{"className":"flex h-7 w-7 items-center justify-center rounded-md border border-indigo-500/30 bg-indigo-600/20 transition-colors group-hover:bg-indigo-600/30","children":["$","svg",null,{"ref":"$undefined","xmlns":"http://www.w3.org/2000/svg","width":24,"height":24,"viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":2,"strokeLinecap":"round","strokeLinejoin":"round","className":"lucide lucide-database h-3.5 w-3.5 text-indigo-400","aria-hidden":"true","children":[["$","ellipse","msslwz",{"cx":"12","cy":"5","rx":"9","ry":"3"}],["$","path","1wlel7",{"d":"M3 5V19A9 3 0 0 0 21 19V5"}],["$","path","mv7ke4",{"d":"M3 12A9 3 0 0 0 21 12"}],"$undefined"]}]}],["$","span",null,{"className":"text-sm font-semibold text-zinc-100","children":["alwyn",["$","span",null,{"className":"text-indigo-400","children":".dev"}]]}]]}],["$","p",null,{"className":"text-xs leading-relaxed text-zinc-500 max-w-xs","children":"Data & AI Engineering Leader. Building modern data platforms, AI systems, and open-source developer tools."}],["$","div",null,{"className":"flex items-center gap-3 pt-1","children":[["$","a","https://github.com/alwyndsouza",{"href":"https://github.com/alwyndsouza","target":"_blank","rel":"noopener noreferrer","aria-label":"GitHub (opens in new tab)","className":"flex h-7 w-7 items-center justify-center rounded-md text-zinc-600 transition-colors hover:bg-zinc-800 hover:text-zinc-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500","children":"$L8"}],"$L9","$La"]}]]}],"$Lb","$Lc"]}],"$Ld"]}]}]]}]}]]}]]}],{"children":["__PAGE__","$Le",{},null,false]},null,false],"$Lf",false]],"m":"$undefined","G":["$10",[]],"s":false,"S":true}
 11:I[8637,["619","static/chunks/619-f09bc47e24909021.js","18","static/chunks/18-31950137827788de.js","881","static/chunks/881-a356c50b127e16a2.js","974","static/chunks/app/page-62ae8289db37ab7f.js"],"Hero"]
 12:I[4421,["619","static/chunks/619-f09bc47e24909021.js","18","static/chunks/18-31950137827788de.js","881","static/chunks/881-a356c50b127e16a2.js","974","static/chunks/app/page-62ae8289db37ab7f.js"],"AboutSection"]
 13:I[6434,["619","static/chunks/619-f09bc47e24909021.js","18","static/chunks/18-31950137827788de.js","881","static/chunks/881-a356c50b127e16a2.js","974","static/chunks/app/page-62ae8289db37ab7f.js"],"Expertise"]
 14:I[5394,["619","static/chunks/619-f09bc47e24909021.js","18","static/chunks/18-31950137827788de.js","881","static/chunks/881-a356c50b127e16a2.js","974","static/chunks/app/page-62ae8289db37ab7f.js"],"ArchitectureGallery"]
 15:I[5059,["619","static/chunks/619-f09bc47e24909021.js","18","static/chunks/18-31950137827788de.js","881","static/chunks/881-a356c50b127e16a2.js","974","static/chunks/app/page-62ae8289db37ab7f.js"],"TechStack"]
 16:I[5209,["619","static/chunks/619-f09bc47e24909021.js","18","static/chunks/18-31950137827788de.js","881","static/chunks/881-a356c50b127e16a2.js","974","static/chunks/app/page-62ae8289db37ab7f.js"],"LatestArticles"]
-1c:I[4431,[],"ViewportBoundary"]
-1e:I[4431,[],"MetadataBoundary"]
-1f:"$Sreact.suspense"
+1d:I[4431,[],"ViewportBoundary"]
+1f:I[4431,[],"MetadataBoundary"]
+20:"$Sreact.suspense"
 8:["$","svg",null,{"ref":"$undefined","xmlns":"http://www.w3.org/2000/svg","width":24,"height":24,"viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":2,"strokeLinecap":"round","strokeLinejoin":"round","className":"lucide lucide-github h-3.5 w-3.5","aria-hidden":"true","children":[["$","path","tonef",{"d":"M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"}],["$","path","9comsn",{"d":"M9 18c-4.51 2-5-2-7-2"}],"$undefined"]}]
 9:["$","a","https://linkedin.com/in/alwynanildsouza",{"href":"https://linkedin.com/in/alwynanildsouza","target":"_blank","rel":"noopener noreferrer","aria-label":"LinkedIn (opens in new tab)","className":"flex h-7 w-7 items-center justify-center rounded-md text-zinc-600 transition-colors hover:bg-zinc-800 hover:text-zinc-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500","children":["$","svg",null,{"ref":"$undefined","xmlns":"http://www.w3.org/2000/svg","width":24,"height":24,"viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":2,"strokeLinecap":"round","strokeLinejoin":"round","className":"lucide lucide-linkedin h-3.5 w-3.5","aria-hidden":"true","children":[["$","path","c2jq9f",{"d":"M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"}],["$","rect","mk3on5",{"width":"4","height":"12","x":"2","y":"9"}],["$","circle","bt5ra8",{"cx":"4","cy":"4","r":"2"}],"$undefined"]}]}]
 a:["$","a","https://medium.com/@aradsouza",{"href":"https://medium.com/@aradsouza","target":"_blank","rel":"noopener noreferrer","aria-label":"Medium (opens in new tab)","className":"flex h-7 w-7 items-center justify-center rounded-md text-zinc-600 transition-colors hover:bg-zinc-800 hover:text-zinc-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500","children":["$","svg",null,{"ref":"$undefined","xmlns":"http://www.w3.org/2000/svg","width":24,"height":24,"viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":2,"strokeLinecap":"round","strokeLinejoin":"round","className":"lucide lucide-file-text h-3.5 w-3.5","aria-hidden":"true","children":[["$","path","1rqfz7",{"d":"M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"}],["$","path","tnqrlb",{"d":"M14 2v4a2 2 0 0 0 2 2h4"}],["$","path","b1mrlr",{"d":"M10 9H8"}],["$","path","t4e002",{"d":"M16 13H8"}],["$","path","z1uh3a",{"d":"M16 17H8"}],"$undefined"]}]}]
 b:["$","nav",null,{"aria-label":"Footer navigation","children":[["$","h2",null,{"className":"mb-4 text-xs font-semibold uppercase tracking-widest text-zinc-600","children":"Navigate"}],["$","ul",null,{"className":"space-y-2.5","role":"list","children":[["$","li","/projects",{"children":["$","$L7",null,{"href":"/projects","className":"text-sm text-zinc-400 transition-colors hover:text-zinc-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 rounded","children":"Projects"}]}],["$","li","/articles",{"children":["$","$L7",null,{"href":"/articles","className":"text-sm text-zinc-400 transition-colors hover:text-zinc-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 rounded","children":"Writing"}]}],["$","li","/about",{"children":["$","$L7",null,{"href":"/about","className":"text-sm text-zinc-400 transition-colors hover:text-zinc-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 rounded","children":"About"}]}]]}]]}]
 c:["$","div",null,{"children":[["$","h2",null,{"className":"mb-4 text-xs font-semibold uppercase tracking-widest text-zinc-600","children":"Connect"}],["$","ul",null,{"className":"space-y-2.5","role":"list","children":[["$","li","https://github.com/alwyndsouza",{"children":["$","a",null,{"href":"https://github.com/alwyndsouza","target":"_blank","rel":"noopener noreferrer","className":"inline-flex items-center gap-1.5 text-sm text-zinc-400 transition-colors hover:text-zinc-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 rounded","children":["GitHub",["$","span",null,{"className":"text-zinc-700 text-xs","aria-hidden":"true","children":"↗"}]]}]}],["$","li","https://linkedin.com/in/alwynanildsouza",{"children":["$","a",null,{"href":"https://linkedin.com/in/alwynanildsouza","target":"_blank","rel":"noopener noreferrer","className":"inline-flex items-center gap-1.5 text-sm text-zinc-400 transition-colors hover:text-zinc-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 rounded","children":["LinkedIn",["$","span",null,{"className":"text-zinc-700 text-xs","aria-hidden":"true","children":"↗"}]]}]}],["$","li","https://medium.com/@aradsouza",{"children":["$","a",null,{"href":"https://medium.com/@aradsouza","target":"_blank","rel":"noopener noreferrer","className":"inline-flex items-center gap-1.5 text-sm text-zinc-400 transition-colors hover:text-zinc-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 rounded","children":["Medium",["$","span",null,{"className":"text-zinc-700 text-xs","aria-hidden":"true","children":"↗"}]]}]}]]}]]}]
 d:["$","div",null,{"className":"mt-10 flex flex-col items-start justify-between gap-3 border-t border-zinc-800/70 pt-6 sm:flex-row sm:items-center","children":[["$","p",null,{"className":"text-xs text-zinc-700","children":["© ",2026," Alwyn D'Souza. Built with Next.js & deployed on GitHub Pages."]}],["$","a",null,{"href":"/rss.xml","className":"inline-flex items-center gap-1.5 text-xs text-zinc-700 transition-colors hover:text-zinc-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 rounded","aria-label":"RSS feed","children":[["$","svg",null,{"ref":"$undefined","xmlns":"http://www.w3.org/2000/svg","width":24,"height":24,"viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":2,"strokeLinecap":"round","strokeLinejoin":"round","className":"lucide lucide-rss h-3 w-3","aria-hidden":"true","children":[["$","path","pv89mb",{"d":"M4 11a9 9 0 0 1 9 9"}],["$","path","k0647b",{"d":"M4 4a16 16 0 0 1 16 16"}],["$","circle","bfqh0e",{"cx":"5","cy":"19","r":"1"}],"$undefined"]}],"RSS Feed"]}]]}]
-17:T455d,<blockquote>
+17:T2034,<blockquote>
+<p>Using AI-powered problem framing and sprint-goal generation to align agile teams around outcomes instead of task lists.</p>
+</blockquote>
+<p><strong>Agent skill GitHub Repo link in references.</strong></p>
+<p>Most sprint failures are not caused by poor execution.</p>
+<p>They happen because teams begin implementation before alignment exists.</p>
+<p>A vague requirement enters backlog refinement, gets converted into stories too quickly, and turns into sprint commitments that optimise delivery activity instead of business outcomes. The result is predictable: teams complete tickets but still miss the actual objective.</p>
+<p>This is where the <strong>sprint-goal-writer</strong> and <strong>problem-framing</strong> Agent Skills become valuable.</p>
+<p>Rather than treating sprint planning as a story aggregation exercise, these skills introduce structured problem definition and outcome-driven sprint goals directly into the developer workflow.</p>
+<p>The goal is simple:</p>
+<blockquote>
+<p><em>Define the right problem before delivery starts, then ensure the sprint has a measurable outcome once work is committed.</em></p>
+</blockquote>
+<h3>Why Most Sprint Goals Fail</h3>
+<p>Many sprint goals are simply renamed task lists.</p>
+<p>Examples like:</p>
+<p><em>“Complete payment integration and finish notification service.”</em></p>
+<p>do not provide:</p>
+<ul>
+<li>direction,</li>
+<li>prioritisation guidance,</li>
+<li>or meaningful trade-off leverage during the sprint.</li>
+</ul>
+<p>When blockers appear or scope changes, these goals collapse because they describe <em>activities</em>, not <em>outcomes</em>.</p>
+<p>A strong sprint goal should answer:</p>
+<p><em>“What meaningful change will exist for the customer or business at the end of this sprint?”</em></p>
+<p>That distinction changes how teams plan, prioritise, and make delivery decisions.</p>
+<h3>The sprint-goal-writer Agent Skill</h3>
+<p>The <strong>sprint-goal-writer</strong> skill converts committed sprint stories into a concise, outcome-oriented sprint objective aligned with Scrum principles.</p>
+<p>Instead of summarising tickets, it synthesises:</p>
+<ul>
+<li>business intent,</li>
+<li>user impact,</li>
+<li>and delivery scope</li>
+</ul>
+<p>into a single operational goal.</p>
+<p>Example transformation:</p>
+<h4>Weak Sprint Goal</h4>
+<p><em>Complete authentication refactor and implement notifications.</em></p>
+<h4>Strong Sprint Goal</h4>
+<p><em>Enable customers to receive real-time transaction updates after completing purchases, reducing support dependency through improved visibility.</em></p>
+<p>The second version provides the following:</p>
+<ul>
+<li>a user outcome,</li>
+<li>a measurable direction,</li>
+<li>and a decision-making framework for the sprint team.</li>
+</ul>
+<h3>The Five-Point Sprint Goal Validation Model</h3>
+<p>Every generated sprint goal is evaluated against five validation checks.</p>
+<h4>1. Single Sentence</h4>
+<p>The goal should be concise enough to communicate clearly during standups and sprint reviews.</p>
+<h4>2. Outcome-Oriented</h4>
+<p>It must describe a result, not implementation tasks.</p>
+<h4>3. Beneficiary-Focused</h4>
+<p>The goal should clearly identify who benefits from the outcome.</p>
+<h4>4. Measurable or Directional</h4>
+<p>Teams should be able to determine whether the goal was achieved.</p>
+<h4>5. Trade-Off Enabling</h4>
+<p>The goal should help teams decide what matters most when priorities shift mid-sprint.</p>
+<p>This transforms sprint goals from planning artefacts into operational alignment tools.</p>
+<p><img src="https://cdn-images-1.medium.com/max/938/1*cT-cTfZYjKtP9kkugn9zzg.png" alt=""></p>
+<h3>Problem Framing Before Sprint Planning</h3>
+<p>The sprint goal skill works best when paired with the <strong>problem-framing</strong> Agent Skill.</p>
+<p>This skill implements the MITRE Problem Framing Canvas — a structured framework used to refine vague requests into actionable problem definitions before stories are written.</p>
+<p><img src="https://cdn-images-1.medium.com/max/840/1*BbSO6fer3YFOydp8Co0mDQ.png" alt=""></p>
+<p>The framework moves through three stages:</p>
+<h4>Phase 1 — Look Inward</h4>
+<ul>
+<li>Current state</li>
+<li>Desired state</li>
+<li>Gap analysis</li>
+</ul>
+<h4>Phase 2 — Look Outward</h4>
+<ul>
+<li>Stakeholders</li>
+<li>Constraints</li>
+<li>Risks and assumptions</li>
+</ul>
+<h4>Phase 3 — Reframe</h4>
+<ul>
+<li>Refined problem statement</li>
+<li>“How Might We” (HMW) question</li>
+</ul>
+<p>The HMW question becomes the bridge between business intent and implementation planning.</p>
+<p>Instead of asking:</p>
+<p><em>“How do we build feature X?”</em></p>
+<p>teams begin asking:</p>
+<p><em>“How might we improve customer onboarding while reducing support dependency and maintaining compliance constraints?”</em></p>
+<p>That shift dramatically improves backlog quality before engineering effort begins.</p>
+<h3>The End-to-End Workflow</h3>
+<p>The complete workflow becomes:</p>
+<h4>1. Problem Framing</h4>
+<p>Convert vague business requests into refined problem statements and HMW questions.</p>
+<h4>2. Story Generation</h4>
+<p>Generate structured agile stories aligned with the framed problem.</p>
+<h4>3. Story Splitting</h4>
+<p>Automatically decompose oversized stories into vertically sliced deliverables.</p>
+<h4>4. Sprint Goal Definition</h4>
+<p>Generate a measurable sprint outcome aligned with customer or business impact.</p>
+<p>This creates a delivery pipeline focused on:</p>
+<ul>
+<li>alignment,</li>
+<li>clarity,</li>
+<li>and measurable outcomes.</li>
+</ul>
+<p>Not just ticket throughput.</p>
+<h3>Practical Use Cases</h3>
+<h4>During Sprint Planning</h4>
+<p>Paste committed stories into /sprint-goal-writer to generate an outcome-focused sprint goal.</p>
+<h4>During Retrospectives</h4>
+<p>Run historical sprint goals through the validation model to identify weak planning patterns.</p>
+<h4>During Discovery</h4>
+<p>Use /problem-framing before backlog refinement to reduce ambiguity and improve stakeholder alignment.</p>
+<h4>During Scope Trade-Offs</h4>
+<p>Use the sprint goal as the prioritisation anchor when blockers or scope changes occur.</p>
+<h3>Why This Matters</h3>
+<p>High-performing agile teams are not defined by velocity alone.</p>
+<p>They are defined by:</p>
+<ul>
+<li>clarity of intent,</li>
+<li>shared understanding,</li>
+<li>and disciplined decision-making.</li>
+</ul>
+<p>Agent Skills like problem-framing and sprint-goal-writer do more than automate documentation.</p>
+<p>They encode delivery discipline directly into the engineering workflow.</p>
+<p>The result is:</p>
+<ul>
+<li>better sprint alignment,</li>
+<li>fewer misinterpreted requirements,</li>
+<li>stronger backlog quality,</li>
+<li>and more outcome-driven delivery cycles.</li>
+</ul>
+<h3>GitHub Repository</h3>
+<h4>Agile Story Skills Repository</h4>
+<p><a href="https://github.com/alwyndsouza/agile-story-skills?utm_source=chatgpt.com">agile-story-skills GitHub Repository</a></p>
+<p>The repository includes:</p>
+<ul>
+<li>problem-framing</li>
+<li>sprint-goal-writer</li>
+<li>agile-story-writer</li>
+<li>agile-story-splitter</li>
+</ul>
+<p>along with structured prompts, workflow patterns, and implementation examples for AI-augmented agile delivery.</p>
+<h3>References</h3>
+<ul>
+<li><a href="https://www.mitre.org/publications/systems-engineering-guide/enterprise-engineering/transformation-planning-and-organizational-change/problem-framing?utm_source=chatgpt.com">MITRE Problem Framing Canvas</a></li>
+<li><a href="https://scrumguides.org/scrum-guide.html?utm_source=chatgpt.com">Scrum Guide (2020)</a></li>
+<li><a href="https://docs.github.com/en/copilot?utm_source=chatgpt.com">GitHub Copilot Documentation</a></li>
+</ul>
+<p><img src="https://medium.com/_/stat?event=post.clientViewed&referrerSource=full_rss&postId=6c2448d8a4b7" alt=""></p>
+<hr>
+<p><em>This article was originally published at <a href="https://aradsouza.medium.com/defining-better-sprint-goals-with-github-copilot-agent-skills-6c2448d8a4b7?source=rss-670f6306e3c0------2">https://aradsouza.medium.com/defining-better-sprint-goals-with-github-copilot-agent-skills-6c2448d8a4b7?source=rss-670f6306e3c0------2</a></em></p>
+18:T455d,<blockquote>
 <p>How eight proven story-splitting patterns turn 13-point sprint killers into vertical slices that actually ship value.</p>
 </blockquote>
 <p>The agile-story-splitter Copilot Agent Skill applies Richard Lawrence&#39;s and Peter Green&#39;s eight battle-tested split patterns to break any oversized story into 2–5 sprint-sized vertical slices. Each slice&#39;s value is independent. No more &quot;backend first, frontend later&quot; horizontal cuts.</p>
@@ -120,7 +272,7 @@ d:["$","div",null,{"className":"mt-10 flex flex-col items-start justify-between 
 <p><img src="https://medium.com/_/stat?event=post.clientViewed&referrerSource=full_rss&postId=92c3130f1905" alt=""></p>
 <hr>
 <p><em>This article was originally published at <a href="https://aradsouza.medium.com/my-copilot-agent-skill-splits-stories-better-than-most-agile-teams-92c3130f1905?source=rss-670f6306e3c0------2">https://aradsouza.medium.com/my-copilot-agent-skill-splits-stories-better-than-most-agile-teams-92c3130f1905?source=rss-670f6306e3c0------2</a></em></p>
-18:T2b59,<blockquote>
+19:T2b59,<blockquote>
 <p>Injecting Deterministic Requirements, BDD Acceptance Criteria, and Automated Quality Gates Directly into Your Backlog</p>
 </blockquote>
 <p>Skills Repository: <a href="https://github.com/alwyndsouza/agile-story-skills">https://github.com/alwyndsouza/agile-story-skills</a></p>
@@ -241,7 +393,7 @@ d:["$","div",null,{"className":"mt-10 flex flex-col items-start justify-between 
 <p><img src="https://medium.com/_/stat?event=post.clientViewed&referrerSource=full_rss&postId=14dd391d4dbb" alt=""></p>
 <hr>
 <p><em>This article was originally published at <a href="https://aradsouza.medium.com/why-your-user-stories-are-broken-and-how-a-copilot-agent-skill-can-fix-them-14dd391d4dbb?source=rss-670f6306e3c0------2">https://aradsouza.medium.com/why-your-user-stories-are-broken-and-how-a-copilot-agent-skill-can-fix-them-14dd391d4dbb?source=rss-670f6306e3c0------2</a></em></p>
-19:T1f14,<p>Most agile teams lose <strong>20–30% of every sprint</strong> rewriting stories that were unclear from the start.</p>
+1a:T1f14,<p>Most agile teams lose <strong>20–30% of every sprint</strong> rewriting stories that were unclear from the start.</p>
 <p>I have written <strong>Agile Story Skills</strong> for <strong>:</strong></p>
 <ul>
 <li><em>problem‑framing</em></li>
@@ -334,15 +486,15 @@ d:["$","div",null,{"className":"mt-10 flex flex-col items-start justify-between 
 <p><img src="https://medium.com/_/stat?event=post.clientViewed&referrerSource=full_rss&postId=592e1193f2a0" alt=""></p>
 <hr>
 <p><em>This article was originally published at <a href="https://aradsouza.medium.com/the-complete-guide-to-agent-skills-for-agile-four-skills-for-better-scrum-592e1193f2a0?source=rss-670f6306e3c0------2">https://aradsouza.medium.com/the-complete-guide-to-agent-skills-for-agile-four-skills-for-better-scrum-592e1193f2a0?source=rss-670f6306e3c0------2</a></em></p>
-e:["$","$1","c",{"children":[[["$","$L11",null,{"articleCount":69,"projectCount":9}],["$","$L12",null,{}],["$","$L13",null,{}],["$","$L14",null,{}],["$","$L15",null,{}],["$","$L16",null,{"articles":[{"slug":"my-copilot-agent-skill-splits-stories-better-than-most-agile-teams","title":"My Copilot Agent Skill Splits Stories Better Than Most Agile Teams","excerpt":"How eight proven story-splitting patterns turn 13-point sprint killers into vertical slices that actually ship value.The agile-story-splitter Copilot Agent Skil...","date":"$D2026-05-25T00:00:00.000Z","readTime":"12 min read","category":"ai-agent","htmlContent":"$17","coverImage":"https://cdn-images-1.medium.com/max/1024/1*g3xgo_oBmSG4-MFfo0ziAg.png","published":true,"tags":["ai-agent","software-development","product-management","data-engineering","agile"]},{"slug":"why-your-user-stories-are-broken-and-how-a-copilot-agent-skill-can-fix-them","title":"Why Your User Stories Are Broken (And How a Copilot Agent Skill Can Fix Them)","excerpt":"Injecting Deterministic Requirements, BDD Acceptance Criteria, and Automated Quality Gates Directly into Your BacklogSkills Repository: https://github.com/alwyn...","date":"$D2026-05-25T00:00:00.000Z","readTime":"6 min read","category":"agile","htmlContent":"$18","coverImage":"https://cdn-images-1.medium.com/max/1024/1*8d1rN41k4lvLdnJfK38GBQ.png","published":true,"tags":["agile","artificial-intelligence","software-engineering","product-management","github-copilot"]},{"slug":"the-complete-guide-to-agent-skills-for-agile-four-skills-for-better-scrum","title":"The Complete Guide to Agent Skills for Agile: Four Skills for Better Scrum","excerpt":"Most agile teams lose 20–30% of every sprint rewriting stories that were unclear from the start.I have written Agile Story Skills for :problem‑framingagile-stor...","date":"$D2026-05-24T00:00:00.000Z","readTime":"4 min read","category":"data-engineering","htmlContent":"$19","coverImage":"https://cdn-images-1.medium.com/max/1024/1*FvpXXVmrLlpjOuLg6r7YQA.png","published":true,"tags":["data-engineering","agile","ai-agent","ai","software-engineering"]},{"slug":"ai-agents-explained-without-the-hype-a-data-engineer-s-take","title":"AI Agents Explained Without the Hype: A Data Engineer’s Take","excerpt":"","date":"$D2026-05-09T00:00:00.000Z","readTime":"1 min read","category":"python","htmlContent":"<hr>\n<p><em>This article was originally published at <a href=\"https://medium.com/towards-data-engineering/ai-agents-explained-without-the-hype-a-data-engineers-take-83633ac7cd1e?source=rss-670f6306e3c0------2\">https://medium.com/towards-data-engineering/ai-agents-explained-without-the-hype-a-data-engineers-take-83633ac7cd1e?source=rss-670f6306e3c0------2</a></em></p>\n","coverImage":"https://cdn-images-1.medium.com/max/1498/1*4cEsgqexLbhIx0aBt0ZRzA.png","published":true,"tags":["python","machine-learning","artificial-intelligence","software-engineering","data-engineering"]},{"slug":"mcp-vs-agentic-skills-which-architecture-should-you-choose","title":"MCP vs. Agentic Skills: Which Architecture Should You Choose?","excerpt":"","date":"$D2026-05-09T00:00:00.000Z","readTime":"1 min read","category":"data-engineering","htmlContent":"<hr>\n<p><em>This article was originally published at <a href=\"https://medium.com/towards-data-engineering/mcp-vs-agentic-skills-which-architecture-should-you-choose-b103f4b2d364?source=rss-670f6306e3c0------2\">https://medium.com/towards-data-engineering/mcp-vs-agentic-skills-which-architecture-should-you-choose-b103f4b2d364?source=rss-670f6306e3c0------2</a></em></p>\n","coverImage":"https://cdn-images-1.medium.com/max/1662/1*Kl2j6CISQUVWzBaxEHnFww.png","published":true,"tags":["data-engineering","machine-learning","model-context-protocol","software-engineering","artificial-intelligence"]}]}],"$L1a"],null,"$L1b"]}]
-f:["$","$1","h",{"children":[null,[["$","$L1c",null,{"children":"$L1d"}],["$","meta",null,{"name":"next-size-adjust","content":""}]],["$","$L1e",null,{"children":["$","div",null,{"hidden":true,"children":["$","$1f",null,{"fallback":null,"children":"$L20"}]}]}]]}]
-21:I[7976,["619","static/chunks/619-f09bc47e24909021.js","18","static/chunks/18-31950137827788de.js","881","static/chunks/881-a356c50b127e16a2.js","974","static/chunks/app/page-62ae8289db37ab7f.js"],"ContactSection"]
-22:I[4431,[],"OutletBoundary"]
-24:I[5278,[],"AsyncMetadataOutlet"]
-1a:["$","$L21",null,{}]
-1b:["$","$L22",null,{"children":["$L23",["$","$L24",null,{"promise":"$@25"}]]}]
-1d:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","2",{"name":"theme-color","media":"(prefers-color-scheme: dark)","content":"#09090b"}],["$","meta","3",{"name":"theme-color","media":"(prefers-color-scheme: light)","content":"#f8fafc"}],["$","meta","4",{"name":"color-scheme","content":"dark light"}]]
-23:null
-26:I[622,[],"IconMark"]
-25:{"metadata":[["$","title","0",{"children":"Alwyn D'Souza — Data & AI Engineering Leader"}],["$","meta","1",{"name":"description","content":"Data & AI Engineering Leader specializing in DataOps, dbt, Databricks, AI Agents, and Modern Data Platforms. Published articles and open-source projects."}],["$","link","2",{"rel":"author","href":"https://alwyndsouza.github.io"}],["$","meta","3",{"name":"author","content":"Alwyn D'Souza"}],["$","meta","4",{"name":"keywords","content":"Data Engineering,dbt,Databricks,DataOps,AI Agents,Semantic Layer,Data Platform,MLOps,Lakehouse,Unity Catalog,MCP,Enterprise Architecture"}],["$","meta","5",{"name":"creator","content":"Alwyn D'Souza"}],["$","meta","6",{"name":"publisher","content":"Alwyn D'Souza"}],["$","meta","7",{"name":"robots","content":"index, follow"}],["$","meta","8",{"name":"googlebot","content":"index, follow, max-image-preview:large"}],["$","link","9",{"rel":"canonical","href":"https://alwyndsouza.github.io/"}],["$","link","10",{"rel":"alternate","type":"application/rss+xml","href":"https://alwyndsouza.github.io/rss.xml"}],["$","meta","11",{"property":"og:title","content":"Alwyn D'Souza — Data & AI Engineering Leader"}],["$","meta","12",{"property":"og:description","content":"Building production-grade data platforms, AI systems, and developer tools that scale for enterprise teams."}],["$","meta","13",{"property":"og:url","content":"https://alwyndsouza.github.io/"}],["$","meta","14",{"property":"og:site_name","content":"Alwyn D'Souza"}],["$","meta","15",{"property":"og:locale","content":"en_US"}],["$","meta","16",{"property":"og:image","content":"https://alwyndsouza.github.io/og-default.svg"}],["$","meta","17",{"property":"og:image:width","content":"1200"}],["$","meta","18",{"property":"og:image:height","content":"630"}],["$","meta","19",{"property":"og:image:alt","content":"Alwyn D'Souza — Data & AI Engineering Leader"}],["$","meta","20",{"property":"og:type","content":"website"}],["$","meta","21",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","22",{"name":"twitter:creator","content":"@aradsouza"}],["$","meta","23",{"name":"twitter:title","content":"Alwyn D'Souza — Data & AI Engineering Leader"}],["$","meta","24",{"name":"twitter:description","content":"Building production-grade data platforms, AI systems, and developer tools that scale for enterprise teams."}],["$","meta","25",{"name":"twitter:image","content":"https://alwyndsouza.github.io/og-default.svg"}],["$","link","26",{"rel":"shortcut icon","href":"/favicon.svg"}],["$","link","27",{"rel":"icon","href":"/favicon.svg","type":"image/svg+xml"}],["$","$L26","28",{}]],"error":null,"digest":"$undefined"}
-20:"$25:metadata"
+e:["$","$1","c",{"children":[[["$","$L11",null,{"articleCount":70,"projectCount":9}],["$","$L12",null,{}],["$","$L13",null,{}],["$","$L14",null,{}],["$","$L15",null,{}],["$","$L16",null,{"articles":[{"slug":"defining-better-sprint-goals-with-github-copilot-agent-skills","title":"Defining Better Sprint Goals with GitHub Copilot Agent Skills","excerpt":"Using AI-powered problem framing and sprint-goal generation to align agile teams around outcomes instead of task lists.Agent skill GitHub Repo link in reference...","date":"$D2026-05-26T00:00:00.000Z","readTime":"5 min read","category":"data-engineering","htmlContent":"$17","coverImage":"https://cdn-images-1.medium.com/max/938/1*cT-cTfZYjKtP9kkugn9zzg.png","published":true,"tags":["data-engineering","artificial-intelligence","agile","product-management","software-engineering"]},{"slug":"my-copilot-agent-skill-splits-stories-better-than-most-agile-teams","title":"My Copilot Agent Skill Splits Stories Better Than Most Agile Teams","excerpt":"How eight proven story-splitting patterns turn 13-point sprint killers into vertical slices that actually ship value.The agile-story-splitter Copilot Agent Skil...","date":"$D2026-05-25T00:00:00.000Z","readTime":"12 min read","category":"ai-agent","htmlContent":"$18","coverImage":"https://cdn-images-1.medium.com/max/1024/1*g3xgo_oBmSG4-MFfo0ziAg.png","published":true,"tags":["ai-agent","software-development","product-management","data-engineering","agile"]},{"slug":"why-your-user-stories-are-broken-and-how-a-copilot-agent-skill-can-fix-them","title":"Why Your User Stories Are Broken (And How a Copilot Agent Skill Can Fix Them)","excerpt":"Injecting Deterministic Requirements, BDD Acceptance Criteria, and Automated Quality Gates Directly into Your BacklogSkills Repository: https://github.com/alwyn...","date":"$D2026-05-25T00:00:00.000Z","readTime":"6 min read","category":"agile","htmlContent":"$19","coverImage":"https://cdn-images-1.medium.com/max/1024/1*8d1rN41k4lvLdnJfK38GBQ.png","published":true,"tags":["agile","artificial-intelligence","software-engineering","product-management","github-copilot"]},{"slug":"the-complete-guide-to-agent-skills-for-agile-four-skills-for-better-scrum","title":"The Complete Guide to Agent Skills for Agile: Four Skills for Better Scrum","excerpt":"Most agile teams lose 20–30% of every sprint rewriting stories that were unclear from the start.I have written Agile Story Skills for :problem‑framingagile-stor...","date":"$D2026-05-24T00:00:00.000Z","readTime":"4 min read","category":"data-engineering","htmlContent":"$1a","coverImage":"https://cdn-images-1.medium.com/max/1024/1*FvpXXVmrLlpjOuLg6r7YQA.png","published":true,"tags":["data-engineering","agile","ai-agent","ai","software-engineering"]},{"slug":"ai-agents-explained-without-the-hype-a-data-engineer-s-take","title":"AI Agents Explained Without the Hype: A Data Engineer’s Take","excerpt":"","date":"$D2026-05-09T00:00:00.000Z","readTime":"1 min read","category":"python","htmlContent":"<hr>\n<p><em>This article was originally published at <a href=\"https://medium.com/towards-data-engineering/ai-agents-explained-without-the-hype-a-data-engineers-take-83633ac7cd1e?source=rss-670f6306e3c0------2\">https://medium.com/towards-data-engineering/ai-agents-explained-without-the-hype-a-data-engineers-take-83633ac7cd1e?source=rss-670f6306e3c0------2</a></em></p>\n","coverImage":"https://cdn-images-1.medium.com/max/1498/1*4cEsgqexLbhIx0aBt0ZRzA.png","published":true,"tags":["python","machine-learning","artificial-intelligence","software-engineering","data-engineering"]}]}],"$L1b"],null,"$L1c"]}]
+f:["$","$1","h",{"children":[null,[["$","$L1d",null,{"children":"$L1e"}],["$","meta",null,{"name":"next-size-adjust","content":""}]],["$","$L1f",null,{"children":["$","div",null,{"hidden":true,"children":["$","$20",null,{"fallback":null,"children":"$L21"}]}]}]]}]
+22:I[7976,["619","static/chunks/619-f09bc47e24909021.js","18","static/chunks/18-31950137827788de.js","881","static/chunks/881-a356c50b127e16a2.js","974","static/chunks/app/page-62ae8289db37ab7f.js"],"ContactSection"]
+23:I[4431,[],"OutletBoundary"]
+25:I[5278,[],"AsyncMetadataOutlet"]
+1b:["$","$L22",null,{}]
+1c:["$","$L23",null,{"children":["$L24",["$","$L25",null,{"promise":"$@26"}]]}]
+1e:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","2",{"name":"theme-color","media":"(prefers-color-scheme: dark)","content":"#09090b"}],["$","meta","3",{"name":"theme-color","media":"(prefers-color-scheme: light)","content":"#f8fafc"}],["$","meta","4",{"name":"color-scheme","content":"dark light"}]]
+24:null
+27:I[622,[],"IconMark"]
+26:{"metadata":[["$","title","0",{"children":"Alwyn D'Souza — Data & AI Engineering Leader"}],["$","meta","1",{"name":"description","content":"Data & AI Engineering Leader specializing in DataOps, dbt, Databricks, AI Agents, and Modern Data Platforms. Published articles and open-source projects."}],["$","link","2",{"rel":"author","href":"https://alwyndsouza.github.io"}],["$","meta","3",{"name":"author","content":"Alwyn D'Souza"}],["$","meta","4",{"name":"keywords","content":"Data Engineering,dbt,Databricks,DataOps,AI Agents,Semantic Layer,Data Platform,MLOps,Lakehouse,Unity Catalog,MCP,Enterprise Architecture"}],["$","meta","5",{"name":"creator","content":"Alwyn D'Souza"}],["$","meta","6",{"name":"publisher","content":"Alwyn D'Souza"}],["$","meta","7",{"name":"robots","content":"index, follow"}],["$","meta","8",{"name":"googlebot","content":"index, follow, max-image-preview:large"}],["$","link","9",{"rel":"canonical","href":"https://alwyndsouza.github.io/"}],["$","link","10",{"rel":"alternate","type":"application/rss+xml","href":"https://alwyndsouza.github.io/rss.xml"}],["$","meta","11",{"property":"og:title","content":"Alwyn D'Souza — Data & AI Engineering Leader"}],["$","meta","12",{"property":"og:description","content":"Building production-grade data platforms, AI systems, and developer tools that scale for enterprise teams."}],["$","meta","13",{"property":"og:url","content":"https://alwyndsouza.github.io/"}],["$","meta","14",{"property":"og:site_name","content":"Alwyn D'Souza"}],["$","meta","15",{"property":"og:locale","content":"en_US"}],["$","meta","16",{"property":"og:image","content":"https://alwyndsouza.github.io/og-default.svg"}],["$","meta","17",{"property":"og:image:width","content":"1200"}],["$","meta","18",{"property":"og:image:height","content":"630"}],["$","meta","19",{"property":"og:image:alt","content":"Alwyn D'Souza — Data & AI Engineering Leader"}],["$","meta","20",{"property":"og:type","content":"website"}],["$","meta","21",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","22",{"name":"twitter:creator","content":"@aradsouza"}],["$","meta","23",{"name":"twitter:title","content":"Alwyn D'Souza — Data & AI Engineering Leader"}],["$","meta","24",{"name":"twitter:description","content":"Building production-grade data platforms, AI systems, and developer tools that scale for enterprise teams."}],["$","meta","25",{"name":"twitter:image","content":"https://alwyndsouza.github.io/og-default.svg"}],["$","link","26",{"rel":"shortcut icon","href":"/favicon.svg"}],["$","link","27",{"rel":"icon","href":"/favicon.svg","type":"image/svg+xml"}],["$","$L27","28",{}]],"error":null,"digest":"$undefined"}
+21:"$26:metadata"

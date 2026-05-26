@@ -5,8 +5,20 @@
     <link>https://alwyndsouza.github.io</link>
     <description>Practical writing on Data Engineering, DataOps, dbt, Databricks, and AI Agents. Articles, open-source projects, and lessons from production data platforms.</description>
     <language>en</language>
-    <lastBuildDate>Mon, 25 May 2026 13:01:31 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 26 May 2026 15:52:50 GMT</lastBuildDate>
     <atom:link href="https://alwyndsouza.github.io/rss.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Defining Better Sprint Goals with GitHub Copilot Agent Skills</title>
+      <link>https://alwyndsouza.github.io/articles/defining-better-sprint-goals-with-github-copilot-agent-skills</link>
+      <guid isPermaLink="true">https://alwyndsouza.github.io/articles/defining-better-sprint-goals-with-github-copilot-agent-skills</guid>
+      <pubDate>Tue, 26 May 2026 00:00:00 GMT</pubDate>
+      <description>Using AI-powered problem framing and sprint-goal generation to align agile teams around outcomes instead of task lists.Agent skill GitHub Repo link in reference...</description>
+      <category>data-engineering</category>
+      <category>artificial-intelligence</category>
+      <category>agile</category>
+      <category>product-management</category>
+      <category>software-engineering</category>
+    </item>
     <item>
       <title>My Copilot Agent Skill Splits Stories Better Than Most Agile Teams</title>
       <link>https://alwyndsouza.github.io/articles/my-copilot-agent-skill-splits-stories-better-than-most-agile-teams</link>
@@ -317,16 +329,6 @@
       <guid isPermaLink="true">https://alwyndsouza.github.io/articles/applying-mlsecops-to-secure-the-ai-lifecycle</guid>
       <pubDate>Fri, 10 Oct 2025 00:00:00 GMT</pubDate>
       <description>The proliferation of Artificial Intelligence (AI) and Machine Learning (ML) across enterprise environments necessitates a dedicated, rigorous security strategy....</description>
-      <category>mlops</category>
-      <category>machine-learning</category>
-      <category>ai</category>
-    </item>
-    <item>
-      <title>MLSecOps Implementation and Strategy: Securing the AI Lifecycle</title>
-      <link>https://alwyndsouza.github.io/articles/mlsecops-implementation-and-strategy-securing-the-ai-lifecycle</link>
-      <guid isPermaLink="true">https://alwyndsouza.github.io/articles/mlsecops-implementation-and-strategy-securing-the-ai-lifecycle</guid>
-      <pubDate>Fri, 10 Oct 2025 00:00:00 GMT</pubDate>
-      <description>Successfully implementing MLSecOps requires infusing security practices directly into the existing MLOps pipeline. This strategy, built on the pillars of people...</description>
       <category>mlops</category>
       <category>machine-learning</category>
       <category>ai</category>
