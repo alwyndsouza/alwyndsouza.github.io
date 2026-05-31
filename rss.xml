@@ -5,8 +5,32 @@
     <link>https://alwyndsouza.github.io</link>
     <description>Practical writing on Data Engineering, DataOps, dbt, Databricks, and AI Agents. Articles, open-source projects, and lessons from production data platforms.</description>
     <language>en</language>
-    <lastBuildDate>Sun, 31 May 2026 13:56:16 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 31 May 2026 19:24:44 GMT</lastBuildDate>
     <atom:link href="https://alwyndsouza.github.io/rss.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>dbt Core v1.12 Rewrites the Semantic Layer Spec</title>
+      <link>https://alwyndsouza.github.io/articles/dbt-core-v1-12-rewrites-the-semantic-layer-spec</link>
+      <guid isPermaLink="true">https://alwyndsouza.github.io/articles/dbt-core-v1-12-rewrites-the-semantic-layer-spec</guid>
+      <pubDate>Sun, 31 May 2026 00:00:00 GMT</pubDate>
+      <description></description>
+      <category>semantic-layer</category>
+      <category>analytics-engineering</category>
+      <category>data-engineering</category>
+      <category>data-modeling</category>
+      <category>dbt</category>
+    </item>
+    <item>
+      <title>How I Use Promptfoo to Test and Grade an Agile AI Skill</title>
+      <link>https://alwyndsouza.github.io/articles/how-i-use-promptfoo-to-test-and-grade-an-agile-ai-skill</link>
+      <guid isPermaLink="true">https://alwyndsouza.github.io/articles/how-i-use-promptfoo-to-test-and-grade-an-agile-ai-skill</guid>
+      <pubDate>Sun, 31 May 2026 00:00:00 GMT</pubDate>
+      <description></description>
+      <category>agentic-ai</category>
+      <category>artificial-intelligence</category>
+      <category>ai-agent</category>
+      <category>llm</category>
+      <category>quality-assurance</category>
+    </item>
     <item>
       <title>Defining Better Sprint Goals with GitHub Copilot Agent Skills</title>
       <link>https://alwyndsouza.github.io/articles/defining-better-sprint-goals-with-github-copilot-agent-skills</link>
@@ -313,25 +337,6 @@
       <pubDate>Mon, 27 Oct 2025 00:00:00 GMT</pubDate>
       <description>Stay up-to-date with the latest innovations, best practices, and technical insights from leading technology companies. These engineering blogs offer invaluable...</description>
       <category>data-engineering</category>
-    </item>
-    <item>
-      <title>Future of Data Engineering: Why Your Ontology Layer Matters More Than Ever</title>
-      <link>https://alwyndsouza.github.io/articles/future-of-data-engineering-why-your-ontology-layer-matters-more-than-ever</link>
-      <guid isPermaLink="true">https://alwyndsouza.github.io/articles/future-of-data-engineering-why-your-ontology-layer-matters-more-than-ever</guid>
-      <pubDate>Sun, 26 Oct 2025 00:00:00 GMT</pubDate>
-      <description>I have been giving a lot of thought to how we design and structure data architecture to effectively support AI initiatives.</description>
-      <category>data-architecture</category>
-      <category>data-strategy</category>
-    </item>
-    <item>
-      <title>Applying MLSecOps to Secure the AI Lifecycle</title>
-      <link>https://alwyndsouza.github.io/articles/applying-mlsecops-to-secure-the-ai-lifecycle</link>
-      <guid isPermaLink="true">https://alwyndsouza.github.io/articles/applying-mlsecops-to-secure-the-ai-lifecycle</guid>
-      <pubDate>Fri, 10 Oct 2025 00:00:00 GMT</pubDate>
-      <description>The proliferation of Artificial Intelligence (AI) and Machine Learning (ML) across enterprise environments necessitates a dedicated, rigorous security strategy....</description>
-      <category>mlops</category>
-      <category>machine-learning</category>
-      <category>ai</category>
     </item>
   </channel>
 </rss>
