@@ -5,7 +5,7 @@
     <link>https://alwyndsouza.github.io</link>
     <description>Practical writing on Data Engineering, DataOps, dbt, Databricks, and AI Agents. Articles, open-source projects, and lessons from production data platforms.</description>
     <language>en</language>
-    <lastBuildDate>Sun, 31 May 2026 19:24:44 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 01 Jun 2026 04:47:05 GMT</lastBuildDate>
     <atom:link href="https://alwyndsouza.github.io/rss.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>dbt Core v1.12 Rewrites the Semantic Layer Spec</title>
@@ -24,7 +24,7 @@
       <link>https://alwyndsouza.github.io/articles/how-i-use-promptfoo-to-test-and-grade-an-agile-ai-skill</link>
       <guid isPermaLink="true">https://alwyndsouza.github.io/articles/how-i-use-promptfoo-to-test-and-grade-an-agile-ai-skill</guid>
       <pubDate>Sun, 31 May 2026 00:00:00 GMT</pubDate>
-      <description></description>
+      <description>I treat agile story skills like software. That means I test them, score them, and grade them — using promptfoo — before users hit a regression.Here is why that...</description>
       <category>agentic-ai</category>
       <category>artificial-intelligence</category>
       <category>ai-agent</category>
