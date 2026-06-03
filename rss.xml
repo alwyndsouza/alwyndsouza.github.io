@@ -5,8 +5,20 @@
     <link>https://alwyndsouza.github.io</link>
     <description>Practical writing on Data Engineering, DataOps, dbt, Databricks, and AI Agents. Articles, open-source projects, and lessons from production data platforms.</description>
     <language>en</language>
-    <lastBuildDate>Tue, 02 Jun 2026 16:43:39 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 03 Jun 2026 04:45:28 GMT</lastBuildDate>
     <atom:link href="https://alwyndsouza.github.io/rss.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>dbt v1.12 vars.yml: A Five-Year Community Ask, Finally Answered</title>
+      <link>https://alwyndsouza.github.io/articles/dbt-v1-12-vars-yml-a-five-year-community-ask-finally-answered</link>
+      <guid isPermaLink="true">https://alwyndsouza.github.io/articles/dbt-v1-12-vars-yml-a-five-year-community-ask-finally-answered</guid>
+      <pubDate>Tue, 02 Jun 2026 00:00:00 GMT</pubDate>
+      <description></description>
+      <category>dbt</category>
+      <category>software-engineering</category>
+      <category>analytics-engineering</category>
+      <category>data-modeling</category>
+      <category>data-engineering</category>
+    </item>
     <item>
       <title>dbt Core v1.12 Rewrites the Semantic Layer Spec</title>
       <link>https://alwyndsouza.github.io/articles/dbt-core-v1-12-rewrites-the-semantic-layer-spec</link>
@@ -331,16 +343,6 @@
       <category>ai</category>
       <category>artificial-intelligence</category>
       <category>automation</category>
-    </item>
-    <item>
-      <title>Don’t Nest Your Curlies: A Practical Guide to Jinja in dbt</title>
-      <link>https://alwyndsouza.github.io/articles/don-t-nest-your-curlies-a-practical-guide-to-jinja-in-dbt</link>
-      <guid isPermaLink="true">https://alwyndsouza.github.io/articles/don-t-nest-your-curlies-a-practical-guide-to-jinja-in-dbt</guid>
-      <pubDate>Sun, 09 Nov 2025 00:00:00 GMT</pubDate>
-      <description>The most common syntax mistake in dbt projects — and how to avoid it</description>
-      <category>data-engineering</category>
-      <category>dbt</category>
-      <category>analytics</category>
     </item>
   </channel>
 </rss>
