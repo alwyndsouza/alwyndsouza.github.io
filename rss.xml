@@ -5,7 +5,7 @@
     <link>https://alwyndsouza.github.io</link>
     <description>Practical writing on Data Engineering, DataOps, dbt, Databricks, and AI Agents. Articles, open-source projects, and lessons from production data platforms.</description>
     <language>en</language>
-    <lastBuildDate>Wed, 03 Jun 2026 04:45:28 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 04 Jun 2026 04:40:10 GMT</lastBuildDate>
     <atom:link href="https://alwyndsouza.github.io/rss.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>dbt v1.12 vars.yml: A Five-Year Community Ask, Finally Answered</title>
