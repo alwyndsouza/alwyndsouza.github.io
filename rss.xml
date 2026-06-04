@@ -5,7 +5,7 @@
     <link>https://alwyndsouza.github.io</link>
     <description>Practical writing on Data Engineering, DataOps, dbt, Databricks, and AI Agents. Articles, open-source projects, and lessons from production data platforms.</description>
     <language>en</language>
-    <lastBuildDate>Thu, 04 Jun 2026 10:04:30 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 04 Jun 2026 15:27:50 GMT</lastBuildDate>
     <atom:link href="https://alwyndsouza.github.io/rss.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>dbt v1.12 vars.yml: A Five-Year Community Ask, Finally Answered</title>
@@ -132,7 +132,7 @@
       <link>https://alwyndsouza.github.io/articles/a-better-way-to-do-real-time-streaming-redpanda-risingwave-explained</link>
       <guid isPermaLink="true">https://alwyndsouza.github.io/articles/a-better-way-to-do-real-time-streaming-redpanda-risingwave-explained</guid>
       <pubDate>Wed, 22 Apr 2026 00:00:00 GMT</pubDate>
-      <description>If your team wants real-time streaming but keeps hitting the wall of JVM tuning, ZooKeeper management, and Flink job orchestration, this stack is worth your tim...</description>
+      <description></description>
       <category>risingwave</category>
       <category>data-quality</category>
       <category>data-engineering</category>
