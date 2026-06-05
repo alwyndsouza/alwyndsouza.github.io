@@ -9,7 +9,7 @@
 :HL["/_next/static/media/e4af272ccee01ff0-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/_next/static/css/58fc18518e987767.css","style"]
 :HL["/_next/static/css/e2c73e6d4f2f1c8a.css","style"]
-0:{"P":null,"b":"s65AG_xebcpEuqOeqap3C","p":"","c":["",""],"i":false,"f":[[["",{"children":["__PAGE__",{}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/58fc18518e987767.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/e2c73e6d4f2f1c8a.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"en","className":"__variable_f367f3 __variable_694534","suppressHydrationWarning":true,"children":[["$","head",null,{"children":["$","script",null,{"dangerouslySetInnerHTML":{"__html":"$2"}}]}],["$","body",null,{"className":"min-h-screen bg-zinc-950 font-sans text-zinc-100 antialiased selection:bg-indigo-600/30 selection:text-zinc-100","children":["$","$L3",null,{"children":[["$","a",null,{"href":"#main-content","className":"sr-only focus-visible:not-sr-only focus-visible:fixed focus-visible:left-4 focus-visible:top-4 focus-visible:z-[100] focus-visible:rounded-lg focus-visible:bg-indigo-600 focus-visible:px-4 focus-visible:py-2 focus-visible:text-sm focus-visible:font-medium focus-visible:text-white focus-visible:shadow-lg","children":"Skip to main content"}],["$","$L4",null,{}],["$","main",null,{"id":"main-content","tabIndex":-1,"className":"outline-none","children":["$","$L5",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","div",null,{"className":"flex min-h-screen items-center justify-center","children":["$","div",null,{"className":"text-center","children":[["$","p",null,{"className":"text-xs font-mono text-indigo-400 mb-4","children":"404"}],["$","h1",null,{"className":"text-3xl font-bold text-zinc-100 mb-3","children":"Page not found"}],["$","p",null,{"className":"text-zinc-500 mb-8 max-w-sm","children":"This page doesn't exist or has been moved."}],["$","$L7",null,{"href":"/","className":"inline-flex items-center gap-2 rounded-lg bg-indigo-600 px-5 py-2.5 text-sm font-medium text-white transition-all hover:bg-indigo-500","children":"Go home"}]]}]}],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","footer",null,{"className":"border-t border-zinc-800 bg-zinc-950","role":"contentinfo","children":["$","div",null,{"className":"mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:px-8","children":[["$","div",null,{"className":"grid grid-cols-1 gap-10 sm:grid-cols-2 md:grid-cols-3","children":[["$","div",null,{"className":"space-y-4","children":[["$","$L7",null,{"href":"/","className":"group inline-flex items-center gap-2 rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500","aria-label":"Alwyn D'Souza — home","children":[["$","div",null,{"className":"flex h-7 w-7 items-center justify-center rounded-md border border-indigo-500/30 bg-indigo-600/20 transition-colors group-hover:bg-indigo-600/30","children":["$","svg",null,{"ref":"$undefined","xmlns":"http://www.w3.org/2000/svg","width":24,"height":24,"viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":2,"strokeLinecap":"round","strokeLinejoin":"round","className":"lucide lucide-database h-3.5 w-3.5 text-indigo-400","aria-hidden":"true","children":[["$","ellipse","msslwz",{"cx":"12","cy":"5","rx":"9","ry":"3"}],["$","path","1wlel7",{"d":"M3 5V19A9 3 0 0 0 21 19V5"}],["$","path","mv7ke4",{"d":"M3 12A9 3 0 0 0 21 12"}],"$undefined"]}]}],["$","span",null,{"className":"text-sm font-semibold text-zinc-100","children":["alwyn",["$","span",null,{"className":"text-indigo-400","children":".dev"}]]}]]}],["$","p",null,{"className":"text-xs leading-relaxed text-zinc-500 max-w-xs","children":"Data & AI Engineering Leader. Building modern data platforms, AI systems, and open-source developer tools."}],["$","div",null,{"className":"flex items-center gap-3 pt-1","children":[["$","a","https://github.com/alwyndsouza",{"href":"https://github.com/alwyndsouza","target":"_blank","rel":"noopener noreferrer","aria-label":"GitHub (opens in new tab)","className":"flex h-7 w-7 items-center justify-center rounded-md text-zinc-600 transition-colors hover:bg-zinc-800 hover:text-zinc-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500","children":"$L8"}],"$L9","$La"]}]]}],"$Lb","$Lc"]}],"$Ld"]}]}]]}]}]]}]]}],{"children":["__PAGE__","$Le",{},null,false]},null,false],"$Lf",false]],"m":"$undefined","G":["$10",[]],"s":false,"S":true}
+0:{"P":null,"b":"AMl1omKwXWToCfXCxpl1e","p":"","c":["",""],"i":false,"f":[[["",{"children":["__PAGE__",{}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/58fc18518e987767.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/e2c73e6d4f2f1c8a.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"en","className":"__variable_f367f3 __variable_694534","suppressHydrationWarning":true,"children":[["$","head",null,{"children":["$","script",null,{"dangerouslySetInnerHTML":{"__html":"$2"}}]}],["$","body",null,{"className":"min-h-screen bg-zinc-950 font-sans text-zinc-100 antialiased selection:bg-indigo-600/30 selection:text-zinc-100","children":["$","$L3",null,{"children":[["$","a",null,{"href":"#main-content","className":"sr-only focus-visible:not-sr-only focus-visible:fixed focus-visible:left-4 focus-visible:top-4 focus-visible:z-[100] focus-visible:rounded-lg focus-visible:bg-indigo-600 focus-visible:px-4 focus-visible:py-2 focus-visible:text-sm focus-visible:font-medium focus-visible:text-white focus-visible:shadow-lg","children":"Skip to main content"}],["$","$L4",null,{}],["$","main",null,{"id":"main-content","tabIndex":-1,"className":"outline-none","children":["$","$L5",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","div",null,{"className":"flex min-h-screen items-center justify-center","children":["$","div",null,{"className":"text-center","children":[["$","p",null,{"className":"text-xs font-mono text-indigo-400 mb-4","children":"404"}],["$","h1",null,{"className":"text-3xl font-bold text-zinc-100 mb-3","children":"Page not found"}],["$","p",null,{"className":"text-zinc-500 mb-8 max-w-sm","children":"This page doesn't exist or has been moved."}],["$","$L7",null,{"href":"/","className":"inline-flex items-center gap-2 rounded-lg bg-indigo-600 px-5 py-2.5 text-sm font-medium text-white transition-all hover:bg-indigo-500","children":"Go home"}]]}]}],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","footer",null,{"className":"border-t border-zinc-800 bg-zinc-950","role":"contentinfo","children":["$","div",null,{"className":"mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:px-8","children":[["$","div",null,{"className":"grid grid-cols-1 gap-10 sm:grid-cols-2 md:grid-cols-3","children":[["$","div",null,{"className":"space-y-4","children":[["$","$L7",null,{"href":"/","className":"group inline-flex items-center gap-2 rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500","aria-label":"Alwyn D'Souza — home","children":[["$","div",null,{"className":"flex h-7 w-7 items-center justify-center rounded-md border border-indigo-500/30 bg-indigo-600/20 transition-colors group-hover:bg-indigo-600/30","children":["$","svg",null,{"ref":"$undefined","xmlns":"http://www.w3.org/2000/svg","width":24,"height":24,"viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":2,"strokeLinecap":"round","strokeLinejoin":"round","className":"lucide lucide-database h-3.5 w-3.5 text-indigo-400","aria-hidden":"true","children":[["$","ellipse","msslwz",{"cx":"12","cy":"5","rx":"9","ry":"3"}],["$","path","1wlel7",{"d":"M3 5V19A9 3 0 0 0 21 19V5"}],["$","path","mv7ke4",{"d":"M3 12A9 3 0 0 0 21 12"}],"$undefined"]}]}],["$","span",null,{"className":"text-sm font-semibold text-zinc-100","children":["alwyn",["$","span",null,{"className":"text-indigo-400","children":".dev"}]]}]]}],["$","p",null,{"className":"text-xs leading-relaxed text-zinc-500 max-w-xs","children":"Data & AI Engineering Leader. Building modern data platforms, AI systems, and open-source developer tools."}],["$","div",null,{"className":"flex items-center gap-3 pt-1","children":[["$","a","https://github.com/alwyndsouza",{"href":"https://github.com/alwyndsouza","target":"_blank","rel":"noopener noreferrer","aria-label":"GitHub (opens in new tab)","className":"flex h-7 w-7 items-center justify-center rounded-md text-zinc-600 transition-colors hover:bg-zinc-800 hover:text-zinc-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500","children":"$L8"}],"$L9","$La"]}]]}],"$Lb","$Lc"]}],"$Ld"]}]}]]}]}]]}]]}],{"children":["__PAGE__","$Le",{},null,false]},null,false],"$Lf",false]],"m":"$undefined","G":["$10",[]],"s":false,"S":true}
 11:I[8637,["619","static/chunks/619-f09bc47e24909021.js","18","static/chunks/18-31950137827788de.js","881","static/chunks/881-a356c50b127e16a2.js","974","static/chunks/app/page-62ae8289db37ab7f.js"],"Hero"]
 12:I[4421,["619","static/chunks/619-f09bc47e24909021.js","18","static/chunks/18-31950137827788de.js","881","static/chunks/881-a356c50b127e16a2.js","974","static/chunks/app/page-62ae8289db37ab7f.js"],"AboutSection"]
 13:I[6434,["619","static/chunks/619-f09bc47e24909021.js","18","static/chunks/18-31950137827788de.js","881","static/chunks/881-a356c50b127e16a2.js","974","static/chunks/app/page-62ae8289db37ab7f.js"],"Expertise"]
@@ -25,7 +25,99 @@ a:["$","a","https://medium.com/@aradsouza",{"href":"https://medium.com/@aradsouz
 b:["$","nav",null,{"aria-label":"Footer navigation","children":[["$","h2",null,{"className":"mb-4 text-xs font-semibold uppercase tracking-widest text-zinc-600","children":"Navigate"}],["$","ul",null,{"className":"space-y-2.5","role":"list","children":[["$","li","/projects",{"children":["$","$L7",null,{"href":"/projects","className":"text-sm text-zinc-400 transition-colors hover:text-zinc-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 rounded","children":"Projects"}]}],["$","li","/articles",{"children":["$","$L7",null,{"href":"/articles","className":"text-sm text-zinc-400 transition-colors hover:text-zinc-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 rounded","children":"Writing"}]}],["$","li","/about",{"children":["$","$L7",null,{"href":"/about","className":"text-sm text-zinc-400 transition-colors hover:text-zinc-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 rounded","children":"About"}]}]]}]]}]
 c:["$","div",null,{"children":[["$","h2",null,{"className":"mb-4 text-xs font-semibold uppercase tracking-widest text-zinc-600","children":"Connect"}],["$","ul",null,{"className":"space-y-2.5","role":"list","children":[["$","li","https://github.com/alwyndsouza",{"children":["$","a",null,{"href":"https://github.com/alwyndsouza","target":"_blank","rel":"noopener noreferrer","className":"inline-flex items-center gap-1.5 text-sm text-zinc-400 transition-colors hover:text-zinc-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 rounded","children":["GitHub",["$","span",null,{"className":"text-zinc-700 text-xs","aria-hidden":"true","children":"↗"}]]}]}],["$","li","https://linkedin.com/in/alwynanildsouza",{"children":["$","a",null,{"href":"https://linkedin.com/in/alwynanildsouza","target":"_blank","rel":"noopener noreferrer","className":"inline-flex items-center gap-1.5 text-sm text-zinc-400 transition-colors hover:text-zinc-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 rounded","children":["LinkedIn",["$","span",null,{"className":"text-zinc-700 text-xs","aria-hidden":"true","children":"↗"}]]}]}],["$","li","https://medium.com/@aradsouza",{"children":["$","a",null,{"href":"https://medium.com/@aradsouza","target":"_blank","rel":"noopener noreferrer","className":"inline-flex items-center gap-1.5 text-sm text-zinc-400 transition-colors hover:text-zinc-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 rounded","children":["Medium",["$","span",null,{"className":"text-zinc-700 text-xs","aria-hidden":"true","children":"↗"}]]}]}]]}]]}]
 d:["$","div",null,{"className":"mt-10 flex flex-col items-start justify-between gap-3 border-t border-zinc-800/70 pt-6 sm:flex-row sm:items-center","children":[["$","p",null,{"className":"text-xs text-zinc-700","children":["© ",2026," Alwyn D'Souza. Built with Next.js & deployed on GitHub Pages."]}],["$","a",null,{"href":"/rss.xml","className":"inline-flex items-center gap-1.5 text-xs text-zinc-700 transition-colors hover:text-zinc-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 rounded","aria-label":"RSS feed","children":[["$","svg",null,{"ref":"$undefined","xmlns":"http://www.w3.org/2000/svg","width":24,"height":24,"viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":2,"strokeLinecap":"round","strokeLinejoin":"round","className":"lucide lucide-rss h-3 w-3","aria-hidden":"true","children":[["$","path","pv89mb",{"d":"M4 11a9 9 0 0 1 9 9"}],["$","path","k0647b",{"d":"M4 4a16 16 0 0 1 16 16"}],["$","circle","bfqh0e",{"cx":"5","cy":"19","r":"1"}],"$undefined"]}],"RSS Feed"]}]]}]
-17:T232a,<p>I treat agile story skills like software. That means I test them, score them, and grade them — using <a href="https://promptfoo.dev">promptfoo</a> — before users hit a regression.</p>
+17:T1a19,<p><em>How dbt MCP v1.20.0 fixes a subtle but important problem in AI-assisted analytics engineering</em></p>
+<h3>Overview</h3>
+<p>dbt MCP v1.20.0 introduces version-aware documentation retrieval. That means AI agents can now answer questions using the documentation that matches your project’s dbt version — not simply the latest docs.</p>
+<p>It sounds like a small enhancement, but it addresses one of the biggest reliability gaps in AI-assisted analytics engineering: ensuring agents are grounded in the context of the environment where they’ll actually execute.</p>
+<p><img src="https://cdn-images-1.medium.com/max/1024/1*osojD8nw-_k0UtU7kWhtaA.png" alt=""></p>
+<h3>The Problem Nobody Said Out Loud</h3>
+<p>When the dbt MCP server first arrived, the value proposition was obvious.</p>
+<p>Instead of relying on stale model training data, AI agents could access live dbt documentation directly through MCP tools.</p>
+<p>That was a significant step forward.</p>
+<p>After all, dbt evolves quickly. If an AI agent is generating code based on patterns learned from an older version of dbt, it may produce deprecated configurations, outdated YAML structures, or syntax that no longer exists.</p>
+<p>Giving agents access to current documentation seemed like the perfect solution.</p>
+<p>But there was a problem hiding beneath the surface.</p>
+<p>What if the documentation is too new for your project?</p>
+<p>If your production environment is running dbt 1.8 and an AI agent retrieves documentation written for dbt 1.12, the agent may confidently recommend features that don’t exist in your environment.</p>
+<p>The answer is still wrong.</p>
+<p>It just has a citation attached to it.</p>
+<p>The real challenge was never:<br><em>Docs versus no docs.</em></p>
+<p>It was:<br><em>How do we ensure agents use the right docs for this repository?</em></p>
+<h3>When “Correct” Becomes Wrong</h3>
+<p>Consider a simple example.</p>
+<p>An analytics engineer asks:<br><em>“Generate a semantic model for customer revenue.”</em></p>
+<p>An AI agent connected to the latest documentation might generate code using syntax introduced in a newer dbt release.</p>
+<p>The generated code may look completely valid.</p>
+<p>It may even be copied directly from official documentation.</p>
+<p>But if the project is running an older version of dbt, validation fails immediately.</p>
+<p>The agent wasn’t hallucinating.</p>
+<p>The documentation wasn’t incorrect.</p>
+<p>The problem was context.</p>
+<p>The agent answered using the wrong version of reality.</p>
+<p>This is exactly the gap that dbt MCP v1.20.0 closes.</p>
+<h3>What dbt MCP v1.20.0 Actually Ships</h3>
+<p>The release note is refreshingly concise:<br><em>Add dbt version awareness to product_docs tools</em></p>
+<p>Under the hood, the MCP server now detects the dbt version installed in the active environment and scopes documentation responses accordingly.</p>
+<p>When an AI agent asks a documentation question through the product_docs tools, the answer is now grounded in the version of dbt actually running in that project.</p>
+<p>The release also introduces a new Semantic Layer capability:</p>
+<p>get_dimension_values</p>
+<p>This tool retrieves distinct values for a dimension, making it easier for agents to perform exploratory metric analysis and build richer Semantic Layer workflows.</p>
+<p>Useful addition.</p>
+<p>But version-aware documentation is unquestionably the headline feature.</p>
+<h3>The Real Lesson: Context Beats Knowledge</h3>
+<p>This release highlights a broader principle that applies across agentic data engineering.</p>
+<p>Agents don’t simply need more knowledge.</p>
+<p>They need contextual knowledge.</p>
+<p>In analytics engineering, “correct” is always relative to the environment.</p>
+<p>Documentation guidance depends on:</p>
+<ul>
+<li>Your dbt version</li>
+<li>Your adapter</li>
+<li>Your packages</li>
+<li>Your Semantic Layer configuration</li>
+<li>Your deployment architecture</li>
+</ul>
+<p>For example:</p>
+<ul>
+<li>A dbt-bigquery project behaves differently from a dbt-databricks project.</li>
+<li>dbt-utils 0.9 and dbt-utils 1.x exposes different capabilities.</li>
+<li>Features available in dbt 1.12 may not exist in dbt 1.8.</li>
+</ul>
+<p>Without context, an agent can generate technically correct answers that are operationally useless.</p>
+<p>Version-aware documentation transforms the MCP tool from:<br><em>“Here’s how dbt works.”</em></p>
+<p>to:<br><em>“Here’s how dbt works for your project in your environment right now.”</em></p>
+<p>That’s a meaningful shift.</p>
+<h3>A New Non-Functional Requirement for AI Agents</h3>
+<p>When teams evaluate AI-powered developer tools, they typically focus on three dimensions:</p>
+<ul>
+<li>Accuracy</li>
+<li>Latency</li>
+<li>Cost</li>
+</ul>
+<p>But agentic systems introduce a fourth requirement:</p>
+<ul>
+<li><strong>Context Alignment</strong></li>
+</ul>
+<p>An answer can be accurate and still be wrong.</p>
+<p>If the answer doesn’t match the environment where it will be executed, it creates risk rather than value.</p>
+<p>As organizations deploy AI agents into production engineering workflows, context alignment becomes a critical non-functional requirement.</p>
+<p>Version-aware documentation is a practical example of this principle in action.</p>
+<h3>The Bigger Picture</h3>
+<p>What I find most interesting about this release isn’t the feature itself.</p>
+<p>It’s the design philosophy behind it.</p>
+<p>The naive approach to AI tooling is: <em>Give agents access to documentation.</em></p>
+<p>The mature approach is: <em>Give agents access to the documentation that is relevant to the environment they’re operating in.</em></p>
+<p>That distinction sounds subtle. It isn’t.</p>
+<p>As AI agents become embedded in software engineering and analytics engineering workflows, the winners won’t be the tools with the largest knowledge base.</p>
+<p>They will be the tools with the best grounding.</p>
+<p>Version awareness is grounding.</p>
+<p>And grounding is what ultimately creates trust.</p>
+<h3>References</h3>
+<p><a href="https://github.com/dbt-labs/dbt-mcp/releases/tag/v1.20.0">https://github.com/dbt-labs/dbt-mcp/releases/tag/v1.20.0</a></p>
+<p><img src="https://medium.com/_/stat?event=post.clientViewed&referrerSource=full_rss&postId=0bb3f1238189" alt=""></p>
+<hr>
+<p><em>This article was originally published at <a href="https://aradsouza.medium.com/your-ai-agent-was-reading-the-wrong-dbt-docs-0bb3f1238189?source=rss-670f6306e3c0------2">https://aradsouza.medium.com/your-ai-agent-was-reading-the-wrong-dbt-docs-0bb3f1238189?source=rss-670f6306e3c0------2</a></em></p>
+18:T232a,<p>I treat agile story skills like software. That means I test them, score them, and grade them — using <a href="https://promptfoo.dev">promptfoo</a> — before users hit a regression.</p>
 <p>Here is why that matters. A skill can look solid in a demo, then quietly drift after a model upgrade, prompt edit, or when a new edge case sneaks in. One day it produces crisp acceptance criteria. The next day it forgets a required section, writes vague success criteria, or falls back to “as a user” even though the repository explicitly forbids that pattern. The goal is not proving prompts are perfect. The goal is catching regressions before users rely on broken output.</p>
 <p>This article uses one skill as the example: agile-story-writer.</p>
 <p><img src="https://cdn-images-1.medium.com/max/1024/1*_PwC0iHlsGCklXSzlzREMw.png" alt=""></p>
@@ -136,7 +228,7 @@ d:["$","div",null,{"className":"mt-10 flex flex-col items-start justify-between 
 <p><img src="https://medium.com/_/stat?event=post.clientViewed&referrerSource=full_rss&postId=20e3e66cb3c4" alt=""></p>
 <hr>
 <p><em>This article was originally published at <a href="https://aradsouza.medium.com/how-i-use-promptfoo-to-test-and-grade-an-agile-ai-skill-20e3e66cb3c4?source=rss-670f6306e3c0------2">https://aradsouza.medium.com/how-i-use-promptfoo-to-test-and-grade-an-agile-ai-skill-20e3e66cb3c4?source=rss-670f6306e3c0------2</a></em></p>
-18:T272c,<p>A practical guide to benchmarking AI skills against baseline agents, measuring quality improvements, and building confidence before production adoption.</p>
+19:T272c,<p>A practical guide to benchmarking AI skills against baseline agents, measuring quality improvements, and building confidence before production adoption.</p>
 <p>I treat agile story skills like software. That means I test them, score them, and grade them — using <a href="https://promptfoo.dev">promptfoo</a> — before users hit a regression.</p>
 <blockquote>
 <p>Github Repo Link in the reference section</p>
@@ -254,160 +346,7 @@ d:["$","div",null,{"className":"mt-10 flex flex-col items-start justify-between 
 <p><a href="https://blog.dataengineerthings.org/how-i-use-promptfoo-to-test-and-grade-an-agile-ai-skill-20e3e66cb3c4">How to Use Promptfoo to Test and Evaluate AI Agent Skills</a> was originally published in <a href="https://blog.dataengineerthings.org">Data Engineer Things</a> on Medium, where people are continuing the conversation by highlighting and responding to this story.</p>
 <hr>
 <p><em>This article was originally published at <a href="https://blog.dataengineerthings.org/how-i-use-promptfoo-to-test-and-grade-an-agile-ai-skill-20e3e66cb3c4?source=rss-670f6306e3c0------2">https://blog.dataengineerthings.org/how-i-use-promptfoo-to-test-and-grade-an-agile-ai-skill-20e3e66cb3c4?source=rss-670f6306e3c0------2</a></em></p>
-19:T22a4,<blockquote>
-<p>Using AI-powered problem framing and sprint-goal generation to align agile teams around outcomes instead of task lists.</p>
-</blockquote>
-<p><strong>Agent skill GitHub Repo link in references.</strong></p>
-<p>Most sprint failures are not caused by poor execution.</p>
-<p>They happen because teams begin implementation before alignment exists.</p>
-<p>A vague requirement enters backlog refinement, gets converted into stories too quickly, and turns into sprint commitments that optimise delivery activity instead of business outcomes. The result is predictable: teams complete tickets but still miss the actual objective.</p>
-<p>This is where the <strong>sprint-goal-writer</strong> and <strong>problem-framing</strong> Agent Skills become valuable.</p>
-<p>Rather than treating sprint planning as a story aggregation exercise, these skills introduce structured problem definition and outcome-driven sprint goals directly into the developer workflow.</p>
-<p>The goal is simple:</p>
-<blockquote>
-<p><em>Define the right problem before delivery starts, then ensure the sprint has a measurable outcome once work is committed.</em></p>
-</blockquote>
-<h3>Why Most Sprint Goals Fail</h3>
-<p>Many sprint goals are simply renamed task lists.</p>
-<p>Examples like:</p>
-<p><em>“Complete payment integration and finish notification service.”</em></p>
-<p>do not provide:</p>
-<ul>
-<li>direction,</li>
-<li>prioritisation guidance,</li>
-<li>or meaningful trade-off leverage during the sprint.</li>
-</ul>
-<p>When blockers appear or scope changes, these goals collapse because they describe <em>activities</em>, not <em>outcomes</em>.</p>
-<p>A strong sprint goal should answer:</p>
-<p><em>“What meaningful change will exist for the customer or business at the end of this sprint?”</em></p>
-<p>That distinction changes how teams plan, prioritise, and make delivery decisions.</p>
-<h3>The sprint-goal-writer Agent Skill</h3>
-<p>The <strong>sprint-goal-writer</strong> skill converts committed sprint stories into a concise, outcome-oriented sprint objective aligned with Scrum principles.</p>
-<p>Instead of summarising tickets, it synthesises:</p>
-<ul>
-<li>business intent,</li>
-<li>user impact,</li>
-<li>and delivery scope</li>
-</ul>
-<p>into a single operational goal.</p>
-<p>Example transformation:</p>
-<h4>Weak Sprint Goal</h4>
-<p><em>Complete authentication refactor and implement notifications.</em></p>
-<h4>Strong Sprint Goal</h4>
-<p><em>Enable customers to receive real-time transaction updates after completing purchases, reducing support dependency through improved visibility.</em></p>
-<p>The second version provides the following:</p>
-<ul>
-<li>a user outcome,</li>
-<li>a measurable direction,</li>
-<li>and a decision-making framework for the sprint team.</li>
-</ul>
-<h3>The Five-Point Sprint Goal Validation Model</h3>
-<p>Every generated sprint goal is evaluated against five validation checks.</p>
-<h4>1. Single Sentence</h4>
-<p>The goal should be concise enough to communicate clearly during standups and sprint reviews.</p>
-<h4>2. Outcome-Oriented</h4>
-<p>It must describe a result, not implementation tasks.</p>
-<h4>3. Beneficiary-Focused</h4>
-<p>The goal should clearly identify who benefits from the outcome.</p>
-<h4>4. Measurable or Directional</h4>
-<p>Teams should be able to determine whether the goal was achieved.</p>
-<h4>5. Trade-Off Enabling</h4>
-<p>The goal should help teams decide what matters most when priorities shift mid-sprint.</p>
-<p>This transforms sprint goals from planning artefacts into operational alignment tools.</p>
-<p><img src="https://cdn-images-1.medium.com/max/938/1*cT-cTfZYjKtP9kkugn9zzg.png" alt=""></p>
-<h3>Problem Framing Before Sprint Planning</h3>
-<p>The sprint goal skill works best when paired with the <strong>problem-framing</strong> Agent Skill.</p>
-<p>This skill implements the MITRE Problem Framing Canvas — a structured framework used to refine vague requests into actionable problem definitions before stories are written.</p>
-<p><img src="https://cdn-images-1.medium.com/max/840/1*BbSO6fer3YFOydp8Co0mDQ.png" alt=""></p>
-<p>The framework moves through three stages:</p>
-<h4>Phase 1 — Look Inward</h4>
-<ul>
-<li>Current state</li>
-<li>Desired state</li>
-<li>Gap analysis</li>
-</ul>
-<h4>Phase 2 — Look Outward</h4>
-<ul>
-<li>Stakeholders</li>
-<li>Constraints</li>
-<li>Risks and assumptions</li>
-</ul>
-<h4>Phase 3 — Reframe</h4>
-<ul>
-<li>Refined problem statement</li>
-<li>“How Might We” (HMW) question</li>
-</ul>
-<p>The HMW question becomes the bridge between business intent and implementation planning.</p>
-<p>Instead of asking:</p>
-<p><em>“How do we build feature X?”</em></p>
-<p>teams begin asking:</p>
-<p><em>“How might we improve customer onboarding while reducing support dependency and maintaining compliance constraints?”</em></p>
-<p>That shift dramatically improves backlog quality before engineering effort begins.</p>
-<h3>The End-to-End Workflow</h3>
-<p>The complete workflow becomes:</p>
-<h4>1. Problem Framing</h4>
-<p>Convert vague business requests into refined problem statements and HMW questions.</p>
-<h4>2. Story Generation</h4>
-<p>Generate structured agile stories aligned with the framed problem.</p>
-<h4>3. Story Splitting</h4>
-<p>Automatically decompose oversized stories into vertically sliced deliverables.</p>
-<h4>4. Sprint Goal Definition</h4>
-<p>Generate a measurable sprint outcome aligned with customer or business impact.</p>
-<p>This creates a delivery pipeline focused on:</p>
-<ul>
-<li>alignment,</li>
-<li>clarity,</li>
-<li>and measurable outcomes.</li>
-</ul>
-<p>Not just ticket throughput.</p>
-<h3>Practical Use Cases</h3>
-<h4>During Sprint Planning</h4>
-<p>Paste committed stories into /sprint-goal-writer to generate an outcome-focused sprint goal.</p>
-<h4>During Retrospectives</h4>
-<p>Run historical sprint goals through the validation model to identify weak planning patterns.</p>
-<h4>During Discovery</h4>
-<p>Use /problem-framing before backlog refinement to reduce ambiguity and improve stakeholder alignment.</p>
-<h4>During Scope Trade-Offs</h4>
-<p>Use the sprint goal as the prioritisation anchor when blockers or scope changes occur.</p>
-<h3>Why This Matters</h3>
-<p>High-performing agile teams are not defined by velocity alone.</p>
-<p>They are defined by:</p>
-<ul>
-<li>clarity of intent,</li>
-<li>shared understanding,</li>
-<li>and disciplined decision-making.</li>
-</ul>
-<p>Agent Skills like problem-framing and sprint-goal-writer do more than automate documentation.</p>
-<p>They encode delivery discipline directly into the engineering workflow.</p>
-<p>The result is:</p>
-<ul>
-<li>better sprint alignment,</li>
-<li>fewer misinterpreted requirements,</li>
-<li>stronger backlog quality,</li>
-<li>and more outcome-driven delivery cycles.</li>
-</ul>
-<h3>GitHub Repository</h3>
-<h4>Agile Story Skills Repository</h4>
-<p><a href="https://github.com/alwyndsouza/agile-story-skills?utm_source=chatgpt.com">agile-story-skills GitHub Repository</a></p>
-<p>The repository includes:</p>
-<ul>
-<li>problem-framing</li>
-<li>sprint-goal-writer</li>
-<li>agile-story-writer</li>
-<li>agile-story-splitter</li>
-</ul>
-<p>along with structured prompts, workflow patterns, and implementation examples for AI-augmented agile delivery.</p>
-<h3>References</h3>
-<ul>
-<li><a href="https://www.mitre.org/publications/systems-engineering-guide/enterprise-engineering/transformation-planning-and-organizational-change/problem-framing?utm_source=chatgpt.com">MITRE Problem Framing Canvas</a></li>
-<li><a href="https://scrumguides.org/scrum-guide.html?utm_source=chatgpt.com">Scrum Guide (2020)</a></li>
-<li><a href="https://docs.github.com/en/copilot?utm_source=chatgpt.com">GitHub Copilot Documentation</a></li>
-</ul>
-<p><em><strong>Alwyn D’Souza</strong></em> <em>is working at the intersection of data mesh architectures, MLOps, and agentic AI systems. He writes about modern data engineering and practical AI implementations on Medium at</em> <a href="https://www.google.com/search?q=https://medium.com/%40aradsouza"><em>@aradsouza</em></a><em>, shares open-source tools at</em> <a href="https://www.google.com/search?q=https://github.com/alwyndsouza"><em>github.com/alwyndsouza</em></a><em>, and connects with the professional community on</em> <a href="https://www.linkedin.com/in/alwynanildsouza/"><em>LinkedIn</em></a><em>.</em></p>
-<p><img src="https://medium.com/_/stat?event=post.clientViewed&referrerSource=full_rss&postId=6c2448d8a4b7" alt=""></p>
-<hr>
-<p><em>This article was originally published at <a href="https://aradsouza.medium.com/defining-better-sprint-goals-with-github-copilot-agent-skills-6c2448d8a4b7?source=rss-670f6306e3c0------2">https://aradsouza.medium.com/defining-better-sprint-goals-with-github-copilot-agent-skills-6c2448d8a4b7?source=rss-670f6306e3c0------2</a></em></p>
-e:["$","$1","c",{"children":[[["$","$L11",null,{"articleCount":74,"projectCount":9}],["$","$L12",null,{}],["$","$L13",null,{}],["$","$L14",null,{}],["$","$L15",null,{}],["$","$L16",null,{"articles":[{"slug":"dbt-v1-12-vars-yml-a-five-year-community-ask-finally-answered","title":"dbt v1.12 vars.yml: A Five-Year Community Ask, Finally Answered","excerpt":"","date":"$D2026-06-02T00:00:00.000Z","readTime":"1 min read","category":"dbt","htmlContent":"<hr>\n<p><em>This article was originally published at <a href=\"https://medium.com/towards-data-engineering/dbt-v1-12-vars-yml-a-five-year-community-ask-finally-answered-06dd484a1f8c?source=rss-670f6306e3c0------2\">https://medium.com/towards-data-engineering/dbt-v1-12-vars-yml-a-five-year-community-ask-finally-answered-06dd484a1f8c?source=rss-670f6306e3c0------2</a></em></p>\n","coverImage":"https://cdn-images-1.medium.com/max/1868/1*lBonrciEKPg3M2bfAzypdQ.png","published":true,"tags":["dbt","software-engineering","analytics-engineering","data-modeling","data-engineering"]},{"slug":"dbt-core-v1-12-rewrites-the-semantic-layer-spec","title":"dbt Core v1.12 Rewrites the Semantic Layer Spec","excerpt":"","date":"$D2026-05-31T00:00:00.000Z","readTime":"1 min read","category":"semantic-layer","htmlContent":"<hr>\n<p><em>This article was originally published at <a href=\"https://medium.com/towards-data-engineering/dbt-core-v1-12-rewrites-the-semantic-layer-spec-52a548a06637?source=rss-670f6306e3c0------2\">https://medium.com/towards-data-engineering/dbt-core-v1-12-rewrites-the-semantic-layer-spec-52a548a06637?source=rss-670f6306e3c0------2</a></em></p>\n","coverImage":"https://cdn-images-1.medium.com/max/1868/1*P3oIqQT8McDvHVe1W_sXgw.png","published":true,"tags":["semantic-layer","analytics-engineering","data-engineering","data-modeling","dbt"]},{"slug":"how-i-use-promptfoo-to-test-and-grade-an-agile-ai-skill","title":"How I Use Promptfoo to Test and Grade an Agile AI Skill","excerpt":"I treat agile story skills like software. That means I test them, score them, and grade them — using promptfoo — before users hit a regression.Here is why that...","date":"$D2026-05-31T00:00:00.000Z","readTime":"6 min read","category":"agentic-ai","htmlContent":"$17","coverImage":"https://cdn-images-1.medium.com/max/1024/1*_PwC0iHlsGCklXSzlzREMw.png","published":true,"tags":["agentic-ai","artificial-intelligence","ai-agent","llm","quality-assurance"]},{"slug":"how-to-use-promptfoo-to-test-and-evaluate-ai-agent-skills","title":"How to Use Promptfoo to Test and Evaluate AI Agent Skills","excerpt":"A practical guide to benchmarking AI skills against baseline agents, measuring quality improvements, and building confidence before production adoption.I treat...","date":"$D2026-05-31T00:00:00.000Z","readTime":"6 min read","category":"agentic-ai","htmlContent":"$18","coverImage":"https://cdn-images-1.medium.com/max/1024/1*_PwC0iHlsGCklXSzlzREMw.png","published":true,"tags":["agentic-ai","artificial-intelligence","ai-agent","llm","quality-assurance"]},{"slug":"defining-better-sprint-goals-with-github-copilot-agent-skills","title":"Defining Better Sprint Goals with GitHub Copilot Agent Skills","excerpt":"Using AI-powered problem framing and sprint-goal generation to align agile teams around outcomes instead of task lists.Agent skill GitHub Repo link in reference...","date":"$D2026-05-26T00:00:00.000Z","readTime":"5 min read","category":"data-engineering","htmlContent":"$19","coverImage":"https://cdn-images-1.medium.com/max/938/1*cT-cTfZYjKtP9kkugn9zzg.png","published":true,"tags":["data-engineering","artificial-intelligence","agile","product-management","software-engineering"]}]}],"$L1a"],null,"$L1b"]}]
+e:["$","$1","c",{"children":[[["$","$L11",null,{"articleCount":75,"projectCount":9}],["$","$L12",null,{}],["$","$L13",null,{}],["$","$L14",null,{}],["$","$L15",null,{}],["$","$L16",null,{"articles":[{"slug":"dbt-mcp-v1-20-0-your-ai-agents-was-reading-the-wrong-dbt-docs","title":"dbt MCP v1.20.0: Your AI Agents was reading the Wrong dbt docs","excerpt":"How dbt MCP v1.20.0 fixes a subtle but important problem in AI-assisted analytics engineeringOverviewdbt MCP v1.20.0 introduces version-aware documentation retr...","date":"$D2026-06-04T00:00:00.000Z","readTime":"5 min read","category":"dbt","htmlContent":"$17","coverImage":"https://cdn-images-1.medium.com/max/1024/1*osojD8nw-_k0UtU7kWhtaA.png","published":true,"tags":["dbt","data-engineering","data-analytics","data-quality","analytics-engineering"]},{"slug":"dbt-v1-12-vars-yml-a-five-year-community-ask-finally-answered","title":"dbt v1.12 vars.yml: A Five-Year Community Ask, Finally Answered","excerpt":"","date":"$D2026-06-02T00:00:00.000Z","readTime":"1 min read","category":"dbt","htmlContent":"<hr>\n<p><em>This article was originally published at <a href=\"https://medium.com/towards-data-engineering/dbt-v1-12-vars-yml-a-five-year-community-ask-finally-answered-06dd484a1f8c?source=rss-670f6306e3c0------2\">https://medium.com/towards-data-engineering/dbt-v1-12-vars-yml-a-five-year-community-ask-finally-answered-06dd484a1f8c?source=rss-670f6306e3c0------2</a></em></p>\n","coverImage":"https://cdn-images-1.medium.com/max/1868/1*lBonrciEKPg3M2bfAzypdQ.png","published":true,"tags":["dbt","software-engineering","analytics-engineering","data-modeling","data-engineering"]},{"slug":"dbt-core-v1-12-rewrites-the-semantic-layer-spec","title":"dbt Core v1.12 Rewrites the Semantic Layer Spec","excerpt":"","date":"$D2026-05-31T00:00:00.000Z","readTime":"1 min read","category":"semantic-layer","htmlContent":"<hr>\n<p><em>This article was originally published at <a href=\"https://medium.com/towards-data-engineering/dbt-core-v1-12-rewrites-the-semantic-layer-spec-52a548a06637?source=rss-670f6306e3c0------2\">https://medium.com/towards-data-engineering/dbt-core-v1-12-rewrites-the-semantic-layer-spec-52a548a06637?source=rss-670f6306e3c0------2</a></em></p>\n","coverImage":"https://cdn-images-1.medium.com/max/1868/1*P3oIqQT8McDvHVe1W_sXgw.png","published":true,"tags":["semantic-layer","analytics-engineering","data-engineering","data-modeling","dbt"]},{"slug":"how-i-use-promptfoo-to-test-and-grade-an-agile-ai-skill","title":"How I Use Promptfoo to Test and Grade an Agile AI Skill","excerpt":"I treat agile story skills like software. That means I test them, score them, and grade them — using promptfoo — before users hit a regression.Here is why that...","date":"$D2026-05-31T00:00:00.000Z","readTime":"6 min read","category":"agentic-ai","htmlContent":"$18","coverImage":"https://cdn-images-1.medium.com/max/1024/1*_PwC0iHlsGCklXSzlzREMw.png","published":true,"tags":["agentic-ai","artificial-intelligence","ai-agent","llm","quality-assurance"]},{"slug":"how-to-use-promptfoo-to-test-and-evaluate-ai-agent-skills","title":"How to Use Promptfoo to Test and Evaluate AI Agent Skills","excerpt":"A practical guide to benchmarking AI skills against baseline agents, measuring quality improvements, and building confidence before production adoption.I treat...","date":"$D2026-05-31T00:00:00.000Z","readTime":"6 min read","category":"agentic-ai","htmlContent":"$19","coverImage":"https://cdn-images-1.medium.com/max/1024/1*_PwC0iHlsGCklXSzlzREMw.png","published":true,"tags":["agentic-ai","artificial-intelligence","ai-agent","llm","quality-assurance"]}]}],"$L1a"],null,"$L1b"]}]
 f:["$","$1","h",{"children":[null,[["$","$L1c",null,{"children":"$L1d"}],["$","meta",null,{"name":"next-size-adjust","content":""}]],["$","$L1e",null,{"children":["$","div",null,{"hidden":true,"children":["$","$1f",null,{"fallback":null,"children":"$L20"}]}]}]]}]
 21:I[7976,["619","static/chunks/619-f09bc47e24909021.js","18","static/chunks/18-31950137827788de.js","881","static/chunks/881-a356c50b127e16a2.js","974","static/chunks/app/page-62ae8289db37ab7f.js"],"ContactSection"]
 22:I[4431,[],"OutletBoundary"]
