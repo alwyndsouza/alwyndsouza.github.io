@@ -5,7 +5,7 @@
     <link>https://alwyndsouza.github.io</link>
     <description>Practical writing on Data Engineering, DataOps, dbt, Databricks, and AI Agents. Articles, open-source projects, and lessons from production data platforms.</description>
     <language>en</language>
-    <lastBuildDate>Fri, 05 Jun 2026 04:14:00 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 05 Jun 2026 10:01:29 GMT</lastBuildDate>
     <atom:link href="https://alwyndsouza.github.io/rss.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>dbt MCP v1.20.0: Your AI Agents was reading the Wrong dbt docs</title>
@@ -13,6 +13,18 @@
       <guid isPermaLink="true">https://alwyndsouza.github.io/articles/dbt-mcp-v1-20-0-your-ai-agents-was-reading-the-wrong-dbt-docs</guid>
       <pubDate>Thu, 04 Jun 2026 00:00:00 GMT</pubDate>
       <description>How dbt MCP v1.20.0 fixes a subtle but important problem in AI-assisted analytics engineeringOverviewdbt MCP v1.20.0 introduces version-aware documentation retr...</description>
+      <category>dbt</category>
+      <category>data-engineering</category>
+      <category>data-analytics</category>
+      <category>data-quality</category>
+      <category>analytics-engineering</category>
+    </item>
+    <item>
+      <title>Your AI Agent Was Reading the Wrong dbt docs</title>
+      <link>https://alwyndsouza.github.io/articles/your-ai-agent-was-reading-the-wrong-dbt-docs</link>
+      <guid isPermaLink="true">https://alwyndsouza.github.io/articles/your-ai-agent-was-reading-the-wrong-dbt-docs</guid>
+      <pubDate>Thu, 04 Jun 2026 00:00:00 GMT</pubDate>
+      <description>dbt MCP v1.20.0: Your AI Agents were reading the Wrong dbt docsHow dbt MCP v1.20.0 fixes a subtle but important problem in AI-assisted analytics engineeringOver...</description>
       <category>dbt</category>
       <category>data-engineering</category>
       <category>data-analytics</category>
@@ -332,16 +344,6 @@
       <guid isPermaLink="true">https://alwyndsouza.github.io/articles/teaching-ai-to-understand-your-codebase</guid>
       <pubDate>Wed, 26 Nov 2025 00:00:00 GMT</pubDate>
       <description>In Part 1, we explored why code reviews have become such a bottleneck and why standard AI tools don’t solve the problem. Now let’s talk about what actually work...</description>
-      <category>ai</category>
-      <category>artificial-intelligence</category>
-      <category>automation</category>
-    </item>
-    <item>
-      <title>From 4 Days to 2 Hours: How Context-Aware AI Transformed Our Code Reviews</title>
-      <link>https://alwyndsouza.github.io/articles/from-4-days-to-2-hours-how-context-aware-ai-transformed-our-code-reviews</link>
-      <guid isPermaLink="true">https://alwyndsouza.github.io/articles/from-4-days-to-2-hours-how-context-aware-ai-transformed-our-code-reviews</guid>
-      <pubDate>Mon, 24 Nov 2025 00:00:00 GMT</pubDate>
-      <description>The bottleneck you don’t talk about in standup meetings, but everyone feels: code reviews that drag on for days, developers frustrated by wait times, and review...</description>
       <category>ai</category>
       <category>artificial-intelligence</category>
       <category>automation</category>
