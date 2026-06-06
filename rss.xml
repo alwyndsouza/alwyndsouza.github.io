@@ -5,8 +5,32 @@
     <link>https://alwyndsouza.github.io</link>
     <description>Practical writing on Data Engineering, DataOps, dbt, Databricks, and AI Agents. Articles, open-source projects, and lessons from production data platforms.</description>
     <language>en</language>
-    <lastBuildDate>Sat, 06 Jun 2026 03:57:08 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 06 Jun 2026 13:54:40 GMT</lastBuildDate>
     <atom:link href="https://alwyndsouza.github.io/rss.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AI Cost Observability: Two Open Source Tools Every AI Developer Should Know</title>
+      <link>https://alwyndsouza.github.io/articles/ai-cost-observability-two-open-source-tools-every-ai-developer-should-know</link>
+      <guid isPermaLink="true">https://alwyndsouza.github.io/articles/ai-cost-observability-two-open-source-tools-every-ai-developer-should-know</guid>
+      <pubDate>Sat, 06 Jun 2026 00:00:00 GMT</pubDate>
+      <description></description>
+      <category>open-source</category>
+      <category>developer</category>
+      <category>software-engineering</category>
+      <category>llm</category>
+      <category>artificial-intelligence</category>
+    </item>
+    <item>
+      <title>AI Skills Need CI/CD Too</title>
+      <link>https://alwyndsouza.github.io/articles/ai-skills-need-ci-cd-too</link>
+      <guid isPermaLink="true">https://alwyndsouza.github.io/articles/ai-skills-need-ci-cd-too</guid>
+      <pubDate>Sat, 06 Jun 2026 00:00:00 GMT</pubDate>
+      <description></description>
+      <category>ai</category>
+      <category>ai-agent</category>
+      <category>data-engineering</category>
+      <category>agentic-ai</category>
+      <category>data-science</category>
+    </item>
     <item>
       <title>dbt MCP v1.20.0: Your AI Agents was reading the Wrong dbt docs</title>
       <link>https://alwyndsouza.github.io/articles/dbt-mcp-v1-20-0-your-ai-agents-was-reading-the-wrong-dbt-docs</link>
@@ -44,18 +68,6 @@
       <category>data-engineering</category>
     </item>
     <item>
-      <title>AI Skills Need CI/CD Too</title>
-      <link>https://alwyndsouza.github.io/articles/ai-skills-need-ci-cd-too</link>
-      <guid isPermaLink="true">https://alwyndsouza.github.io/articles/ai-skills-need-ci-cd-too</guid>
-      <pubDate>Sun, 31 May 2026 00:00:00 GMT</pubDate>
-      <description></description>
-      <category>agentic-ai</category>
-      <category>artificial-intelligence</category>
-      <category>ai-agent</category>
-      <category>llm</category>
-      <category>quality-assurance</category>
-    </item>
-    <item>
       <title>dbt Core v1.12 Rewrites the Semantic Layer Spec</title>
       <link>https://alwyndsouza.github.io/articles/dbt-core-v1-12-rewrites-the-semantic-layer-spec</link>
       <guid isPermaLink="true">https://alwyndsouza.github.io/articles/dbt-core-v1-12-rewrites-the-semantic-layer-spec</guid>
@@ -85,6 +97,18 @@
       <guid isPermaLink="true">https://alwyndsouza.github.io/articles/how-to-use-promptfoo-to-test-and-evaluate-ai-agent-skills</guid>
       <pubDate>Sun, 31 May 2026 00:00:00 GMT</pubDate>
       <description>A practical guide to benchmarking AI skills against baseline agents, measuring quality improvements, and building confidence before production adoption.I treat...</description>
+      <category>agentic-ai</category>
+      <category>artificial-intelligence</category>
+      <category>ai-agent</category>
+      <category>llm</category>
+      <category>quality-assurance</category>
+    </item>
+    <item>
+      <title>Testing AI Skills Like a Software Engineer</title>
+      <link>https://alwyndsouza.github.io/articles/testing-ai-skills-like-a-software-engineer</link>
+      <guid isPermaLink="true">https://alwyndsouza.github.io/articles/testing-ai-skills-like-a-software-engineer</guid>
+      <pubDate>Sun, 31 May 2026 00:00:00 GMT</pubDate>
+      <description></description>
       <category>agentic-ai</category>
       <category>artificial-intelligence</category>
       <category>ai-agent</category>
@@ -329,26 +353,6 @@
       <category>data-quality</category>
       <category>testing</category>
       <category>validation</category>
-    </item>
-    <item>
-      <title>The Code Review Journey: From Manual Slog to AI-Powered Efficiency</title>
-      <link>https://alwyndsouza.github.io/articles/the-code-review-journey-from-manual-slog-to-ai-powered-efficiency</link>
-      <guid isPermaLink="true">https://alwyndsouza.github.io/articles/the-code-review-journey-from-manual-slog-to-ai-powered-efficiency</guid>
-      <pubDate>Thu, 27 Nov 2025 00:00:00 GMT</pubDate>
-      <description>I will be honest — code reviews used to be the part of my day I would quietly dread. Not because I didn’t value them, but because they felt like pushing a bould...</description>
-      <category>ai</category>
-      <category>artificial-intelligence</category>
-      <category>automation</category>
-    </item>
-    <item>
-      <title>Building Context-Aware AI for Your Team</title>
-      <link>https://alwyndsouza.github.io/articles/building-context-aware-ai-for-your-team</link>
-      <guid isPermaLink="true">https://alwyndsouza.github.io/articles/building-context-aware-ai-for-your-team</guid>
-      <pubDate>Wed, 26 Nov 2025 00:00:00 GMT</pubDate>
-      <description>In Parts 1 and 2, we explored why code reviews are broken and how context-aware AI fixes them. Now let’s get practical: exactly how do you implement this for yo...</description>
-      <category>ai</category>
-      <category>artificial-intelligence</category>
-      <category>automation</category>
     </item>
   </channel>
 </rss>
