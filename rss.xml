@@ -5,8 +5,20 @@
     <link>https://alwyndsouza.github.io</link>
     <description>Practical writing on Data Engineering, DataOps, dbt, Databricks, and AI Agents. Articles, open-source projects, and lessons from production data platforms.</description>
     <language>en</language>
-    <lastBuildDate>Sun, 07 Jun 2026 04:23:15 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 07 Jun 2026 14:04:54 GMT</lastBuildDate>
     <atom:link href="https://alwyndsouza.github.io/rss.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>dbt wizard cli: AI agent built for analytics engineering</title>
+      <link>https://alwyndsouza.github.io/articles/dbt-wizard-cli-ai-agent-built-for-analytics-engineering</link>
+      <guid isPermaLink="true">https://alwyndsouza.github.io/articles/dbt-wizard-cli-ai-agent-built-for-analytics-engineering</guid>
+      <pubDate>Sun, 07 Jun 2026 00:00:00 GMT</pubDate>
+      <description></description>
+      <category>ai-agent</category>
+      <category>dbt</category>
+      <category>coding</category>
+      <category>data-engineering</category>
+      <category>data-analysis</category>
+    </item>
     <item>
       <title>AI Cost Observability: Two Open Source Tools Every AI Developer Should Know</title>
       <link>https://alwyndsouza.github.io/articles/ai-cost-observability-two-open-source-tools-every-ai-developer-should-know</link>
@@ -343,16 +355,6 @@
       <description>Here’s the uncomfortable truth: most data teams spend 60–80% of their time dealing with data quality issues instead of delivering actual business value. That’s...</description>
       <category>data-architecture</category>
       <category>data-strategy</category>
-    </item>
-    <item>
-      <title>Shift Left Governance: Why You Are Fixing Data Problems at the Wrong Time</title>
-      <link>https://alwyndsouza.github.io/articles/shift-left-governance-why-you-are-fixing-data-problems-at-the-wrong-time</link>
-      <guid isPermaLink="true">https://alwyndsouza.github.io/articles/shift-left-governance-why-you-are-fixing-data-problems-at-the-wrong-time</guid>
-      <pubDate>Sun, 30 Nov 2025 00:00:00 GMT</pubDate>
-      <description>What DevOps taught us about preventing problems instead of reacting to them</description>
-      <category>data-quality</category>
-      <category>testing</category>
-      <category>validation</category>
     </item>
   </channel>
 </rss>
