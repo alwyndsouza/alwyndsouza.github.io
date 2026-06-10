@@ -5,12 +5,24 @@
     <link>https://alwyndsouza.github.io</link>
     <description>Practical writing on Data Engineering, DataOps, dbt, Databricks, and AI Agents. Articles, open-source projects, and lessons from production data platforms.</description>
     <language>en</language>
-    <lastBuildDate>Tue, 09 Jun 2026 09:55:31 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 10 Jun 2026 04:11:17 GMT</lastBuildDate>
     <atom:link href="https://alwyndsouza.github.io/rss.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>dbt wizard cli: AI agent built for analytics engineering</title>
       <link>https://alwyndsouza.github.io/articles/dbt-wizard-cli-ai-agent-built-for-analytics-engineering</link>
       <guid isPermaLink="true">https://alwyndsouza.github.io/articles/dbt-wizard-cli-ai-agent-built-for-analytics-engineering</guid>
+      <pubDate>Sun, 07 Jun 2026 00:00:00 GMT</pubDate>
+      <description></description>
+      <category>ai-agent</category>
+      <category>dbt</category>
+      <category>coding</category>
+      <category>data-engineering</category>
+      <category>data-analysis</category>
+    </item>
+    <item>
+      <title>dbt Wizard CLI: An AI Agent Built for Analytics Engineering</title>
+      <link>https://alwyndsouza.github.io/articles/dbt-wizard-cli-an-ai-agent-built-for-analytics-engineering</link>
+      <guid isPermaLink="true">https://alwyndsouza.github.io/articles/dbt-wizard-cli-an-ai-agent-built-for-analytics-engineering</guid>
       <pubDate>Sun, 07 Jun 2026 00:00:00 GMT</pubDate>
       <description></description>
       <category>ai-agent</category>
@@ -42,6 +54,18 @@
       <category>data-engineering</category>
       <category>agentic-ai</category>
       <category>data-science</category>
+    </item>
+    <item>
+      <title>Stop Guessing Your AI Spend: Two Open Source Tools That Track Every Token</title>
+      <link>https://alwyndsouza.github.io/articles/stop-guessing-your-ai-spend-two-open-source-tools-that-track-every-token</link>
+      <guid isPermaLink="true">https://alwyndsouza.github.io/articles/stop-guessing-your-ai-spend-two-open-source-tools-that-track-every-token</guid>
+      <pubDate>Sat, 06 Jun 2026 00:00:00 GMT</pubDate>
+      <description></description>
+      <category>open-source</category>
+      <category>developer</category>
+      <category>software-engineering</category>
+      <category>llm</category>
+      <category>artificial-intelligence</category>
     </item>
     <item>
       <title>dbt MCP v1.20.0: Your AI Agents was reading the Wrong dbt docs</title>
@@ -335,24 +359,6 @@
       <guid isPermaLink="true">https://alwyndsouza.github.io/articles/implementing-data-contracts-with-dbt-from-theory-to-practice</guid>
       <pubDate>Mon, 01 Dec 2025 00:00:00 GMT</pubDate>
       <description>Real code, real patterns, real results</description>
-      <category>data-architecture</category>
-      <category>data-strategy</category>
-    </item>
-    <item>
-      <title>The Business Case for Data Contracts: Quantifying ROI</title>
-      <link>https://alwyndsouza.github.io/articles/the-business-case-for-data-contracts-quantifying-roi</link>
-      <guid isPermaLink="true">https://alwyndsouza.github.io/articles/the-business-case-for-data-contracts-quantifying-roi</guid>
-      <pubDate>Mon, 01 Dec 2025 00:00:00 GMT</pubDate>
-      <description>Show your CTO the numbers that justify the investment</description>
-      <category>data-architecture</category>
-      <category>data-strategy</category>
-    </item>
-    <item>
-      <title>Data Contracts: The Missing Link in Your Data Engineering Strategy</title>
-      <link>https://alwyndsouza.github.io/articles/data-contracts-the-missing-link-in-your-data-engineering-strategy</link>
-      <guid isPermaLink="true">https://alwyndsouza.github.io/articles/data-contracts-the-missing-link-in-your-data-engineering-strategy</guid>
-      <pubDate>Sun, 30 Nov 2025 00:00:00 GMT</pubDate>
-      <description>Here’s the uncomfortable truth: most data teams spend 60–80% of their time dealing with data quality issues instead of delivering actual business value. That’s...</description>
       <category>data-architecture</category>
       <category>data-strategy</category>
     </item>
