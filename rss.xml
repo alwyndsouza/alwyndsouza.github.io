@@ -5,7 +5,7 @@
     <link>https://alwyndsouza.github.io</link>
     <description>Practical writing on Data Engineering, DataOps, dbt, Databricks, and AI Agents. Articles, open-source projects, and lessons from production data platforms.</description>
     <language>en</language>
-    <lastBuildDate>Wed, 10 Jun 2026 04:11:17 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 11 Jun 2026 10:46:25 GMT</lastBuildDate>
     <atom:link href="https://alwyndsouza.github.io/rss.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>dbt wizard cli: AI agent built for analytics engineering</title>
@@ -84,7 +84,7 @@
       <link>https://alwyndsouza.github.io/articles/your-ai-agent-was-reading-the-wrong-dbt-docs</link>
       <guid isPermaLink="true">https://alwyndsouza.github.io/articles/your-ai-agent-was-reading-the-wrong-dbt-docs</guid>
       <pubDate>Thu, 04 Jun 2026 00:00:00 GMT</pubDate>
-      <description>dbt MCP v1.20.0: Your AI Agents are reading the Wrong dbt docsHow dbt MCP v1.20.0 fixes a subtle but important problem in AI-assisted analytics engineeringOverv...</description>
+      <description></description>
       <category>dbt</category>
       <category>data-engineering</category>
       <category>data-analytics</category>
