@@ -5,8 +5,20 @@
     <link>https://alwyndsouza.github.io</link>
     <description>Practical writing on Data Engineering, DataOps, dbt, Databricks, and AI Agents. Articles, open-source projects, and lessons from production data platforms.</description>
     <language>en</language>
-    <lastBuildDate>Thu, 11 Jun 2026 10:46:25 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 13 Jun 2026 04:15:22 GMT</lastBuildDate>
     <atom:link href="https://alwyndsouza.github.io/rss.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The Hidden Dependency Behind Reliable AI Agents</title>
+      <link>https://alwyndsouza.github.io/articles/the-hidden-dependency-behind-reliable-ai-agents</link>
+      <guid isPermaLink="true">https://alwyndsouza.github.io/articles/the-hidden-dependency-behind-reliable-ai-agents</guid>
+      <pubDate>Fri, 12 Jun 2026 00:00:00 GMT</pubDate>
+      <description></description>
+      <category>data-science</category>
+      <category>technology</category>
+      <category>artificial-intelligence</category>
+      <category>data-engineering</category>
+      <category>software-engineering</category>
+    </item>
     <item>
       <title>dbt wizard cli: AI agent built for analytics engineering</title>
       <link>https://alwyndsouza.github.io/articles/dbt-wizard-cli-ai-agent-built-for-analytics-engineering</link>
@@ -352,15 +364,6 @@
       <category>documentation</category>
       <category>dbt-cloud</category>
       <category>data-lineage</category>
-    </item>
-    <item>
-      <title>Implementing Data Contracts with dbt: From Theory to Practice</title>
-      <link>https://alwyndsouza.github.io/articles/implementing-data-contracts-with-dbt-from-theory-to-practice</link>
-      <guid isPermaLink="true">https://alwyndsouza.github.io/articles/implementing-data-contracts-with-dbt-from-theory-to-practice</guid>
-      <pubDate>Mon, 01 Dec 2025 00:00:00 GMT</pubDate>
-      <description>Real code, real patterns, real results</description>
-      <category>data-architecture</category>
-      <category>data-strategy</category>
     </item>
   </channel>
 </rss>
