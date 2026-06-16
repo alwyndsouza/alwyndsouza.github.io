@@ -5,8 +5,20 @@
     <link>https://alwyndsouza.github.io</link>
     <description>Practical writing on Data Engineering, DataOps, dbt, Databricks, and AI Agents. Articles, open-source projects, and lessons from production data platforms.</description>
     <language>en</language>
-    <lastBuildDate>Sun, 14 Jun 2026 14:14:15 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 16 Jun 2026 17:04:59 GMT</lastBuildDate>
     <atom:link href="https://alwyndsouza.github.io/rss.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Altimate Code and the Rise of the AI Engineering Harness</title>
+      <link>https://alwyndsouza.github.io/articles/altimate-code-and-the-rise-of-the-ai-engineering-harness</link>
+      <guid isPermaLink="true">https://alwyndsouza.github.io/articles/altimate-code-and-the-rise-of-the-ai-engineering-harness</guid>
+      <pubDate>Tue, 16 Jun 2026 00:00:00 GMT</pubDate>
+      <description></description>
+      <category>data-engineering</category>
+      <category>data-science</category>
+      <category>software-engineering</category>
+      <category>ai-agent</category>
+      <category>coding</category>
+    </item>
     <item>
       <title>The Hidden Dependency Behind Reliable AI Agents</title>
       <link>https://alwyndsouza.github.io/articles/the-hidden-dependency-behind-reliable-ai-agents</link>
@@ -352,18 +364,6 @@
       <category>developer-experience</category>
       <category>speed</category>
       <category>dbt</category>
-    </item>
-    <item>
-      <title>Customizing Your dbt Documentation with node_color</title>
-      <link>https://alwyndsouza.github.io/articles/customizing-your-dbt-documentation-with-node-color</link>
-      <guid isPermaLink="true">https://alwyndsouza.github.io/articles/customizing-your-dbt-documentation-with-node-color</guid>
-      <pubDate>Sat, 06 Dec 2025 00:00:00 GMT</pubDate>
-      <description>If you have ever looked at your dbt DAG and wished you could add some visual distinction to help your team quickly identify different model types, domains, or d...</description>
-      <category>dbt</category>
-      <category>dbt-labs</category>
-      <category>documentation</category>
-      <category>dbt-cloud</category>
-      <category>data-lineage</category>
     </item>
   </channel>
 </rss>
